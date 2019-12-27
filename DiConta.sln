@@ -1,0 +1,92 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Presentacion", "Presentacion\Presentacion.vbproj", "{574DE247-05E9-4C97-B76D-1B8A2612D8CC}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Datos", "Datos\Datos.vbproj", "{5B7FB688-E360-4A92-AF3F-319FC2A8628B}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Logica", "Logica\Logica.vbproj", "{3A0A5B43-AF28-4516-86A6-420D336524A8}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Modelos", "Modelos\Modelos.vbproj", "{7349E903-24DB-41B4-BFFC-A2E220216D73}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Facturacion", "Facturacion\Facturacion.vbproj", "{B3433567-A344-48BD-A7A7-3946B3381504}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{574DE247-05E9-4C97-B76D-1B8A2612D8CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{574DE247-05E9-4C97-B76D-1B8A2612D8CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{574DE247-05E9-4C97-B76D-1B8A2612D8CC}.Debug|x86.ActiveCfg = Debug|x86
+		{574DE247-05E9-4C97-B76D-1B8A2612D8CC}.Debug|x86.Build.0 = Debug|x86
+		{574DE247-05E9-4C97-B76D-1B8A2612D8CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{574DE247-05E9-4C97-B76D-1B8A2612D8CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{574DE247-05E9-4C97-B76D-1B8A2612D8CC}.Release|x86.ActiveCfg = Release|x86
+		{574DE247-05E9-4C97-B76D-1B8A2612D8CC}.Release|x86.Build.0 = Release|x86
+		{5B7FB688-E360-4A92-AF3F-319FC2A8628B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B7FB688-E360-4A92-AF3F-319FC2A8628B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B7FB688-E360-4A92-AF3F-319FC2A8628B}.Debug|x86.ActiveCfg = Debug|x86
+		{5B7FB688-E360-4A92-AF3F-319FC2A8628B}.Debug|x86.Build.0 = Debug|x86
+		{5B7FB688-E360-4A92-AF3F-319FC2A8628B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B7FB688-E360-4A92-AF3F-319FC2A8628B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B7FB688-E360-4A92-AF3F-319FC2A8628B}.Release|x86.ActiveCfg = Release|x86
+		{5B7FB688-E360-4A92-AF3F-319FC2A8628B}.Release|x86.Build.0 = Release|x86
+		{3A0A5B43-AF28-4516-86A6-420D336524A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A0A5B43-AF28-4516-86A6-420D336524A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A0A5B43-AF28-4516-86A6-420D336524A8}.Debug|x86.ActiveCfg = Debug|x86
+		{3A0A5B43-AF28-4516-86A6-420D336524A8}.Debug|x86.Build.0 = Debug|x86
+		{3A0A5B43-AF28-4516-86A6-420D336524A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A0A5B43-AF28-4516-86A6-420D336524A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A0A5B43-AF28-4516-86A6-420D336524A8}.Release|x86.ActiveCfg = Release|x86
+		{3A0A5B43-AF28-4516-86A6-420D336524A8}.Release|x86.Build.0 = Release|x86
+		{7349E903-24DB-41B4-BFFC-A2E220216D73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7349E903-24DB-41B4-BFFC-A2E220216D73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7349E903-24DB-41B4-BFFC-A2E220216D73}.Debug|x86.ActiveCfg = Debug|x86
+		{7349E903-24DB-41B4-BFFC-A2E220216D73}.Debug|x86.Build.0 = Debug|x86
+		{7349E903-24DB-41B4-BFFC-A2E220216D73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7349E903-24DB-41B4-BFFC-A2E220216D73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7349E903-24DB-41B4-BFFC-A2E220216D73}.Release|x86.ActiveCfg = Release|x86
+		{7349E903-24DB-41B4-BFFC-A2E220216D73}.Release|x86.Build.0 = Release|x86
+		{B3433567-A344-48BD-A7A7-3946B3381504}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3433567-A344-48BD-A7A7-3946B3381504}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3433567-A344-48BD-A7A7-3946B3381504}.Debug|x86.ActiveCfg = Debug|x86
+		{B3433567-A344-48BD-A7A7-3946B3381504}.Debug|x86.Build.0 = Debug|x86
+		{B3433567-A344-48BD-A7A7-3946B3381504}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3433567-A344-48BD-A7A7-3946B3381504}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3433567-A344-48BD-A7A7-3946B3381504}.Release|x86.ActiveCfg = Release|x86
+		{B3433567-A344-48BD-A7A7-3946B3381504}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1520779-492E-473B-B248-CB422B157EAD}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dinases.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Datos\\Datos.vbproj
+		SccProjectName1 = Datos
+		SccLocalPath1 = Datos
+		SccProjectUniqueName2 = Logica\\Logica.vbproj
+		SccProjectName2 = Logica
+		SccLocalPath2 = Logica
+		SccProjectUniqueName3 = Presentacion\\Presentacion.vbproj
+		SccProjectName3 = Presentacion
+		SccLocalPath3 = Presentacion
+		SccProjectUniqueName4 = Modelos\\Modelos.vbproj
+		SccProjectName4 = Modelos
+		SccLocalPath4 = Modelos
+		SccProjectUniqueName5 = Facturacion\\Facturacion.vbproj
+		SccProjectName5 = Facturacion
+		SccLocalPath5 = Facturacion
+	EndGlobalSection
+EndGlobal
