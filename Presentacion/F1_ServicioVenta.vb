@@ -1052,6 +1052,14 @@ Public Class F1_ServicioVenta
             End If
         Next
     End Sub
+
+    Public Sub _prCalcularPrecioTotalLavadero()
+        Dim montodesc As Double = tbMdesc.Value
+        Dim pordesc As Double = ((montodesc * 100) / grdetalle.GetTotal(grdetalle.RootTable.Columns("vdptot"), AggregateFunction.Sum))
+        tbPdesc.Value = pordesc
+        tbSubTotal.Value = grdetalle.GetTotal(grdetalle.RootTable.Columns("vdptot"), AggregateFunction.Sum)
+        tbtotal.Value = grdetalle.GetTotal(grdetalle.RootTable.Columns("vdptot"), AggregateFunction.Sum) - montodesc
+    End Sub
     Public Sub _prCalcularPrecioTotal()
         Dim montodesc As Double = tbMdesc.Value
         Dim pordesc As Double = ((montodesc * 100) / grdetalle.GetTotal(grdetalle.RootTable.Columns("vdtotdesc"), AggregateFunction.Sum))
@@ -2079,7 +2087,14 @@ Public Class F1_ServicioVenta
                 End If
             End If
         Next
-        _prCalcularPrecioTotal()
+
+        Dim dtDetalle As DataTable = CType(grdetalle.DataSource, DataTable)
+        Dim Descuento As Double = 0
+        For i As Integer = 0 To dtDetalle.Rows.Count - 1 Step 1
+            Descuento = Descuento + dtDetalle.Rows(i).Item("vddesc")
+        Next
+        tbMdesc.Value = Descuento
+        _prCalcularPrecioTotalLavadero()
         If (cbsector.Value <> 3) Then
             TbNit.Focus()
         End If
