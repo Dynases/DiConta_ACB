@@ -3874,7 +3874,7 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
     End Function
     Public Shared Function L_fnGrabarDosificacion(ByRef numi As String, cia As Integer, alm As String, sfc As String,
                                                   autoriz As Double, nfac As Double, key As String, fdel As String,
-                                                  fal As String, nota As String, nota2 As String, est As String, tipo As Integer, inicio As Integer, final As Integer) As Boolean
+                                                  fal As String, nota As String, nota2 As String, est As String, tipo As Integer, inicio As Integer, final As Integer, modulo As Integer) As Boolean
         Dim _resultado As Boolean
 
         Dim _Tabla As DataTable
@@ -3902,7 +3902,7 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
         _listParam.Add(New Datos.DParametro("@sbtipo", tipo))
         _listParam.Add(New Datos.DParametro("@inicio", inicio))
         _listParam.Add(New Datos.DParametro("@fin", final))
-
+        _listParam.Add(New Datos.DParametro("@modulo", modulo))
         _listParam.Add(New Datos.DParametro("@uact", L_Usuario))
         _Tabla = D_ProcedimientoConParam("sp_go_TS002", _listParam)
 
@@ -3920,7 +3920,7 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
     End Function
     Public Shared Function L_fnModificarDosificacion(ByRef numi As String, cia As Integer, alm As String, sfc As String,
                                                      autoriz As String, nfac As Double, key As String, fdel As String,
-                                                     fal As String, nota As String, nota2 As String, est As String, tipo As Integer, inicio As Integer, final As Integer) As Boolean
+                                                     fal As String, nota As String, nota2 As String, est As String, tipo As Integer, inicio As Integer, final As Integer, modulo As Integer) As Boolean
         Dim _resultado As Boolean
 
         Dim _Tabla As DataTable
@@ -3942,6 +3942,7 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
         _listParam.Add(New Datos.DParametro("@sbtipo", tipo))
         _listParam.Add(New Datos.DParametro("@inicio", inicio))
         _listParam.Add(New Datos.DParametro("@fin", final))
+        _listParam.Add(New Datos.DParametro("@modulo", modulo))
         _listParam.Add(New Datos.DParametro("@uact", L_Usuario))
         _Tabla = D_ProcedimientoConParam("sp_go_TS002", _listParam)
 
@@ -3957,7 +3958,6 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
 
         Return _resultado
     End Function
-
     Public Shared Function L_fnGeneralDosificacion() As DataTable
         Dim _Tabla As DataTable
 
@@ -3976,6 +3976,17 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
 
         _listParam.Add(New Datos.DParametro("@tipo", 7))
         _listParam.Add(New Datos.DParametro("@numi", numi))
+        _listParam.Add(New Datos.DParametro("@uact", L_Usuario))
+        _Tabla = D_ProcedimientoConParam("sp_go_TS002", _listParam)
+
+        Return _Tabla
+    End Function
+    Public Shared Function L_fnListarModulos() As DataTable
+        Dim _Tabla As DataTable
+
+        Dim _listParam As New List(Of Datos.DParametro)
+
+        _listParam.Add(New Datos.DParametro("@tipo", 8))
         _listParam.Add(New Datos.DParametro("@uact", L_Usuario))
         _Tabla = D_ProcedimientoConParam("sp_go_TS002", _listParam)
 
@@ -4281,7 +4292,7 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
 
         Return _Tabla
     End Function
-    Public Shared Function L_fnEsDosificacionManual(sucursal As Integer, fechaFactura As String) As DataTable
+    Public Shared Function L_fnEsDosificacionManual(sucursal As Integer, fechaFactura As String, modulo As Integer) As DataTable
         Dim _Tabla As DataTable
 
         Dim _listParam As New List(Of Datos.DParametro)
@@ -4290,6 +4301,22 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
         _listParam.Add(New Datos.DParametro("@sucursal", sucursal))
         _listParam.Add(New Datos.DParametro("@vcfdoc", fechaFactura))
         _listParam.Add(New Datos.DParametro("@vcuact", L_Usuario))
+        _listParam.Add(New Datos.DParametro("@modulo", modulo))
+        _Tabla = D_ProcedimientoConParam("sp_Mam_TV002", _listParam)
+
+        Return _Tabla
+    End Function
+
+    Public Shared Function L_DosificacionAutomatica(sucursal As Integer, fechaFactura As String, modulo As Integer) As DataTable
+        Dim _Tabla As DataTable
+
+        Dim _listParam As New List(Of Datos.DParametro)
+
+        _listParam.Add(New Datos.DParametro("@tipo", 22))
+        _listParam.Add(New Datos.DParametro("@sucursal", sucursal))
+        _listParam.Add(New Datos.DParametro("@vcfdoc", fechaFactura))
+        _listParam.Add(New Datos.DParametro("@vcuact", L_Usuario))
+        _listParam.Add(New Datos.DParametro("@modulo", modulo))
         _Tabla = D_ProcedimientoConParam("sp_Mam_TV002", _listParam)
 
         Return _Tabla
@@ -4312,6 +4339,19 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
         Dim _listParam As New List(Of Datos.DParametro)
 
         _listParam.Add(New Datos.DParametro("@tipo", 5))
+        _listParam.Add(New Datos.DParametro("@vcuact", L_Usuario))
+        _listParam.Add(New Datos.DParametro("@TV0022", "", dt))
+        _Tabla = D_ProcedimientoConParam("sp_Mam_TV002", _listParam)
+
+        Return _Tabla
+    End Function
+
+    Public Shared Function L_fnListarVentaLavaderoProductos(dt As DataTable) As DataTable
+        Dim _Tabla As DataTable
+
+        Dim _listParam As New List(Of Datos.DParametro)
+
+        _listParam.Add(New Datos.DParametro("@tipo", 23))
         _listParam.Add(New Datos.DParametro("@vcuact", L_Usuario))
         _listParam.Add(New Datos.DParametro("@TV0022", "", dt))
         _Tabla = D_ProcedimientoConParam("sp_Mam_TV002", _listParam)
@@ -4749,17 +4789,17 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
 
 #Region "Libro de ventas"
 
-    Public Shared Function L_fnObtenerLibroVenta(_CodAlm As String, _fechai As String, _FechaF As String, factura As Integer) As DataTable
+    Public Shared Function L_fnObtenerLibroVenta(_CodAlm As String, _fechai As String, _FechaF As String, factura As Integer, modulo As String) As DataTable
         Dim _Tabla As DataTable
         Dim _Where As String = ""
         If _CodAlm > 0 Then
-            _Where = "fvaalm = " + _CodAlm + " and fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' and factura=" + Str(factura) + " ORDER BY fvanfac"
+            _Where = "vcsector = " + modulo + " and fvaalm = " + _CodAlm + " and fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' and factura=" + Str(factura) + " ORDER BY fvanfac"
         End If
         If _CodAlm = 0 Then 'todas las sucursales
-            _Where = " fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' and factura=" + Str(factura) + " ORDER BY fvanfac"
+            _Where = "vcsector = " + modulo + " and fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' and factura=" + Str(factura) + " ORDER BY fvanfac"
         End If
         If _CodAlm = -1 Then 'todas las sucursales menos la principal
-            _Where = "fvaalm <>1 " + " and fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' and factura=" + Str(factura) + " ORDER BY fvanfac"
+            _Where = "vcsector = " + modulo + " and fvaalm <>1 " + " and fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' and factura=" + Str(factura) + " ORDER BY fvanfac"
         End If
         Dim _select As String = "fvanumi, FORMAT(fvafec,'dd/MM/yyyy') as fvafec, fvanfac, fvaautoriz,fvaest, fvanitcli, fvadescli, fvastot, fvaimpsi, fvaimpeo, fvaimptc, fvasubtotal, fvadesc, fvatotal, fvadebfis, fvaccont,fvaflim,fvaalm,scneg, factura"
 
@@ -4767,18 +4807,18 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
                                "VR_GO_LibroVenta", _Where)
         Return _Tabla
     End Function
-    Public Shared Function L_fnObtenerLibroVentaAmbosTipoFactura(_CodAlm As String, _fechai As String, _FechaF As String) As DataTable
+    Public Shared Function L_fnObtenerLibroVentaAmbosTipoFactura(_CodAlm As String, _fechai As String, _FechaF As String, modulo As Integer) As DataTable
         Dim _Tabla As DataTable
         Dim _Where As String = ""
 
         If _CodAlm > 0 Then
-            _Where = "fvaalm = " + _CodAlm + " and fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' " + " ORDER BY fvanfac"
+            _Where = "vcsector = " + Str(modulo) + " and fvaalm = " + _CodAlm + " and fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' " + " ORDER BY fvanumi desc"
         End If
         If _CodAlm = 0 Then 'todas las sucursales
-            _Where = " fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' " + " ORDER BY fvanfac"
+            _Where = "vcsector = " + Str(modulo) + " and  fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' " + " ORDER BY fvanumi desc"
         End If
         If _CodAlm = -1 Then 'todas las sucursales menos la principal
-            _Where = "fvaalm <>1 " + " and fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' " + " ORDER BY fvanfac"
+            _Where = "vcsector = " + Str(modulo) + " and fvaalm <>1 " + " and fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' " + " ORDER BY fvanumi desc"
         End If
 
         Dim _select As String = "fvanumi, FORMAT(fvafec,'dd/MM/yyyy') as fvafec, fvanfac, fvaautoriz,fvaest, fvanitcli, fvadescli, fvastot, fvaimpsi, fvaimpeo, fvaimptc, fvasubtotal, fvadesc, fvatotal, fvadebfis, fvaccont,fvaflim,fvaalm,scneg, factura"

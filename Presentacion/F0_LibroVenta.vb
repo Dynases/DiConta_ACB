@@ -28,10 +28,30 @@ Public Class F0_LibroVenta
 #End Region
 
 #Region "Metodos"
+    Private Sub _prCargarComboSector(mCombo As Janus.Windows.GridEX.EditControls.MultiColumnCombo)
 
+        Dim dt As New DataTable
+        dt = L_prlistarCategoriasActivos()
+
+        With mCombo
+            .DropDownList.Columns.Clear()
+            .DropDownList.Columns.Add("cenum").Width = 60
+            .DropDownList.Columns("cenum").Caption = "COD"
+            .DropDownList.Columns.Add("cedesc1").Width = 500
+            .DropDownList.Columns("cedesc1").Caption = "CATEGORIA"
+            .ValueMember = "cenum"
+            .DisplayMember = "cedesc1"
+            .DataSource = dt
+            .Refresh()
+        End With
+        If (CType(mCombo.DataSource, DataTable).Rows.Count > 0) Then
+            mCombo.SelectedIndex = 0
+        End If
+    End Sub
     Private Sub P_Inicio()
         'L_prAbrirConexion(gs_Ip, gs_UsuarioSql, gs_ClaveSql, gs_NombreBD)
         _prCargarComboAlmacen(CbAlmacen)
+        _prCargarComboSector(cbModulo)
         Me.WindowState = FormWindowState.Maximized
         Me.Text = "L I B R O   D E   V E N T A S"
 
@@ -399,10 +419,10 @@ Public Class F0_LibroVenta
     Private Sub P_LlenarDatosGrilla()
         _DsLV = New DataTable
         If tbTipoFactura.Value = 2 Then 'es ambos
-            _DsLV = L_fnObtenerLibroVentaAmbosTipoFactura(CbAlmacen.Value, tbFechaI.Value.ToString("yyyy-MM-dd"), tbFechaF.Value.ToString("yyyy-MM-dd"))
+            _DsLV = L_fnObtenerLibroVentaAmbosTipoFactura(CbAlmacen.Value, tbFechaI.Value.ToString("yyyy-MM-dd"), tbFechaF.Value.ToString("yyyy-MM-dd"), cbModulo.Value)
         Else 'filtrado por tipo factura
             _DsLV = L_fnObtenerLibroVenta(CbAlmacen.Value, tbFechaI.Value.ToString("yyyy-MM-dd"), tbFechaF.Value.ToString("yyyy-MM-dd"),
-                                      tbTipoFactura.Value)
+                                      tbTipoFactura.Value, cbModulo.Value)
         End If
 
 

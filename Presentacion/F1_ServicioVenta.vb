@@ -1436,7 +1436,7 @@ Public Class F1_ServicioVenta
     End Function
     Public Sub _GuardarNuevo()
         Dim numi As String = ""
-        Dim dt As DataTable = L_fnEsDosificacionManual(cbSucursal.Value, tbFechaVenta.Value.ToString("yyyy/MM/dd"))
+        Dim dt As DataTable = L_fnEsDosificacionManual(cbSucursal.Value, tbFechaVenta.Value.ToString("yyyy/MM/dd"), cbsector.Value)
         Dim bandera As Boolean = False
 
         If tbTipoVenta.Value = False And _conFactura = True Then
@@ -1468,9 +1468,9 @@ Public Class F1_ServicioVenta
         End If
 
         If tbTipoVenta.Value = True And _conFactura = True Then
-            Dim dtSet As DataSet = L_Dosificacion("1", cbSucursal.Value, tbFechaVenta.Value.ToString("yyyy/MM/dd"))
-            If dtSet.Tables.Count > 0 Then
-                If dtSet.Tables(0).Rows.Count = 0 Then
+            Dim dtSet As DataTable = L_DosificacionAutomatica(cbSucursal.Value, tbFechaVenta.Value.ToString("yyyy/MM/dd"), cbsector.Value)
+            If dtSet.Rows.Count > 0 Then
+                If dtSet.Rows.Count = 0 Then
                     Dim img As Bitmap = New Bitmap(My.Resources.cancel, 50, 50)
                     ToastNotification.Show(Me, "no existe la dosificacion automatica habilitada para esta sucursal, por lo tanto no se puede realizar la facturacion automatica".ToUpper, img, 4000, eToastGlowColor.Red, eToastPosition.BottomCenter)
                     Return
@@ -1785,8 +1785,15 @@ Public Class F1_ServicioVenta
     Public Sub _prListarServiciosLavadero()
 
         Dim dt As DataTable
+        If (cbsector.Value = 3) Then
 
-        dt = L_fnListarVentaLavadero(CType(grventasLavadero.DataSource, DataTable))
+            dt = L_fnListarVentaLavadero(CType(grventasLavadero.DataSource, DataTable))
+        End If
+        If (cbsector.Value = 8) Then
+            dt = L_fnListarVentaLavaderoProductos(CType(grventasLavadero.DataSource, DataTable))
+
+        End If
+
         dt = _prlimpiardatatble(dt)
         'a.ldnumi ,ldnord,a.ldtcl11veh ,vehiculo .lbplac as placas,a.ldsuc ,a.ldfdoc ,a.ldtcl1cli ,cliente .lanom as nombre,a.ldfvcr ,a.ldtpago ,a.ldest ,Sum(detalle .lcptot)as total 
 
@@ -1955,7 +1962,7 @@ Public Class F1_ServicioVenta
     Private Sub tbsecnumi_KeyDown(sender As Object, e As KeyEventArgs) Handles tbsecnumi.KeyDown
         If (_fnAccesible()) Then
             If e.KeyData = Keys.Control + Keys.Enter Then
-                If (cbsector.Value = 3) Then
+                If (cbsector.Value = 3 Or cbsector.Value = 8) Then
                     _prListarServiciosLavadero()
                     Return
                 End If
@@ -1967,6 +1974,7 @@ Public Class F1_ServicioVenta
                     _prListarServiciosCabañas()
                     Return
                 End If
+
                 tbsecnumi.Clear()
                 tbsecnumi.ReadOnly = True
             End If
@@ -2569,7 +2577,8 @@ Public Class F1_ServicioVenta
     End Sub
     Private Sub P_prImprimirFacturar(numi As String, impFactura As Boolean, grabarPDF As Boolean, carta As Boolean)
         Dim _Fecha, _FechaAl As Date
-        Dim _Ds, _Ds1, _Ds2, _Ds3 As New DataSet
+        Dim _Ds, _Ds2, _Ds3 As New DataSet
+        Dim _Ds1 As DataTable
         Dim _Autorizacion, _Nit, _Fechainv, _Total, _Key, _Cod_Control, _Hora,
             _Literal, _TotalDecimal, _TotalDecimal2 As String
         Dim I, _NumFac, _numidosif, _TotalCC As Integer
@@ -2582,11 +2591,10 @@ Public Class F1_ServicioVenta
 
         _Fecha = tbFechaVenta.Value '.ToString("dd/MM/yyyy")
         _Hora = Now.Hour.ToString + ":" + Now.Minute.ToString
-        _Ds1 = L_Dosificacion("1", cbSucursal.Value, _Fecha.ToString("yyyy/MM/dd"))
-
+        _Ds1 = L_DosificacionAutomatica(cbSucursal.Value, _Fecha.ToString("yyyy/MM/dd"), cbsector.Value)
         _Ds = L_Reporte_Factura(numi, numi)
-        _Autorizacion = _Ds1.Tables(0).Rows(0).Item("sbautoriz").ToString
-        _NumFac = CInt(_Ds1.Tables(0).Rows(0).Item("sbnfac")) + 1
+        _Autorizacion = _Ds1.Rows(0).Item("sbautoriz").ToString
+        _NumFac = CInt(_Ds1.Rows(0).Item("sbnfac")) + 1
         _Nit = _Ds.Tables(0).Rows(0).Item("fvanitcli").ToString
         _Fechainv = _Fecha.Year.ToString +
                    _CompletarMonth(_Fecha.Month).Trim +
@@ -2596,9 +2604,9 @@ Public Class F1_ServicioVenta
         '            Microsoft.VisualBasic.Left(_Fecha.ToShortDateString, 2)
         _Total = _Ds.Tables(0).Rows(0).Item("fvatotal").ToString
         ice = _Ds.Tables(0).Rows(0).Item("fvaimpsi")
-        _numidosif = _Ds1.Tables(0).Rows(0).Item("sbnumi").ToString
-        _Key = _Ds1.Tables(0).Rows(0).Item("sbkey")
-        _FechaAl = _Ds1.Tables(0).Rows(0).Item("sbfal")
+        _numidosif = _Ds1.Rows(0).Item("sbnumi").ToString
+        _Key = _Ds1.Rows(0).Item("sbkey")
+        _FechaAl = _Ds1.Rows(0).Item("sbfal")
 
         Dim maxNFac As Integer = L_fnObtenerMaxIdTabla("TFV001", "fvanfac", "fvaautoriz = " + _Autorizacion)
         _NumFac = maxNFac + 1
@@ -2682,7 +2690,7 @@ Public Class F1_ServicioVenta
             objrep.SetDataSource(dt)
             objrep.SetParameterValue("nroFactura", _CompletarNroFactura(_Ds.Tables(0).Rows(0).Item("fvanfac")))
             objrep.SetParameterValue("nroAutorizacion", _Ds.Tables(0).Rows(0).Item("fvaautoriz"))
-            objrep.SetParameterValue("MensajeContribuyente", "''" + _Ds1.Tables(0).Rows(0).Item("sbnota").ToString + "''.")
+            objrep.SetParameterValue("MensajeContribuyente", "''" + _Ds1.Rows(0).Item("sbnota").ToString + "''.")
             objrep.SetParameterValue("nit", _Ds2.Tables(0).Rows(0).Item("scnit").ToString)
             objrep.SetParameterValue("lugarFecha", "Cochabamba, " + Str(tbFechaVenta.Value.Day) + " De " + MonthName(tbFechaVenta.Value.Month) + " De " + Str(tbFechaVenta.Value.Year))
             objrep.SetParameterValue("nombreFactura", TbNombre1.Text)
@@ -2692,7 +2700,7 @@ Public Class F1_ServicioVenta
             Dim FechaEmision As Date = _Ds.Tables(0).Rows(0).Item("fvaflim")
             objrep.SetParameterValue("FechaLimiteEmision", _CompletarMonth(FechaEmision.Day).Trim + "/" + _CompletarMonth(FechaEmision.Month).Trim + "/" + _CompletarMonth(FechaEmision.Year).Trim)
             objrep.SetParameterValue("glosa", tbObservacion.Text)
-            objrep.SetParameterValue("mensaje2", _Ds1.Tables(0).Rows(0).Item("sbnota2").ToString)
+            objrep.SetParameterValue("mensaje2", _Ds1.Rows(0).Item("sbnota2").ToString)
 
             Dim dtSucursal As DataTable = L_fnDosificacionObtenerDatosSucursal(cbSucursal.Value)
             If dtSucursal.Rows.Count > 0 Then
@@ -3101,14 +3109,17 @@ Public Class F1_ServicioVenta
                 _prCargarTablaNroOrdenLavadero("-1", 16)
             End If
 
-            If (cbsector.Value = 3 Or cbsector.Value = 4 Or cbsector.Value = -10) Then
+            If (cbsector.Value = 3 Or cbsector.Value = 4 Or cbsector.Value = -10 Or cbsector.Value = 8) Then
                 CType(grdetalle.DataSource, DataTable).Rows.Clear()
                 SuperTabItem2.Visible = True
             End If
             If (cbsector.Value = 2 Or cbsector.Value = 1 Or cbsector.Value = -5 Or cbsector.Value > 4) Then
-                CType(grdetalle.DataSource, DataTable).Rows.Clear()
-                _prAddDetalleVenta()
-                SuperTabItem2.Visible = False
+                If (Not cbsector.Value = 8) Then
+                    CType(grdetalle.DataSource, DataTable).Rows.Clear()
+                    _prAddDetalleVenta()
+                    SuperTabItem2.Visible = False
+                End If
+
             End If
             If (cbsector.ReadOnly = False) Then
                 '_Limpiar()
@@ -3121,7 +3132,7 @@ Public Class F1_ServicioVenta
 
             End If
         End If
-        If (cbsector.Value = 3 Or cbsector.Value = 4 Or cbsector.Value = -10) Then
+        If (cbsector.Value = 3 Or cbsector.Value = 4 Or cbsector.Value = -10 Or cbsector.Value = 8) Then
 
             SuperTabItem2.Visible = True
         End If

@@ -23,6 +23,8 @@ Public Class F1_Dosificacion
         L_prAbrirConexion(gs_Ip, gs_UsuarioSql, gs_ClaveSql, gs_NombreBD)
         _prCargarComboCompania(CbCompania)
         _prCargarComboAlmacen(CbAlmacen)
+
+        _prCargarComboModulos(cbModulos)
         Me.Text = "DOSIFICACIÓN"
         Me.TbCodigo.ReadOnly = True
 
@@ -34,7 +36,21 @@ Public Class F1_Dosificacion
         'Me.Icon = ico
 
     End Sub
-
+    Private Sub _prCargarComboModulos(mCombo As Janus.Windows.GridEX.EditControls.MultiColumnCombo)
+        Dim dt As New DataTable
+        dt = L_fnListarModulos()
+        With mCombo
+            .DropDownList.Columns.Clear()
+            .DropDownList.Columns.Add("cod").Width = 60
+            .DropDownList.Columns("cod").Caption = "COD"
+            .DropDownList.Columns.Add("desc").Width = 500
+            .DropDownList.Columns("desc").Caption = "Modulo"
+            .ValueMember = "cod"
+            .DisplayMember = "desc"
+            .DataSource = dt
+            .Refresh()
+        End With
+    End Sub
     Private Sub _prCargarComboCompania(mCombo As Janus.Windows.GridEX.EditControls.MultiColumnCombo)
         Dim dt As New DataTable
         dt = L_fnListarCompaniaDosificacion()
@@ -101,7 +117,7 @@ Public Class F1_Dosificacion
 
         tbinicial.IsInputReadOnly = False
         tbfinal.IsInputReadOnly = False
-
+        cbModulos.ReadOnly = False
         CbCompania.ReadOnly = False
         CbAlmacen.ReadOnly = False
 
@@ -126,7 +142,7 @@ Public Class F1_Dosificacion
     Public Overrides Sub _PMOInhabilitar()
         CbCompania.ReadOnly = True
         CbAlmacen.ReadOnly = True
-
+        cbModulos.ReadOnly = True
         tbinicial.IsInputReadOnly = True
         tbfinal.IsInputReadOnly = True
 
@@ -163,7 +179,7 @@ Public Class F1_Dosificacion
         TbLlave.Clear()
         TbNota1.Clear()
         TbNota2.Clear()
-
+        cbModulos.Value = 1
         DtiFechaIni.Value = Now.Date
         DtiFechaLim.Value = Now.Date.AddMonths(6)
 
@@ -200,7 +216,7 @@ Public Class F1_Dosificacion
                                                     DtiFechaLim.Value.ToString("yyyy/MM/dd"),
                                                     TbNota1.Text.Trim,
                                                     TbNota2.Text.Trim,
-                                                    IIf(SbEstado.Value, "1", "0"), IIf(swtipo.Value, 1, 0), tbinicial.Value, tbfinal.Value)
+                                                    IIf(SbEstado.Value, "1", "0"), IIf(swtipo.Value, 1, 0), tbinicial.Value, tbfinal.Value, cbModulos.Value)
         If res Then
             Dim img As Bitmap = New Bitmap(My.Resources.checked, 50, 50)
             ToastNotification.Show(Me,
@@ -236,7 +252,7 @@ Public Class F1_Dosificacion
                                         DtiFechaLim.Value.ToString("yyyy/MM/dd"),
                                         TbNota1.Text.Trim,
                                         TbNota2.Text.Trim,
-                                        IIf(SbEstado.Value, "1", "0"), IIf(swtipo.Value, 1, 0), tbinicial.Value, tbfinal.Value)
+                                        IIf(SbEstado.Value, "1", "0"), IIf(swtipo.Value, 1, 0), tbinicial.Value, tbfinal.Value, cbModulos.Value)
         If res Then
             Dim img As Bitmap = New Bitmap(My.Resources.checked, 50, 50)
             ToastNotification.Show(Me, "Código de dosificación ".ToUpper + TbCodigo.Text + " modificado con Exito.".ToUpper,
@@ -430,6 +446,7 @@ Public Class F1_Dosificacion
         listEstCeldas.Add(New Modelos.Celda("tipo", False))
         listEstCeldas.Add(New Modelos.Celda("inicio", False))
         listEstCeldas.Add(New Modelos.Celda("final", False))
+        listEstCeldas.Add(New Modelos.Celda("sbmodulo", False))
         Return listEstCeldas
     End Function
 
@@ -452,6 +469,7 @@ Public Class F1_Dosificacion
             TbLlave.Text = .GetValue("key").ToString
             DtiFechaIni.Value = .GetValue("fdel")
             DtiFechaLim.Value = .GetValue("fal")
+            cbModulos.Value = .GetValue("sbmodulo")
             TbNota1.Text = .GetValue("nota").ToString
             TbNota2.Text = .GetValue("nota2").ToString
             SbEstado.Value = .GetValue("est")
