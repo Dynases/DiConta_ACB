@@ -2663,6 +2663,14 @@ Public Class F1_ServicioVenta
                             CStr(numi))
 
         _Ds = L_Reporte_Factura(numi, numi)
+        Dim sector As Integer = cbsector.Value
+        Dim dtActividad As DataTable = L_ObtenerActividadEconomica(sector)
+        Dim ActividadEconomica As String = ""
+        If (dtActividad.Rows.Count > 0) Then
+            ActividadEconomica = dtActividad.Rows(0).Item(0)
+
+        End If
+
         Dim dt As DataTable = L_fnFacturaLavadero(numi)
         For j As Integer = 0 To dt.Rows.Count - 1 Step 1
             dt.Rows(j).Item("img") = P_fnImageToByteArray(QrFactura.Image)
@@ -2716,7 +2724,7 @@ Public Class F1_ServicioVenta
             objrep.SetParameterValue("FechaLimiteEmision", _CompletarMonth(FechaEmision.Day).Trim + "/" + _CompletarMonth(FechaEmision.Month).Trim + "/" + _CompletarMonth(FechaEmision.Year).Trim)
             objrep.SetParameterValue("glosa", tbObservacion.Text)
             objrep.SetParameterValue("mensaje2", _Ds1.Rows(0).Item("sbnota2").ToString)
-
+            objrep.SetParameterValue("actividadEconomica", ActividadEconomica)
             Dim dtSucursal As DataTable = L_fnDosificacionObtenerDatosSucursal(cbSucursal.Value)
             If dtSucursal.Rows.Count > 0 Then
                 objrep.SetParameterValue("nroSucursal", dtSucursal.Rows(0).Item("caconcep1").ToString)
@@ -2817,6 +2825,13 @@ Public Class F1_ServicioVenta
 
 
         _Ds = L_Reporte_Factura(numi, numi)
+        Dim sector As Integer = cbsector.Value
+        Dim dtActividad As DataTable = L_ObtenerActividadEconomica(sector)
+        Dim ActividadEconomica As String = ""
+        If (dtActividad.Rows.Count > 0) Then
+            ActividadEconomica = dtActividad.Rows(0).Item(0)
+
+        End If
         Dim dt As DataTable = L_fnFacturaLavadero(numi)
         For j As Integer = 0 To dt.Rows.Count - 1 Step 1
             dt.Rows(j).Item("img") = P_fnImageToByteArray(QrFactura.Image)
@@ -2874,7 +2889,7 @@ Public Class F1_ServicioVenta
             objrep.SetParameterValue("FechaLimiteEmision", _CompletarMonth(FechaEmision.Day).Trim + "/" + _CompletarMonth(FechaEmision.Month).Trim + "/" + _CompletarMonth(FechaEmision.Year).Trim)
             objrep.SetParameterValue("glosa", tbObservacion.Text)
             objrep.SetParameterValue("mensaje2", _Ds1.Tables(0).Rows(0).Item("sbnota2").ToString)
-
+            objrep.SetParameterValue("actividadEconomica", ActividadEconomica)
             Dim dtSucursal As DataTable = L_fnDosificacionObtenerDatosSucursal(cbSucursal.Value)
             If dtSucursal.Rows.Count > 0 Then
                 objrep.SetParameterValue("nroSucursal", dtSucursal.Rows(0).Item("caconcep1").ToString)

@@ -4321,6 +4321,19 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
 
         Return _Tabla
     End Function
+
+    Public Shared Function L_ObtenerActividadEconomica(modulo As Integer) As DataTable
+        Dim _Tabla As DataTable
+
+        Dim _listParam As New List(Of Datos.DParametro)
+
+        _listParam.Add(New Datos.DParametro("@tipo", 24))
+        _listParam.Add(New Datos.DParametro("@vcuact", L_Usuario))
+        _listParam.Add(New Datos.DParametro("@modulo", modulo))
+        _Tabla = D_ProcedimientoConParam("sp_Mam_TV002", _listParam)
+
+        Return _Tabla
+    End Function
     Public Shared Function L_fnGeneralLibreriaLavadero() As DataTable
         Dim _Tabla As DataTable
 

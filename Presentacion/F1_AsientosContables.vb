@@ -1228,7 +1228,7 @@ Public Class F1_AsientosContables
                                     Dim TotalSus As Double = Round(to3Decimales(totales / (tbTipoCambio.Value)), 2)
                                     tabla.Rows.Add(numiCuenta, DBNull.Value, "IT ADMINISTRACION SOCIOS" + " DEL " + tbFechaI.Value.ToString("dd/MM/yyyy") + " AL " + tbFechaF.Value.ToString("dd/MM/yyyy"), DBNull.Value, DBNull.Value, DBNull.Value, tbTipoCambio.Value, totales, DBNull.Value, TotalSus, DBNull.Value, Administracion, Linea)
                                 End If
-                                If (categoria = 3) Then   '''Servicios Lavadero
+                                If (categoria = 3 Or categoria = 8) Then   '''Servicios Lavadero
                                     Dim conversion As Double = (total * (porcentaje / 100))
                                     conversion = to3Decimales(conversion)
                                     Dim totales As Double = Round(conversion, 2)
@@ -1373,7 +1373,7 @@ Public Class F1_AsientosContables
                                     End If
                                 End If
 
-                                If (categoria = 3) Then  '''Lavadero
+                                If (categoria = 3 Or categoria = 8) Then  '''Lavadero
                                     dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(1, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
                                     total = dtserviciostotalcuentacobrar.Rows(0).Item("total")
 
@@ -1688,7 +1688,7 @@ Public Class F1_AsientosContables
                                         End If
 
                                     End If
-                                    If (categoria = 3) Then
+                                    If (categoria = 3 Or categoria = 8) Then
                                         If (CatDiferente <> categoria) Then
                                             tabla.Rows.Add(DtNumiCuentaPorCobrar.Rows(0).Item("cuenta"), DBNull.Value, "LAVADERO", DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, Lavadero, Linea)
                                             Linea += 1
