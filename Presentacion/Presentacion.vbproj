@@ -77,71 +77,83 @@
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.Design, Version=12.5.0.2, Culture=neutral, PublicKeyToken=2c9ff1fddc42653c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\librerias\DotNet\DevComponents.DotNetBar.Design.dll</HintPath>
+    </Reference>
     <Reference Include="DevComponents.DotNetBar.Keyboard, Version=12.5.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\MArco\DotNet\DevComponents.DotNetBar.Keyboard.dll</HintPath>
+      <HintPath>C:\librerias\DotNet\DevComponents.DotNetBar.Keyboard.dll</HintPath>
     </Reference>
     <Reference Include="DevComponents.DotNetBar.Layout, Version=12.5.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\MArco\DotNet\DevComponents.DotNetBar.Layout.dll</HintPath>
+      <HintPath>C:\librerias\DotNet\DevComponents.DotNetBar.Layout.dll</HintPath>
     </Reference>
     <Reference Include="DevComponents.DotNetBar.Layout.Design, Version=12.5.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\MArco\DotNet\DevComponents.DotNetBar.Layout.Design.dll</HintPath>
+      <HintPath>C:\librerias\DotNet\DevComponents.DotNetBar.Layout.Design.dll</HintPath>
     </Reference>
     <Reference Include="DevComponents.DotNetBar.Schedule, Version=12.5.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\MArco\DotNet\DevComponents.DotNetBar.Schedule.dll</HintPath>
+      <HintPath>C:\librerias\DotNet\DevComponents.DotNetBar.Schedule.dll</HintPath>
     </Reference>
     <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=12.5.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\MArco\DotNet\DevComponents.DotNetBar.SuperGrid.dll</HintPath>
+      <HintPath>C:\librerias\DotNet\DevComponents.DotNetBar.SuperGrid.dll</HintPath>
     </Reference>
     <Reference Include="DevComponents.DotNetBar2, Version=12.5.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\MArco\DotNet\DevComponents.DotNetBar2.dll</HintPath>
+      <HintPath>C:\librerias\DotNet\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
     <Reference Include="DevComponents.Instrumentation, Version=12.5.0.2, Culture=neutral, PublicKeyToken=bc4a9d761ea44ef0, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\MArco\DotNet\DevComponents.Instrumentation.dll</HintPath>
+      <HintPath>C:\librerias\DotNet\DevComponents.Instrumentation.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.Instrumentation.Design, Version=12.5.0.2, Culture=neutral, PublicKeyToken=30cefae8f341f577, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\librerias\DotNet\DevComponents.Instrumentation.Design.dll</HintPath>
     </Reference>
     <Reference Include="DevComponents.SuperGrid.Design, Version=12.5.0.2, Culture=neutral, PublicKeyToken=1fea3f5d8d482bff, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\MArco\DotNet\DevComponents.SuperGrid.Design.dll</HintPath>
+      <HintPath>C:\librerias\DotNet\DevComponents.SuperGrid.Design.dll</HintPath>
     </Reference>
     <Reference Include="DevComponents.TreeGX, Version=12.5.0.2, Culture=neutral, PublicKeyToken=cfcbd7476b2389d1, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\MArco\DotNet\DevComponents.TreeGX.dll</HintPath>
+      <HintPath>C:\librerias\DotNet\DevComponents.TreeGX.dll</HintPath>
     </Reference>
     <Reference Include="Gma.QrCodeNet.Encoding">
-      <HintPath>..\..\..\Google Drive\Librerias\QrCode\Gma.QrCodeNet.Encoding.dll</HintPath>
+      <HintPath>C:\librerias\QrCode\Gma.QrCodeNet.Encoding.dll</HintPath>
     </Reference>
     <Reference Include="GMap.NET.Core">
-      <HintPath>..\..\..\Google Drive\Librerias\GMap\GMap.NET.Core.dll</HintPath>
+      <HintPath>C:\librerias\Gmap\GMap.NET.Core.dll</HintPath>
     </Reference>
     <Reference Include="GMap.NET.WindowsForms">
-      <HintPath>..\..\..\Google Drive\Librerias\GMap\GMap.NET.WindowsForms.dll</HintPath>
+      <HintPath>C:\librerias\Gmap\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.AcroPDFLib.1.0">
+      <HintPath>C:\librerias\Interop.AcroPDFLib.1.0.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Janus.Data.v3">
-      <HintPath>..\..\..\Google Drive\Librerias\Janus\Janus.Data.v3.dll</HintPath>
+      <HintPath>C:\librerias\Janus\Janus.Data.v3.dll</HintPath>
     </Reference>
     <Reference Include="Janus.Windows.CalendarCombo.v3">
-      <HintPath>..\..\..\Google Drive\Librerias\Janus\Janus.Windows.CalendarCombo.v3.dll</HintPath>
+      <HintPath>C:\librerias\Janus\Janus.Windows.CalendarCombo.v3.dll</HintPath>
     </Reference>
     <Reference Include="Janus.Windows.Common.v3">
-      <HintPath>..\..\..\Google Drive\Librerias\Janus\Janus.Windows.Common.v3.dll</HintPath>
+      <HintPath>C:\librerias\Janus\Janus.Windows.Common.v3.dll</HintPath>
     </Reference>
     <Reference Include="Janus.Windows.GridEX.v3">
-      <HintPath>..\..\..\Google Drive\Librerias\Janus\Janus.Windows.GridEX.v3.dll</HintPath>
+      <HintPath>C:\librerias\Janus\Janus.Windows.GridEX.v3.dll</HintPath>
     </Reference>
     <Reference Include="Janus.Windows.Ribbon.v3">
-      <HintPath>..\..\..\Google Drive\Librerias\Janus\Janus.Windows.Ribbon.v3.dll</HintPath>
+      <HintPath>C:\librerias\Janus\Janus.Windows.Ribbon.v3.dll</HintPath>
     </Reference>
     <Reference Include="Janus.Windows.UI.v3">
-      <HintPath>..\..\..\Google Drive\Librerias\Janus\Janus.Windows.UI.v3.dll</HintPath>
+      <HintPath>C:\librerias\Janus\Janus.Windows.UI.v3.dll</HintPath>
     </Reference>
     <Reference Include="OnBarcode.Barcode.WinForms">
-      <HintPath>..\..\..\Google Drive\Librerias\QrCode\OnBarcode.Barcode.WinForms.dll</HintPath>
+      <HintPath>C:\librerias\QrCode\OnBarcode.Barcode.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -1460,15 +1472,6 @@
     <None Include="Resources\reload-5.png" />
   </ItemGroup>
   <ItemGroup>
-    <COMReference Include="AcroPDFLib">
-      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
     <COMReference Include="AxAcroPDFLib">
       <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
       <VersionMajor>1</VersionMajor>
