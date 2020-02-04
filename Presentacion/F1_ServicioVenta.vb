@@ -2529,7 +2529,7 @@ Public Class F1_ServicioVenta
                 End If
             End If
 
-            Dim dtActividad As DataTable = L_ObtenerActividadEconomica(sector)
+            Dim dtActividad As DataTable = L_ObtenerActividadEconomica(cbsector.Value)
             Dim ActividadEconomica As String = ""
             If (dtActividad.Rows.Count > 0) Then
                 ActividadEconomica = dtActividad.Rows(0).Item(0)
