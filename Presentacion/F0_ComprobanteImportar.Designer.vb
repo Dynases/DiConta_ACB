@@ -208,6 +208,7 @@ Partial Class F0_ComprobanteImportar
         '
         Me.grDetalle.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.[False]
         Me.grDetalle.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.grDetalle.EnterKeyBehavior = Janus.Windows.GridEX.EnterKeyBehavior.None
         Me.grDetalle.Location = New System.Drawing.Point(0, 0)
         Me.grDetalle.Margin = New System.Windows.Forms.Padding(4)
         Me.grDetalle.Name = "grDetalle"

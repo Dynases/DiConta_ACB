@@ -275,6 +275,10 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
 
         '_PMOLimpiar()
 
+        If (CType(tbTipo.DataSource, DataTable).Rows.Count > 0) Then
+            tbTipo.Value = 1
+
+        End If
     End Sub
 
     Private Sub _PMModificar()
@@ -409,15 +413,36 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         dt = L_prComprobanteDetalleGeneral(numi)
 
         If vacio = 1 Then
-            For Each fila As DataRow In dt.Rows
-                fila.Item("obdebebs") = 0
-                fila.Item("obhaberbs") = 0
-                fila.Item("obdebeus") = 0
-                fila.Item("obhaberus") = 0
-                fila.Item("estado") = 0
-                fila.Item("obtc") = tbTipoCambio.Value
+            Dim ef = New Efecto
+            ef.tipo = 2
+            ef.Context = "Diconta".ToUpper
+            ef.Header = "¿Desea Importar los montos del comprobante?".ToUpper
+            ef.ShowDialog()
+            Dim bandera As Boolean = False
+            bandera = ef.band
+            If (bandera = True) Then
+                For Each fila As DataRow In dt.Rows
+                    'fila.Item("obdebebs") = 0
+                    'fila.Item("obhaberbs") = 0
+                    'fila.Item("obdebeus") = 0
+                    'fila.Item("obhaberus") = 0
+                    fila.Item("estado") = 0
+                    fila.Item("obtc") = tbTipoCambio.Value
 
-            Next
+                Next
+            Else
+                For Each fila As DataRow In dt.Rows
+                    fila.Item("obdebebs") = 0
+                    fila.Item("obhaberbs") = 0
+                    fila.Item("obdebeus") = 0
+                    fila.Item("obhaberus") = 0
+                    fila.Item("estado") = 0
+                    fila.Item("obtc") = tbTipoCambio.Value
+
+                Next
+            End If
+
+
         End If
         grDetalle.DataSource = dt
         grDetalle.RetrieveStructure()
@@ -2873,7 +2898,15 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         Dim f As Integer = grAyudaCuenta.Row
         Dim c As Integer = grAyudaCuenta.Col
         If e.KeyData = Keys.Enter And c >= 0 And f >= 0 And btnGrabar.Enabled = True Then
+
+
             If grAyudaCuenta.Tag = 0 Then 'significa que esta poniendo una cuenta
+                If (grAyudaCuenta.GetValue("caniv") <= 4) Then
+                    ToastNotification.Show(Me, "Error: La cuenta seleccionada no corresponde a una cuenta operacional".ToUpper, My.Resources.WARNING, 3000, eToastGlowColor.Blue, eToastPosition.TopCenter)
+
+                    Return
+
+                End If
                 If True Then 'grAyudaCuenta.GetValue("caniv") = 5
                     Dim numiCuenta As String = grAyudaCuenta.GetValue("canumi")
                     Dim cod As String = grAyudaCuenta.GetValue("cacta")
@@ -2972,114 +3005,114 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
             End If
 
             If grAyudaCuenta.Tag = -1 Then 'significa que esta ingresando cliente de cuenta por cobrar
-                Dim numiCliente As String = grAyudaCuenta.GetValue("cjnumi").ToString
-                Dim desc As String = grAyudaCuenta.GetValue(("cjnombre")).ToString
+                    Dim numiCliente As String = grAyudaCuenta.GetValue("cjnumi").ToString
+                    Dim desc As String = grAyudaCuenta.GetValue(("cjnombre")).ToString
 
-                grDetalle.SetValue("numiCobrar", numiCliente)
-                grDetalle.SetValue("descCobrar", desc)
-                grDetalle.SetValue("obobs", desc)
+                    grDetalle.SetValue("numiCobrar", numiCliente)
+                    grDetalle.SetValue("descCobrar", desc)
+                    grDetalle.SetValue("obobs", desc)
 
-                'verificar si tiene aux1 para mandarlo a buscar el auxiliar 1
-                If grDetalle.GetValue("numAux") >= 1 Then
-                    _prCargarGridAyudaAuxiliar(1, _numiAuxMod)
-                Else
-                    grDetalle.Focus()
-                    grDetalle.Col = grDetalle.RootTable.Columns("obobs").Index
+                    'verificar si tiene aux1 para mandarlo a buscar el auxiliar 1
+                    If grDetalle.GetValue("numAux") >= 1 Then
+                        _prCargarGridAyudaAuxiliar(1, _numiAuxMod)
+                    Else
+                        grDetalle.Focus()
+                        grDetalle.Col = grDetalle.RootTable.Columns("obobs").Index
 
-                    panelAyudaCuenta.Visible = False
+                        panelAyudaCuenta.Visible = False
+                    End If
+
+                    Return
                 End If
 
-                Return
-            End If
+                If grAyudaCuenta.Tag = -2 Then 'significa que esta ingresando cliente de cuenta por cobrar
+                    Dim numiCliente As String = grAyudaCuenta.GetValue("cjnumi").ToString
+                    Dim desc As String = grAyudaCuenta.GetValue(("cjnombre")).ToString
 
-            If grAyudaCuenta.Tag = -2 Then 'significa que esta ingresando cliente de cuenta por cobrar
-                Dim numiCliente As String = grAyudaCuenta.GetValue("cjnumi").ToString
-                Dim desc As String = grAyudaCuenta.GetValue(("cjnombre")).ToString
+                    grDetalle.SetValue("numiCobrar", numiCliente)
+                    grDetalle.SetValue("descCobrar", desc)
+                    grDetalle.SetValue("obobs", desc)
 
-                grDetalle.SetValue("numiCobrar", numiCliente)
-                grDetalle.SetValue("descCobrar", desc)
-                grDetalle.SetValue("obobs", desc)
+                    'verificar si tiene aux1 para mandarlo a buscar el auxiliar 1
+                    If grDetalle.GetValue("numAux") >= 1 Then
+                        _prCargarGridAyudaAuxiliar(1, _numiAuxMod)
+                    Else
+                        grDetalle.Focus()
+                        grDetalle.Col = grDetalle.RootTable.Columns("obobs").Index
 
-                'verificar si tiene aux1 para mandarlo a buscar el auxiliar 1
-                If grDetalle.GetValue("numAux") >= 1 Then
-                    _prCargarGridAyudaAuxiliar(1, _numiAuxMod)
-                Else
-                    grDetalle.Focus()
-                    grDetalle.Col = grDetalle.RootTable.Columns("obobs").Index
+                        panelAyudaCuenta.Visible = False
+                    End If
 
-                    panelAyudaCuenta.Visible = False
+                    Return
                 End If
 
-                Return
-            End If
+                If grAyudaCuenta.Tag = 1 Then 'significa que esta el auxiliar 1
+                    Dim numiAuxiliar As String = grAyudaCuenta.GetValue("cdnumi")
+                    Dim desc As String = grAyudaCuenta.GetValue(("cddesc"))
 
-            If grAyudaCuenta.Tag = 1 Then 'significa que esta el auxiliar 1
-                Dim numiAuxiliar As String = grAyudaCuenta.GetValue("cdnumi")
-                Dim desc As String = grAyudaCuenta.GetValue(("cddesc"))
+                    grDetalle.SetValue("obaux1", numiAuxiliar)
+                    grDetalle.SetValue("desc1", desc)
 
-                grDetalle.SetValue("obaux1", numiAuxiliar)
-                grDetalle.SetValue("desc1", desc)
+                    'verificar si tiene aux1 para mandarlo a buscar el auxiliar 1
+                    If grDetalle.GetValue("numAux") >= 2 Then
+                        _prCargarGridAyudaAuxiliar(2, _numiAuxSuc)
+                    Else
+                        grDetalle.Focus()
+                        grDetalle.Col = grDetalle.RootTable.Columns("obobs").Index
+                        'If grDetalle.GetValue("camon") = "BO" Then
+                        '    grDetalle.Col = grDetalle.RootTable.Columns("obdebebs").Index
+                        'Else
+                        '    grDetalle.Col = grDetalle.RootTable.Columns("obdebeus").Index
+                        'End If
 
-                'verificar si tiene aux1 para mandarlo a buscar el auxiliar 1
-                If grDetalle.GetValue("numAux") >= 2 Then
-                    _prCargarGridAyudaAuxiliar(2, _numiAuxSuc)
-                Else
+                        panelAyudaCuenta.Visible = False
+                    End If
+                    Return
+                End If
+
+                If grAyudaCuenta.Tag = 2 Then 'significa que esta el auxiliar 1
+                    Dim numiAuxiliar As String = grAyudaCuenta.GetValue("cdnumi")
+                    Dim desc As String = grAyudaCuenta.GetValue(("cddesc"))
+
+                    grDetalle.SetValue("obaux2", numiAuxiliar)
+                    grDetalle.SetValue("desc2", desc)
+
+                    'verificar si tiene aux1 para mandarlo a buscar el auxiliar 1
+                    If grDetalle.GetValue("numAux") >= 3 Then
+                        _prCargarGridAyudaAuxiliar(3, 0)
+                    Else
+                        grDetalle.Focus()
+                        grDetalle.Col = grDetalle.RootTable.Columns("obobs").Index
+
+                        'If grDetalle.GetValue("camon") = "BO" Then
+                        '    grDetalle.Col = grDetalle.RootTable.Columns("obdebebs").Index
+                        'Else
+                        '    grDetalle.Col = grDetalle.RootTable.Columns("obdebeus").Index
+                        'End If
+                        panelAyudaCuenta.Visible = False
+                    End If
+                    Return
+                End If
+
+                If grAyudaCuenta.Tag = 3 Then 'significa que esta el auxiliar 1
+                    Dim numiAuxiliar As String = grAyudaCuenta.GetValue("cdnumi")
+                    Dim desc As String = grAyudaCuenta.GetValue(("cddesc"))
+
+                    grDetalle.SetValue("obaux3", numiAuxiliar)
+                    grDetalle.SetValue("desc3", desc)
+
                     grDetalle.Focus()
                     grDetalle.Col = grDetalle.RootTable.Columns("obobs").Index
+
                     'If grDetalle.GetValue("camon") = "BO" Then
                     '    grDetalle.Col = grDetalle.RootTable.Columns("obdebebs").Index
                     'Else
                     '    grDetalle.Col = grDetalle.RootTable.Columns("obdebeus").Index
                     'End If
-
                     panelAyudaCuenta.Visible = False
+                    Return
                 End If
-                Return
             End If
-
-            If grAyudaCuenta.Tag = 2 Then 'significa que esta el auxiliar 1
-                Dim numiAuxiliar As String = grAyudaCuenta.GetValue("cdnumi")
-                Dim desc As String = grAyudaCuenta.GetValue(("cddesc"))
-
-                grDetalle.SetValue("obaux2", numiAuxiliar)
-                grDetalle.SetValue("desc2", desc)
-
-                'verificar si tiene aux1 para mandarlo a buscar el auxiliar 1
-                If grDetalle.GetValue("numAux") >= 3 Then
-                    _prCargarGridAyudaAuxiliar(3, 0)
-                Else
-                    grDetalle.Focus()
-                    grDetalle.Col = grDetalle.RootTable.Columns("obobs").Index
-
-                    'If grDetalle.GetValue("camon") = "BO" Then
-                    '    grDetalle.Col = grDetalle.RootTable.Columns("obdebebs").Index
-                    'Else
-                    '    grDetalle.Col = grDetalle.RootTable.Columns("obdebeus").Index
-                    'End If
-                    panelAyudaCuenta.Visible = False
-                End If
-                Return
-            End If
-
-            If grAyudaCuenta.Tag = 3 Then 'significa que esta el auxiliar 1
-                Dim numiAuxiliar As String = grAyudaCuenta.GetValue("cdnumi")
-                Dim desc As String = grAyudaCuenta.GetValue(("cddesc"))
-
-                grDetalle.SetValue("obaux3", numiAuxiliar)
-                grDetalle.SetValue("desc3", desc)
-
-                grDetalle.Focus()
-                grDetalle.Col = grDetalle.RootTable.Columns("obobs").Index
-
-                'If grDetalle.GetValue("camon") = "BO" Then
-                '    grDetalle.Col = grDetalle.RootTable.Columns("obdebebs").Index
-                'Else
-                '    grDetalle.Col = grDetalle.RootTable.Columns("obdebeus").Index
-                'End If
-                panelAyudaCuenta.Visible = False
-                Return
-            End If
-        End If
     End Sub
 
     Private Sub ButtonX2_Click(sender As Object, e As EventArgs) Handles ButtonX2.Click
@@ -3163,9 +3196,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         End If
     End Sub
 
-    Private Sub grAyudaCuenta_KeyPress(sender As Object, e As KeyPressEventArgs) Handles grAyudaCuenta.KeyPress
 
-    End Sub
 
     Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
         If grAyudaCuenta.Row >= 0 Then
@@ -3235,5 +3266,80 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
                 L_prComprobanteGrabarRespaldo(gi_userNumi, dtDetalle)
             End If
         End If
+    End Sub
+
+    Private Sub grdetalle_Enter(sender As Object, e As EventArgs) Handles grDetalle.Enter
+        grDetalle.Focus()
+        grDetalle.Select()
+        grDetalle.Col = 2
+        grDetalle.Row = 0
+
+    End Sub
+
+    Private Sub tbTipo_KeyDown(sender As Object, e As KeyEventArgs) Handles tbTipo.KeyDown
+        If e.KeyData = Keys.Enter Or e.KeyData = Keys.Tab Then
+            tbFecha.Focus()
+        End If
+    End Sub
+
+    Private Sub tbFecha_KeyDown(sender As Object, e As KeyEventArgs) Handles tbFecha.KeyDown
+        If e.KeyData = Keys.Enter Or e.KeyData = Keys.Tab Then
+            tbGlosa.Focus()
+        End If
+    End Sub
+
+    Private Sub tbGlosa_KeyDown(sender As Object, e As KeyEventArgs) Handles tbGlosa.KeyDown
+        If e.KeyData = Keys.Enter Or e.KeyData = Keys.Tab Then
+            tbObs.Focus()
+        End If
+    End Sub
+
+    Private Sub tbObs_KeyDown(sender As Object, e As KeyEventArgs) Handles tbObs.KeyDown
+        If e.KeyData = Keys.Enter Or e.KeyData = Keys.Tab Then
+            grDetalle.Focus()
+
+            If (grDetalle.RowCount = 1) Then
+                panelAyudaCuenta.Visible = True
+                _prIsBalanceado()
+                grDetalle.Row = grDetalle.RowCount - 1
+                _prCargarGridAyudaCuenta()
+            End If
+        End If
+    End Sub
+
+    Private Sub F0_Comprobante_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.KeyData = Keys.Alt + Keys.I Then
+            ButtonX2.Focus()
+            ButtonX2.PerformClick()
+
+            Return
+
+        End If
+        If btnGrabar.Enabled = True Then
+            If e.KeyData = Keys.Alt + Keys.S Then
+                btnGrabar.Focus()
+                btnGrabar.PerformClick()
+
+                Return
+
+            End If
+
+        End If
+
+        If e.KeyData = Keys.Alt + Keys.C Then
+            ButtonX4.Focus()
+            ButtonX4.PerformClick()
+
+            Return
+
+        End If
+        If e.KeyData = Keys.Alt + Keys.L Then
+            ButtonX3.Focus()
+            ButtonX3.PerformClick()
+
+            Return
+
+        End If
+
     End Sub
 End Class

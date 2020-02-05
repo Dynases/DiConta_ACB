@@ -128,4 +128,19 @@ Public Class F0_ComprobanteImportar
             _PMCargarBuscador()
         End If
     End Sub
+
+    Private Sub grDetalle_KeyDown(sender As Object, e As KeyEventArgs) Handles grDetalle.KeyDown
+        If e.KeyData = Keys.Enter Then
+            If grDetalle.Row >= 0 Then
+                filaSelect = grDetalle.GetRow()
+                seleccionado = True
+                Me.Close()
+            Else
+                ToastNotification.Show(Me, "seleccione alguna fila".ToUpper, My.Resources.WARNING, 3000, eToastGlowColor.Blue, eToastPosition.TopCenter)
+
+            End If
+        End If
+
+
+    End Sub
 End Class
