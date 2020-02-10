@@ -543,6 +543,16 @@ Public Class PR_LibroMayor
     End Sub
     Private Sub _prImprimir()
         If IsNothing(grDetalle.DataSource) = False Then
+            Dim Auxiliar01 As String = "Todos"
+            Dim Auxiliar02 As String = "Todos"
+            If swAuxiliar01.Value = False Then
+                Auxiliar01 = cbAuxiliar01.Text
+
+            End If
+            If swAuxiliar02.Value = False Then
+                Auxiliar02 = cbAuxiliar02.Text
+
+            End If
             Dim objrep As New R_LibroMayor
             Dim dt As DataTable = CType(grDetalle.DataSource, DataTable)
             If tbMeses.Value = True Then
@@ -566,6 +576,8 @@ Public Class PR_LibroMayor
             objrep.SetParameterValue("nroCuenta", tbNumi.Text)
             objrep.SetParameterValue("cuenta", tbCuenta.Text)
             objrep.SetParameterValue("moneda", tbMoneda.Value)
+            objrep.SetParameterValue("auxiliar01", Auxiliar01)
+            objrep.SetParameterValue("auxiliar02", Auxiliar02)
             If tbMeses.Value = True Then
                 objrep.SetParameterValue("conMeses", 1)
 
@@ -858,5 +870,9 @@ Public Class PR_LibroMayor
             lbAuxiliar02.Visible = True
             cbAuxiliar02.Visible = True
         End If
+    End Sub
+
+    Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
+
     End Sub
 End Class
