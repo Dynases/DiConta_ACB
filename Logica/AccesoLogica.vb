@@ -415,6 +415,55 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
         Return _Tabla
     End Function
 
+    Public Shared Function L_prCuentaReporteLibroMayorAuxiliar01(_numiCuenta As String, _fechaDel As String, _fechaAl As String, auxiliar01 As Integer) As DataTable
+        Dim _Tabla As DataTable
+
+        Dim _listParam As New List(Of Datos.DParametro)
+
+        _listParam.Add(New Datos.DParametro("@tipo", 500))
+        _listParam.Add(New Datos.DParametro("@canumi", _numiCuenta))
+        _listParam.Add(New Datos.DParametro("@fecha1", _fechaDel))
+        _listParam.Add(New Datos.DParametro("@fecha2", _fechaAl))
+        _listParam.Add(New Datos.DParametro("@uact", L_Usuario))
+        _listParam.Add(New Datos.DParametro("@numiAux", auxiliar01))
+        _Tabla = D_ProcedimientoConParam("sp_dg_TC001", _listParam)
+
+        Return _Tabla
+    End Function
+
+    Public Shared Function L_prCuentaReporteLibroMayorAuxiliar01AndAuxiliar02(_numiCuenta As String, _fechaDel As String, _fechaAl As String, auxiliar01 As Integer, auxiliar02 As Integer) As DataTable
+        Dim _Tabla As DataTable
+
+        Dim _listParam As New List(Of Datos.DParametro)
+
+        _listParam.Add(New Datos.DParametro("@tipo", 501))
+        _listParam.Add(New Datos.DParametro("@canumi", _numiCuenta))
+        _listParam.Add(New Datos.DParametro("@fecha1", _fechaDel))
+        _listParam.Add(New Datos.DParametro("@fecha2", _fechaAl))
+        _listParam.Add(New Datos.DParametro("@uact", L_Usuario))
+        _listParam.Add(New Datos.DParametro("@numiAux", auxiliar01))
+        _listParam.Add(New Datos.DParametro("@numiAux2", auxiliar02))
+        _Tabla = D_ProcedimientoConParam("sp_dg_TC001", _listParam)
+
+        Return _Tabla
+    End Function
+
+    Public Shared Function L_prCuentaReporteLibroMayorAuxiliar02(_numiCuenta As String, _fechaDel As String, _fechaAl As String, auxiliar02 As Integer) As DataTable
+        Dim _Tabla As DataTable
+
+        Dim _listParam As New List(Of Datos.DParametro)
+
+        _listParam.Add(New Datos.DParametro("@tipo", 502))
+        _listParam.Add(New Datos.DParametro("@canumi", _numiCuenta))
+        _listParam.Add(New Datos.DParametro("@fecha1", _fechaDel))
+        _listParam.Add(New Datos.DParametro("@fecha2", _fechaAl))
+        _listParam.Add(New Datos.DParametro("@uact", L_Usuario))
+        _listParam.Add(New Datos.DParametro("@numiAux2", auxiliar02))
+        _Tabla = D_ProcedimientoConParam("sp_dg_TC001", _listParam)
+
+        Return _Tabla
+    End Function
+
     Public Shared Function L_prCuentaReporteLibroMayorPorCliente(_numiCuenta As String, _fechaDel As String, _fechaAl As String, _numiCliente As String) As DataTable
         Dim _Tabla As DataTable
 
@@ -432,6 +481,57 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
         Return _Tabla
     End Function
 
+    Public Shared Function L_prCuentaReporteLibroMayorPorClienteAuxiliar01(_numiCuenta As String, _fechaDel As String, _fechaAl As String, _numiCliente As String, Auxiliar01 As Integer) As DataTable
+        Dim _Tabla As DataTable
+
+        Dim _listParam As New List(Of Datos.DParametro)
+
+        _listParam.Add(New Datos.DParametro("@tipo", 503))
+        _listParam.Add(New Datos.DParametro("@canumi", _numiCuenta))
+        _listParam.Add(New Datos.DParametro("@fecha1", _fechaDel))
+        _listParam.Add(New Datos.DParametro("@fecha2", _fechaAl))
+        _listParam.Add(New Datos.DParametro("@numiAux", _numiCliente))
+        _listParam.Add(New Datos.DParametro("@uact", L_Usuario))
+        _listParam.Add(New Datos.DParametro("@auxiliar01", Auxiliar01))
+        _Tabla = D_ProcedimientoConParam("sp_dg_TC001", _listParam)
+
+        Return _Tabla
+    End Function
+
+    Public Shared Function L_prCuentaReporteLibroMayorPorClienteAuxiliar01Auxiliar02(_numiCuenta As String, _fechaDel As String, _fechaAl As String, _numiCliente As String, Auxiliar01 As Integer, Auxiliar02 As Integer) As DataTable
+        Dim _Tabla As DataTable
+
+        Dim _listParam As New List(Of Datos.DParametro)
+
+        _listParam.Add(New Datos.DParametro("@tipo", 504))
+        _listParam.Add(New Datos.DParametro("@canumi", _numiCuenta))
+        _listParam.Add(New Datos.DParametro("@fecha1", _fechaDel))
+        _listParam.Add(New Datos.DParametro("@fecha2", _fechaAl))
+        _listParam.Add(New Datos.DParametro("@numiAux", _numiCliente))
+        _listParam.Add(New Datos.DParametro("@uact", L_Usuario))
+        _listParam.Add(New Datos.DParametro("@auxiliar01", Auxiliar01))
+        _listParam.Add(New Datos.DParametro("@auxiliar02", Auxiliar02))
+        _Tabla = D_ProcedimientoConParam("sp_dg_TC001", _listParam)
+
+        Return _Tabla
+    End Function
+
+    Public Shared Function L_prCuentaReporteLibroMayorPorClienteAuxiliar02(_numiCuenta As String, _fechaDel As String, _fechaAl As String, _numiCliente As String, Auxiliar02 As Integer) As DataTable
+        Dim _Tabla As DataTable
+
+        Dim _listParam As New List(Of Datos.DParametro)
+
+        _listParam.Add(New Datos.DParametro("@tipo", 505))
+        _listParam.Add(New Datos.DParametro("@canumi", _numiCuenta))
+        _listParam.Add(New Datos.DParametro("@fecha1", _fechaDel))
+        _listParam.Add(New Datos.DParametro("@fecha2", _fechaAl))
+        _listParam.Add(New Datos.DParametro("@numiAux", _numiCliente))
+        _listParam.Add(New Datos.DParametro("@uact", L_Usuario))
+        _listParam.Add(New Datos.DParametro("@auxiliar02", Auxiliar02))
+        _Tabla = D_ProcedimientoConParam("sp_dg_TC001", _listParam)
+
+        Return _Tabla
+    End Function
     Public Shared Function L_prCuentaGeneralBasicoParaParametros(_numiEmpresa As String) As DataTable
         Dim _Tabla As DataTable
 
@@ -1172,6 +1272,20 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
         Dim _listParam As New List(Of Datos.DParametro)
 
         _listParam.Add(New Datos.DParametro("@tipo", 4))
+        _listParam.Add(New Datos.DParametro("@ccnumi", _numi))
+        _listParam.Add(New Datos.DParametro("@uact", L_Usuario))
+
+        _Tabla = D_ProcedimientoConParam("sp_dg_TC003", _listParam)
+
+        Return _Tabla
+    End Function
+
+    Public Shared Function L_prAuxiliarDetalleGeneralAuxiliar(_numi As String) As DataTable
+        Dim _Tabla As DataTable
+
+        Dim _listParam As New List(Of Datos.DParametro)
+
+        _listParam.Add(New Datos.DParametro("@tipo", 5))
         _listParam.Add(New Datos.DParametro("@ccnumi", _numi))
         _listParam.Add(New Datos.DParametro("@uact", L_Usuario))
 

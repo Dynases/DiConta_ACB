@@ -1414,7 +1414,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
     Private Sub _prCargarGridAyudaAuxiliar(pos As Integer, numiAux As Integer)
 
         Dim dt, dtAuxiliaresCuenta As DataTable
-
+        '' here
         dtAuxiliaresCuenta = L_prCuentaDetalleGeneral(grDetalle.GetValue("obcuenta"))
 
         dt = L_prAuxiliarDetalleGeneral(dtAuxiliaresCuenta.Rows(pos - 1).Item("cenumitc3"))

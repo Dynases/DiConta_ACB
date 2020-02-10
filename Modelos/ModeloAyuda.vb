@@ -12,10 +12,12 @@ Public Class ModeloAyuda
     Public filaSelect As Janus.Windows.GridEX.GridEXRow
 
     Public listEstrucGrilla As List(Of Celda)
+    Public bandera As Boolean
+
 #End Region
 
 #Region "METODOS PRIVADOS"
-    Public Sub New(ByVal x As Integer, y As Integer, dt1 As DataTable, titulo As String, listEst As List(Of Celda))
+    Public Sub New(ByVal x As Integer, y As Integer, dt1 As DataTable, titulo As String, listEst As List(Of Celda), Optional b As Boolean = False)
         dtBuscador = dt1
         posX = x
         posY = y
@@ -29,7 +31,7 @@ Public Class ModeloAyuda
         Else
             Me.Location = New Point(posX, posY)
         End If
-
+        bandera = b
         GPPanelP.Text = titulo
 
         listEstrucGrilla = listEst
@@ -37,6 +39,15 @@ Public Class ModeloAyuda
         seleccionado = False
 
         _PMCargarBuscador()
+
+        If (bandera = True) Then
+            Dim fc As GridEXFormatCondition
+            'setear todas las que son mayores
+            fc = New GridEXFormatCondition(grJBuscador.RootTable.Columns("nivel"), ConditionOperator.LessThanOrEqualTo, 4)
+            fc.FormatStyle.FontBold = TriState.True
+            fc.FormatStyle.ForeColor = Color.Red
+            grJBuscador.RootTable.FormatConditions.Add(fc)
+        End If
         'grJBuscador.Row = grJBuscador.FilterRow.RowIndex
         'grJBuscador.Col = 1
 

@@ -16,6 +16,32 @@ Public Class PR_LibroMayor
         tbFechaAl.Value = Now.Date
         _prCargarComboMoneda()
         tbReferencia.Enabled = False
+        _prCargarComboLibreria(cbAuxiliar01, 1)
+        _prCargarComboLibreria(cbAuxiliar02, 11)
+
+    End Sub
+
+    Private Sub _prCargarComboLibreria(mCombo As Janus.Windows.GridEX.EditControls.MultiColumnCombo, cod1 As Integer)
+        Dim dt As New DataTable
+        dt = L_prAuxiliarDetalleGeneralAuxiliar(cod1)
+
+        With mCombo
+            .DropDownList.Columns.Clear()
+
+            .DropDownList.Columns.Add("codigo").Width = 70
+            .DropDownList.Columns("codigo").Caption = "COD"
+
+            .DropDownList.Columns.Add("descripcion").Width = 200
+            .DropDownList.Columns("descripcion").Caption = "DESCRIPCION"
+
+            .ValueMember = "codigo"
+            .DisplayMember = "descripcion"
+            .DataSource = dt
+            .Refresh()
+        End With
+        If (dt.Rows.Count > 0) Then
+            mCombo.SelectedIndex = 0
+        End If
     End Sub
     Private Sub _prCargarComboMoneda()
         Dim dt As New DataTable
@@ -41,16 +67,56 @@ Public Class PR_LibroMayor
         End With
         tbMoneda.SelectedIndex = 0
     End Sub
+
+    Public Sub Interpretar(ByRef dt As DataTable)
+        If (swAuxiliar01.Value = True And swAuxiliar02.Value = True) Then
+            dt = L_prCuentaReporteLibroMayor(tbNumi.Tag.ToString.Trim, tbFechaDel.Value.ToString("yyyy/MM/dd"), tbFechaAl.Value.ToString("yyyy/MM/dd"))
+            Return
+
+        End If
+        If (swAuxiliar01.Value = False And swAuxiliar02.Value = True) Then '' Si selecciono una variable auxiliar 01 y la Aux02 es todos
+            dt = L_prCuentaReporteLibroMayorAuxiliar01(tbNumi.Tag.ToString.Trim, tbFechaDel.Value.ToString("yyyy/MM/dd"), tbFechaAl.Value.ToString("yyyy/MM/dd"), cbAuxiliar01.Value)
+            Return
+        End If
+        If (swAuxiliar01.Value = False And swAuxiliar02.Value = False) Then '' Si selecciono una variable auxiliar 01 y la Aux02 es todos
+            dt = L_prCuentaReporteLibroMayorAuxiliar01AndAuxiliar02(tbNumi.Tag.ToString.Trim, tbFechaDel.Value.ToString("yyyy/MM/dd"), tbFechaAl.Value.ToString("yyyy/MM/dd"), cbAuxiliar01.Value, cbAuxiliar02.Value)
+            Return
+        End If
+        If (swAuxiliar01.Value = True And swAuxiliar02.Value = False) Then '' Si selecciono una variable auxiliar 01 y la Aux02 es todos
+            dt = L_prCuentaReporteLibroMayorAuxiliar02(tbNumi.Tag.ToString.Trim, tbFechaDel.Value.ToString("yyyy/MM/dd"), tbFechaAl.Value.ToString("yyyy/MM/dd"), cbAuxiliar02.Value)
+            Return
+        End If
+    End Sub
+    Public Sub InterpretarPorCliente(ByRef dt As DataTable)
+        If (swAuxiliar01.Value = True And swAuxiliar02.Value = True) Then
+            dt = L_prCuentaReporteLibroMayorPorCliente(tbNumi.Tag.ToString.Trim, tbFechaDel.Value.ToString("yyyy/MM/dd"), tbFechaAl.Value.ToString("yyyy/MM/dd"), tbCliente.Tag)
+            Return
+
+        End If
+        If (swAuxiliar01.Value = False And swAuxiliar02.Value = True) Then '' Si selecciono una variable auxiliar 01 y la Aux02 es todos
+            dt = L_prCuentaReporteLibroMayorPorClienteAuxiliar01(tbNumi.Tag.ToString.Trim, tbFechaDel.Value.ToString("yyyy/MM/dd"), tbFechaAl.Value.ToString("yyyy/MM/dd"), tbCliente.Tag, cbAuxiliar01.Value)
+            Return
+        End If
+        If (swAuxiliar01.Value = False And swAuxiliar02.Value = False) Then '' Si selecciono una variable auxiliar 01 y la Aux02 es todos
+            dt = L_prCuentaReporteLibroMayorPorClienteAuxiliar01Auxiliar02(tbNumi.Tag.ToString.Trim, tbFechaDel.Value.ToString("yyyy/MM/dd"), tbFechaAl.Value.ToString("yyyy/MM/dd"), tbCliente.Tag, cbAuxiliar01.Value, cbAuxiliar02.Value)
+            Return
+        End If
+        If (swAuxiliar01.Value = True And swAuxiliar02.Value = False) Then '' Si selecciono una variable auxiliar 01 y la Aux02 es todos
+            dt = L_prCuentaReporteLibroMayorPorClienteAuxiliar02(tbNumi.Tag.ToString.Trim, tbFechaDel.Value.ToString("yyyy/MM/dd"), tbFechaAl.Value.ToString("yyyy/MM/dd"), tbCliente.Tag, cbAuxiliar02.Value)
+            Return
+        End If
+    End Sub
+
     Private Sub _prCargarGridDetalle()
         Dim dt As New DataTable
         If tbCliente.Tag = 0 Then
-            dt = L_prCuentaReporteLibroMayor(tbNumi.Tag.ToString.Trim, tbFechaDel.Value.ToString("yyyy/MM/dd"), tbFechaAl.Value.ToString("yyyy/MM/dd"))
-
+            Interpretar(dt)
         Else
-            dt = L_prCuentaReporteLibroMayorPorCliente(tbNumi.Tag.ToString.Trim, tbFechaDel.Value.ToString("yyyy/MM/dd"), tbFechaAl.Value.ToString("yyyy/MM/dd"), tbCliente.Tag)
+            InterpretarPorCliente(dt)
+            ''  dt = L_prCuentaReporteLibroMayorPorCliente(tbNumi.Tag.ToString.Trim, tbFechaDel.Value.ToString("yyyy/MM/dd"), tbFechaAl.Value.ToString("yyyy/MM/dd"), tbCliente.Tag)
         End If
 
-        'preguntar si hay que filtrar por referencia
+        'preguntar si hay que filtrar por referencia 
         If tbFiltrarRef.Value = True Then
             Dim filasFiltradas As DataRow() = dt.Select("obobs like '%" + tbReferencia.Text + "%'", "orden,oafdoc asc")
             If filasFiltradas.Count = 0 Then
@@ -599,12 +665,31 @@ Public Class PR_LibroMayor
             listEstCeldas.Add(New Modelos.Celda("cndesc1", True, "tipo".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("isCobrar", False, "", 100))
             listEstCeldas.Add(New Modelos.Celda("isPagar", False, "", 100))
+            listEstCeldas.Add(New Modelos.Celda("nivel", False, "", 100))
 
-
-            frmAyuda = New Modelos.ModeloAyuda(0, 0, dt, "seleccione cuenta".ToUpper, listEstCeldas)
+            frmAyuda = New Modelos.ModeloAyuda(0, 0, dt, "seleccione cuenta".ToUpper, listEstCeldas, True)
             frmAyuda.ShowDialog()
 
             If frmAyuda.seleccionado = True Then
+
+                If (frmAyuda.filaSelect.Cells("nivel").Value <= 4) Then
+                    tbNumi.Text = ""
+                    tbNumi.Tag = 0
+                    tbCuenta.Text = ""
+
+                    tbCliente.Enabled = False
+                    tbCliente.Visible = False
+                    LabelX5.Visible = False
+
+                    tbCliente.Text = ""
+                    tbCliente.Tag = 0
+                    ToastNotification.Show(Me, "La cuenta seleccionada no es una cuenta operacional!!".ToUpper,
+                                           My.Resources.WARNING, 2000,
+                                           eToastGlowColor.Blue,
+                                           eToastPosition.BottomLeft)
+
+                    Return
+                End If
                 tbCliente.Text = ""
                 tbCliente.Tag = 0
 
@@ -750,5 +835,28 @@ Public Class PR_LibroMayor
         tbReferencia.Enabled = tbFiltrarRef.Value
         grDetalle.DataSource = Nothing
 
+    End Sub
+
+    Private Sub swAuxiliar01_ValueChanged(sender As Object, e As EventArgs) Handles swAuxiliar01.ValueChanged
+        If (swAuxiliar01.Value = True) Then
+            lbAuxiliar01.Visible = False
+            cbAuxiliar01.Visible = False
+
+        Else
+            lbAuxiliar01.Visible = True
+            cbAuxiliar01.Visible = True
+        End If
+
+    End Sub
+
+    Private Sub swAuxiliar02_ValueChanged(sender As Object, e As EventArgs) Handles swAuxiliar02.ValueChanged
+        If (swAuxiliar02.Value = True) Then
+            lbAuxiliar02.Visible = False
+            cbAuxiliar02.Visible = False
+
+        Else
+            lbAuxiliar02.Visible = True
+            cbAuxiliar02.Visible = True
+        End If
     End Sub
 End Class
