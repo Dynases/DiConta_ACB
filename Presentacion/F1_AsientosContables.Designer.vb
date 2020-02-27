@@ -268,8 +268,8 @@ Partial Class F1_AsientosContables
         'PanelBuscador
         '
         Me.PanelBuscador.Controls.Add(Me.GroupPanel2)
-        Me.PanelBuscador.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.PanelBuscador.Size = New System.Drawing.Size(1275, 579)
+        Me.PanelBuscador.Margin = New System.Windows.Forms.Padding(4)
+        Me.PanelBuscador.Size = New System.Drawing.Size(1275, 553)
         '
         'GrDatos
         '
@@ -377,7 +377,7 @@ Partial Class F1_AsientosContables
         Me.LabelX7.Font = New System.Drawing.Font("Century", 14.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(139, Byte), Integer))
         Me.LabelX7.Location = New System.Drawing.Point(301, 204)
-        Me.LabelX7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX7.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX7.Name = "LabelX7"
         Me.LabelX7.SingleLineColor = System.Drawing.SystemColors.Control
         Me.LabelX7.Size = New System.Drawing.Size(74, 33)
@@ -395,7 +395,7 @@ Partial Class F1_AsientosContables
         Me.LabelX6.Font = New System.Drawing.Font("Century", 14.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(139, Byte), Integer))
         Me.LabelX6.Location = New System.Drawing.Point(301, 166)
-        Me.LabelX6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX6.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX6.Name = "LabelX6"
         Me.LabelX6.SingleLineColor = System.Drawing.SystemColors.Control
         Me.LabelX6.Size = New System.Drawing.Size(91, 33)
@@ -413,7 +413,7 @@ Partial Class F1_AsientosContables
         Me.LabelX2.Font = New System.Drawing.Font("Century", 14.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(139, Byte), Integer))
         Me.LabelX2.Location = New System.Drawing.Point(301, 135)
-        Me.LabelX2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX2.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX2.Name = "LabelX2"
         Me.LabelX2.SingleLineColor = System.Drawing.SystemColors.Control
         Me.LabelX2.Size = New System.Drawing.Size(103, 33)
@@ -431,7 +431,7 @@ Partial Class F1_AsientosContables
         Me.LabelX17.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(139, Byte), Integer))
         Me.LabelX17.Location = New System.Drawing.Point(357, 7)
-        Me.LabelX17.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX17.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX17.Name = "LabelX17"
         Me.LabelX17.SingleLineColor = System.Drawing.SystemColors.Control
         Me.LabelX17.Size = New System.Drawing.Size(76, 20)
@@ -444,7 +444,7 @@ Partial Class F1_AsientosContables
         Me.cbSucursal.DesignTimeLayout = cbSucursal_DesignTimeLayout
         Me.cbSucursal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbSucursal.Location = New System.Drawing.Point(453, 4)
-        Me.cbSucursal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbSucursal.Margin = New System.Windows.Forms.Padding(4)
         Me.cbSucursal.Name = "cbSucursal"
         Me.cbSucursal.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.cbSucursal.Office2007CustomColor = System.Drawing.Color.DodgerBlue
@@ -462,7 +462,7 @@ Partial Class F1_AsientosContables
         Me.btnNuevoTipoCambio.Image = Global.Presentacion.My.Resources.Resources.anadir
         Me.btnNuevoTipoCambio.ImageFixedSize = New System.Drawing.Size(28, 28)
         Me.btnNuevoTipoCambio.Location = New System.Drawing.Point(205, 33)
-        Me.btnNuevoTipoCambio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnNuevoTipoCambio.Margin = New System.Windows.Forms.Padding(4)
         Me.btnNuevoTipoCambio.Name = "btnNuevoTipoCambio"
         Me.btnNuevoTipoCambio.Size = New System.Drawing.Size(45, 36)
         Me.btnNuevoTipoCambio.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
@@ -478,7 +478,7 @@ Partial Class F1_AsientosContables
         Me.btActualizar.Image = Global.Presentacion.My.Resources.Resources.reload_5
         Me.btActualizar.ImageFixedSize = New System.Drawing.Size(40, 40)
         Me.btActualizar.Location = New System.Drawing.Point(453, 58)
-        Me.btActualizar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btActualizar.Margin = New System.Windows.Forms.Padding(4)
         Me.btActualizar.Name = "btActualizar"
         Me.btActualizar.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor(4)
         Me.btActualizar.Size = New System.Drawing.Size(141, 60)
@@ -497,7 +497,7 @@ Partial Class F1_AsientosContables
         Me.LabelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX5.Location = New System.Drawing.Point(271, 74)
-        Me.LabelX5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX5.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX5.Name = "LabelX5"
         Me.LabelX5.Size = New System.Drawing.Size(23, 18)
         Me.LabelX5.TabIndex = 130
@@ -509,7 +509,7 @@ Partial Class F1_AsientosContables
         Me.tbFechaF.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbFechaF.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.tbFechaF.Location = New System.Drawing.Point(301, 71)
-        Me.tbFechaF.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbFechaF.Margin = New System.Windows.Forms.Padding(4)
         Me.tbFechaF.Name = "tbFechaF"
         Me.tbFechaF.Size = New System.Drawing.Size(132, 23)
         Me.tbFechaF.TabIndex = 129
@@ -523,7 +523,7 @@ Partial Class F1_AsientosContables
         Me.tbNumi.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbNumi.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbNumi.Location = New System.Drawing.Point(133, 4)
-        Me.tbNumi.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbNumi.Margin = New System.Windows.Forms.Padding(4)
         Me.tbNumi.Name = "tbNumi"
         Me.tbNumi.PreventEnterBeep = True
         Me.tbNumi.Size = New System.Drawing.Size(96, 23)
@@ -541,7 +541,7 @@ Partial Class F1_AsientosContables
         Me.tbTipoCambio.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbTipoCambio.Increment = 1.0R
         Me.tbTipoCambio.Location = New System.Drawing.Point(133, 39)
-        Me.tbTipoCambio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbTipoCambio.Margin = New System.Windows.Forms.Padding(4)
         Me.tbTipoCambio.Name = "tbTipoCambio"
         Me.tbTipoCambio.Size = New System.Drawing.Size(76, 23)
         Me.tbTipoCambio.TabIndex = 122
@@ -556,7 +556,7 @@ Partial Class F1_AsientosContables
         Me.LabelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX4.Location = New System.Drawing.Point(24, 39)
-        Me.LabelX4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX4.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX4.Name = "LabelX4"
         Me.LabelX4.Size = New System.Drawing.Size(96, 18)
         Me.LabelX4.TabIndex = 128
@@ -571,7 +571,7 @@ Partial Class F1_AsientosContables
         Me.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX1.Location = New System.Drawing.Point(24, 4)
-        Me.LabelX1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX1.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX1.Name = "LabelX1"
         Me.LabelX1.Size = New System.Drawing.Size(100, 28)
         Me.LabelX1.TabIndex = 124
@@ -587,7 +587,7 @@ Partial Class F1_AsientosContables
         Me.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX3.Location = New System.Drawing.Point(24, 76)
-        Me.LabelX3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX3.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX3.Name = "LabelX3"
         Me.LabelX3.Size = New System.Drawing.Size(53, 18)
         Me.LabelX3.TabIndex = 127
@@ -599,7 +599,7 @@ Partial Class F1_AsientosContables
         Me.tbFechaI.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbFechaI.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.tbFechaI.Location = New System.Drawing.Point(133, 71)
-        Me.tbFechaI.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbFechaI.Margin = New System.Windows.Forms.Padding(4)
         Me.tbFechaI.Name = "tbFechaI"
         Me.tbFechaI.Size = New System.Drawing.Size(132, 23)
         Me.tbFechaI.TabIndex = 121
@@ -614,9 +614,9 @@ Partial Class F1_AsientosContables
         Me.GroupPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupPanel2.Font = New System.Drawing.Font("Georgia", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupPanel2.Location = New System.Drawing.Point(0, 0)
-        Me.GroupPanel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupPanel2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupPanel2.Name = "GroupPanel2"
-        Me.GroupPanel2.Size = New System.Drawing.Size(1275, 579)
+        Me.GroupPanel2.Size = New System.Drawing.Size(1275, 553)
         '
         '
         '
@@ -663,14 +663,14 @@ Partial Class F1_AsientosContables
         Me.grmovimientos.HeaderFormatStyle.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grmovimientos.HideSelection = Janus.Windows.GridEX.HideSelection.Highlight
         Me.grmovimientos.Location = New System.Drawing.Point(0, 0)
-        Me.grmovimientos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grmovimientos.Margin = New System.Windows.Forms.Padding(4)
         Me.grmovimientos.Name = "grmovimientos"
         Me.grmovimientos.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.grmovimientos.Office2007CustomColor = System.Drawing.Color.DodgerBlue
         Me.grmovimientos.SelectedFormatStyle.BackColor = System.Drawing.Color.DodgerBlue
         Me.grmovimientos.SelectedFormatStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grmovimientos.SelectedFormatStyle.ForeColor = System.Drawing.Color.White
-        Me.grmovimientos.Size = New System.Drawing.Size(1269, 552)
+        Me.grmovimientos.Size = New System.Drawing.Size(1269, 526)
         Me.grmovimientos.TabIndex = 0
         Me.grmovimientos.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
@@ -854,7 +854,7 @@ Partial Class F1_AsientosContables
         Me.btnbanco.ImageFixedSize = New System.Drawing.Size(48, 48)
         Me.btnbanco.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
         Me.btnbanco.Location = New System.Drawing.Point(2, 0)
-        Me.btnbanco.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnbanco.Margin = New System.Windows.Forms.Padding(4)
         Me.btnbanco.Name = "btnbanco"
         Me.btnbanco.Size = New System.Drawing.Size(149, 89)
         Me.btnbanco.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled

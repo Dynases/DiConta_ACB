@@ -129,14 +129,23 @@ Public Class PR_LibroMayor
         End If
 
         'calcular el saldo
-        dt.Rows(0).Item("saldo") = IIf(IsDBNull(dt.Rows(0).Item("obdebebs")) = True, 0, dt.Rows(0).Item("obdebebs")) - IIf(IsDBNull(dt.Rows(0).Item("obhaberbs")) = True, 0, dt.Rows(0).Item("obhaberbs"))
-        dt.Rows(0).Item("saldoSus") = IIf(IsDBNull(dt.Rows(0).Item("obdebeus")) = True, 0, dt.Rows(0).Item("obdebeus")) - IIf(IsDBNull(dt.Rows(0).Item("obhaberus")) = True, 0, dt.Rows(0).Item("obhaberus"))
-
-        dt.Rows(0).Item("obdebebs") = DBNull.Value
-        dt.Rows(0).Item("obhaberbs") = DBNull.Value
-        dt.Rows(0).Item("obdebeus") = DBNull.Value
-        dt.Rows(0).Item("obhaberus") = DBNull.Value
-        dt.Rows(0).Item("obobs") = "SALDO ANTERIOR"
+        Try
+            dt.Rows(0).Item("saldo") = IIf(IsDBNull(dt.Rows(0).Item("obdebebs")) = True, 0, dt.Rows(0).Item("obdebebs")) - IIf(IsDBNull(dt.Rows(0).Item("obhaberbs")) = True, 0, dt.Rows(0).Item("obhaberbs"))
+            dt.Rows(0).Item("saldoSus") = IIf(IsDBNull(dt.Rows(0).Item("obdebeus")) = True, 0, dt.Rows(0).Item("obdebeus")) - IIf(IsDBNull(dt.Rows(0).Item("obhaberus")) = True, 0, dt.Rows(0).Item("obhaberus"))
+            dt.Rows(0).Item("saldo") = 0
+            dt.Rows(0).Item("saldoSus") = 0
+            dt.Rows(0).Item("obdebebs") = DBNull.Value
+            dt.Rows(0).Item("obhaberbs") = DBNull.Value
+            dt.Rows(0).Item("obdebeus") = DBNull.Value
+            dt.Rows(0).Item("obhaberus") = DBNull.Value
+            dt.Rows(0).Item("obobs") = "SALDO ANTERIOR"
+        Catch ex As Exception
+            ToastNotification.Show(Me, "No Existen Movimientos.".ToUpper,
+                                           My.Resources.WARNING, 2000,
+                                           eToastGlowColor.Blue,
+                                           eToastPosition.BottomLeft)
+            Exit Sub
+        End Try
 
 
         Dim debe, haber, saldo, debeSus, haberSus, saldoSus As Double
@@ -194,12 +203,17 @@ Public Class PR_LibroMayor
         End With
         With grDetalle.RootTable.Columns("cacta")
             .Caption = "CUENTA"
-            .Width = 100
+            .Width = 80
             .HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center
         End With
         With grDetalle.RootTable.Columns("obobs")
             .Caption = "DETALLE"
             .Width = 300
+            .HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center
+        End With
+        With grDetalle.RootTable.Columns("obcheque")
+            .Caption = "CHEQUE"
+            .Width = 80
             .HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center
         End With
         With grDetalle.RootTable.Columns("oafdoc")
@@ -214,14 +228,14 @@ Public Class PR_LibroMayor
         End With
         With grDetalle.RootTable.Columns("obdebebs")
             .Caption = "DEBE"
-            .Width = 100
+            .Width = 80
             .HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center
             .FormatString = "0.00"
             .CellStyle.TextAlignment = TextAlignment.Far
         End With
         With grDetalle.RootTable.Columns("obhaberbs")
             .Caption = "HABER"
-            .Width = 100
+            .Width = 80
             .HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center
             .FormatString = "0.00"
             .CellStyle.TextAlignment = TextAlignment.Far
@@ -229,7 +243,7 @@ Public Class PR_LibroMayor
         End With
         With grDetalle.RootTable.Columns("saldo")
             .Caption = "SALDO"
-            .Width = 100
+            .Width = 80
             .HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center
             .FormatString = "0.00"
             .CellStyle.TextAlignment = TextAlignment.Far
@@ -245,7 +259,7 @@ Public Class PR_LibroMayor
         End With
         With grDetalle.RootTable.Columns("obdebeus")
             .Caption = "DEBE $US"
-            .Width = 100
+            .Width = 80
             .HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center
             .FormatString = "0.00"
             .CellStyle.TextAlignment = TextAlignment.Far
@@ -253,7 +267,7 @@ Public Class PR_LibroMayor
         End With
         With grDetalle.RootTable.Columns("obhaberus")
             .Caption = "HABER $US"
-            .Width = 100
+            .Width = 80
             .HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center
             .FormatString = "0.00"
             .CellStyle.TextAlignment = TextAlignment.Far
@@ -272,7 +286,7 @@ Public Class PR_LibroMayor
 
         With grDetalle.RootTable.Columns("saldoSus")
             .Caption = "SALDO US"
-            .Width = 100
+            .Width = 80
             .HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center
             .FormatString = "0.00"
             .CellStyle.TextAlignment = TextAlignment.Far

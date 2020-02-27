@@ -51,7 +51,7 @@ Public Class F0_LibroVenta
     Private Sub P_Inicio()
         'L_prAbrirConexion(gs_Ip, gs_UsuarioSql, gs_ClaveSql, gs_NombreBD)
         _prCargarComboAlmacen(CbAlmacen)
-        _prCargarComboSector(cbModulo)
+        _prCargarComboModulos(cbModulo)
         Me.WindowState = FormWindowState.Maximized
         Me.Text = "L I B R O   D E   V E N T A S"
 
@@ -75,6 +75,33 @@ Public Class F0_LibroVenta
             Cb3RazonSocial.SelectedIndex = 0
         End If
         _prCargarComboEstados()
+        Dim Mes, Ano As Integer
+        Mes = Month(Today.Date)
+        Ano = Year(Today.Date)
+        tbFechaI.Value = "01/" + Mes.ToString + "/" + Ano.ToString
+        Mes = Mes + 1
+        If Mes = 13 Then
+            Ano = Ano + 1
+            Mes = 1
+        End If
+        tbFechaF.Value = "01/" + Str(Mes) + "/" + Str(Ano)
+        tbFechaF.Value = tbFechaF.Value.AddDays(-1)
+    End Sub
+    Private Sub _prCargarComboModulos(mCombo As Janus.Windows.GridEX.EditControls.MultiColumnCombo)
+        Dim dt As New DataTable
+        dt = L_fnListarModulos()
+        With mCombo
+            .DropDownList.Columns.Clear()
+            .DropDownList.Columns.Add("cod").Width = 60
+            .DropDownList.Columns("cod").Caption = "COD"
+            .DropDownList.Columns.Add("desc").Width = 500
+            .DropDownList.Columns("desc").Caption = "Modulo"
+            .ValueMember = "cod"
+            .DisplayMember = "desc"
+            .DataSource = dt
+            .Refresh()
+            .TabIndex = 3
+        End With
     End Sub
 
     Private Sub _prCargarComboEstados()
@@ -97,7 +124,7 @@ Public Class F0_LibroVenta
             .DataSource = dt
             .Refresh()
 
-            .SelectedIndex = 0
+            .SelectedIndex = 1
         End With
 
     End Sub
@@ -418,6 +445,8 @@ Public Class F0_LibroVenta
 
     Private Sub P_LlenarDatosGrilla()
         _DsLV = New DataTable
+        Dim _TotAlm As New DataTable
+        Dim _TotMod As New DataTable
         If tbTipoFactura.Value = 2 Then 'es ambos
             _DsLV = L_fnObtenerLibroVentaAmbosTipoFactura(CbAlmacen.Value, tbFechaI.Value.ToString("yyyy-MM-dd"), tbFechaF.Value.ToString("yyyy-MM-dd"), cbModulo.Value)
         Else 'filtrado por tipo factura
@@ -425,6 +454,23 @@ Public Class F0_LibroVenta
                                       tbTipoFactura.Value, cbModulo.Value)
         End If
 
+        _TotAlm = L_SumarSucursalTotal(cbModulo.Value, CbAlmacen.Value, tbFechaI.Value.ToString("yyyy-MM-dd"), tbFechaF.Value.ToString("yyyy-MM-dd"))
+        Try
+            TotSuc.Text = _TotAlm.Rows(0).Item(0)
+        Catch ex As Exception
+            TotSuc.Text = 0
+        End Try
+
+        If _DsLV.Rows.Count > 0 Then
+            _TotMod = L_SumarModuloTotal(cbModulo.Value, CbAlmacen.Value, tbFechaI.Value.ToString("yyyy-MM-dd"), tbFechaF.Value.ToString("yyyy-MM-dd"))
+            Try
+                TotMod.Text = _TotMod.Rows(0).Item(0)
+            Catch ex As Exception
+                TotMod.Text = 0
+            End Try
+        Else
+            TotMod.Text = 0
+        End If
 
         For Each fil As DataRow In _DsLV.Rows
             If (fil.Item("fvaest").ToString.Equals("A")) Then
@@ -653,5 +699,9 @@ Public Class F0_LibroVenta
     End Sub
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         _prSalir()
+    End Sub
+
+    Private Sub LabelX7_Click(sender As Object, e As EventArgs) Handles LabelX7.Click
+
     End Sub
 End Class

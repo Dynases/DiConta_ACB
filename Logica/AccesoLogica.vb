@@ -4920,13 +4920,13 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
         Dim _Tabla As DataTable
         Dim _Where As String = ""
         If _CodAlm > 0 Then
-            _Where = "vcsector = " + modulo + " and fvaalm = " + _CodAlm + " and fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' and factura=" + Str(factura) + " ORDER BY fvanfac"
+            _Where = "modulo = " + modulo + " and fvaalm = " + _CodAlm + " and fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' and factura=" + Str(factura) + " ORDER BY fvanfac"
         End If
         If _CodAlm = 0 Then 'todas las sucursales
-            _Where = "vcsector = " + modulo + " and fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' and factura=" + Str(factura) + " ORDER BY fvanfac"
+            _Where = "modulo = " + modulo + " and fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' and factura=" + Str(factura) + " ORDER BY fvanfac"
         End If
         If _CodAlm = -1 Then 'todas las sucursales menos la principal
-            _Where = "vcsector = " + modulo + " and fvaalm <>1 " + " and fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' and factura=" + Str(factura) + " ORDER BY fvanfac"
+            _Where = "modulo = " + modulo + " and fvaalm <>1 " + " and fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' and factura=" + Str(factura) + " ORDER BY fvanfac"
         End If
         Dim _select As String = "fvanumi, FORMAT(fvafec,'dd/MM/yyyy') as fvafec, fvanfac, fvaautoriz,fvaest, fvanitcli, fvadescli, fvastot, fvaimpsi, fvaimpeo, fvaimptc, fvasubtotal, fvadesc, fvatotal, fvadebfis, fvaccont,fvaflim,fvaalm,scneg, factura"
 
@@ -4938,33 +4938,64 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
         Dim _Tabla As DataTable
         Dim _Where As String = ""
 
-        If _CodAlm > 0 Then
-            _Where = " fvaalm = " + _CodAlm + " and fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' " + " ORDER BY fvanumi desc"
-        End If
-        If _CodAlm = 0 Then 'todas las sucursales
-            _Where = " fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' " + " ORDER BY fvanumi desc"
-        End If
-        If _CodAlm = -1 Then 'todas las sucursales menos la principal
-            _Where = " fvaalm <>1 " + " and fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' " + " ORDER BY fvanumi desc"
-        End If
-
         'If _CodAlm > 0 Then
-        '    _Where = "vcsector = " + Str(modulo) + " and fvaalm = " + _CodAlm + " and fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' " + " ORDER BY fvanumi desc"
+        '    _Where = " fvaalm = " + _CodAlm + " and fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' " + " ORDER BY fvanumi desc"
         'End If
         'If _CodAlm = 0 Then 'todas las sucursales
-        '    _Where = "vcsector = " + Str(modulo) + " and  fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' " + " ORDER BY fvanumi desc"
+        '    _Where = " fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' " + " ORDER BY fvanumi desc"
         'End If
         'If _CodAlm = -1 Then 'todas las sucursales menos la principal
-        '    _Where = "vcsector = " + Str(modulo) + " and fvaalm <>1 " + " and fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' " + " ORDER BY fvanumi desc"
-        'End If  CFO 13-02-20
+        '    _Where = " fvaalm <>1 " + " and fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' " + " ORDER BY fvanumi desc"
+        'End If  CFO 27-02-20
+
+        If _CodAlm > 0 Then
+            _Where = "vcsector = " + Str(modulo) + " and fvaalm = " + _CodAlm + " and fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' " + " ORDER BY fvanumi desc"
+        End If
+        If _CodAlm = 0 Then 'todas las sucursales
+            _Where = "vcsector = " + Str(modulo) + " and  fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' " + " ORDER BY fvanumi desc"
+        End If
+        If _CodAlm = -1 Then 'todas las sucursales menos la principal
+            _Where = "vcsector = " + Str(modulo) + " and fvaalm <>1 " + " and fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' " + " ORDER BY fvanumi desc"
+        End If  'CFO 13-02-20
 
         Dim _select As String = "fvanumi, FORMAT(fvafec,'dd/MM/yyyy') as fvafec, fvanfac, fvaautoriz,fvaest, fvanitcli, fvadescli, fvastot, fvaimpsi, fvaimpeo, fvaimptc, fvasubtotal, fvadesc, fvatotal, fvadebfis, fvaccont,fvaflim,fvaalm,scneg, factura"
 
         _Tabla = D_Datos_Tabla(_select,
                                "VR_GO_LibroVenta", _Where)
         Return _Tabla
-    End Function
 
+
+    End Function
+    Public Shared Function L_SumarSucursalTotal(modulo As String, codalm As String, fechai As String, fechaf As String) As DataTable
+        Dim _Tabla As DataTable
+
+        Dim _listParam As New List(Of Datos.DParametro)
+
+        _listParam.Add(New Datos.DParametro("@tipo", 9))
+        _listParam.Add(New Datos.DParametro("@modulo", modulo))
+        _listParam.Add(New Datos.DParametro("@alm", codalm))
+        _listParam.Add(New Datos.DParametro("@fdel", fechai))
+        _listParam.Add(New Datos.DParametro("@fal", fechaf))
+        _listParam.Add(New Datos.DParametro("@uact", L_Usuario))
+        _Tabla = D_ProcedimientoConParam("sp_go_TS002", _listParam)
+
+        Return _Tabla
+    End Function
+    Public Shared Function L_SumarModuloTotal(modulo As String, codalm As String, fechai As String, fechaf As String) As DataTable
+        Dim _Tabla As DataTable
+
+        Dim _listParam As New List(Of Datos.DParametro)
+
+        _listParam.Add(New Datos.DParametro("@tipo", 10))
+        _listParam.Add(New Datos.DParametro("@modulo", modulo))
+        _listParam.Add(New Datos.DParametro("@alm", codalm))
+        _listParam.Add(New Datos.DParametro("@fdel", fechai))
+        _listParam.Add(New Datos.DParametro("@fal", fechaf))
+        _listParam.Add(New Datos.DParametro("@uact", L_Usuario))
+        _Tabla = D_ProcedimientoConParam("sp_go_TS002", _listParam)
+
+        Return _Tabla
+    End Function
     Public Shared Function L_ObtenerAnhoFactura() As DataTable
         Dim _Tabla As DataTable
         Dim _Where As String = "1 = 1 ORDER BY year(fvafec)"

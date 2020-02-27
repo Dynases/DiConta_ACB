@@ -78,49 +78,38 @@
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="DevComponents.DotNetBar.Design, Version=12.5.0.2, Culture=neutral, PublicKeyToken=2c9ff1fddc42653c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar.Design.dll</HintPath>
+    <Reference Include="DevComponents.DotNetBar.Design">
+      <HintPath>C:\Librerias\DotNet\DevComponents.DotNetBar.Design.dll</HintPath>
     </Reference>
-    <Reference Include="DevComponents.DotNetBar.Keyboard, Version=12.5.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar.Keyboard.dll</HintPath>
+    <Reference Include="DevComponents.DotNetBar.Keyboard">
+      <HintPath>C:\Librerias\DotNet\DevComponents.DotNetBar.Keyboard.dll</HintPath>
     </Reference>
-    <Reference Include="DevComponents.DotNetBar.Layout, Version=12.5.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar.Layout.dll</HintPath>
+    <Reference Include="DevComponents.DotNetBar.Layout">
+      <HintPath>C:\Librerias\DotNet\DevComponents.DotNetBar.Layout.dll</HintPath>
     </Reference>
-    <Reference Include="DevComponents.DotNetBar.Layout.Design, Version=12.5.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar.Layout.Design.dll</HintPath>
+    <Reference Include="DevComponents.DotNetBar.Layout.Design">
+      <HintPath>C:\Librerias\DotNet\DevComponents.DotNetBar.Layout.Design.dll</HintPath>
     </Reference>
-    <Reference Include="DevComponents.DotNetBar.Schedule, Version=12.5.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar.Schedule.dll</HintPath>
+    <Reference Include="DevComponents.DotNetBar.Schedule">
+      <HintPath>C:\Librerias\DotNet\DevComponents.DotNetBar.Schedule.dll</HintPath>
     </Reference>
-    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=12.5.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar.SuperGrid.dll</HintPath>
+    <Reference Include="DevComponents.DotNetBar.SuperGrid">
+      <HintPath>C:\Librerias\DotNet\DevComponents.DotNetBar.SuperGrid.dll</HintPath>
     </Reference>
-    <Reference Include="DevComponents.DotNetBar2, Version=12.5.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar2.dll</HintPath>
+    <Reference Include="DevComponents.DotNetBar2">
+      <HintPath>C:\Librerias\DotNet\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
-    <Reference Include="DevComponents.Instrumentation, Version=12.5.0.2, Culture=neutral, PublicKeyToken=bc4a9d761ea44ef0, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.Instrumentation.dll</HintPath>
+    <Reference Include="DevComponents.Instrumentation">
+      <HintPath>C:\Librerias\DotNet\DevComponents.Instrumentation.dll</HintPath>
     </Reference>
-    <Reference Include="DevComponents.Instrumentation.Design, Version=12.5.0.2, Culture=neutral, PublicKeyToken=30cefae8f341f577, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.Instrumentation.Design.dll</HintPath>
+    <Reference Include="DevComponents.Instrumentation.Design">
+      <HintPath>C:\Librerias\DotNet\DevComponents.Instrumentation.Design.dll</HintPath>
     </Reference>
-    <Reference Include="DevComponents.SuperGrid.Design, Version=12.5.0.2, Culture=neutral, PublicKeyToken=1fea3f5d8d482bff, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.SuperGrid.Design.dll</HintPath>
+    <Reference Include="DevComponents.SuperGrid.Design">
+      <HintPath>C:\Librerias\DotNet\DevComponents.SuperGrid.Design.dll</HintPath>
     </Reference>
-    <Reference Include="DevComponents.TreeGX, Version=12.5.0.2, Culture=neutral, PublicKeyToken=cfcbd7476b2389d1, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.TreeGX.dll</HintPath>
+    <Reference Include="DevComponents.TreeGX">
+      <HintPath>C:\Librerias\DotNet\DevComponents.TreeGX.dll</HintPath>
     </Reference>
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Janus.Data.v3">

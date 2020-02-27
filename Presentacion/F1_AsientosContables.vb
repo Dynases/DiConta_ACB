@@ -920,7 +920,7 @@ Public Class F1_AsientosContables
                     Dim numiCuentaHijo As Integer = dtCuentaServ.Rows(i).Item("canumi")
                     Dim dttotc As DataTable
                     If (dtCuentaServ.Rows(i).Item("seest") = 1) Then
-
+                        'OJO 26
                         dttotc = L_prObtenerTotalPorCuentaAdministracion(dtCuentaServ.Rows(i).Item("senrocuenta"), dtCuentaServ.Rows(i).Item("seref"), tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value, 2)
                         If (dttotc.Rows(0).Item("total") > 0) Then
                             Dim dtnombre As DataTable = L_prObtenerNombreCuenta(dtCuentaServ.Rows(i).Item("senrocuenta"))
