@@ -889,4 +889,8 @@ Public Class PR_LibroMayor
     Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
 
     End Sub
+
+    Private Sub tbCuenta_TextChanged(sender As Object, e As EventArgs) Handles tbCuenta.TextChanged
+
+    End Sub
 End Class

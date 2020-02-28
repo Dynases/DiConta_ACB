@@ -100,21 +100,21 @@ Partial Class PR_LibroMayor
         'SuperTabControlPanelBuscador
         '
         Me.SuperTabControlPanelBuscador.Location = New System.Drawing.Point(0, 0)
-        Me.SuperTabControlPanelBuscador.Margin = New System.Windows.Forms.Padding(5)
-        Me.SuperTabControlPanelBuscador.Size = New System.Drawing.Size(1269, 690)
+        Me.SuperTabControlPanelBuscador.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.SuperTabControlPanelBuscador.Size = New System.Drawing.Size(952, 561)
         '
         'SuperTabControlPanelRegistro
         '
-        Me.SuperTabControlPanelRegistro.Margin = New System.Windows.Forms.Padding(5)
-        Me.SuperTabControlPanelRegistro.Size = New System.Drawing.Size(1277, 690)
+        Me.SuperTabControlPanelRegistro.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.SuperTabControlPanelRegistro.Size = New System.Drawing.Size(952, 561)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelSuperior, 0)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelInferior, 0)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelPrincipal, 0)
         '
         'PanelSuperior
         '
-        Me.PanelSuperior.Margin = New System.Windows.Forms.Padding(5)
-        Me.PanelSuperior.Size = New System.Drawing.Size(1277, 89)
+        Me.PanelSuperior.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelSuperior.Size = New System.Drawing.Size(952, 72)
         Me.PanelSuperior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelSuperior.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(150, Byte), Integer))
         Me.PanelSuperior.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(150, Byte), Integer))
@@ -131,8 +131,8 @@ Partial Class PR_LibroMayor
         '
         'PanelInferior
         '
-        Me.PanelInferior.Margin = New System.Windows.Forms.Padding(5)
-        Me.PanelInferior.Size = New System.Drawing.Size(1277, 48)
+        Me.PanelInferior.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelInferior.Size = New System.Drawing.Size(952, 39)
         Me.PanelInferior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelInferior.Style.BackColor1.Color = System.Drawing.Color.Transparent
         Me.PanelInferior.Style.BackColor2.Color = System.Drawing.Color.Transparent
@@ -167,14 +167,14 @@ Partial Class PR_LibroMayor
         '
         'TxtNombreUsu
         '
-        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(5)
-        Me.TxtNombreUsu.Size = New System.Drawing.Size(179, 38)
+        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtNombreUsu.Size = New System.Drawing.Size(135, 32)
         '
         'btnSalir
         '
         Me.btnSalir.Dock = System.Windows.Forms.DockStyle.Left
-        Me.btnSalir.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnSalir.Size = New System.Drawing.Size(156, 89)
+        Me.btnSalir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnSalir.Size = New System.Drawing.Size(117, 72)
         '
         'btnGrabar
         '
@@ -196,23 +196,23 @@ Partial Class PR_LibroMayor
         '
         'PanelToolBar2
         '
-        Me.PanelToolBar2.Location = New System.Drawing.Point(1170, 0)
-        Me.PanelToolBar2.Margin = New System.Windows.Forms.Padding(5)
+        Me.PanelToolBar2.Location = New System.Drawing.Point(872, 0)
+        Me.PanelToolBar2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         '
         'PanelPrincipal
         '
         Me.PanelPrincipal.Controls.Add(Me.gpGrilla)
         Me.PanelPrincipal.Controls.Add(Me.GroupPanel1)
-        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(5)
-        Me.PanelPrincipal.Size = New System.Drawing.Size(1277, 553)
+        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelPrincipal.Size = New System.Drawing.Size(952, 450)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelUsuario, 0)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.GroupPanel1, 0)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.gpGrilla, 0)
         '
         'PanelUsuario
         '
-        Me.PanelUsuario.Location = New System.Drawing.Point(883, 4)
-        Me.PanelUsuario.Margin = New System.Windows.Forms.Padding(5)
+        Me.PanelUsuario.Location = New System.Drawing.Point(662, 3)
+        Me.PanelUsuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         '
         'btnImprimir
         '
@@ -224,12 +224,13 @@ Partial Class PR_LibroMayor
         '
         'btnUltimo
         '
+        Me.btnUltimo.Location = New System.Drawing.Point(129, 0)
         Me.btnUltimo.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         '
         'MPanelUserAct
         '
-        Me.MPanelUserAct.Location = New System.Drawing.Point(1010, 0)
-        Me.MPanelUserAct.Margin = New System.Windows.Forms.Padding(5)
+        Me.MPanelUserAct.Location = New System.Drawing.Point(752, 0)
+        Me.MPanelUserAct.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         '
         'MRlAccion
         '
@@ -237,8 +238,8 @@ Partial Class PR_LibroMayor
         '
         '
         Me.MRlAccion.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.MRlAccion.Margin = New System.Windows.Forms.Padding(5)
-        Me.MRlAccion.Size = New System.Drawing.Size(669, 89)
+        Me.MRlAccion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MRlAccion.Size = New System.Drawing.Size(496, 72)
         '
         'GroupPanel1
         '
@@ -251,9 +252,8 @@ Partial Class PR_LibroMayor
         Me.GroupPanel1.DisabledBackColor = System.Drawing.Color.Empty
         Me.GroupPanel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.GroupPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupPanel1.Name = "GroupPanel1"
-        Me.GroupPanel1.Size = New System.Drawing.Size(1277, 222)
+        Me.GroupPanel1.Size = New System.Drawing.Size(952, 180)
         '
         '
         '
@@ -295,10 +295,9 @@ Partial Class PR_LibroMayor
         Me.GroupPanel4.Controls.Add(Me.swAuxiliar02)
         Me.GroupPanel4.DisabledBackColor = System.Drawing.Color.Empty
         Me.GroupPanel4.Dock = System.Windows.Forms.DockStyle.Left
-        Me.GroupPanel4.Location = New System.Drawing.Point(1007, 0)
-        Me.GroupPanel4.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupPanel4.Location = New System.Drawing.Point(755, 0)
         Me.GroupPanel4.Name = "GroupPanel4"
-        Me.GroupPanel4.Size = New System.Drawing.Size(219, 199)
+        Me.GroupPanel4.Size = New System.Drawing.Size(164, 159)
         '
         '
         '
@@ -338,10 +337,9 @@ Partial Class PR_LibroMayor
         '
         '
         Me.lbAuxiliar02.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.lbAuxiliar02.Location = New System.Drawing.Point(4, 43)
-        Me.lbAuxiliar02.Margin = New System.Windows.Forms.Padding(4)
+        Me.lbAuxiliar02.Location = New System.Drawing.Point(3, 35)
         Me.lbAuxiliar02.Name = "lbAuxiliar02"
-        Me.lbAuxiliar02.Size = New System.Drawing.Size(134, 17)
+        Me.lbAuxiliar02.Size = New System.Drawing.Size(114, 15)
         Me.lbAuxiliar02.TabIndex = 248
         Me.lbAuxiliar02.Text = "Seleccione un Auxiliar:"
         Me.lbAuxiliar02.Visible = False
@@ -351,14 +349,13 @@ Partial Class PR_LibroMayor
         cbAuxiliar02_DesignTimeLayout.LayoutString = resources.GetString("cbAuxiliar02_DesignTimeLayout.LayoutString")
         Me.cbAuxiliar02.DesignTimeLayout = cbAuxiliar02_DesignTimeLayout
         Me.cbAuxiliar02.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbAuxiliar02.Location = New System.Drawing.Point(4, 64)
-        Me.cbAuxiliar02.Margin = New System.Windows.Forms.Padding(4)
+        Me.cbAuxiliar02.Location = New System.Drawing.Point(3, 52)
         Me.cbAuxiliar02.Name = "cbAuxiliar02"
         Me.cbAuxiliar02.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.cbAuxiliar02.Office2007CustomColor = System.Drawing.Color.DodgerBlue
         Me.cbAuxiliar02.SelectedIndex = -1
         Me.cbAuxiliar02.SelectedItem = Nothing
-        Me.cbAuxiliar02.Size = New System.Drawing.Size(180, 23)
+        Me.cbAuxiliar02.Size = New System.Drawing.Size(135, 20)
         Me.cbAuxiliar02.TabIndex = 247
         Me.cbAuxiliar02.Visible = False
         '
@@ -368,15 +365,15 @@ Partial Class PR_LibroMayor
         '
         '
         Me.swAuxiliar02.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.swAuxiliar02.Location = New System.Drawing.Point(14, 12)
-        Me.swAuxiliar02.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.swAuxiliar02.Location = New System.Drawing.Point(10, 10)
+        Me.swAuxiliar02.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.swAuxiliar02.Name = "swAuxiliar02"
         Me.swAuxiliar02.OffBackColor = System.Drawing.Color.Gold
         Me.swAuxiliar02.OffText = "Uno"
         Me.swAuxiliar02.OnBackColor = System.Drawing.Color.Aqua
         Me.swAuxiliar02.OnText = "Todos"
         Me.swAuxiliar02.ReadOnlyMarkerColor = System.Drawing.Color.Empty
-        Me.swAuxiliar02.Size = New System.Drawing.Size(149, 22)
+        Me.swAuxiliar02.Size = New System.Drawing.Size(112, 18)
         Me.swAuxiliar02.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.swAuxiliar02.TabIndex = 246
         Me.swAuxiliar02.Value = True
@@ -392,10 +389,9 @@ Partial Class PR_LibroMayor
         Me.GroupPanel3.Controls.Add(Me.swAuxiliar01)
         Me.GroupPanel3.DisabledBackColor = System.Drawing.Color.Empty
         Me.GroupPanel3.Dock = System.Windows.Forms.DockStyle.Left
-        Me.GroupPanel3.Location = New System.Drawing.Point(785, 0)
-        Me.GroupPanel3.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupPanel3.Location = New System.Drawing.Point(589, 0)
         Me.GroupPanel3.Name = "GroupPanel3"
-        Me.GroupPanel3.Size = New System.Drawing.Size(222, 199)
+        Me.GroupPanel3.Size = New System.Drawing.Size(166, 159)
         '
         '
         '
@@ -435,10 +431,9 @@ Partial Class PR_LibroMayor
         '
         '
         Me.lbAuxiliar01.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.lbAuxiliar01.Location = New System.Drawing.Point(4, 43)
-        Me.lbAuxiliar01.Margin = New System.Windows.Forms.Padding(4)
+        Me.lbAuxiliar01.Location = New System.Drawing.Point(3, 35)
         Me.lbAuxiliar01.Name = "lbAuxiliar01"
-        Me.lbAuxiliar01.Size = New System.Drawing.Size(134, 17)
+        Me.lbAuxiliar01.Size = New System.Drawing.Size(114, 15)
         Me.lbAuxiliar01.TabIndex = 246
         Me.lbAuxiliar01.Text = "Seleccione un Auxiliar:"
         Me.lbAuxiliar01.Visible = False
@@ -448,14 +443,13 @@ Partial Class PR_LibroMayor
         cbAuxiliar01_DesignTimeLayout.LayoutString = resources.GetString("cbAuxiliar01_DesignTimeLayout.LayoutString")
         Me.cbAuxiliar01.DesignTimeLayout = cbAuxiliar01_DesignTimeLayout
         Me.cbAuxiliar01.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbAuxiliar01.Location = New System.Drawing.Point(4, 64)
-        Me.cbAuxiliar01.Margin = New System.Windows.Forms.Padding(4)
+        Me.cbAuxiliar01.Location = New System.Drawing.Point(3, 52)
         Me.cbAuxiliar01.Name = "cbAuxiliar01"
         Me.cbAuxiliar01.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.cbAuxiliar01.Office2007CustomColor = System.Drawing.Color.DodgerBlue
         Me.cbAuxiliar01.SelectedIndex = -1
         Me.cbAuxiliar01.SelectedItem = Nothing
-        Me.cbAuxiliar01.Size = New System.Drawing.Size(180, 23)
+        Me.cbAuxiliar01.Size = New System.Drawing.Size(135, 20)
         Me.cbAuxiliar01.TabIndex = 245
         Me.cbAuxiliar01.Visible = False
         '
@@ -465,15 +459,15 @@ Partial Class PR_LibroMayor
         '
         '
         Me.swAuxiliar01.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.swAuxiliar01.Location = New System.Drawing.Point(4, 12)
-        Me.swAuxiliar01.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.swAuxiliar01.Location = New System.Drawing.Point(3, 10)
+        Me.swAuxiliar01.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.swAuxiliar01.Name = "swAuxiliar01"
         Me.swAuxiliar01.OffBackColor = System.Drawing.Color.Gold
         Me.swAuxiliar01.OffText = "Uno"
         Me.swAuxiliar01.OnBackColor = System.Drawing.Color.Aqua
         Me.swAuxiliar01.OnText = "Todos"
         Me.swAuxiliar01.ReadOnlyMarkerColor = System.Drawing.Color.Empty
-        Me.swAuxiliar01.Size = New System.Drawing.Size(149, 22)
+        Me.swAuxiliar01.Size = New System.Drawing.Size(112, 18)
         Me.swAuxiliar01.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.swAuxiliar01.TabIndex = 244
         Me.swAuxiliar01.Value = True
@@ -488,10 +482,9 @@ Partial Class PR_LibroMayor
         Me.GroupPanel2.Controls.Add(Me.tbFiltrarRef)
         Me.GroupPanel2.DisabledBackColor = System.Drawing.Color.Empty
         Me.GroupPanel2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.GroupPanel2.Location = New System.Drawing.Point(562, 0)
-        Me.GroupPanel2.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupPanel2.Location = New System.Drawing.Point(422, 0)
         Me.GroupPanel2.Name = "GroupPanel2"
-        Me.GroupPanel2.Size = New System.Drawing.Size(223, 199)
+        Me.GroupPanel2.Size = New System.Drawing.Size(167, 159)
         '
         '
         '
@@ -525,11 +518,10 @@ Partial Class PR_LibroMayor
         '
         'tbReferencia
         '
-        Me.tbReferencia.Location = New System.Drawing.Point(4, 43)
-        Me.tbReferencia.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbReferencia.Location = New System.Drawing.Point(3, 35)
         Me.tbReferencia.Multiline = True
         Me.tbReferencia.Name = "tbReferencia"
-        Me.tbReferencia.Size = New System.Drawing.Size(208, 69)
+        Me.tbReferencia.Size = New System.Drawing.Size(157, 57)
         Me.tbReferencia.TabIndex = 245
         '
         'tbFiltrarRef
@@ -538,12 +530,12 @@ Partial Class PR_LibroMayor
         '
         '
         Me.tbFiltrarRef.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.tbFiltrarRef.Location = New System.Drawing.Point(4, 12)
-        Me.tbFiltrarRef.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.tbFiltrarRef.Location = New System.Drawing.Point(3, 10)
+        Me.tbFiltrarRef.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.tbFiltrarRef.Name = "tbFiltrarRef"
         Me.tbFiltrarRef.OffText = "NO"
         Me.tbFiltrarRef.OnText = "SI"
-        Me.tbFiltrarRef.Size = New System.Drawing.Size(91, 22)
+        Me.tbFiltrarRef.Size = New System.Drawing.Size(68, 18)
         Me.tbFiltrarRef.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.tbFiltrarRef.TabIndex = 244
         '
@@ -565,9 +557,8 @@ Partial Class PR_LibroMayor
         Me.Panel1.Controls.Add(Me.LabelX6)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(562, 199)
+        Me.Panel1.Size = New System.Drawing.Size(422, 159)
         Me.Panel1.TabIndex = 248
         '
         'LabelX1
@@ -577,10 +568,9 @@ Partial Class PR_LibroMayor
         '
         '
         Me.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX1.Location = New System.Drawing.Point(35, 2)
-        Me.LabelX1.Margin = New System.Windows.Forms.Padding(4)
+        Me.LabelX1.Location = New System.Drawing.Point(26, 2)
         Me.LabelX1.Name = "LabelX1"
-        Me.LabelX1.Size = New System.Drawing.Size(81, 28)
+        Me.LabelX1.Size = New System.Drawing.Size(61, 23)
         Me.LabelX1.TabIndex = 0
         Me.LabelX1.Text = "CUENTA"
         '
@@ -590,12 +580,12 @@ Partial Class PR_LibroMayor
         '
         '
         Me.tbMeses.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.tbMeses.Location = New System.Drawing.Point(152, 157)
-        Me.tbMeses.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.tbMeses.Location = New System.Drawing.Point(114, 128)
+        Me.tbMeses.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.tbMeses.Name = "tbMeses"
         Me.tbMeses.OffText = "SIN TOTAL POR MES"
         Me.tbMeses.OnText = "CON TOTAL POR MES"
-        Me.tbMeses.Size = New System.Drawing.Size(205, 22)
+        Me.tbMeses.Size = New System.Drawing.Size(154, 18)
         Me.tbMeses.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.tbMeses.TabIndex = 129
         '
@@ -606,20 +596,18 @@ Partial Class PR_LibroMayor
         '
         '
         Me.LabelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX5.Location = New System.Drawing.Point(77, 62)
-        Me.LabelX5.Margin = New System.Windows.Forms.Padding(4)
+        Me.LabelX5.Location = New System.Drawing.Point(58, 50)
         Me.LabelX5.Name = "LabelX5"
-        Me.LabelX5.Size = New System.Drawing.Size(69, 28)
+        Me.LabelX5.Size = New System.Drawing.Size(52, 23)
         Me.LabelX5.TabIndex = 127
         Me.LabelX5.Text = "CLIENTE:"
         '
         'tbCliente
         '
-        Me.tbCliente.Location = New System.Drawing.Point(155, 64)
-        Me.tbCliente.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbCliente.Location = New System.Drawing.Point(116, 52)
         Me.tbCliente.Name = "tbCliente"
         Me.tbCliente.ReadOnly = True
-        Me.tbCliente.Size = New System.Drawing.Size(317, 22)
+        Me.tbCliente.Size = New System.Drawing.Size(239, 20)
         Me.tbCliente.TabIndex = 126
         Me.tbCliente.Tag = "0"
         '
@@ -630,10 +618,9 @@ Partial Class PR_LibroMayor
         '
         '
         Me.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX2.Location = New System.Drawing.Point(154, 94)
-        Me.LabelX2.Margin = New System.Windows.Forms.Padding(4)
+        Me.LabelX2.Location = New System.Drawing.Point(116, 76)
         Me.LabelX2.Name = "LabelX2"
-        Me.LabelX2.Size = New System.Drawing.Size(81, 28)
+        Me.LabelX2.Size = New System.Drawing.Size(61, 23)
         Me.LabelX2.TabIndex = 1
         Me.LabelX2.Text = "DESDE"
         '
@@ -643,12 +630,11 @@ Partial Class PR_LibroMayor
         tbMoneda_DesignTimeLayout.LayoutString = resources.GetString("tbMoneda_DesignTimeLayout.LayoutString")
         Me.tbMoneda.DesignTimeLayout = tbMoneda_DesignTimeLayout
         Me.tbMoneda.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbMoneda.Location = New System.Drawing.Point(437, 125)
-        Me.tbMoneda.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbMoneda.Location = New System.Drawing.Point(328, 102)
         Me.tbMoneda.Name = "tbMoneda"
         Me.tbMoneda.SelectedIndex = -1
         Me.tbMoneda.SelectedItem = Nothing
-        Me.tbMoneda.Size = New System.Drawing.Size(104, 26)
+        Me.tbMoneda.Size = New System.Drawing.Size(78, 22)
         Me.tbMoneda.TabIndex = 124
         '
         'LabelX3
@@ -658,10 +644,9 @@ Partial Class PR_LibroMayor
         '
         '
         Me.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX3.Location = New System.Drawing.Point(300, 94)
-        Me.LabelX3.Margin = New System.Windows.Forms.Padding(4)
+        Me.LabelX3.Location = New System.Drawing.Point(225, 76)
         Me.LabelX3.Name = "LabelX3"
-        Me.LabelX3.Size = New System.Drawing.Size(81, 28)
+        Me.LabelX3.Size = New System.Drawing.Size(61, 23)
         Me.LabelX3.TabIndex = 2
         Me.LabelX3.Text = "HASTA"
         '
@@ -672,47 +657,42 @@ Partial Class PR_LibroMayor
         '
         '
         Me.LabelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX4.Location = New System.Drawing.Point(437, 94)
-        Me.LabelX4.Margin = New System.Windows.Forms.Padding(4)
+        Me.LabelX4.Location = New System.Drawing.Point(328, 76)
         Me.LabelX4.Name = "LabelX4"
-        Me.LabelX4.Size = New System.Drawing.Size(81, 28)
+        Me.LabelX4.Size = New System.Drawing.Size(61, 23)
         Me.LabelX4.TabIndex = 123
         Me.LabelX4.Text = "MONEDA"
         '
         'tbFechaDel
         '
         Me.tbFechaDel.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.tbFechaDel.Location = New System.Drawing.Point(154, 126)
-        Me.tbFechaDel.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbFechaDel.Location = New System.Drawing.Point(116, 102)
         Me.tbFechaDel.Name = "tbFechaDel"
-        Me.tbFechaDel.Size = New System.Drawing.Size(131, 22)
+        Me.tbFechaDel.Size = New System.Drawing.Size(99, 20)
         Me.tbFechaDel.TabIndex = 119
         '
         'tbCuenta
         '
-        Me.tbCuenta.Location = New System.Drawing.Point(155, 34)
-        Me.tbCuenta.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbCuenta.Location = New System.Drawing.Point(116, 28)
         Me.tbCuenta.Name = "tbCuenta"
         Me.tbCuenta.ReadOnly = True
-        Me.tbCuenta.Size = New System.Drawing.Size(317, 22)
+        Me.tbCuenta.Size = New System.Drawing.Size(239, 20)
         Me.tbCuenta.TabIndex = 122
         '
         'tbFechaAl
         '
         Me.tbFechaAl.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.tbFechaAl.Location = New System.Drawing.Point(300, 126)
-        Me.tbFechaAl.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbFechaAl.Location = New System.Drawing.Point(225, 102)
         Me.tbFechaAl.Name = "tbFechaAl"
-        Me.tbFechaAl.Size = New System.Drawing.Size(128, 22)
+        Me.tbFechaAl.Size = New System.Drawing.Size(97, 20)
         Me.tbFechaAl.TabIndex = 120
         '
         'tbNumi
         '
-        Me.tbNumi.Location = New System.Drawing.Point(35, 34)
-        Me.tbNumi.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbNumi.Location = New System.Drawing.Point(26, 28)
         Me.tbNumi.Name = "tbNumi"
         Me.tbNumi.ReadOnly = True
-        Me.tbNumi.Size = New System.Drawing.Size(111, 22)
+        Me.tbNumi.Size = New System.Drawing.Size(84, 20)
         Me.tbNumi.TabIndex = 121
         '
         'LabelX6
@@ -724,10 +704,9 @@ Partial Class PR_LibroMayor
         Me.LabelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX6.ForeColor = System.Drawing.Color.Green
-        Me.LabelX6.Location = New System.Drawing.Point(159, 10)
-        Me.LabelX6.Margin = New System.Windows.Forms.Padding(4)
+        Me.LabelX6.Location = New System.Drawing.Point(119, 8)
         Me.LabelX6.Name = "LabelX6"
-        Me.LabelX6.Size = New System.Drawing.Size(111, 28)
+        Me.LabelX6.Size = New System.Drawing.Size(83, 23)
         Me.LabelX6.TabIndex = 128
         Me.LabelX6.Text = "CTRL+ENTER"
         '
@@ -738,10 +717,9 @@ Partial Class PR_LibroMayor
         Me.gpGrilla.Controls.Add(Me.grDetalle)
         Me.gpGrilla.DisabledBackColor = System.Drawing.Color.Empty
         Me.gpGrilla.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.gpGrilla.Location = New System.Drawing.Point(0, 222)
-        Me.gpGrilla.Margin = New System.Windows.Forms.Padding(4)
+        Me.gpGrilla.Location = New System.Drawing.Point(0, 180)
         Me.gpGrilla.Name = "gpGrilla"
-        Me.gpGrilla.Size = New System.Drawing.Size(1277, 331)
+        Me.gpGrilla.Size = New System.Drawing.Size(952, 270)
         '
         '
         '
@@ -778,17 +756,16 @@ Partial Class PR_LibroMayor
         Me.grDetalle.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.[False]
         Me.grDetalle.Dock = System.Windows.Forms.DockStyle.Fill
         Me.grDetalle.Location = New System.Drawing.Point(0, 0)
-        Me.grDetalle.Margin = New System.Windows.Forms.Padding(4)
         Me.grDetalle.Name = "grDetalle"
-        Me.grDetalle.Size = New System.Drawing.Size(1271, 308)
+        Me.grDetalle.Size = New System.Drawing.Size(946, 249)
         Me.grDetalle.TabIndex = 3
         '
         'PR_LibroMayor
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1312, 690)
-        Me.Margin = New System.Windows.Forms.Padding(5)
+        Me.ClientSize = New System.Drawing.Size(984, 561)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "PR_LibroMayor"
         Me.Text = "PR_LibroMayor"
         Me.Controls.SetChildIndex(Me.SuperTabPrincipal, 0)

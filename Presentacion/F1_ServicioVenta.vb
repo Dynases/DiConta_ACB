@@ -151,7 +151,7 @@ Public Class F1_ServicioVenta
             .Refresh()
         End With
         If (CType(mCombo.DataSource, DataTable).Rows.Count > 0) Then
-            mCombo.SelectedIndex = 0
+            mCombo.SelectedIndex = 1
         End If
     End Sub
 
@@ -1725,11 +1725,12 @@ Public Class F1_ServicioVenta
         ef.Context = "Seleccione VENTA".ToUpper
         ef.ShowDialog()
         Dim bandera As Boolean = False
+        Dim renumi As Integer
         bandera = ef.band
         If (bandera = True) Then
             'a.renumi  , a.retcr11vehcli, vehiculo.rbplac, a.refdoc, a.retcr1cli, cliente.ranom, a.refvcr, a.retpago, a.reest  ,Sucursal,total,cliente.ranit ,cliente.rafacnom  
             Dim Row As Janus.Windows.GridEX.GridEXRow = ef.Row
-            tbsecnumi.Text = Row.Cells("renumi").Value
+            tbsecnumi.Text = Row.Cells("renumi").Value 'CFO 28/02/2020
             _CodVehiculo = Row.Cells("retcr11vehcli").Value
             tbVehiculo.Text = Row.Cells("placas").Value
             cbSucursal.Value = Row.Cells("Sucursal").Value
@@ -1737,7 +1738,7 @@ Public Class F1_ServicioVenta
             _CodCliente = Row.Cells("retcr1cli").Value
             tbCliente.Text = Row.Cells("nombre").Value
             tbFechaVenc.Value = Row.Cells("refvcr").Value
-            swTipoVenta.Value = Row.Cells("retpago").Value
+            'swTipoVenta.Value = Row.Cells("retpago").Value  CFO  28/02/20
             _CargarDetalleVentaAyudaRemolque(tbsecnumi.Text)
             TbNit.Text = Row.Cells("ranit").Value
             TbNombre1.Text = Row.Cells("rafacnom").Value
@@ -1831,11 +1832,12 @@ Public Class F1_ServicioVenta
         ef.Context = "Seleccione VENTA".ToUpper
         ef.ShowDialog()
         Dim bandera As Boolean = False
+        Dim Renumi As Integer
         bandera = ef.band
         If (bandera = True) Then
             'a.ldnumi ,a.ldtcl11veh ,vehiculo .lbplac as placas,a.ldsuc ,a.ldfdoc ,a.ldtcl1cli ,cliente .lanom as nombre,a.ldfvcr ,a.ldtpago ,a.ldest ,Sum(detalle .lcptot)as total 
             Dim Row As Janus.Windows.GridEX.GridEXRow = ef.Row
-            tbsecnumi.Text = Row.Cells("ldnumi").Value
+            tbsecnumi.Text = Row.Cells("ldnumi").Value ' CFO 28/02/20
             _CodVehiculo = Row.Cells("ldtcl11veh").Value
             tbVehiculo.Text = Row.Cells("placas").Value
             cbSucursal.Value = Row.Cells("ldsuc").Value
@@ -1843,11 +1845,11 @@ Public Class F1_ServicioVenta
             _CodCliente = Row.Cells("ldtcl1cli").Value
             tbCliente.Text = Row.Cells("nombre").Value
             tbFechaVenc.Value = Row.Cells("ldfvcr").Value
-            swTipoVenta.Value = Row.Cells("ldtven").Value
+            'swTipoVenta.Value = Row.Cells("ldtven").Value CFO 28/02/20
             cbmoneda.Value = Row.Cells("ldtmon").Value
             _Codbanco = Row.Cells("ldbanco").Value
             tbbanco.Text = Row.Cells("banco").Value
-            _CargarDetalleVentaAyuda(tbsecnumi.Text)
+            _CargarDetalleVentaAyuda(tbsecnumi.Text) ' CFO 28/02/20
 
             '    a.venumi , a.vetv2numi, a.vesecnumi, venta.ldnord As orden,
             'vehiculo.lbplac as placa, cliente.lanom As cliente , 1 as estado
@@ -1923,6 +1925,7 @@ Public Class F1_ServicioVenta
         ef.ShowDialog()
         Dim bandera As Boolean = False
         bandera = ef.band
+        Dim Hdnumi As Integer
         If (bandera = True) Then
             '      a.hdnumi , a.hdfing, cliente.hanumi, cliente.hanom As cliente,
             'a.hdfcin as fechai , a.hdfcou As fechaf, a.hdtc2cab As numiCabana,
@@ -1934,7 +1937,7 @@ Public Class F1_ServicioVenta
             '---------------
 
             Dim Row As Janus.Windows.GridEX.GridEXRow = ef.Row
-            tbsecnumi.Text = Row.Cells("hdnumi").Value
+            tbsecnumi.Text = Row.Cells("hdnumi").Value ' CFO 28/02/20
             _CodVehiculo = 0
             tbVehiculo.Text = ""
             cbSucursal.Value = 1
@@ -3784,7 +3787,7 @@ salirIf:
         End If
     End Sub
 
-   
+
     Private Sub tbbanco_MouseHover(sender As Object, e As EventArgs) Handles tbbanco.MouseHover
 
         ttmensaje.SetToolTip(tbbanco, "Presionando Ctrl+Enter")
@@ -3793,5 +3796,7 @@ salirIf:
 
     End Sub
 
+    Private Sub tbsecnumi_TextChanged(sender As Object, e As EventArgs) Handles tbsecnumi.TextChanged
 
+    End Sub
 End Class

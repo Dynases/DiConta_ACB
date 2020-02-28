@@ -4934,7 +4934,7 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
                                "VR_GO_LibroVenta", _Where)
         Return _Tabla
     End Function
-    Public Shared Function L_fnObtenerLibroVentaAmbosTipoFactura(_CodAlm As String, _fechai As String, _FechaF As String, modulo As Integer) As DataTable
+    Public Shared Function L_fnObtenerLibroVentaAmbosTipoFactura(_CodAlm As String, _fechai As String, _FechaF As String, modulo As String) As DataTable
         Dim _Tabla As DataTable
         Dim _Where As String = ""
 
@@ -4949,14 +4949,14 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
         'End If  CFO 27-02-20
 
         If _CodAlm > 0 Then
-            _Where = "vcsector = " + Str(modulo) + " and fvaalm = " + _CodAlm + " and fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' " + " ORDER BY fvanumi desc"
+            _Where = "modulo = " + modulo + " and fvaalm = " + _CodAlm + " and fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' " + " ORDER BY fvanumi desc"
         End If
         If _CodAlm = 0 Then 'todas las sucursales
-            _Where = "vcsector = " + Str(modulo) + " and  fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' " + " ORDER BY fvanumi desc"
+            _Where = "modulo = " + modulo + " and  fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' " + " ORDER BY fvanumi desc"
         End If
         If _CodAlm = -1 Then 'todas las sucursales menos la principal
-            _Where = "vcsector = " + Str(modulo) + " and fvaalm <>1 " + " and fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' " + " ORDER BY fvanumi desc"
-        End If  'CFO 13-02-20
+            _Where = "modulo = " + modulo + " and fvaalm <>1 " + " and fvafec >= '" + _fechai + "' and fvafec <= '" + _FechaF + "' " + " ORDER BY fvanumi"
+        End If  'CFO 13-02-20,  CFO 28-02-20 cambiar a modulo
 
         Dim _select As String = "fvanumi, FORMAT(fvafec,'dd/MM/yyyy') as fvafec, fvanfac, fvaautoriz,fvaest, fvanitcli, fvadescli, fvastot, fvaimpsi, fvaimpeo, fvaimptc, fvasubtotal, fvadesc, fvatotal, fvadebfis, fvaccont,fvaflim,fvaalm,scneg, factura"
 
