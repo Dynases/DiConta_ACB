@@ -127,9 +127,11 @@ Partial Class PR_EstadoCuentasResultadosV2
         '
         'btnSalir
         '
+        Me.btnSalir.Text = "&SALIR"
         '
         'btnGenerar
         '
+        Me.btnGenerar.Text = "&GENERAR"
         '
         'PanelInferior
         '

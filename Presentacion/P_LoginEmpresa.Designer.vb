@@ -112,7 +112,7 @@ Partial Class P_LoginEmpresa
         Me.ButtonX2.Size = New System.Drawing.Size(162, 43)
         Me.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ButtonX2.TabIndex = 2
-        Me.ButtonX2.Text = "SALIR"
+        Me.ButtonX2.Text = "&SALIR"
         '
         'ButtonX1
         '
@@ -127,7 +127,7 @@ Partial Class P_LoginEmpresa
         Me.ButtonX1.Size = New System.Drawing.Size(164, 43)
         Me.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ButtonX1.TabIndex = 1
-        Me.ButtonX1.Text = "ACEPTAR"
+        Me.ButtonX1.Text = "&ACEPTAR"
         '
         'GroupPanel1
         '

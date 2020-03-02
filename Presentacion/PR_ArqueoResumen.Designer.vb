@@ -42,17 +42,17 @@ Partial Class PR_ArqueoResumen
         'PanelPrincipal
         '
         Me.PanelPrincipal.Location = New System.Drawing.Point(247, 0)
-        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelPrincipal.Size = New System.Drawing.Size(637, 561)
         '
         'MReportViewer
         '
-        Me.MReportViewer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MReportViewer.Margin = New System.Windows.Forms.Padding(4)
         Me.MReportViewer.Size = New System.Drawing.Size(637, 561)
         '
         'MGPFiltros
         '
-        Me.MGPFiltros.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MGPFiltros.Margin = New System.Windows.Forms.Padding(4)
         Me.MGPFiltros.Size = New System.Drawing.Size(247, 561)
         '
         '
@@ -85,7 +85,7 @@ Partial Class PR_ArqueoResumen
         '
         'PanelIzq
         '
-        Me.PanelIzq.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelIzq.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelIzq.Size = New System.Drawing.Size(247, 561)
         Me.PanelIzq.Controls.SetChildIndex(Me.MGPFiltros, 0)
         Me.PanelIzq.Controls.SetChildIndex(Me.PanelEx1, 0)
@@ -93,7 +93,7 @@ Partial Class PR_ArqueoResumen
         '
         'PanelEx1
         '
-        Me.PanelEx1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelEx1.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelEx1.Size = New System.Drawing.Size(247, 76)
         Me.PanelEx1.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(150, Byte), Integer))
@@ -111,9 +111,11 @@ Partial Class PR_ArqueoResumen
         '
         'btnSalir
         '
+        Me.btnSalir.Text = "&SALIR"
         '
         'btnGenerar
         '
+        Me.btnGenerar.Text = "&GENERAR"
         '
         'PanelInferior
         '
@@ -151,7 +153,7 @@ Partial Class PR_ArqueoResumen
         '
         'TxtNombreUsu
         '
-        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtNombreUsu.Size = New System.Drawing.Size(135, 32)
         '
         'GroupPanelFiltros
@@ -160,7 +162,7 @@ Partial Class PR_ArqueoResumen
         Me.GroupPanelFiltros.Controls.Add(Me.tbFechaAl)
         Me.GroupPanelFiltros.Controls.Add(Me.LabelX3)
         Me.GroupPanelFiltros.Controls.Add(Me.tbFechaDel)
-        Me.GroupPanelFiltros.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupPanelFiltros.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupPanelFiltros.Size = New System.Drawing.Size(247, 485)
         '
         '
@@ -194,7 +196,7 @@ Partial Class PR_ArqueoResumen
         'Panel1
         '
         Me.Panel1.Location = New System.Drawing.Point(38, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         '
         'LabelX3
         '
@@ -246,7 +248,7 @@ Partial Class PR_ArqueoResumen
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(884, 561)
         Me.Location = New System.Drawing.Point(0, 0)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "PR_ArqueoResumen"
         Me.Text = "PR_EstadoCuentasActivoPasivo"
         Me.Controls.SetChildIndex(Me.PanelInferior, 0)

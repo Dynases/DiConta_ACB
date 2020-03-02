@@ -24,6 +24,8 @@ Public Class F1_Cuentas
 
         _prAsignarPermisos()
 
+        tvCuentas.SelectedNode.ExpandAll()
+
         '_prCargarArbol()
     End Sub
     Private Sub _prCargarComboLibreria(mCombo As Janus.Windows.GridEX.EditControls.MultiColumnCombo, cod1 As String, cod2 As String)
@@ -448,16 +450,35 @@ Public Class F1_Cuentas
         Dim info As New TaskDialogInfo("eliminacion".ToUpper, eTaskDialogIcon.Delete, "¿esta seguro de eliminar el registro?".ToUpper, "".ToUpper, eTaskDialogButton.Yes Or eTaskDialogButton.Cancel, eTaskDialogBackgroundColor.Blue)
         Dim result As eTaskDialogResult = TaskDialog.Show(info)
         If result = eTaskDialogResult.Yes Then
-            Dim mensajeError As String = ""
-            Dim res As Boolean = L_prCuentaBorrar(tbNumi.Text, 1, tbCuenta.Text, tbDesc.Text, tbNivel2.Text, IIf(tbMoneda.Value = True, "SU", "BO"), tbTipo.Value, tbPadre.Text, mensajeError)
-            If res Then
-                ToastNotification.Show(Me, "Codigo de equipo ".ToUpper + tbNumi.Text + " eliminado con Exito.".ToUpper, My.Resources.GRABACION_EXITOSA, 5000, eToastGlowColor.Green, eToastPosition.TopCenter)
-                _PMFiltrar()
-            Else
-                ToastNotification.Show(Me, mensajeError, My.Resources.WARNING, 8000, eToastGlowColor.Red, eToastPosition.TopCenter)
+            If validar(tbNumi.Text) Then
+                Dim mensajeError As String = ""
+                Dim res As Boolean = L_prCuentaBorrar(tbNumi.Text, 1, tbCuenta.Text, tbDesc.Text, tbNivel2.Text, IIf(tbMoneda.Value = True, "SU", "BO"), tbTipo.Value, tbPadre.Text, mensajeError)
+                If res Then
+                    ToastNotification.Show(Me, "Codigo de cuenta ".ToUpper + tbNumi.Text + " eliminado con Exito.".ToUpper, My.Resources.GRABACION_EXITOSA, 5000, eToastGlowColor.Green, eToastPosition.TopCenter)
+                    _PMFiltrar()
+                    tvCuentas.SelectedNode.ExpandAll()
+                Else
+                    ToastNotification.Show(Me, mensajeError, My.Resources.WARNING, 8000, eToastGlowColor.Red, eToastPosition.TopCenter)
+                End If
             End If
         End If
     End Sub
+    Public Function validar(numi As Integer) As Boolean
+        Dim _Tabla As New DataTable
+        _Tabla = L_Comprobante(numi)
+        If _Tabla.Rows(0).Item("total") > 0 Then
+            ToastNotification.Show(Me, "Existen ".ToUpper + Str(_Tabla.Rows(0).Item("total")) + " registros en comprobantes. No se puede Eliminar.".ToUpper, My.Resources.GRABACION_EXITOSA, 5000, eToastGlowColor.Green, eToastPosition.TopCenter)
+            Return False
+        End If
+
+        _Tabla = L_Hijoscuenta(numi)
+        If _Tabla.Rows(0).Item("total") > 0 Then
+            ToastNotification.Show(Me, "No se puede Eliminar cuenta contanedora de otras cuentas.".ToUpper, My.Resources.GRABACION_EXITOSA, 5000, eToastGlowColor.Green, eToastPosition.TopCenter)
+            Return False
+        End If
+
+        Return True
+    End Function
     Public Overrides Function _PMOValidarCampos() As Boolean
         Dim _ok As Boolean = True
         MEP.Clear()
@@ -687,6 +708,10 @@ Public Class F1_Cuentas
     End Sub
 
     Private Sub grDetalle_FormattingRow(sender As Object, e As RowLoadEventArgs) Handles grDetalle.FormattingRow
+
+    End Sub
+
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
 
     End Sub
 End Class

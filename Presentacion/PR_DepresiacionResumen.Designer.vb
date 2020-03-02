@@ -109,9 +109,11 @@ Partial Class PR_DepresiacionResumen
         '
         'btnSalir
         '
+        Me.btnSalir.Text = "&SALIR"
         '
         'btnGenerar
         '
+        Me.btnGenerar.Text = "&GENERAR"
         '
         'PanelInferior
         '

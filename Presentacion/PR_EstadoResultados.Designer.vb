@@ -58,17 +58,17 @@ Partial Class PR_EstadoResultados
         'PanelPrincipal
         '
         Me.PanelPrincipal.Location = New System.Drawing.Point(324, 0)
-        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelPrincipal.Size = New System.Drawing.Size(560, 561)
         '
         'MReportViewer
         '
-        Me.MReportViewer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MReportViewer.Margin = New System.Windows.Forms.Padding(4)
         Me.MReportViewer.Size = New System.Drawing.Size(560, 561)
         '
         'MGPFiltros
         '
-        Me.MGPFiltros.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MGPFiltros.Margin = New System.Windows.Forms.Padding(4)
         Me.MGPFiltros.Size = New System.Drawing.Size(324, 561)
         '
         '
@@ -101,7 +101,7 @@ Partial Class PR_EstadoResultados
         '
         'PanelIzq
         '
-        Me.PanelIzq.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelIzq.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelIzq.Size = New System.Drawing.Size(324, 561)
         Me.PanelIzq.Controls.SetChildIndex(Me.MGPFiltros, 0)
         Me.PanelIzq.Controls.SetChildIndex(Me.PanelEx1, 0)
@@ -109,7 +109,7 @@ Partial Class PR_EstadoResultados
         '
         'PanelEx1
         '
-        Me.PanelEx1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelEx1.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelEx1.Size = New System.Drawing.Size(324, 76)
         Me.PanelEx1.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(150, Byte), Integer))
@@ -127,9 +127,11 @@ Partial Class PR_EstadoResultados
         '
         'btnSalir
         '
+        Me.btnSalir.Text = "&SALIR"
         '
         'btnGenerar
         '
+        Me.btnGenerar.Text = "&GENERAR"
         '
         'PanelInferior
         '
@@ -167,7 +169,7 @@ Partial Class PR_EstadoResultados
         '
         'TxtNombreUsu
         '
-        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtNombreUsu.Size = New System.Drawing.Size(135, 32)
         '
         'GroupPanelFiltros
@@ -175,7 +177,7 @@ Partial Class PR_EstadoResultados
         Me.GroupPanelFiltros.Controls.Add(Me.GroupPanel2)
         Me.GroupPanelFiltros.Controls.Add(Me.GroupPanel1)
         Me.GroupPanelFiltros.Controls.Add(Me.Panel2)
-        Me.GroupPanelFiltros.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupPanelFiltros.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupPanelFiltros.Size = New System.Drawing.Size(324, 485)
         '
         '
@@ -209,7 +211,7 @@ Partial Class PR_EstadoResultados
         'Panel1
         '
         Me.Panel1.Location = New System.Drawing.Point(64, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         '
         'LabelX3
         '
@@ -264,7 +266,7 @@ Partial Class PR_EstadoResultados
         Me.Panel2.Controls.Add(Me.tbFechaAl)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(318, 81)
         Me.Panel2.TabIndex = 120
@@ -280,7 +282,7 @@ Partial Class PR_EstadoResultados
         Me.GroupPanel1.DisabledBackColor = System.Drawing.Color.Empty
         Me.GroupPanel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupPanel1.Location = New System.Drawing.Point(0, 81)
-        Me.GroupPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupPanel1.Name = "GroupPanel1"
         Me.GroupPanel1.Size = New System.Drawing.Size(318, 98)
         '
@@ -347,7 +349,7 @@ Partial Class PR_EstadoResultados
         '
         Me.tbFiltrar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbFiltrar.Location = New System.Drawing.Point(78, 16)
-        Me.tbFiltrar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.tbFiltrar.Margin = New System.Windows.Forms.Padding(2)
         Me.tbFiltrar.Name = "tbFiltrar"
         Me.tbFiltrar.OffText = "NO"
         Me.tbFiltrar.OnText = "SI"
@@ -447,7 +449,7 @@ Partial Class PR_EstadoResultados
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(884, 561)
         Me.Location = New System.Drawing.Point(0, 0)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "PR_EstadoResultados"
         Me.Text = "PR_EstadoCuentasActivoPasivo"
         Me.Controls.SetChildIndex(Me.PanelInferior, 0)

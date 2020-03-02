@@ -294,12 +294,12 @@ Partial Class F0_Arqueo
         '
         Me.SuperTabControlPanelBuscador.Controls.Add(Me.JGrM_Buscador)
         Me.SuperTabControlPanelBuscador.Location = New System.Drawing.Point(0, 0)
-        Me.SuperTabControlPanelBuscador.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.SuperTabControlPanelBuscador.Margin = New System.Windows.Forms.Padding(2)
         Me.SuperTabControlPanelBuscador.Size = New System.Drawing.Size(984, 596)
         '
         'SuperTabControlPanelRegistro
         '
-        Me.SuperTabControlPanelRegistro.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.SuperTabControlPanelRegistro.Margin = New System.Windows.Forms.Padding(2)
         Me.SuperTabControlPanelRegistro.Size = New System.Drawing.Size(925, 563)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelSuperior, 0)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelInferior, 0)
@@ -307,7 +307,7 @@ Partial Class F0_Arqueo
         '
         'PanelSuperior
         '
-        Me.PanelSuperior.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelSuperior.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelSuperior.Size = New System.Drawing.Size(925, 72)
         Me.PanelSuperior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelSuperior.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(150, Byte), Integer))
@@ -326,7 +326,7 @@ Partial Class F0_Arqueo
         'PanelInferior
         '
         Me.PanelInferior.Location = New System.Drawing.Point(0, 524)
-        Me.PanelInferior.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelInferior.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelInferior.Size = New System.Drawing.Size(925, 39)
         Me.PanelInferior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelInferior.Style.BackColor1.Color = System.Drawing.Color.Transparent
@@ -362,14 +362,14 @@ Partial Class F0_Arqueo
         '
         'TxtNombreUsu
         '
-        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(2)
         Me.TxtNombreUsu.Size = New System.Drawing.Size(135, 19)
         '
         'PanelToolBar1
         '
         Me.PanelToolBar1.Controls.Add(Me.ButtonX1)
         Me.PanelToolBar1.Controls.Add(Me.ButtonX2)
-        Me.PanelToolBar1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelToolBar1.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelToolBar1.Size = New System.Drawing.Size(576, 72)
         Me.PanelToolBar1.Controls.SetChildIndex(Me.btnNuevo, 0)
         Me.PanelToolBar1.Controls.SetChildIndex(Me.btnModificar, 0)
@@ -382,32 +382,37 @@ Partial Class F0_Arqueo
         'btnSalir
         '
         Me.btnSalir.Dock = System.Windows.Forms.DockStyle.Left
-        Me.btnSalir.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnSalir.Margin = New System.Windows.Forms.Padding(2)
         Me.btnSalir.Size = New System.Drawing.Size(66, 72)
+        Me.btnSalir.Text = "&SALIR"
         '
         'btnGrabar
         '
+        Me.btnGrabar.Text = "GR&ABAR"
         '
         'btnEliminar
         '
+        Me.btnEliminar.Text = "&ELIMNAR"
         '
         'btnModificar
         '
+        Me.btnModificar.Text = "&MODIFICAR"
         '
         'btnNuevo
         '
+        Me.btnNuevo.Text = "&NUEVO"
         '
         'PanelToolBar2
         '
         Me.PanelToolBar2.Location = New System.Drawing.Point(845, 0)
-        Me.PanelToolBar2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelToolBar2.Margin = New System.Windows.Forms.Padding(2)
         '
         'PanelPrincipal
         '
         Me.PanelPrincipal.BackColor = System.Drawing.Color.Transparent
         Me.PanelPrincipal.Controls.Add(Me.Panel1)
         Me.PanelPrincipal.Controls.Add(Me.panelDatos)
-        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelPrincipal.Size = New System.Drawing.Size(925, 452)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelUsuario, 0)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.panelDatos, 0)
@@ -419,6 +424,7 @@ Partial Class F0_Arqueo
         '
         'btnImprimir
         '
+        Me.btnImprimir.Text = "IM&PRIMIR"
         '
         'btnUltimo
         '
@@ -437,7 +443,7 @@ Partial Class F0_Arqueo
         'MPanelUserAct
         '
         Me.MPanelUserAct.Location = New System.Drawing.Point(725, 0)
-        Me.MPanelUserAct.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MPanelUserAct.Margin = New System.Windows.Forms.Padding(2)
         '
         'MFlyoutUsuario
         '
@@ -449,7 +455,7 @@ Partial Class F0_Arqueo
         '
         Me.MRlAccion.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.MRlAccion.Location = New System.Drawing.Point(576, 0)
-        Me.MRlAccion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MRlAccion.Margin = New System.Windows.Forms.Padding(2)
         Me.MRlAccion.Size = New System.Drawing.Size(269, 72)
         '
         'panelDatos
@@ -463,7 +469,7 @@ Partial Class F0_Arqueo
         Me.panelDatos.Dock = System.Windows.Forms.DockStyle.Left
         Me.panelDatos.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.panelDatos.Location = New System.Drawing.Point(0, 0)
-        Me.panelDatos.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.panelDatos.Margin = New System.Windows.Forms.Padding(2)
         Me.panelDatos.Name = "panelDatos"
         Me.panelDatos.Size = New System.Drawing.Size(752, 452)
         Me.panelDatos.TabIndex = 1
@@ -2481,10 +2487,10 @@ Partial Class F0_Arqueo
         Me.SuperTabControl2.ControlBox.Name = ""
         Me.SuperTabControl2.ControlBox.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.SuperTabControl2.ControlBox.MenuBox, Me.SuperTabControl2.ControlBox.CloseBox})
         Me.SuperTabControl2.Controls.Add(Me.SuperTabControlPanel4)
+        Me.SuperTabControl2.Controls.Add(Me.SuperTabControlPanel5)
         Me.SuperTabControl2.Controls.Add(Me.SuperTabControlPanel1)
         Me.SuperTabControl2.Controls.Add(Me.SuperTabControlPanel3)
         Me.SuperTabControl2.Controls.Add(Me.SuperTabControlPanel2)
-        Me.SuperTabControl2.Controls.Add(Me.SuperTabControlPanel5)
         Me.SuperTabControl2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SuperTabControl2.Location = New System.Drawing.Point(0, 0)
         Me.SuperTabControl2.Name = "SuperTabControl2"
@@ -2533,7 +2539,7 @@ Partial Class F0_Arqueo
         Me.SuperTabControlPanel1.Controls.Add(Me.grPagosAnticipados)
         Me.SuperTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SuperTabControlPanel1.Location = New System.Drawing.Point(121, 0)
-        Me.SuperTabControlPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.SuperTabControlPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.SuperTabControlPanel1.Name = "SuperTabControlPanel1"
         Me.SuperTabControlPanel1.Size = New System.Drawing.Size(17, 527)
         Me.SuperTabControlPanel1.TabIndex = 0
@@ -2611,7 +2617,7 @@ Partial Class F0_Arqueo
         Me.SuperTabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SuperTabControlPanel5.Location = New System.Drawing.Point(121, 0)
         Me.SuperTabControlPanel5.Name = "SuperTabControlPanel5"
-        Me.SuperTabControlPanel5.Size = New System.Drawing.Size(17, 527)
+        Me.SuperTabControlPanel5.Size = New System.Drawing.Size(0, 429)
         Me.SuperTabControlPanel5.TabIndex = 2
         Me.SuperTabControlPanel5.TabItem = Me.SuperTabItem5
         '
@@ -2620,7 +2626,7 @@ Partial Class F0_Arqueo
         Me.grDetalle2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.grDetalle2.Location = New System.Drawing.Point(0, 0)
         Me.grDetalle2.Name = "grDetalle2"
-        Me.grDetalle2.Size = New System.Drawing.Size(17, 527)
+        Me.grDetalle2.Size = New System.Drawing.Size(0, 429)
         Me.grDetalle2.TabIndex = 1
         '
         'SuperTabItem5
@@ -2751,7 +2757,7 @@ Partial Class F0_Arqueo
         Me.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ButtonX2.TabIndex = 13
         Me.ButtonX2.Tag = "0"
-        Me.ButtonX2.Text = "AYUDA SUMA"
+        Me.ButtonX2.Text = "AYUDA &SUMA"
         Me.ButtonX2.TextColor = System.Drawing.Color.White
         Me.ButtonX2.Visible = False
         '
@@ -2770,7 +2776,7 @@ Partial Class F0_Arqueo
         Me.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ButtonX1.TabIndex = 14
         Me.ButtonX1.Tag = "0"
-        Me.ButtonX1.Text = "LIMPIAR SUMA"
+        Me.ButtonX1.Text = "&LIMPIAR SUMA"
         Me.ButtonX1.TextColor = System.Drawing.Color.White
         Me.ButtonX1.Visible = False
         '
@@ -2779,7 +2785,7 @@ Partial Class F0_Arqueo
         Me.ContextMenuStrip4.ImageScalingSize = New System.Drawing.Size(24, 24)
         Me.ContextMenuStrip4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem3})
         Me.ContextMenuStrip4.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip4.Size = New System.Drawing.Size(166, 62)
+        Me.ContextMenuStrip4.Size = New System.Drawing.Size(141, 40)
         '
         'ToolStripMenuItem3
         '
@@ -2824,7 +2830,7 @@ Partial Class F0_Arqueo
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(957, 563)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "F0_Arqueo"
         Me.Text = "F1_Arqueo"
         Me.Controls.SetChildIndex(Me.SuperTabPrincipal, 0)

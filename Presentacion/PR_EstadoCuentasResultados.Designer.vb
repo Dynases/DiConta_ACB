@@ -60,20 +60,19 @@ Partial Class PR_EstadoCuentasResultados
         '
         'PanelPrincipal
         '
-        Me.PanelPrincipal.Location = New System.Drawing.Point(325, 0)
-        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(5)
-        Me.PanelPrincipal.Size = New System.Drawing.Size(854, 690)
+        Me.PanelPrincipal.Location = New System.Drawing.Point(244, 0)
+        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelPrincipal.Size = New System.Drawing.Size(640, 561)
         '
         'MReportViewer
         '
-        Me.MReportViewer.Margin = New System.Windows.Forms.Padding(5)
-        Me.MReportViewer.Size = New System.Drawing.Size(854, 690)
-        Me.MReportViewer.ToolPanelWidth = 267
+        Me.MReportViewer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MReportViewer.Size = New System.Drawing.Size(640, 561)
         '
         'MGPFiltros
         '
-        Me.MGPFiltros.Margin = New System.Windows.Forms.Padding(5)
-        Me.MGPFiltros.Size = New System.Drawing.Size(325, 690)
+        Me.MGPFiltros.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MGPFiltros.Size = New System.Drawing.Size(244, 561)
         '
         '
         '
@@ -105,16 +104,16 @@ Partial Class PR_EstadoCuentasResultados
         '
         'PanelIzq
         '
-        Me.PanelIzq.Margin = New System.Windows.Forms.Padding(5)
-        Me.PanelIzq.Size = New System.Drawing.Size(325, 690)
+        Me.PanelIzq.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelIzq.Size = New System.Drawing.Size(244, 561)
         Me.PanelIzq.Controls.SetChildIndex(Me.MGPFiltros, 0)
         Me.PanelIzq.Controls.SetChildIndex(Me.PanelEx1, 0)
         Me.PanelIzq.Controls.SetChildIndex(Me.GroupPanelFiltros, 0)
         '
         'PanelEx1
         '
-        Me.PanelEx1.Margin = New System.Windows.Forms.Padding(5)
-        Me.PanelEx1.Size = New System.Drawing.Size(325, 94)
+        Me.PanelEx1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelEx1.Size = New System.Drawing.Size(244, 76)
         Me.PanelEx1.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(150, Byte), Integer))
         Me.PanelEx1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(150, Byte), Integer))
@@ -131,9 +130,11 @@ Partial Class PR_EstadoCuentasResultados
         '
         'btnSalir
         '
+        Me.btnSalir.Text = "&SALIR"
         '
         'btnGenerar
         '
+        Me.btnGenerar.Text = "&GENERAR"
         '
         'PanelInferior
         '
@@ -171,16 +172,16 @@ Partial Class PR_EstadoCuentasResultados
         '
         'TxtNombreUsu
         '
-        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(5)
-        Me.TxtNombreUsu.Size = New System.Drawing.Size(179, 38)
+        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtNombreUsu.Size = New System.Drawing.Size(135, 32)
         '
         'GroupPanelFiltros
         '
         Me.GroupPanelFiltros.Controls.Add(Me.GroupPanel2)
         Me.GroupPanelFiltros.Controls.Add(Me.GroupPanel1)
         Me.GroupPanelFiltros.Controls.Add(Me.Panel2)
-        Me.GroupPanelFiltros.Margin = New System.Windows.Forms.Padding(5)
-        Me.GroupPanelFiltros.Size = New System.Drawing.Size(325, 596)
+        Me.GroupPanelFiltros.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupPanelFiltros.Size = New System.Drawing.Size(244, 485)
         '
         '
         '
@@ -212,8 +213,8 @@ Partial Class PR_EstadoCuentasResultados
         '
         'Panel1
         '
-        Me.Panel1.Location = New System.Drawing.Point(54, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(5)
+        Me.Panel1.Location = New System.Drawing.Point(40, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         '
         'LabelX3
         '
@@ -223,10 +224,9 @@ Partial Class PR_EstadoCuentasResultados
         '
         Me.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX3.Location = New System.Drawing.Point(10, 15)
-        Me.LabelX3.Margin = New System.Windows.Forms.Padding(4)
+        Me.LabelX3.Location = New System.Drawing.Point(8, 12)
         Me.LabelX3.Name = "LabelX3"
-        Me.LabelX3.Size = New System.Drawing.Size(109, 28)
+        Me.LabelX3.Size = New System.Drawing.Size(82, 23)
         Me.LabelX3.TabIndex = 117
         Me.LabelX3.Text = "GESTION:"
         '
@@ -238,12 +238,11 @@ Partial Class PR_EstadoCuentasResultados
         Me.tbGestion.BackgroundStyle.Class = "DateTimeInputBackground"
         Me.tbGestion.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbGestion.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
-        Me.tbGestion.Location = New System.Drawing.Point(150, 17)
-        Me.tbGestion.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbGestion.Location = New System.Drawing.Point(112, 14)
         Me.tbGestion.MinValue = 2000
         Me.tbGestion.Name = "tbGestion"
         Me.tbGestion.ShowUpDown = True
-        Me.tbGestion.Size = New System.Drawing.Size(107, 26)
+        Me.tbGestion.Size = New System.Drawing.Size(80, 22)
         Me.tbGestion.TabIndex = 120
         Me.tbGestion.Value = 2000
         '
@@ -255,10 +254,9 @@ Partial Class PR_EstadoCuentasResultados
         '
         Me.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX2.Location = New System.Drawing.Point(8, 58)
-        Me.LabelX2.Margin = New System.Windows.Forms.Padding(4)
+        Me.LabelX2.Location = New System.Drawing.Point(6, 47)
         Me.LabelX2.Name = "LabelX2"
-        Me.LabelX2.Size = New System.Drawing.Size(109, 28)
+        Me.LabelX2.Size = New System.Drawing.Size(82, 23)
         Me.LabelX2.TabIndex = 123
         Me.LabelX2.Text = "FECHA DEL:"
         '
@@ -270,29 +268,26 @@ Partial Class PR_EstadoCuentasResultados
         '
         Me.LabelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX4.Location = New System.Drawing.Point(8, 92)
-        Me.LabelX4.Margin = New System.Windows.Forms.Padding(4)
+        Me.LabelX4.Location = New System.Drawing.Point(6, 75)
         Me.LabelX4.Name = "LabelX4"
-        Me.LabelX4.Size = New System.Drawing.Size(129, 28)
+        Me.LabelX4.Size = New System.Drawing.Size(97, 23)
         Me.LabelX4.TabIndex = 125
         Me.LabelX4.Text = "FECHA HASTA:"
         '
         'tbFechaDel
         '
         Me.tbFechaDel.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.tbFechaDel.Location = New System.Drawing.Point(148, 59)
-        Me.tbFechaDel.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbFechaDel.Location = New System.Drawing.Point(111, 48)
         Me.tbFechaDel.Name = "tbFechaDel"
-        Me.tbFechaDel.Size = New System.Drawing.Size(156, 26)
+        Me.tbFechaDel.Size = New System.Drawing.Size(118, 22)
         Me.tbFechaDel.TabIndex = 122
         '
         'tbFechaAl
         '
         Me.tbFechaAl.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.tbFechaAl.Location = New System.Drawing.Point(148, 94)
-        Me.tbFechaAl.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbFechaAl.Location = New System.Drawing.Point(111, 76)
         Me.tbFechaAl.Name = "tbFechaAl"
-        Me.tbFechaAl.Size = New System.Drawing.Size(156, 26)
+        Me.tbFechaAl.Size = New System.Drawing.Size(118, 22)
         Me.tbFechaAl.TabIndex = 124
         '
         'Panel2
@@ -306,8 +301,9 @@ Partial Class PR_EstadoCuentasResultados
         Me.Panel2.Controls.Add(Me.tbFechaDel)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(319, 133)
+        Me.Panel2.Size = New System.Drawing.Size(238, 108)
         Me.Panel2.TabIndex = 126
         '
         'GroupPanel1
@@ -320,10 +316,10 @@ Partial Class PR_EstadoCuentasResultados
         Me.GroupPanel1.Controls.Add(Me.tbFiltrar)
         Me.GroupPanel1.DisabledBackColor = System.Drawing.Color.Empty
         Me.GroupPanel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.GroupPanel1.Location = New System.Drawing.Point(0, 133)
-        Me.GroupPanel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupPanel1.Location = New System.Drawing.Point(0, 108)
+        Me.GroupPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupPanel1.Name = "GroupPanel1"
-        Me.GroupPanel1.Size = New System.Drawing.Size(319, 119)
+        Me.GroupPanel1.Size = New System.Drawing.Size(238, 97)
         '
         '
         '
@@ -360,12 +356,11 @@ Partial Class PR_EstadoCuentasResultados
         Me.tbVariable.DesignTimeLayout = tbVariable_DesignTimeLayout
         Me.tbVariable.Enabled = False
         Me.tbVariable.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbVariable.Location = New System.Drawing.Point(7, 50)
-        Me.tbVariable.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbVariable.Location = New System.Drawing.Point(5, 41)
         Me.tbVariable.Name = "tbVariable"
         Me.tbVariable.SelectedIndex = -1
         Me.tbVariable.SelectedItem = Nothing
-        Me.tbVariable.Size = New System.Drawing.Size(300, 26)
+        Me.tbVariable.Size = New System.Drawing.Size(225, 22)
         Me.tbVariable.TabIndex = 122
         '
         'LabelX1
@@ -376,10 +371,9 @@ Partial Class PR_EstadoCuentasResultados
         '
         Me.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX1.Location = New System.Drawing.Point(7, 14)
-        Me.LabelX1.Margin = New System.Windows.Forms.Padding(4)
+        Me.LabelX1.Location = New System.Drawing.Point(5, 11)
         Me.LabelX1.Name = "LabelX1"
-        Me.LabelX1.Size = New System.Drawing.Size(81, 28)
+        Me.LabelX1.Size = New System.Drawing.Size(61, 23)
         Me.LabelX1.TabIndex = 118
         Me.LabelX1.Text = "FILTRAR:"
         '
@@ -389,12 +383,12 @@ Partial Class PR_EstadoCuentasResultados
         '
         '
         Me.tbFiltrar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.tbFiltrar.Location = New System.Drawing.Point(104, 20)
-        Me.tbFiltrar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.tbFiltrar.Location = New System.Drawing.Point(78, 16)
+        Me.tbFiltrar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.tbFiltrar.Name = "tbFiltrar"
         Me.tbFiltrar.OffText = "NO"
         Me.tbFiltrar.OnText = "SI"
-        Me.tbFiltrar.Size = New System.Drawing.Size(91, 22)
+        Me.tbFiltrar.Size = New System.Drawing.Size(68, 18)
         Me.tbFiltrar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.tbFiltrar.TabIndex = 0
         '
@@ -408,10 +402,10 @@ Partial Class PR_EstadoCuentasResultados
         Me.GroupPanel2.Controls.Add(Me.tbFiltrarSucursal)
         Me.GroupPanel2.DisabledBackColor = System.Drawing.Color.Empty
         Me.GroupPanel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.GroupPanel2.Location = New System.Drawing.Point(0, 252)
-        Me.GroupPanel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupPanel2.Location = New System.Drawing.Point(0, 205)
+        Me.GroupPanel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupPanel2.Name = "GroupPanel2"
-        Me.GroupPanel2.Size = New System.Drawing.Size(319, 121)
+        Me.GroupPanel2.Size = New System.Drawing.Size(238, 98)
         '
         '
         '
@@ -448,12 +442,11 @@ Partial Class PR_EstadoCuentasResultados
         Me.tbVariableSucursal.DesignTimeLayout = tbVariableSucursal_DesignTimeLayout
         Me.tbVariableSucursal.Enabled = False
         Me.tbVariableSucursal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbVariableSucursal.Location = New System.Drawing.Point(7, 50)
-        Me.tbVariableSucursal.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbVariableSucursal.Location = New System.Drawing.Point(5, 41)
         Me.tbVariableSucursal.Name = "tbVariableSucursal"
         Me.tbVariableSucursal.SelectedIndex = -1
         Me.tbVariableSucursal.SelectedItem = Nothing
-        Me.tbVariableSucursal.Size = New System.Drawing.Size(300, 26)
+        Me.tbVariableSucursal.Size = New System.Drawing.Size(225, 22)
         Me.tbVariableSucursal.TabIndex = 122
         '
         'LabelX5
@@ -464,10 +457,9 @@ Partial Class PR_EstadoCuentasResultados
         '
         Me.LabelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX5.Location = New System.Drawing.Point(7, 14)
-        Me.LabelX5.Margin = New System.Windows.Forms.Padding(4)
+        Me.LabelX5.Location = New System.Drawing.Point(5, 11)
         Me.LabelX5.Name = "LabelX5"
-        Me.LabelX5.Size = New System.Drawing.Size(81, 28)
+        Me.LabelX5.Size = New System.Drawing.Size(61, 23)
         Me.LabelX5.TabIndex = 118
         Me.LabelX5.Text = "FILTRAR:"
         '
@@ -477,22 +469,22 @@ Partial Class PR_EstadoCuentasResultados
         '
         '
         Me.tbFiltrarSucursal.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.tbFiltrarSucursal.Location = New System.Drawing.Point(104, 20)
-        Me.tbFiltrarSucursal.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.tbFiltrarSucursal.Location = New System.Drawing.Point(78, 16)
+        Me.tbFiltrarSucursal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.tbFiltrarSucursal.Name = "tbFiltrarSucursal"
         Me.tbFiltrarSucursal.OffText = "NO"
         Me.tbFiltrarSucursal.OnText = "SI"
-        Me.tbFiltrarSucursal.Size = New System.Drawing.Size(91, 22)
+        Me.tbFiltrarSucursal.Size = New System.Drawing.Size(68, 18)
         Me.tbFiltrarSucursal.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.tbFiltrarSucursal.TabIndex = 0
         '
         'PR_EstadoCuentasResultados
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1179, 690)
+        Me.ClientSize = New System.Drawing.Size(884, 561)
         Me.Location = New System.Drawing.Point(0, 0)
-        Me.Margin = New System.Windows.Forms.Padding(5)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "PR_EstadoCuentasResultados"
         Me.Text = "PR_EstadoCuentasActivoPasivo"
         Me.Controls.SetChildIndex(Me.PanelInferior, 0)

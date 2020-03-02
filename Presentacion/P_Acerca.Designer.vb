@@ -47,11 +47,10 @@ Partial Class P_Acerca
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(66, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel2.Location = New System.Drawing.Point(12, 11)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel2.Location = New System.Drawing.Point(9, 9)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Padding = New System.Windows.Forms.Padding(4)
-        Me.Panel2.Size = New System.Drawing.Size(696, 379)
+        Me.Panel2.Padding = New System.Windows.Forms.Padding(3)
+        Me.Panel2.Size = New System.Drawing.Size(522, 308)
         Me.Panel2.TabIndex = 17
         '
         'Panel3
@@ -67,42 +66,38 @@ Partial Class P_Acerca
         Me.Panel3.Controls.Add(Me.Panel4)
         Me.Panel3.Controls.Add(Me.btnIngresar)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel3.Location = New System.Drawing.Point(4, 4)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel3.Location = New System.Drawing.Point(3, 3)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(688, 371)
+        Me.Panel3.Size = New System.Drawing.Size(516, 302)
         Me.Panel3.TabIndex = 16
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(356, 149)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(267, 121)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(124, 20)
+        Me.Label2.Size = New System.Drawing.Size(99, 16)
         Me.Label2.TabIndex = 24
-        Me.Label2.Text = "Fecha:27/02/20"
+        Me.Label2.Text = "Fecha:01/03/20"
         '
         'lbVersion
         '
         Me.lbVersion.AutoSize = True
         Me.lbVersion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbVersion.Location = New System.Drawing.Point(423, 114)
-        Me.lbVersion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbVersion.Location = New System.Drawing.Point(317, 93)
         Me.lbVersion.Name = "lbVersion"
-        Me.lbVersion.Size = New System.Drawing.Size(44, 20)
+        Me.lbVersion.Size = New System.Drawing.Size(35, 16)
         Me.lbVersion.TabIndex = 22
-        Me.lbVersion.Text = "3.0.0"
+        Me.lbVersion.Text = "3.0.2"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(356, 214)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(267, 174)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(296, 20)
+        Me.Label5.Size = New System.Drawing.Size(237, 16)
         Me.Label5.TabIndex = 21
         Me.Label5.Text = "Nombre de Empresa: DINASES S.R.L."
         '
@@ -110,10 +105,9 @@ Partial Class P_Acerca
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(355, 182)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(266, 148)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(279, 20)
+        Me.Label6.Size = New System.Drawing.Size(220, 16)
         Me.Label6.TabIndex = 20
         Me.Label6.Text = "Derechos de Autor: DINASES S.R.L"
         '
@@ -121,10 +115,9 @@ Partial Class P_Acerca
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(355, 114)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(266, 93)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(71, 20)
+        Me.Label7.Size = New System.Drawing.Size(57, 16)
         Me.Label7.TabIndex = 19
         Me.Label7.Text = "Versión:"
         '
@@ -132,10 +125,9 @@ Partial Class P_Acerca
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(355, 82)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(266, 67)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(211, 20)
+        Me.Label8.Size = New System.Drawing.Size(168, 16)
         Me.Label8.TabIndex = 18
         Me.Label8.Text = "Nombre Producto: DiConta"
         '
@@ -143,13 +135,13 @@ Partial Class P_Acerca
         '
         Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Left
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(0, 70)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(8, 4, 4, 4)
+        Me.TextBox1.Location = New System.Drawing.Point(0, 57)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(6, 3, 3, 3)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
         Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBox1.Size = New System.Drawing.Size(343, 301)
+        Me.TextBox1.Size = New System.Drawing.Size(258, 245)
         Me.TextBox1.TabIndex = 17
         Me.TextBox1.TabStop = False
         Me.TextBox1.Text = resources.GetString("TextBox1.Text")
@@ -160,9 +152,8 @@ Partial Class P_Acerca
         Me.Panel4.Controls.Add(Me.PictureBox2)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel4.Location = New System.Drawing.Point(0, 0)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(688, 70)
+        Me.Panel4.Size = New System.Drawing.Size(516, 57)
         Me.Panel4.TabIndex = 16
         '
         'PictureBox2
@@ -171,9 +162,8 @@ Partial Class P_Acerca
         Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Left
         Me.PictureBox2.Image = Global.Presentacion.My.Resources.Resources.dinases
         Me.PictureBox2.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(332, 70)
+        Me.PictureBox2.Size = New System.Drawing.Size(249, 57)
         Me.PictureBox2.TabIndex = 17
         Me.PictureBox2.TabStop = False
         '
@@ -188,10 +178,9 @@ Partial Class P_Acerca
         Me.btnIngresar.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnIngresar.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnIngresar.Location = New System.Drawing.Point(427, 305)
-        Me.btnIngresar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnIngresar.Location = New System.Drawing.Point(320, 248)
         Me.btnIngresar.Name = "btnIngresar"
-        Me.btnIngresar.Size = New System.Drawing.Size(183, 46)
+        Me.btnIngresar.Size = New System.Drawing.Size(137, 37)
         Me.btnIngresar.TabIndex = 2
         Me.btnIngresar.TabStop = False
         Me.btnIngresar.Text = "OK"
@@ -199,16 +188,15 @@ Partial Class P_Acerca
         '
         'P_Acerca
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(720, 401)
+        Me.ClientSize = New System.Drawing.Size(540, 326)
         Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "P_Acerca"
-        Me.Padding = New System.Windows.Forms.Padding(12, 11, 12, 11)
+        Me.Padding = New System.Windows.Forms.Padding(9)
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "P_Acerca"

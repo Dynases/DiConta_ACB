@@ -178,6 +178,7 @@ Partial Class F1_Cuentas
         'TxtNombreUsu
         '
         Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4)
+        Me.TxtNombreUsu.Size = New System.Drawing.Size(200, 36)
         '
         'PanelToolBar1
         '
@@ -200,6 +201,9 @@ Partial Class F1_Cuentas
         Me.btnSalir.Size = New System.Drawing.Size(86, 72)
         '
         'btnGrabar
+        '
+        '
+        'btnEliminar
         '
         '
         'btnModificar
@@ -277,6 +281,7 @@ Partial Class F1_Cuentas
         '
         'btnUltimo
         '
+        Me.btnUltimo.Location = New System.Drawing.Point(129, 0)
         Me.btnUltimo.Margin = New System.Windows.Forms.Padding(2)
         '
         'MPanelUserAct

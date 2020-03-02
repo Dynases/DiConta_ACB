@@ -127,9 +127,11 @@ Partial Class PR_EstadoCuentasActivoPasivo
         '
         'btnSalir
         '
+        Me.btnSalir.Text = "&SALIR"
         '
         'btnGenerar
         '
+        Me.btnGenerar.Text = "&GENERAR"
         '
         'PanelInferior
         '

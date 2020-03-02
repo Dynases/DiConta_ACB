@@ -4934,6 +4934,28 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
                                "VR_GO_LibroVenta", _Where)
         Return _Tabla
     End Function
+    Public Shared Function L_Comprobante(_numi As String)
+        Dim _Tabla As DataTable
+
+        Dim _listParam As New List(Of Datos.DParametro)
+
+        _listParam.Add(New Datos.DParametro("@tipo", 1))
+        _listParam.Add(New Datos.DParametro("@Numi", _numi))
+        _Tabla = D_ProcedimientoConParam("validaciones", _listParam)
+
+        Return _Tabla
+    End Function
+    Public Shared Function L_hijoscuenta(_numi As String)
+        Dim _Tabla As DataTable
+
+        Dim _listParam As New List(Of Datos.DParametro)
+
+        _listParam.Add(New Datos.DParametro("@tipo", 2))
+        _listParam.Add(New Datos.DParametro("@Numi", _numi))
+        _Tabla = D_ProcedimientoConParam("validaciones", _listParam)
+
+        Return _Tabla
+    End Function
     Public Shared Function L_fnObtenerLibroVentaAmbosTipoFactura(_CodAlm As String, _fechai As String, _FechaF As String, modulo As String) As DataTable
         Dim _Tabla As DataTable
         Dim _Where As String = ""

@@ -151,7 +151,7 @@ Partial Class F0_ComprobanteCompra
         Me.ButtonX2.Size = New System.Drawing.Size(167, 43)
         Me.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ButtonX2.TabIndex = 15
-        Me.ButtonX2.Text = "SALIR"
+        Me.ButtonX2.Text = "&SALIR"
         '
         'ButtonX1
         '
@@ -166,7 +166,7 @@ Partial Class F0_ComprobanteCompra
         Me.ButtonX1.Size = New System.Drawing.Size(170, 43)
         Me.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ButtonX1.TabIndex = 14
-        Me.ButtonX1.Text = "GRABAR"
+        Me.ButtonX1.Text = "GR&ABAR"
         '
         'GroupPanel2
         '

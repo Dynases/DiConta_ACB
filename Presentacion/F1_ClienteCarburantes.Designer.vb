@@ -72,12 +72,12 @@ Partial Class F1_ClienteCarburantes
         'SuperTabControlPanelBuscador
         '
         Me.SuperTabControlPanelBuscador.Location = New System.Drawing.Point(0, 0)
-        Me.SuperTabControlPanelBuscador.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.SuperTabControlPanelBuscador.Margin = New System.Windows.Forms.Padding(2)
         Me.SuperTabControlPanelBuscador.Size = New System.Drawing.Size(826, 507)
         '
         'SuperTabControlPanelRegistro
         '
-        Me.SuperTabControlPanelRegistro.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.SuperTabControlPanelRegistro.Margin = New System.Windows.Forms.Padding(2)
         Me.SuperTabControlPanelRegistro.Size = New System.Drawing.Size(821, 507)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelSuperior, 0)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelInferior, 0)
@@ -85,7 +85,7 @@ Partial Class F1_ClienteCarburantes
         '
         'PanelSuperior
         '
-        Me.PanelSuperior.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelSuperior.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelSuperior.Size = New System.Drawing.Size(821, 72)
         Me.PanelSuperior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelSuperior.Style.BackColor1.Color = System.Drawing.Color.DarkSlateGray
@@ -98,7 +98,7 @@ Partial Class F1_ClienteCarburantes
         '
         'PanelInferior
         '
-        Me.PanelInferior.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelInferior.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelInferior.Size = New System.Drawing.Size(821, 36)
         Me.PanelInferior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelInferior.Style.BackColor1.Color = System.Drawing.Color.DarkSlateGray
@@ -134,21 +134,33 @@ Partial Class F1_ClienteCarburantes
         '
         'TxtNombreUsu
         '
-        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(2)
+        Me.TxtNombreUsu.Size = New System.Drawing.Size(200, 36)
         '
         'btnSalir
         '
+        Me.btnSalir.Text = "&SALIR"
+        '
+        'btnGrabar
+        '
+        Me.btnGrabar.Text = "GR&ABAR"
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.Text = "&ELIMNAR"
         '
         'btnModificar
         '
+        Me.btnModificar.Text = "&MODIFICAR"
         '
         'btnNuevo
         '
+        Me.btnNuevo.Text = "&NUEVO"
         '
         'PanelToolBar2
         '
         Me.PanelToolBar2.Location = New System.Drawing.Point(741, 0)
-        Me.PanelToolBar2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelToolBar2.Margin = New System.Windows.Forms.Padding(2)
         '
         'MPanelSup
         '
@@ -161,7 +173,7 @@ Partial Class F1_ClienteCarburantes
         Me.MPanelSup.Controls.Add(Me.LabelX2)
         Me.MPanelSup.Controls.Add(Me.tbNombre)
         Me.MPanelSup.Controls.Add(Me.tbNumi)
-        Me.MPanelSup.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MPanelSup.Margin = New System.Windows.Forms.Padding(2)
         Me.MPanelSup.Size = New System.Drawing.Size(821, 184)
         Me.MPanelSup.Controls.SetChildIndex(Me.PanelUsuario, 0)
         Me.MPanelSup.Controls.SetChildIndex(Me.tbNumi, 0)
@@ -176,12 +188,12 @@ Partial Class F1_ClienteCarburantes
         '
         'PanelPrincipal
         '
-        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelPrincipal.Size = New System.Drawing.Size(821, 399)
         '
         'GroupPanelBuscador
         '
-        Me.GroupPanelBuscador.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupPanelBuscador.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupPanelBuscador.Size = New System.Drawing.Size(821, 215)
         '
         '
@@ -214,22 +226,27 @@ Partial Class F1_ClienteCarburantes
         '
         'JGrM_Buscador
         '
-        Me.JGrM_Buscador.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.JGrM_Buscador.Margin = New System.Windows.Forms.Padding(2)
         Me.JGrM_Buscador.Size = New System.Drawing.Size(815, 192)
         '
         'PanelUsuario
         '
         Me.PanelUsuario.Location = New System.Drawing.Point(651, 29)
-        Me.PanelUsuario.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelUsuario.Margin = New System.Windows.Forms.Padding(2)
+        '
+        'btnImprimir
+        '
+        Me.btnImprimir.Text = "IM&PRIMIR"
         '
         'btnUltimo
         '
-        Me.btnUltimo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnUltimo.Location = New System.Drawing.Point(129, 0)
+        Me.btnUltimo.Margin = New System.Windows.Forms.Padding(2)
         '
         'MPanelUserAct
         '
         Me.MPanelUserAct.Location = New System.Drawing.Point(621, 0)
-        Me.MPanelUserAct.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MPanelUserAct.Margin = New System.Windows.Forms.Padding(2)
         '
         'MRlAccion
         '
@@ -237,13 +254,13 @@ Partial Class F1_ClienteCarburantes
         '
         '
         Me.MRlAccion.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.MRlAccion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MRlAccion.Margin = New System.Windows.Forms.Padding(2)
         Me.MRlAccion.Size = New System.Drawing.Size(365, 72)
         '
         'PictureBox1
         '
         Me.PictureBox1.Location = New System.Drawing.Point(477, 0)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         '
         'LabelX1
         '
@@ -376,7 +393,7 @@ Partial Class F1_ClienteCarburantes
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(853, 507)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "F1_ClienteCarburantes"
         Me.Text = "F1_ClienteCarburantes"
         Me.Controls.SetChildIndex(Me.SuperTabPrincipal, 0)

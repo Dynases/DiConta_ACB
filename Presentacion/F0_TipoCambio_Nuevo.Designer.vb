@@ -116,7 +116,7 @@ Partial Class F0_TipoCambio_Nuevo
         Me.ButtonX2.Size = New System.Drawing.Size(167, 43)
         Me.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ButtonX2.TabIndex = 2
-        Me.ButtonX2.Text = "SALIR"
+        Me.ButtonX2.Text = "&SALIR"
         '
         'ButtonX1
         '
@@ -131,7 +131,7 @@ Partial Class F0_TipoCambio_Nuevo
         Me.ButtonX1.Size = New System.Drawing.Size(164, 43)
         Me.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ButtonX1.TabIndex = 1
-        Me.ButtonX1.Text = "ACEPTAR"
+        Me.ButtonX1.Text = "&ACEPTAR"
         '
         'LabelX3
         '
@@ -156,7 +156,7 @@ Partial Class F0_TipoCambio_Nuevo
         Me.tbFecha.Location = New System.Drawing.Point(105, 89)
         Me.tbFecha.Margin = New System.Windows.Forms.Padding(4)
         Me.tbFecha.Name = "tbFecha"
-        Me.tbFecha.Size = New System.Drawing.Size(111, 30)
+        Me.tbFecha.Size = New System.Drawing.Size(111, 26)
         Me.tbFecha.TabIndex = 116
         '
         'LabelX2
@@ -186,7 +186,7 @@ Partial Class F0_TipoCambio_Nuevo
         Me.tbDolar.Location = New System.Drawing.Point(105, 128)
         Me.tbDolar.Name = "tbDolar"
         Me.tbDolar.ShowUpDown = True
-        Me.tbDolar.Size = New System.Drawing.Size(88, 26)
+        Me.tbDolar.Size = New System.Drawing.Size(88, 22)
         Me.tbDolar.TabIndex = 120
         '
         'tbUFV
@@ -202,7 +202,7 @@ Partial Class F0_TipoCambio_Nuevo
         Me.tbUFV.Location = New System.Drawing.Point(105, 156)
         Me.tbUFV.Name = "tbUFV"
         Me.tbUFV.ShowUpDown = True
-        Me.tbUFV.Size = New System.Drawing.Size(88, 26)
+        Me.tbUFV.Size = New System.Drawing.Size(88, 22)
         Me.tbUFV.TabIndex = 122
         '
         'LabelX1
@@ -222,7 +222,7 @@ Partial Class F0_TipoCambio_Nuevo
         '
         'F0_TipoCambio_Nuevo
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(331, 240)
         Me.Controls.Add(Me.tbUFV)

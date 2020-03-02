@@ -271,7 +271,7 @@ Partial Class F0_LibroCompra1
         Me.btReporte.Size = New System.Drawing.Size(150, 50)
         Me.btReporte.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.btReporte.TabIndex = 1
-        Me.btReporte.Text = "Reporte"
+        Me.btReporte.Text = "&Reporte"
         '
         'CpExportarExcel
         '
@@ -302,7 +302,7 @@ Partial Class F0_LibroCompra1
         Me.btGenerar.Size = New System.Drawing.Size(150, 50)
         Me.btGenerar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.btGenerar.TabIndex = 0
-        Me.btGenerar.Text = "Generar"
+        Me.btGenerar.Text = "&Generar"
         '
         'btTxt
         '
@@ -315,7 +315,7 @@ Partial Class F0_LibroCompra1
         Me.btTxt.Size = New System.Drawing.Size(150, 50)
         Me.btTxt.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.btTxt.TabIndex = 3
-        Me.btTxt.Text = "Archivo Txt"
+        Me.btTxt.Text = "&Archivo Txt"
         Me.btTxt.Visible = False
         '
         'btExcel
@@ -329,7 +329,7 @@ Partial Class F0_LibroCompra1
         Me.btExcel.Size = New System.Drawing.Size(150, 50)
         Me.btExcel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.btExcel.TabIndex = 2
-        Me.btExcel.Text = "Excel"
+        Me.btExcel.Text = "&Excel"
         '
         'TableLayoutPanelDatos
         '

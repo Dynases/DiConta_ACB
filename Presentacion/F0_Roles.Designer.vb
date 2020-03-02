@@ -72,7 +72,8 @@ Partial Class F0_Roles
         Me.SuperTabPrincipal.ControlBox.MenuBox.Name = ""
         Me.SuperTabPrincipal.ControlBox.Name = ""
         Me.SuperTabPrincipal.ControlBox.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.SuperTabPrincipal.ControlBox.MenuBox, Me.SuperTabPrincipal.ControlBox.CloseBox})
-        Me.SuperTabPrincipal.Size = New System.Drawing.Size(1179, 690)
+        Me.SuperTabPrincipal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.SuperTabPrincipal.Size = New System.Drawing.Size(884, 561)
         Me.SuperTabPrincipal.Controls.SetChildIndex(Me.SuperTabControlPanelBuscador, 0)
         Me.SuperTabPrincipal.Controls.SetChildIndex(Me.SuperTabControlPanelRegistro, 0)
         '
@@ -80,18 +81,21 @@ Partial Class F0_Roles
         '
         Me.SuperTabControlPanelBuscador.Controls.Add(Me.JGr_Buscador)
         Me.SuperTabControlPanelBuscador.Location = New System.Drawing.Point(0, 0)
-        Me.SuperTabControlPanelBuscador.Size = New System.Drawing.Size(1144, 690)
+        Me.SuperTabControlPanelBuscador.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.SuperTabControlPanelBuscador.Size = New System.Drawing.Size(858, 561)
         '
         'SuperTabControlPanelRegistro
         '
-        Me.SuperTabControlPanelRegistro.Size = New System.Drawing.Size(1144, 690)
+        Me.SuperTabControlPanelRegistro.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.SuperTabControlPanelRegistro.Size = New System.Drawing.Size(852, 561)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelSuperior, 0)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelInferior, 0)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelPrincipal, 0)
         '
         'PanelSuperior
         '
-        Me.PanelSuperior.Size = New System.Drawing.Size(1144, 89)
+        Me.PanelSuperior.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelSuperior.Size = New System.Drawing.Size(852, 72)
         Me.PanelSuperior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelSuperior.Style.BackColor1.Color = System.Drawing.Color.Yellow
         Me.PanelSuperior.Style.BackColor2.Color = System.Drawing.Color.Khaki
@@ -108,7 +112,8 @@ Partial Class F0_Roles
         '
         'PanelInferior
         '
-        Me.PanelInferior.Size = New System.Drawing.Size(1144, 48)
+        Me.PanelInferior.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelInferior.Size = New System.Drawing.Size(852, 39)
         Me.PanelInferior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelInferior.Style.BackColor1.Color = System.Drawing.Color.Gold
         Me.PanelInferior.Style.BackColor2.Color = System.Drawing.Color.Gold
@@ -143,44 +148,56 @@ Partial Class F0_Roles
         '
         'TxtNombreUsu
         '
-        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.TxtNombreUsu.Size = New System.Drawing.Size(179, 38)
+        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtNombreUsu.Size = New System.Drawing.Size(135, 32)
         '
         'btnSalir
         '
+        Me.btnSalir.Text = "&SALIR"
         '
         'btnGrabar
         '
+        Me.btnGrabar.Text = "GR&ABAR"
         '
         'btnEliminar
         '
+        Me.btnEliminar.Text = "&ELIMNAR"
         '
         'btnModificar
         '
+        Me.btnModificar.Text = "&MODIFICAR"
         '
         'btnNuevo
         '
+        Me.btnNuevo.Text = "&NUEVO"
         '
         'PanelToolBar2
         '
-        Me.PanelToolBar2.Location = New System.Drawing.Point(1037, 0)
+        Me.PanelToolBar2.Location = New System.Drawing.Point(772, 0)
+        Me.PanelToolBar2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         '
         'PanelPrincipal
         '
         Me.PanelPrincipal.Controls.Add(Me.Panel2)
         Me.PanelPrincipal.Controls.Add(Me.Panel1)
-        Me.PanelPrincipal.Size = New System.Drawing.Size(1144, 553)
+        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelPrincipal.Size = New System.Drawing.Size(852, 450)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelUsuario, 0)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.Panel1, 0)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.Panel2, 0)
         '
         'PanelUsuario
         '
-        Me.PanelUsuario.Location = New System.Drawing.Point(881, 7)
-        Me.PanelUsuario.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.PanelUsuario.Location = New System.Drawing.Point(661, 6)
+        Me.PanelUsuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        '
+        'btnImprimir
+        '
+        Me.btnImprimir.Text = "IM&PRIMIR"
         '
         'btnUltimo
         '
+        Me.btnUltimo.Location = New System.Drawing.Point(129, 0)
         '
         'btnSiguiente
         '
@@ -193,7 +210,8 @@ Partial Class F0_Roles
         '
         'MPanelUserAct
         '
-        Me.MPanelUserAct.Location = New System.Drawing.Point(877, 0)
+        Me.MPanelUserAct.Location = New System.Drawing.Point(652, 0)
+        Me.MPanelUserAct.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         '
         'MRlAccion
         '
@@ -201,7 +219,8 @@ Partial Class F0_Roles
         '
         '
         Me.MRlAccion.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.MRlAccion.Size = New System.Drawing.Size(536, 89)
+        Me.MRlAccion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MRlAccion.Size = New System.Drawing.Size(396, 72)
         '
         'Panel1
         '
@@ -211,9 +230,8 @@ Partial Class F0_Roles
         Me.Panel1.Controls.Add(Me.Tb_Id)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1144, 127)
+        Me.Panel1.Size = New System.Drawing.Size(852, 103)
         Me.Panel1.TabIndex = 20
         '
         'Tb_Nombre
@@ -224,11 +242,10 @@ Partial Class F0_Roles
         Me.Tb_Nombre.Border.Class = "TextBoxBorder"
         Me.Tb_Nombre.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.Tb_Nombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Tb_Nombre.Location = New System.Drawing.Point(123, 63)
-        Me.Tb_Nombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Tb_Nombre.Location = New System.Drawing.Point(92, 51)
         Me.Tb_Nombre.Name = "Tb_Nombre"
         Me.Tb_Nombre.PreventEnterBeep = True
-        Me.Tb_Nombre.Size = New System.Drawing.Size(271, 26)
+        Me.Tb_Nombre.Size = New System.Drawing.Size(203, 22)
         Me.Tb_Nombre.TabIndex = 13
         '
         'LabelX2
@@ -238,10 +255,9 @@ Partial Class F0_Roles
         '
         Me.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX2.Location = New System.Drawing.Point(25, 63)
-        Me.LabelX2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX2.Location = New System.Drawing.Point(19, 51)
         Me.LabelX2.Name = "LabelX2"
-        Me.LabelX2.Size = New System.Drawing.Size(100, 28)
+        Me.LabelX2.Size = New System.Drawing.Size(75, 23)
         Me.LabelX2.TabIndex = 12
         Me.LabelX2.Text = "ROL:"
         '
@@ -252,10 +268,9 @@ Partial Class F0_Roles
         '
         Me.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX1.Location = New System.Drawing.Point(25, 25)
-        Me.LabelX1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX1.Location = New System.Drawing.Point(19, 20)
         Me.LabelX1.Name = "LabelX1"
-        Me.LabelX1.Size = New System.Drawing.Size(89, 28)
+        Me.LabelX1.Size = New System.Drawing.Size(67, 23)
         Me.LabelX1.TabIndex = 11
         Me.LabelX1.Text = "ID:"
         '
@@ -267,21 +282,19 @@ Partial Class F0_Roles
         Me.Tb_Id.Border.Class = "TextBoxBorder"
         Me.Tb_Id.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.Tb_Id.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Tb_Id.Location = New System.Drawing.Point(123, 28)
-        Me.Tb_Id.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Tb_Id.Location = New System.Drawing.Point(92, 23)
         Me.Tb_Id.Name = "Tb_Id"
         Me.Tb_Id.PreventEnterBeep = True
-        Me.Tb_Id.Size = New System.Drawing.Size(133, 26)
+        Me.Tb_Id.Size = New System.Drawing.Size(100, 22)
         Me.Tb_Id.TabIndex = 10
         '
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.TableLayoutPanel1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel2.Location = New System.Drawing.Point(0, 127)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Location = New System.Drawing.Point(0, 103)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1144, 426)
+        Me.Panel2.Size = New System.Drawing.Size(852, 347)
         Me.Panel2.TabIndex = 21
         '
         'TableLayoutPanel1
@@ -293,12 +306,12 @@ Partial Class F0_Roles
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 554.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1144, 426)
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 241.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(852, 347)
         Me.TableLayoutPanel1.TabIndex = 1
         '
         'JGr_Detalle
@@ -319,14 +332,14 @@ Partial Class F0_Roles
         Me.JGr_Detalle.GroupByBoxVisible = False
         Me.JGr_Detalle.HeaderFormatStyle.BackColorGradient = System.Drawing.Color.Empty
         Me.JGr_Detalle.HeaderFormatStyle.FontBold = Janus.Windows.GridEX.TriState.[True]
-        Me.JGr_Detalle.Location = New System.Drawing.Point(346, 2)
-        Me.JGr_Detalle.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.JGr_Detalle.Location = New System.Drawing.Point(257, 2)
+        Me.JGr_Detalle.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.JGr_Detalle.Name = "JGr_Detalle"
         Me.JGr_Detalle.RecordNavigator = True
         Me.JGr_Detalle.RowHeaders = Janus.Windows.GridEX.InheritableBoolean.[True]
         Me.JGr_Detalle.SelectedInactiveFormatStyle.Blend = 0!
         Me.JGr_Detalle.SelectionMode = Janus.Windows.GridEX.SelectionMode.MultipleSelection
-        Me.JGr_Detalle.Size = New System.Drawing.Size(795, 422)
+        Me.JGr_Detalle.Size = New System.Drawing.Size(593, 343)
         Me.JGr_Detalle.TabIndex = 327
         Me.JGr_Detalle.TableHeaderFormatStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
         Me.JGr_Detalle.TableHeaderFormatStyle.LineAlignment = Janus.Windows.GridEX.TextAlignment.Center
@@ -340,23 +353,22 @@ Partial Class F0_Roles
         Me.TableLayoutPanel2.Controls.Add(Me.Txt_Actualizar, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.ListB_Empleados, 0, 1)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 2)
-        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(2, 2)
+        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 2
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(337, 422)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(251, 343)
         Me.TableLayoutPanel2.TabIndex = 25
         '
         'Txt_Actualizar
         '
         Me.Txt_Actualizar.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Txt_Actualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txt_Actualizar.Location = New System.Drawing.Point(4, 4)
-        Me.Txt_Actualizar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_Actualizar.Location = New System.Drawing.Point(3, 3)
         Me.Txt_Actualizar.Name = "Txt_Actualizar"
-        Me.Txt_Actualizar.Size = New System.Drawing.Size(329, 42)
+        Me.Txt_Actualizar.Size = New System.Drawing.Size(245, 35)
         Me.Txt_Actualizar.TabIndex = 118
         Me.Txt_Actualizar.Text = "Actualizar"
         Me.Txt_Actualizar.UseVisualStyleBackColor = True
@@ -371,15 +383,13 @@ Partial Class F0_Roles
         Me.ListB_Empleados.BackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.DockSiteBackColor
         Me.ListB_Empleados.BackgroundStyle.Class = "ListBoxAdv"
         Me.ListB_Empleados.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.ListB_Empleados.CheckStateMember = Nothing
         Me.ListB_Empleados.ContainerControlProcessDialogKey = True
         Me.ListB_Empleados.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ListB_Empleados.DragDropSupport = True
         Me.ListB_Empleados.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ListB_Empleados.Location = New System.Drawing.Point(4, 54)
-        Me.ListB_Empleados.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ListB_Empleados.Location = New System.Drawing.Point(3, 44)
         Me.ListB_Empleados.Name = "ListB_Empleados"
-        Me.ListB_Empleados.Size = New System.Drawing.Size(329, 364)
+        Me.ListB_Empleados.Size = New System.Drawing.Size(245, 296)
         Me.ListB_Empleados.TabIndex = 117
         Me.ListB_Empleados.Text = "ListBoxAdv1"
         '
@@ -387,17 +397,16 @@ Partial Class F0_Roles
         '
         Me.JGr_Buscador.Dock = System.Windows.Forms.DockStyle.Fill
         Me.JGr_Buscador.Location = New System.Drawing.Point(0, 0)
-        Me.JGr_Buscador.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.JGr_Buscador.Name = "JGr_Buscador"
-        Me.JGr_Buscador.Size = New System.Drawing.Size(1144, 690)
+        Me.JGr_Buscador.Size = New System.Drawing.Size(858, 561)
         Me.JGr_Buscador.TabIndex = 0
         '
         'F0_Roles
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1179, 690)
-        Me.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.ClientSize = New System.Drawing.Size(884, 561)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "F0_Roles"
         Me.Text = "F0_Roles"
         Me.Controls.SetChildIndex(Me.SuperTabPrincipal, 0)

@@ -100,12 +100,12 @@ Partial Class PR_LibroMayor
         'SuperTabControlPanelBuscador
         '
         Me.SuperTabControlPanelBuscador.Location = New System.Drawing.Point(0, 0)
-        Me.SuperTabControlPanelBuscador.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.SuperTabControlPanelBuscador.Margin = New System.Windows.Forms.Padding(4)
         Me.SuperTabControlPanelBuscador.Size = New System.Drawing.Size(952, 561)
         '
         'SuperTabControlPanelRegistro
         '
-        Me.SuperTabControlPanelRegistro.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.SuperTabControlPanelRegistro.Margin = New System.Windows.Forms.Padding(4)
         Me.SuperTabControlPanelRegistro.Size = New System.Drawing.Size(952, 561)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelSuperior, 0)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelInferior, 0)
@@ -113,7 +113,7 @@ Partial Class PR_LibroMayor
         '
         'PanelSuperior
         '
-        Me.PanelSuperior.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelSuperior.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelSuperior.Size = New System.Drawing.Size(952, 72)
         Me.PanelSuperior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelSuperior.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(150, Byte), Integer))
@@ -131,7 +131,7 @@ Partial Class PR_LibroMayor
         '
         'PanelInferior
         '
-        Me.PanelInferior.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelInferior.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelInferior.Size = New System.Drawing.Size(952, 39)
         Me.PanelInferior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelInferior.Style.BackColor1.Color = System.Drawing.Color.Transparent
@@ -167,24 +167,25 @@ Partial Class PR_LibroMayor
         '
         'TxtNombreUsu
         '
-        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtNombreUsu.Size = New System.Drawing.Size(135, 32)
         '
         'btnSalir
         '
         Me.btnSalir.Dock = System.Windows.Forms.DockStyle.Left
-        Me.btnSalir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnSalir.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSalir.Size = New System.Drawing.Size(117, 72)
+        Me.btnSalir.Text = "&SALIR"
         '
         'btnGrabar
         '
         Me.btnGrabar.Image = Global.Presentacion.My.Resources.Resources.reporte
-        Me.btnGrabar.Text = "GENERAR"
+        Me.btnGrabar.Text = "&GENERAR"
         '
         'btnEliminar
         '
         Me.btnEliminar.Image = Global.Presentacion.My.Resources.Resources.printer
-        Me.btnEliminar.Text = "IMPRIMIR"
+        Me.btnEliminar.Text = "IM&PRIMIR"
         '
         'btnModificar
         '
@@ -197,13 +198,13 @@ Partial Class PR_LibroMayor
         'PanelToolBar2
         '
         Me.PanelToolBar2.Location = New System.Drawing.Point(872, 0)
-        Me.PanelToolBar2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelToolBar2.Margin = New System.Windows.Forms.Padding(4)
         '
         'PanelPrincipal
         '
         Me.PanelPrincipal.Controls.Add(Me.gpGrilla)
         Me.PanelPrincipal.Controls.Add(Me.GroupPanel1)
-        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelPrincipal.Size = New System.Drawing.Size(952, 450)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelUsuario, 0)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.GroupPanel1, 0)
@@ -212,7 +213,7 @@ Partial Class PR_LibroMayor
         'PanelUsuario
         '
         Me.PanelUsuario.Location = New System.Drawing.Point(662, 3)
-        Me.PanelUsuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelUsuario.Margin = New System.Windows.Forms.Padding(4)
         '
         'btnImprimir
         '
@@ -230,7 +231,7 @@ Partial Class PR_LibroMayor
         'MPanelUserAct
         '
         Me.MPanelUserAct.Location = New System.Drawing.Point(752, 0)
-        Me.MPanelUserAct.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MPanelUserAct.Margin = New System.Windows.Forms.Padding(4)
         '
         'MRlAccion
         '
@@ -238,7 +239,7 @@ Partial Class PR_LibroMayor
         '
         '
         Me.MRlAccion.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.MRlAccion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MRlAccion.Margin = New System.Windows.Forms.Padding(4)
         Me.MRlAccion.Size = New System.Drawing.Size(496, 72)
         '
         'GroupPanel1
@@ -366,7 +367,7 @@ Partial Class PR_LibroMayor
         '
         Me.swAuxiliar02.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.swAuxiliar02.Location = New System.Drawing.Point(10, 10)
-        Me.swAuxiliar02.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.swAuxiliar02.Margin = New System.Windows.Forms.Padding(2)
         Me.swAuxiliar02.Name = "swAuxiliar02"
         Me.swAuxiliar02.OffBackColor = System.Drawing.Color.Gold
         Me.swAuxiliar02.OffText = "Uno"
@@ -460,7 +461,7 @@ Partial Class PR_LibroMayor
         '
         Me.swAuxiliar01.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.swAuxiliar01.Location = New System.Drawing.Point(3, 10)
-        Me.swAuxiliar01.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.swAuxiliar01.Margin = New System.Windows.Forms.Padding(2)
         Me.swAuxiliar01.Name = "swAuxiliar01"
         Me.swAuxiliar01.OffBackColor = System.Drawing.Color.Gold
         Me.swAuxiliar01.OffText = "Uno"
@@ -531,7 +532,7 @@ Partial Class PR_LibroMayor
         '
         Me.tbFiltrarRef.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbFiltrarRef.Location = New System.Drawing.Point(3, 10)
-        Me.tbFiltrarRef.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.tbFiltrarRef.Margin = New System.Windows.Forms.Padding(2)
         Me.tbFiltrarRef.Name = "tbFiltrarRef"
         Me.tbFiltrarRef.OffText = "NO"
         Me.tbFiltrarRef.OnText = "SI"
@@ -581,7 +582,7 @@ Partial Class PR_LibroMayor
         '
         Me.tbMeses.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbMeses.Location = New System.Drawing.Point(114, 128)
-        Me.tbMeses.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.tbMeses.Margin = New System.Windows.Forms.Padding(2)
         Me.tbMeses.Name = "tbMeses"
         Me.tbMeses.OffText = "SIN TOTAL POR MES"
         Me.tbMeses.OnText = "CON TOTAL POR MES"
@@ -765,7 +766,7 @@ Partial Class PR_LibroMayor
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(984, 561)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "PR_LibroMayor"
         Me.Text = "PR_LibroMayor"
         Me.Controls.SetChildIndex(Me.SuperTabPrincipal, 0)

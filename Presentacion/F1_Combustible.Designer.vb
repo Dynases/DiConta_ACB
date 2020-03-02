@@ -126,14 +126,29 @@ Partial Class F1_Combustible
         Me.BubbleBarUsuario.MouseOverTabColors.BorderColor = System.Drawing.SystemColors.Highlight
         Me.BubbleBarUsuario.SelectedTabColors.BorderColor = System.Drawing.Color.Black
         '
+        'TxtNombreUsu
+        '
+        Me.TxtNombreUsu.Size = New System.Drawing.Size(200, 36)
+        '
         'btnSalir
         '
+        Me.btnSalir.Text = "&SALIR"
+        '
+        'btnGrabar
+        '
+        Me.btnGrabar.Text = "GR&ABAR"
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.Text = "&ELIMNAR"
         '
         'btnModificar
         '
+        Me.btnModificar.Text = "&MODIFICAR"
         '
         'btnNuevo
         '
+        Me.btnNuevo.Text = "&NUEVO"
         '
         'PanelToolBar2
         '
@@ -200,6 +215,14 @@ Partial Class F1_Combustible
         'PanelUsuario
         '
         Me.PanelUsuario.Location = New System.Drawing.Point(651, 29)
+        '
+        'btnImprimir
+        '
+        Me.btnImprimir.Text = "IM&PRIMIR"
+        '
+        'btnUltimo
+        '
+        Me.btnUltimo.Location = New System.Drawing.Point(129, 0)
         '
         'MPanelUserAct
         '

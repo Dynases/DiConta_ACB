@@ -118,7 +118,7 @@ Partial Class F0_ComprobanteImportar
         Me.ButtonX2.Size = New System.Drawing.Size(167, 43)
         Me.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ButtonX2.TabIndex = 2
-        Me.ButtonX2.Text = "SALIR"
+        Me.ButtonX2.Text = "&SALIR"
         '
         'ButtonX1
         '
@@ -133,7 +133,7 @@ Partial Class F0_ComprobanteImportar
         Me.ButtonX1.Size = New System.Drawing.Size(170, 43)
         Me.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ButtonX1.TabIndex = 1
-        Me.ButtonX1.Text = "SELECCIONAR"
+        Me.ButtonX1.Text = "S&ELECCIONAR"
         '
         'LabelX3
         '
@@ -158,7 +158,7 @@ Partial Class F0_ComprobanteImportar
         Me.tbFechaDel.Location = New System.Drawing.Point(200, 10)
         Me.tbFechaDel.Margin = New System.Windows.Forms.Padding(4)
         Me.tbFechaDel.Name = "tbFechaDel"
-        Me.tbFechaDel.Size = New System.Drawing.Size(146, 27)
+        Me.tbFechaDel.Size = New System.Drawing.Size(146, 23)
         Me.tbFechaDel.TabIndex = 116
         '
         'GroupPanel1
@@ -212,7 +212,7 @@ Partial Class F0_ComprobanteImportar
         Me.grDetalle.Location = New System.Drawing.Point(0, 0)
         Me.grDetalle.Margin = New System.Windows.Forms.Padding(4)
         Me.grDetalle.Name = "grDetalle"
-        Me.grDetalle.Size = New System.Drawing.Size(1091, 232)
+        Me.grDetalle.Size = New System.Drawing.Size(1091, 236)
         Me.grDetalle.TabIndex = 2
         '
         'LabelX1
@@ -238,7 +238,7 @@ Partial Class F0_ComprobanteImportar
         Me.tbFechaAl.Location = New System.Drawing.Point(417, 10)
         Me.tbFechaAl.Margin = New System.Windows.Forms.Padding(4)
         Me.tbFechaAl.Name = "tbFechaAl"
-        Me.tbFechaAl.Size = New System.Drawing.Size(146, 27)
+        Me.tbFechaAl.Size = New System.Drawing.Size(146, 23)
         Me.tbFechaAl.TabIndex = 130
         '
         'GroupPanel2
@@ -302,7 +302,7 @@ Partial Class F0_ComprobanteImportar
         '
         'F0_ComprobanteImportar
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1097, 452)
         Me.Controls.Add(Me.GroupPanel1)

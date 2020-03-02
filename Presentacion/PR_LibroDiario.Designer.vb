@@ -22,7 +22,7 @@ Partial Class PR_LibroDiario
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PR_EstadoCuentasActivoPasivo))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PR_LibroDiario))
         Me.LabelX3 = New DevComponents.DotNetBar.LabelX()
         Me.tbFechaDel = New System.Windows.Forms.DateTimePicker()
         Me.LabelX1 = New DevComponents.DotNetBar.LabelX()
@@ -106,9 +106,11 @@ Partial Class PR_LibroDiario
         '
         'btnSalir
         '
+        Me.btnSalir.Text = "&SALIR"
         '
         'btnGenerar
         '
+        Me.btnGenerar.Text = "&GENERAR"
         '
         'PanelInferior
         '
@@ -228,13 +230,13 @@ Partial Class PR_LibroDiario
         Me.tbFechaAl.Size = New System.Drawing.Size(118, 22)
         Me.tbFechaAl.TabIndex = 118
         '
-        'PR_EstadoCuentasActivoPasivo
+        'PR_LibroDiario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(884, 561)
         Me.Location = New System.Drawing.Point(0, 0)
-        Me.Name = "PR_EstadoCuentasActivoPasivo"
+        Me.Name = "PR_LibroDiario"
         Me.Text = "PR_EstadoCuentasActivoPasivo"
         Me.Controls.SetChildIndex(Me.PanelInferior, 0)
         Me.PanelPrincipal.ResumeLayout(False)

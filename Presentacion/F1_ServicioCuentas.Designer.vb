@@ -63,8 +63,8 @@ Partial Class F1_ServicioCuentas
         '
         'PanelSuperior
         '
-        Me.PanelSuperior.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PanelSuperior.Size = New System.Drawing.Size(937, 89)
+        Me.PanelSuperior.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelSuperior.Size = New System.Drawing.Size(703, 72)
         Me.PanelSuperior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelSuperior.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(150, Byte), Integer))
         Me.PanelSuperior.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(150, Byte), Integer))
@@ -81,9 +81,9 @@ Partial Class F1_ServicioCuentas
         '
         'PanelInferior
         '
-        Me.PanelInferior.Location = New System.Drawing.Point(0, 446)
-        Me.PanelInferior.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PanelInferior.Size = New System.Drawing.Size(937, 48)
+        Me.PanelInferior.Location = New System.Drawing.Point(0, 362)
+        Me.PanelInferior.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelInferior.Size = New System.Drawing.Size(703, 39)
         Me.PanelInferior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelInferior.Style.BackColor1.Color = System.Drawing.Color.Transparent
         Me.PanelInferior.Style.BackColor2.Color = System.Drawing.Color.Transparent
@@ -118,9 +118,9 @@ Partial Class F1_ServicioCuentas
         '
         'TxtNombreUsu
         '
-        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TxtNombreUsu.ReadOnly = True
-        Me.TxtNombreUsu.Size = New System.Drawing.Size(179, 27)
+        Me.TxtNombreUsu.Size = New System.Drawing.Size(135, 23)
         Me.TxtNombreUsu.Text = "DEFAULT"
         '
         'btnSalir
@@ -131,16 +131,17 @@ Partial Class F1_ServicioCuentas
         '
         'btnModificar
         '
+        Me.btnModificar.Text = "&MODIFICAR"
         '
         'PanelToolBar2
         '
-        Me.PanelToolBar2.Location = New System.Drawing.Point(830, 0)
-        Me.PanelToolBar2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PanelToolBar2.Location = New System.Drawing.Point(623, 0)
+        Me.PanelToolBar2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         '
         'PanelPrincipal
         '
-        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PanelPrincipal.Size = New System.Drawing.Size(937, 494)
+        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelPrincipal.Size = New System.Drawing.Size(703, 401)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelInferior, 0)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelUsuario, 0)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelSuperior, 0)
@@ -148,12 +149,13 @@ Partial Class F1_ServicioCuentas
         '
         'btnUltimo
         '
-        Me.btnUltimo.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.btnUltimo.Location = New System.Drawing.Point(129, 0)
+        Me.btnUltimo.Margin = New System.Windows.Forms.Padding(5)
         '
         'MPanelUserAct
         '
-        Me.MPanelUserAct.Location = New System.Drawing.Point(670, 0)
-        Me.MPanelUserAct.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MPanelUserAct.Location = New System.Drawing.Point(503, 0)
+        Me.MPanelUserAct.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         '
         'MRlAccion
         '
@@ -161,24 +163,24 @@ Partial Class F1_ServicioCuentas
         '
         '
         Me.MRlAccion.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.MRlAccion.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.MRlAccion.Size = New System.Drawing.Size(329, 89)
+        Me.MRlAccion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MRlAccion.Size = New System.Drawing.Size(247, 72)
         '
         'PanelContent
         '
         Me.PanelContent.Controls.Add(Me.PanelPrecios)
-        Me.PanelContent.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PanelContent.Size = New System.Drawing.Size(900, 357)
+        Me.PanelContent.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelContent.Size = New System.Drawing.Size(670, 290)
         '
         'Panel1
         '
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Panel1.Size = New System.Drawing.Size(937, 357)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Size = New System.Drawing.Size(703, 290)
         '
         'MSuperTabControlPanel1
         '
-        Me.MSuperTabControlPanel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.MSuperTabControlPanel1.Size = New System.Drawing.Size(900, 357)
+        Me.MSuperTabControlPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MSuperTabControlPanel1.Size = New System.Drawing.Size(670, 290)
         '
         'MSuperTabControl
         '
@@ -195,19 +197,19 @@ Partial Class F1_ServicioCuentas
         Me.MSuperTabControl.ControlBox.MenuBox.Name = ""
         Me.MSuperTabControl.ControlBox.Name = ""
         Me.MSuperTabControl.ControlBox.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.MSuperTabControl.ControlBox.MenuBox, Me.MSuperTabControl.ControlBox.CloseBox})
-        Me.MSuperTabControl.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.MSuperTabControl.Size = New System.Drawing.Size(937, 357)
+        Me.MSuperTabControl.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MSuperTabControl.Size = New System.Drawing.Size(703, 290)
         Me.MSuperTabControl.Controls.SetChildIndex(Me.MSuperTabControlPanel1, 0)
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(478, 0)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox1.Location = New System.Drawing.Point(359, 0)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         '
         'PanelBuscador
         '
-        Me.PanelBuscador.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.PanelBuscador.Size = New System.Drawing.Size(1275, 579)
+        Me.PanelBuscador.Margin = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.PanelBuscador.Size = New System.Drawing.Size(951, 424)
         '
         'PanelPrecios
         '
@@ -217,9 +219,8 @@ Partial Class F1_ServicioCuentas
         Me.PanelPrecios.Controls.Add(Me.GroupPanel3)
         Me.PanelPrecios.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelPrecios.Location = New System.Drawing.Point(0, 0)
-        Me.PanelPrecios.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PanelPrecios.Name = "PanelPrecios"
-        Me.PanelPrecios.Size = New System.Drawing.Size(900, 357)
+        Me.PanelPrecios.Size = New System.Drawing.Size(670, 290)
         Me.PanelPrecios.TabIndex = 2
         '
         'GroupPanel4
@@ -230,10 +231,9 @@ Partial Class F1_ServicioCuentas
         Me.GroupPanel4.DisabledBackColor = System.Drawing.Color.Empty
         Me.GroupPanel4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupPanel4.Font = New System.Drawing.Font("Georgia", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupPanel4.Location = New System.Drawing.Point(0, 113)
-        Me.GroupPanel4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupPanel4.Location = New System.Drawing.Point(0, 92)
         Me.GroupPanel4.Name = "GroupPanel4"
-        Me.GroupPanel4.Size = New System.Drawing.Size(900, 244)
+        Me.GroupPanel4.Size = New System.Drawing.Size(670, 198)
         '
         '
         '
@@ -271,9 +271,8 @@ Partial Class F1_ServicioCuentas
         Me.Panel5.Controls.Add(Me.grServicios)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel5.Location = New System.Drawing.Point(0, 0)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(894, 217)
+        Me.Panel5.Size = New System.Drawing.Size(664, 175)
         Me.Panel5.TabIndex = 0
         '
         'grServicios
@@ -282,11 +281,10 @@ Partial Class F1_ServicioCuentas
         Me.grServicios.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grServicios.HeaderFormatStyle.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grServicios.Location = New System.Drawing.Point(0, 0)
-        Me.grServicios.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.grServicios.Name = "grServicios"
         Me.grServicios.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.grServicios.Office2007CustomColor = System.Drawing.Color.DodgerBlue
-        Me.grServicios.Size = New System.Drawing.Size(894, 217)
+        Me.grServicios.Size = New System.Drawing.Size(664, 175)
         Me.grServicios.TabIndex = 0
         Me.grServicios.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
@@ -299,9 +297,8 @@ Partial Class F1_ServicioCuentas
         Me.GroupPanel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupPanel3.Font = New System.Drawing.Font("Georgia", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupPanel3.Location = New System.Drawing.Point(0, 0)
-        Me.GroupPanel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupPanel3.Name = "GroupPanel3"
-        Me.GroupPanel3.Size = New System.Drawing.Size(900, 113)
+        Me.GroupPanel3.Size = New System.Drawing.Size(670, 92)
         '
         '
         '
@@ -340,9 +337,8 @@ Partial Class F1_ServicioCuentas
         Me.Panel4.Controls.Add(Me.TableLayoutPanel1)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel4.Location = New System.Drawing.Point(0, 0)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(894, 86)
+        Me.Panel4.Size = New System.Drawing.Size(664, 69)
         Me.Panel4.TabIndex = 0
         '
         'TableLayoutPanel1
@@ -354,11 +350,10 @@ Partial Class F1_ServicioCuentas
         Me.TableLayoutPanel1.Controls.Add(Me.Panel6, 1, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(894, 86)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(664, 69)
         Me.TableLayoutPanel1.TabIndex = 236
         '
         'Panel6
@@ -367,11 +362,10 @@ Partial Class F1_ServicioCuentas
         Me.Panel6.Controls.Add(Me.cbCategoria)
         Me.Panel6.Controls.Add(Me.lbgrupo2)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel6.Location = New System.Drawing.Point(316, 4)
-        Me.Panel6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel6.Location = New System.Drawing.Point(235, 3)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Padding = New System.Windows.Forms.Padding(0, 25, 0, 0)
-        Me.Panel6.Size = New System.Drawing.Size(260, 78)
+        Me.Panel6.Padding = New System.Windows.Forms.Padding(0, 20, 0, 0)
+        Me.Panel6.Size = New System.Drawing.Size(193, 63)
         Me.Panel6.TabIndex = 34
         '
         'cbCategoria
@@ -382,14 +376,13 @@ Partial Class F1_ServicioCuentas
         Me.cbCategoria.DesignTimeLayout = cbCategoria_DesignTimeLayout
         Me.cbCategoria.Dock = System.Windows.Forms.DockStyle.Fill
         Me.cbCategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbCategoria.Location = New System.Drawing.Point(90, 25)
-        Me.cbCategoria.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbCategoria.Location = New System.Drawing.Point(73, 20)
         Me.cbCategoria.Name = "cbCategoria"
         Me.cbCategoria.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.cbCategoria.Office2007CustomColor = System.Drawing.Color.DodgerBlue
         Me.cbCategoria.SelectedIndex = -1
         Me.cbCategoria.SelectedItem = Nothing
-        Me.cbCategoria.Size = New System.Drawing.Size(170, 24)
+        Me.cbCategoria.Size = New System.Drawing.Size(120, 21)
         Me.cbCategoria.TabIndex = 31
         Me.cbCategoria.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
@@ -404,21 +397,20 @@ Partial Class F1_ServicioCuentas
         Me.lbgrupo2.Dock = System.Windows.Forms.DockStyle.Left
         Me.lbgrupo2.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbgrupo2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.lbgrupo2.Location = New System.Drawing.Point(0, 25)
-        Me.lbgrupo2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.lbgrupo2.Location = New System.Drawing.Point(0, 20)
         Me.lbgrupo2.Name = "lbgrupo2"
         Me.lbgrupo2.PaddingTop = 4
         Me.lbgrupo2.SingleLineColor = System.Drawing.SystemColors.Control
-        Me.lbgrupo2.Size = New System.Drawing.Size(90, 24)
+        Me.lbgrupo2.Size = New System.Drawing.Size(73, 20)
         Me.lbgrupo2.TabIndex = 32
         Me.lbgrupo2.Text = "Categorias:"
         '
         'F1_ServicioCuentas
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(937, 494)
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ClientSize = New System.Drawing.Size(703, 401)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "F1_ServicioCuentas"
         Me.Text = "F1_ServicioCuentas"
         Me.Controls.SetChildIndex(Me.PanelPrincipal, 0)

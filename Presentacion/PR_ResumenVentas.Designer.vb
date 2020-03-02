@@ -59,19 +59,18 @@ Partial Class PR_ResumenVentas
         '
         'PanelPrincipal
         '
-        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.PanelPrincipal.Size = New System.Drawing.Size(429, 645)
+        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelPrincipal.Size = New System.Drawing.Size(322, 524)
         '
         'MReportViewer
         '
-        Me.MReportViewer.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.MReportViewer.Size = New System.Drawing.Size(429, 645)
-        Me.MReportViewer.ToolPanelWidth = 267
+        Me.MReportViewer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MReportViewer.Size = New System.Drawing.Size(322, 524)
         '
         'MGPFiltros
         '
-        Me.MGPFiltros.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.MGPFiltros.Size = New System.Drawing.Size(484, 645)
+        Me.MGPFiltros.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MGPFiltros.Size = New System.Drawing.Size(363, 524)
         '
         '
         '
@@ -103,8 +102,8 @@ Partial Class PR_ResumenVentas
         '
         'PanelIzq
         '
-        Me.PanelIzq.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.PanelIzq.Size = New System.Drawing.Size(484, 645)
+        Me.PanelIzq.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelIzq.Size = New System.Drawing.Size(363, 524)
         Me.PanelIzq.Controls.SetChildIndex(Me.MGPFiltros, 0)
         Me.PanelIzq.Controls.SetChildIndex(Me.PanelEx1, 0)
         Me.PanelIzq.Controls.SetChildIndex(Me.GroupPanelFiltros, 0)
@@ -127,15 +126,17 @@ Partial Class PR_ResumenVentas
         '
         'btnSalir
         '
+        Me.btnSalir.Text = "&SALIR"
         '
         'btnGenerar
         '
+        Me.btnGenerar.Text = "&GENERAR"
         '
         'PanelInferior
         '
-        Me.PanelInferior.Location = New System.Drawing.Point(0, 597)
-        Me.PanelInferior.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.PanelInferior.Size = New System.Drawing.Size(913, 48)
+        Me.PanelInferior.Location = New System.Drawing.Point(0, 485)
+        Me.PanelInferior.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelInferior.Size = New System.Drawing.Size(685, 39)
         Me.PanelInferior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelInferior.Style.BackColor1.Color = System.Drawing.Color.Transparent
         Me.PanelInferior.Style.BackColor2.Color = System.Drawing.Color.Transparent
@@ -147,8 +148,8 @@ Partial Class PR_ResumenVentas
         '
         'MPanelUserAct
         '
-        Me.MPanelUserAct.Location = New System.Drawing.Point(646, 0)
-        Me.MPanelUserAct.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.MPanelUserAct.Location = New System.Drawing.Point(485, 0)
+        Me.MPanelUserAct.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         '
         'BubbleBarUsuario
         '
@@ -175,8 +176,8 @@ Partial Class PR_ResumenVentas
         '
         'TxtNombreUsu
         '
-        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.TxtNombreUsu.Size = New System.Drawing.Size(179, 38)
+        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtNombreUsu.Size = New System.Drawing.Size(135, 32)
         '
         'GroupPanelFiltros
         '
@@ -187,8 +188,8 @@ Partial Class PR_ResumenVentas
         Me.GroupPanelFiltros.Controls.Add(Me.tbfec2)
         Me.GroupPanelFiltros.Controls.Add(Me.LabelX3)
         Me.GroupPanelFiltros.Controls.Add(Me.tbfec1)
-        Me.GroupPanelFiltros.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.GroupPanelFiltros.Size = New System.Drawing.Size(484, 551)
+        Me.GroupPanelFiltros.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupPanelFiltros.Size = New System.Drawing.Size(363, 448)
         '
         '
         '
@@ -224,14 +225,13 @@ Partial Class PR_ResumenVentas
         cbSucursal_DesignTimeLayout.LayoutString = resources.GetString("cbSucursal_DesignTimeLayout.LayoutString")
         Me.cbSucursal.DesignTimeLayout = cbSucursal_DesignTimeLayout
         Me.cbSucursal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbSucursal.Location = New System.Drawing.Point(172, 143)
-        Me.cbSucursal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbSucursal.Location = New System.Drawing.Point(129, 116)
         Me.cbSucursal.Name = "cbSucursal"
         Me.cbSucursal.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.cbSucursal.Office2007CustomColor = System.Drawing.Color.DodgerBlue
         Me.cbSucursal.SelectedIndex = -1
         Me.cbSucursal.SelectedItem = Nothing
-        Me.cbSucursal.Size = New System.Drawing.Size(260, 26)
+        Me.cbSucursal.Size = New System.Drawing.Size(195, 22)
         Me.cbSucursal.TabIndex = 254
         Me.cbSucursal.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
@@ -243,10 +243,9 @@ Partial Class PR_ResumenVentas
         '
         Me.LabelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX5.Location = New System.Drawing.Point(31, 142)
-        Me.LabelX5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX5.Location = New System.Drawing.Point(23, 115)
         Me.LabelX5.Name = "LabelX5"
-        Me.LabelX5.Size = New System.Drawing.Size(105, 28)
+        Me.LabelX5.Size = New System.Drawing.Size(79, 23)
         Me.LabelX5.TabIndex = 255
         Me.LabelX5.Text = "SUCURSAL:"
         '
@@ -264,10 +263,9 @@ Partial Class PR_ResumenVentas
         Me.GroupPanel1.Controls.Add(Me.tbFiltrar)
         Me.GroupPanel1.Controls.Add(Me.LabelX2)
         Me.GroupPanel1.DisabledBackColor = System.Drawing.Color.Empty
-        Me.GroupPanel1.Location = New System.Drawing.Point(0, 215)
-        Me.GroupPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupPanel1.Location = New System.Drawing.Point(0, 175)
         Me.GroupPanel1.Name = "GroupPanel1"
-        Me.GroupPanel1.Size = New System.Drawing.Size(476, 198)
+        Me.GroupPanel1.Size = New System.Drawing.Size(357, 161)
         '
         '
         '
@@ -306,14 +304,13 @@ Partial Class PR_ResumenVentas
         Me.cbServicio.DesignTimeLayout = cbServicio_DesignTimeLayout
         Me.cbServicio.Enabled = False
         Me.cbServicio.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbServicio.Location = New System.Drawing.Point(133, 133)
-        Me.cbServicio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbServicio.Location = New System.Drawing.Point(100, 108)
         Me.cbServicio.Name = "cbServicio"
         Me.cbServicio.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.cbServicio.Office2007CustomColor = System.Drawing.Color.DodgerBlue
         Me.cbServicio.SelectedIndex = -1
         Me.cbServicio.SelectedItem = Nothing
-        Me.cbServicio.Size = New System.Drawing.Size(264, 26)
+        Me.cbServicio.Size = New System.Drawing.Size(198, 22)
         Me.cbServicio.TabIndex = 250
         Me.cbServicio.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
@@ -325,10 +322,9 @@ Partial Class PR_ResumenVentas
         '
         Me.LabelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX6.Location = New System.Drawing.Point(27, 97)
-        Me.LabelX6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX6.Location = New System.Drawing.Point(20, 79)
         Me.LabelX6.Name = "LabelX6"
-        Me.LabelX6.Size = New System.Drawing.Size(81, 28)
+        Me.LabelX6.Size = New System.Drawing.Size(61, 23)
         Me.LabelX6.TabIndex = 253
         Me.LabelX6.Text = "FILTRAR:"
         '
@@ -338,12 +334,12 @@ Partial Class PR_ResumenVentas
         '
         '
         Me.swFiltroServ.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.swFiltroServ.Location = New System.Drawing.Point(133, 103)
-        Me.swFiltroServ.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.swFiltroServ.Location = New System.Drawing.Point(100, 84)
+        Me.swFiltroServ.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.swFiltroServ.Name = "swFiltroServ"
         Me.swFiltroServ.OffText = "NO"
         Me.swFiltroServ.OnText = "SI"
-        Me.swFiltroServ.Size = New System.Drawing.Size(91, 22)
+        Me.swFiltroServ.Size = New System.Drawing.Size(68, 18)
         Me.swFiltroServ.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.swFiltroServ.TabIndex = 252
         '
@@ -355,10 +351,9 @@ Partial Class PR_ResumenVentas
         '
         Me.LabelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX7.Location = New System.Drawing.Point(27, 133)
-        Me.LabelX7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX7.Location = New System.Drawing.Point(20, 108)
         Me.LabelX7.Name = "LabelX7"
-        Me.LabelX7.Size = New System.Drawing.Size(123, 28)
+        Me.LabelX7.Size = New System.Drawing.Size(92, 23)
         Me.LabelX7.TabIndex = 251
         Me.LabelX7.Text = "SERVICIO:"
         '
@@ -369,14 +364,13 @@ Partial Class PR_ResumenVentas
         Me.cbsector.DesignTimeLayout = cbsector_DesignTimeLayout
         Me.cbsector.Enabled = False
         Me.cbsector.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbsector.Location = New System.Drawing.Point(133, 59)
-        Me.cbsector.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbsector.Location = New System.Drawing.Point(100, 48)
         Me.cbsector.Name = "cbsector"
         Me.cbsector.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.cbsector.Office2007CustomColor = System.Drawing.Color.DodgerBlue
         Me.cbsector.SelectedIndex = -1
         Me.cbsector.SelectedItem = Nothing
-        Me.cbsector.Size = New System.Drawing.Size(237, 26)
+        Me.cbsector.Size = New System.Drawing.Size(178, 22)
         Me.cbsector.TabIndex = 241
         Me.cbsector.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
@@ -388,10 +382,9 @@ Partial Class PR_ResumenVentas
         '
         Me.LabelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX4.Location = New System.Drawing.Point(27, 25)
-        Me.LabelX4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX4.Location = New System.Drawing.Point(20, 20)
         Me.LabelX4.Name = "LabelX4"
-        Me.LabelX4.Size = New System.Drawing.Size(81, 28)
+        Me.LabelX4.Size = New System.Drawing.Size(61, 23)
         Me.LabelX4.TabIndex = 245
         Me.LabelX4.Text = "FILTRAR:"
         '
@@ -401,12 +394,12 @@ Partial Class PR_ResumenVentas
         '
         '
         Me.tbFiltrar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.tbFiltrar.Location = New System.Drawing.Point(133, 31)
-        Me.tbFiltrar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.tbFiltrar.Location = New System.Drawing.Point(100, 25)
+        Me.tbFiltrar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.tbFiltrar.Name = "tbFiltrar"
         Me.tbFiltrar.OffText = "NO"
         Me.tbFiltrar.OnText = "SI"
-        Me.tbFiltrar.Size = New System.Drawing.Size(91, 22)
+        Me.tbFiltrar.Size = New System.Drawing.Size(68, 18)
         Me.tbFiltrar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.tbFiltrar.TabIndex = 244
         '
@@ -418,10 +411,9 @@ Partial Class PR_ResumenVentas
         '
         Me.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX2.Location = New System.Drawing.Point(24, 59)
-        Me.LabelX2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX2.Location = New System.Drawing.Point(18, 48)
         Me.LabelX2.Name = "LabelX2"
-        Me.LabelX2.Size = New System.Drawing.Size(95, 28)
+        Me.LabelX2.Size = New System.Drawing.Size(71, 23)
         Me.LabelX2.TabIndex = 243
         Me.LabelX2.Text = "SECTOR:"
         '
@@ -433,20 +425,18 @@ Partial Class PR_ResumenVentas
         '
         Me.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX1.Location = New System.Drawing.Point(31, 91)
-        Me.LabelX1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX1.Location = New System.Drawing.Point(23, 74)
         Me.LabelX1.Name = "LabelX1"
-        Me.LabelX1.Size = New System.Drawing.Size(129, 28)
+        Me.LabelX1.Size = New System.Drawing.Size(97, 23)
         Me.LabelX1.TabIndex = 252
         Me.LabelX1.Text = "FECHA HASTA:"
         '
         'tbfec2
         '
         Me.tbfec2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.tbfec2.Location = New System.Drawing.Point(171, 92)
-        Me.tbfec2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbfec2.Location = New System.Drawing.Point(128, 75)
         Me.tbfec2.Name = "tbfec2"
-        Me.tbfec2.Size = New System.Drawing.Size(156, 26)
+        Me.tbfec2.Size = New System.Drawing.Size(118, 22)
         Me.tbfec2.TabIndex = 251
         '
         'LabelX3
@@ -457,29 +447,27 @@ Partial Class PR_ResumenVentas
         '
         Me.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX3.Location = New System.Drawing.Point(31, 57)
-        Me.LabelX3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX3.Location = New System.Drawing.Point(23, 46)
         Me.LabelX3.Name = "LabelX3"
-        Me.LabelX3.Size = New System.Drawing.Size(109, 28)
+        Me.LabelX3.Size = New System.Drawing.Size(82, 23)
         Me.LabelX3.TabIndex = 250
         Me.LabelX3.Text = "FECHA DEL:"
         '
         'tbfec1
         '
         Me.tbfec1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.tbfec1.Location = New System.Drawing.Point(171, 58)
-        Me.tbfec1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbfec1.Location = New System.Drawing.Point(128, 47)
         Me.tbfec1.Name = "tbfec1"
-        Me.tbfec1.Size = New System.Drawing.Size(156, 26)
+        Me.tbfec1.Size = New System.Drawing.Size(118, 22)
         Me.tbfec1.TabIndex = 249
         '
         'PR_ResumenVentas
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(913, 645)
+        Me.ClientSize = New System.Drawing.Size(685, 524)
         Me.Location = New System.Drawing.Point(0, 0)
-        Me.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "PR_ResumenVentas"
         Me.Text = "PR_ResumenVentas"
         Me.Controls.SetChildIndex(Me.PanelInferior, 0)
