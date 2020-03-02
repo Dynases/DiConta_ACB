@@ -248,22 +248,27 @@ Partial Class F1_ServicioVenta
         'btnSalir
         '
         Me.btnSalir.TabIndex = 11
+        Me.btnSalir.Text = "&SALIR"
         '
         'btnGrabar
         '
         Me.btnGrabar.TabIndex = 10
+        Me.btnGrabar.Text = "GR&ABAR"
         '
         'btnEliminar
         '
         Me.btnEliminar.TabIndex = 3
+        Me.btnEliminar.Text = "&ELIMNAR"
         '
         'btnModificar
         '
         Me.btnModificar.TabIndex = 2
+        Me.btnModificar.Text = "&MODIFICAR"
         '
         'btnNuevo
         '
         Me.btnNuevo.TabIndex = 1
+        Me.btnNuevo.Text = "&NUEVO"
         '
         'PanelToolBar2
         '
@@ -283,6 +288,7 @@ Partial Class F1_ServicioVenta
         'btnImprimir
         '
         Me.btnImprimir.TabIndex = 0
+        Me.btnImprimir.Text = "IM&PRIMIR"
         '
         'btnUltimo
         '
@@ -330,6 +336,10 @@ Partial Class F1_ServicioVenta
         Me.MSuperTabControlPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.MSuperTabControlPanel1.Size = New System.Drawing.Size(1151, 498)
         '
+        'MSuperTabItem1
+        '
+        Me.MSuperTabItem1.Text = "&REGISTRO"
+        '
         'MSuperTabControl
         '
         '
@@ -355,11 +365,15 @@ Partial Class F1_ServicioVenta
         Me.PictureBox1.Location = New System.Drawing.Point(840, 0)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         '
+        'SuperTabItemBuscador
+        '
+        Me.SuperTabItemBuscador.Text = "&BUSCADOR"
+        '
         'PanelBuscador
         '
         Me.PanelBuscador.Controls.Add(Me.TableLayoutPanel1)
         Me.PanelBuscador.Margin = New System.Windows.Forms.Padding(3)
-        Me.PanelBuscador.Size = New System.Drawing.Size(951, 450)
+        Me.PanelBuscador.Size = New System.Drawing.Size(1151, 498)
         '
         'PanelTotal
         '
@@ -1762,7 +1776,7 @@ Partial Class F1_ServicioVenta
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 450.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(951, 450)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1151, 498)
         Me.TableLayoutPanel1.TabIndex = 2
         '
         'PanelVentas
@@ -1773,7 +1787,7 @@ Partial Class F1_ServicioVenta
         Me.PanelVentas.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelVentas.Location = New System.Drawing.Point(3, 3)
         Me.PanelVentas.Name = "PanelVentas"
-        Me.PanelVentas.Size = New System.Drawing.Size(945, 444)
+        Me.PanelVentas.Size = New System.Drawing.Size(1145, 492)
         Me.PanelVentas.TabIndex = 0
         '
         'GroupPanel2
@@ -1786,7 +1800,7 @@ Partial Class F1_ServicioVenta
         Me.GroupPanel2.Font = New System.Drawing.Font("Georgia", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupPanel2.Location = New System.Drawing.Point(0, 0)
         Me.GroupPanel2.Name = "GroupPanel2"
-        Me.GroupPanel2.Size = New System.Drawing.Size(945, 444)
+        Me.GroupPanel2.Size = New System.Drawing.Size(1145, 492)
         '
         '
         '
@@ -1826,7 +1840,7 @@ Partial Class F1_ServicioVenta
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel6.Location = New System.Drawing.Point(0, 0)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(939, 421)
+        Me.Panel6.Size = New System.Drawing.Size(1139, 469)
         Me.Panel6.TabIndex = 0
         '
         'grVentas
@@ -1848,7 +1862,7 @@ Partial Class F1_ServicioVenta
         Me.grVentas.SelectedFormatStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grVentas.SelectedFormatStyle.ForeColor = System.Drawing.Color.White
         Me.grVentas.SelectOnExpand = False
-        Me.grVentas.Size = New System.Drawing.Size(939, 421)
+        Me.grVentas.Size = New System.Drawing.Size(1139, 469)
         Me.grVentas.TabIndex = 0
         Me.grVentas.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
