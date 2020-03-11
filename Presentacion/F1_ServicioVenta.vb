@@ -1062,10 +1062,10 @@ Public Class F1_ServicioVenta
     End Sub
     Public Sub _prCalcularPrecioTotal()
         Dim montodesc As Double = tbMdesc.Value
-        Dim pordesc As Double = ((montodesc * 100) / grdetalle.GetTotal(grdetalle.RootTable.Columns("vdtotdesc"), AggregateFunction.Sum))
+        Dim pordesc As Double = ((montodesc * 100) / grdetalle.GetTotal(grdetalle.RootTable.Columns("vdptot"), AggregateFunction.Sum))
         tbPdesc.Value = pordesc
-        tbSubTotal.Value = grdetalle.GetTotal(grdetalle.RootTable.Columns("vdtotdesc"), AggregateFunction.Sum)
-        tbtotal.Value = grdetalle.GetTotal(grdetalle.RootTable.Columns("vdtotdesc"), AggregateFunction.Sum) - montodesc
+        tbSubTotal.Value = grdetalle.GetTotal(grdetalle.RootTable.Columns("vdptot"), AggregateFunction.Sum)
+        tbtotal.Value = grdetalle.GetTotal(grdetalle.RootTable.Columns("vdptot"), AggregateFunction.Sum) - montodesc
     End Sub
     Public Sub _prEliminarFila()
         If (grdetalle.Row >= 0) Then
@@ -3091,37 +3091,37 @@ Public Class F1_ServicioVenta
                 objrep.SetParameterValue("tc", _tc)
             End If
             If (_Ds3.Tables(0).Rows(0).Item("cbvp")) Then 'Vista Previa de la Ventana de Vizualización 1 = True 0 = False
-                    P_Global.Visualizador.CRV1.ReportSource = objrep 'Comentar
-                    P_Global.Visualizador.ShowDialog() 'Comentar
-                    P_Global.Visualizador.BringToFront() 'Comentar
-                End If
+                P_Global.Visualizador.CRV1.ReportSource = objrep 'Comentar
+                P_Global.Visualizador.ShowDialog() 'Comentar
+                P_Global.Visualizador.BringToFront() 'Comentar
+            End If
 
-                Dim pd As New PrintDocument()
-                'pd.PrinterSettings.PrinterName = _Ds3.Tables(0).Rows(0).Item("cbrut").ToString
-                If (Not pd.PrinterSettings.IsValid) Then
-                    ToastNotification.Show(Me, "La Impresora ".ToUpper + _Ds3.Tables(0).Rows(0).Item("cbrut").ToString + Chr(13) + "No Existe".ToUpper,
+            Dim pd As New PrintDocument()
+            'pd.PrinterSettings.PrinterName = _Ds3.Tables(0).Rows(0).Item("cbrut").ToString
+            If (Not pd.PrinterSettings.IsValid) Then
+                ToastNotification.Show(Me, "La Impresora ".ToUpper + _Ds3.Tables(0).Rows(0).Item("cbrut").ToString + Chr(13) + "No Existe".ToUpper,
                                            My.Resources.WARNING, 5 * 1000,
                                            eToastGlowColor.Blue, eToastPosition.BottomRight)
-                Else
-                    'objrep.PrintOptions.PrinterName = _Ds3.Tables(0).Rows(0).Item("cbrut").ToString '"EPSON TM-T20II Receipt5 (1)"
-                    'objrep.PrintToPrinter(1, False, 1, 1)
+            Else
+                'objrep.PrintOptions.PrinterName = _Ds3.Tables(0).Rows(0).Item("cbrut").ToString '"EPSON TM-T20II Receipt5 (1)"
+                'objrep.PrintToPrinter(1, False, 1, 1)
 
-                End If
-
-                'If (grabarPDF) Then
-                '    'Copia de Factura en PDF
-                '    If (Not Directory.Exists(gs_CarpetaRaiz + "\Facturas")) Then
-                '        Directory.CreateDirectory(gs_CarpetaRaiz + "\Facturas")
-                '    End If
-                '    Try
-                '        objrep.ExportToDisk(ExportFormatType.PortableDocFormat, gs_CarpetaRaiz + "\Facturas\" + CStr(_NumFac) + "_" + CStr(_Autorizacion) + ".pdf")
-                '    Catch ex As Exception
-
-                '    End Try
-
-
-                'End If
             End If
+
+            'If (grabarPDF) Then
+            '    'Copia de Factura en PDF
+            '    If (Not Directory.Exists(gs_CarpetaRaiz + "\Facturas")) Then
+            '        Directory.CreateDirectory(gs_CarpetaRaiz + "\Facturas")
+            '    End If
+            '    Try
+            '        objrep.ExportToDisk(ExportFormatType.PortableDocFormat, gs_CarpetaRaiz + "\Facturas\" + CStr(_NumFac) + "_" + CStr(_Autorizacion) + ".pdf")
+            '    Catch ex As Exception
+
+            '    End Try
+
+
+            'End If
+        End If
         'L_Actualiza_Dosificacion(_numidosif, _NumFac, numi)    
     End Sub
 
@@ -3797,6 +3797,10 @@ salirIf:
     End Sub
 
     Private Sub tbsecnumi_TextChanged(sender As Object, e As EventArgs) Handles tbsecnumi.TextChanged
+
+    End Sub
+
+    Private Sub tbClienteCredito_TextChanged(sender As Object, e As EventArgs) Handles tbClienteCredito.TextChanged
 
     End Sub
 End Class

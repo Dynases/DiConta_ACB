@@ -471,7 +471,7 @@ Public Class F1_Cuentas
             Return False
         End If
 
-        _Tabla = L_Hijoscuenta(numi)
+        _Tabla = L_hijoscuenta(numi)
         If _Tabla.Rows(0).Item("total") > 0 Then
             ToastNotification.Show(Me, "No se puede Eliminar cuenta contanedora de otras cuentas.".ToUpper, My.Resources.GRABACION_EXITOSA, 5000, eToastGlowColor.Green, eToastPosition.TopCenter)
             Return False

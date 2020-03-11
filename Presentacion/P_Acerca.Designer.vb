@@ -79,7 +79,7 @@ Partial Class P_Acerca
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(99, 16)
         Me.Label2.TabIndex = 24
-        Me.Label2.Text = "Fecha:01/03/20"
+        Me.Label2.Text = "Fecha:06/03/20"
         '
         'lbVersion
         '
@@ -89,7 +89,7 @@ Partial Class P_Acerca
         Me.lbVersion.Name = "lbVersion"
         Me.lbVersion.Size = New System.Drawing.Size(35, 16)
         Me.lbVersion.TabIndex = 22
-        Me.lbVersion.Text = "3.0.2"
+        Me.lbVersion.Text = "3.0.3"
         '
         'Label5
         '

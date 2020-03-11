@@ -4941,7 +4941,7 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
 
         _listParam.Add(New Datos.DParametro("@tipo", 1))
         _listParam.Add(New Datos.DParametro("@Numi", _numi))
-        _Tabla = D_ProcedimientoConParam("validaciones", _listParam)
+        _Tabla = D_ProcedimientoConParam("sp_dg_validaciones", _listParam)
 
         Return _Tabla
     End Function
@@ -4952,7 +4952,7 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
 
         _listParam.Add(New Datos.DParametro("@tipo", 2))
         _listParam.Add(New Datos.DParametro("@Numi", _numi))
-        _Tabla = D_ProcedimientoConParam("validaciones", _listParam)
+        _Tabla = D_ProcedimientoConParam("sp_dg_validaciones", _listParam)
 
         Return _Tabla
     End Function

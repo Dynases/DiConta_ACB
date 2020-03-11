@@ -199,18 +199,23 @@ Partial Class F1_Cuentas
         Me.btnSalir.Dock = System.Windows.Forms.DockStyle.Left
         Me.btnSalir.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSalir.Size = New System.Drawing.Size(86, 72)
+        Me.btnSalir.Text = "&SALIR"
         '
         'btnGrabar
         '
+        Me.btnGrabar.Text = "GR&ABAR"
         '
         'btnEliminar
         '
+        Me.btnEliminar.Text = "&ELIMNAR"
         '
         'btnModificar
         '
+        Me.btnModificar.Text = "&MODIFICAR"
         '
         'btnNuevo
         '
+        Me.btnNuevo.Text = "&NUEVO"
         '
         'PanelToolBar2
         '
@@ -278,6 +283,10 @@ Partial Class F1_Cuentas
         '
         Me.PanelUsuario.Location = New System.Drawing.Point(782, 29)
         Me.PanelUsuario.Margin = New System.Windows.Forms.Padding(4)
+        '
+        'btnImprimir
+        '
+        Me.btnImprimir.Text = "IM&PRIMIR"
         '
         'btnUltimo
         '
@@ -801,7 +810,7 @@ Partial Class F1_Cuentas
         Me.ButtonX2.Size = New System.Drawing.Size(81, 72)
         Me.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ButtonX2.TabIndex = 12
-        Me.ButtonX2.Text = "CONTRAER"
+        Me.ButtonX2.Text = "&CONTRAER"
         Me.ButtonX2.TextColor = System.Drawing.Color.White
         '
         'ButtonX1
@@ -818,7 +827,7 @@ Partial Class F1_Cuentas
         Me.ButtonX1.Size = New System.Drawing.Size(81, 72)
         Me.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ButtonX1.TabIndex = 13
-        Me.ButtonX1.Text = "EXPANDIR"
+        Me.ButtonX1.Text = "E&XPANDIR"
         Me.ButtonX1.TextColor = System.Drawing.Color.White
         '
         'ContextMenuStrip1
