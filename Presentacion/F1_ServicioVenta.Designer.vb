@@ -112,6 +112,7 @@ Partial Class F1_ServicioVenta
         Me.CbOP = New System.Windows.Forms.CheckBox()
         Me.ttmensaje = New System.Windows.Forms.ToolTip(Me.components)
         Me.CachedR_ArqueoResumen1 = New Presentacion.CachedR_ArqueoResumen()
+        Me.lbCtrlEnter1 = New DevComponents.DotNetBar.LabelX()
         Me.PanelSuperior.SuspendLayout()
         Me.PanelInferior.SuspendLayout()
         CType(Me.BubbleBarUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1059,6 +1060,7 @@ Partial Class F1_ServicioVenta
         '
         Me.Panel2.AutoScroll = True
         Me.Panel2.BackColor = System.Drawing.Color.White
+        Me.Panel2.Controls.Add(Me.lbCtrlEnter1)
         Me.Panel2.Controls.Add(Me.tbbanco)
         Me.Panel2.Controls.Add(Me.lbbanco)
         Me.Panel2.Controls.Add(Me.LabelX21)
@@ -1355,13 +1357,13 @@ Partial Class F1_ServicioVenta
         cbsector_DesignTimeLayout.LayoutString = resources.GetString("cbsector_DesignTimeLayout.LayoutString")
         Me.cbsector.DesignTimeLayout = cbsector_DesignTimeLayout
         Me.cbsector.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbsector.Location = New System.Drawing.Point(134, 67)
+        Me.cbsector.Location = New System.Drawing.Point(134, 71)
         Me.cbsector.Name = "cbsector"
         Me.cbsector.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.cbsector.Office2007CustomColor = System.Drawing.Color.DodgerBlue
         Me.cbsector.SelectedIndex = -1
         Me.cbsector.SelectedItem = Nothing
-        Me.cbsector.Size = New System.Drawing.Size(116, 22)
+        Me.cbsector.Size = New System.Drawing.Size(154, 22)
         Me.cbsector.TabIndex = 1
         Me.cbsector.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
@@ -1375,7 +1377,7 @@ Partial Class F1_ServicioVenta
         Me.tbsecnumi.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbsecnumi.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbsecnumi.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.tbsecnumi.Location = New System.Drawing.Point(264, 70)
+        Me.tbsecnumi.Location = New System.Drawing.Point(294, 71)
         Me.tbsecnumi.Name = "tbsecnumi"
         Me.tbsecnumi.PreventEnterBeep = True
         Me.tbsecnumi.Size = New System.Drawing.Size(63, 22)
@@ -1390,7 +1392,7 @@ Partial Class F1_ServicioVenta
         Me.LabelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX10.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.LabelX10.Location = New System.Drawing.Point(12, 68)
+        Me.LabelX10.Location = New System.Drawing.Point(12, 72)
         Me.LabelX10.Name = "LabelX10"
         Me.LabelX10.SingleLineColor = System.Drawing.SystemColors.Control
         Me.LabelX10.Size = New System.Drawing.Size(113, 23)
@@ -1918,6 +1920,23 @@ Partial Class F1_ServicioVenta
         '
         Me.ttmensaje.IsBalloon = True
         '
+        'lbCtrlEnter1
+        '
+        Me.lbCtrlEnter1.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.lbCtrlEnter1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.lbCtrlEnter1.Font = New System.Drawing.Font("Georgia", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbCtrlEnter1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(139, Byte), Integer))
+        Me.lbCtrlEnter1.Location = New System.Drawing.Point(304, 61)
+        Me.lbCtrlEnter1.Name = "lbCtrlEnter1"
+        Me.lbCtrlEnter1.SingleLineColor = System.Drawing.SystemColors.Control
+        Me.lbCtrlEnter1.Size = New System.Drawing.Size(55, 8)
+        Me.lbCtrlEnter1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010
+        Me.lbCtrlEnter1.TabIndex = 258
+        Me.lbCtrlEnter1.Text = "Ctrl+Enter"
+        '
         'F1_ServicioVenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2072,4 +2091,5 @@ Partial Class F1_ServicioVenta
     Friend WithEvents CachedR_ArqueoResumen1 As CachedR_ArqueoResumen
     Friend WithEvents CbOP As CheckBox
     Friend WithEvents ttmensaje As ToolTip
+    Friend WithEvents lbCtrlEnter1 As DevComponents.DotNetBar.LabelX
 End Class
