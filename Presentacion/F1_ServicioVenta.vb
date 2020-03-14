@@ -3084,10 +3084,12 @@ Public Class F1_ServicioVenta
                 objrep.SetParameterValue("TotalBs", _Literal)
                 objrep.SetParameterValue("glosa", tbObservacion.Text)
                 objrep.SetParameterValue("descuento", tbPdesc.Value)
-                objrep.SetParameterValue("contado", IIf(swTipoVenta.Value = True, "CONTADO", "CREDITO"))
+                objrep.SetParameterValue("contado", swTipoVenta.Text)
                 objrep.SetParameterValue("vendedor", gs_user)
                 objrep.SetParameterValue("sucursal", cbSucursal.Text)
-                objrep.SetParameterValue("numiVenta", numi)
+                'objrep.SetParameterValue("numiVenta", numi)
+                objrep.SetParameterValue("nrofac", tbNroFactura.Text)
+
                 objrep.SetParameterValue("tc", _tc)
             End If
             If (_Ds3.Tables(0).Rows(0).Item("cbvp")) Then 'Vista Previa de la Ventana de Vizualización 1 = True 0 = False
@@ -3369,101 +3371,100 @@ salirIf:
     End Sub
 
     Private Sub grdetalle_CellEdited(sender As Object, e As ColumnActionEventArgs) Handles grdetalle.CellEdited
+        'If (e.Column.Index = grdetalle.RootTable.Columns("vdcmin").Index) Then
+        '    If (Not IsNumeric(grdetalle.GetValue("vdcmin")) Or grdetalle.GetValue("vdcmin").ToString = String.Empty) Then
+
+        '        'grDetalle.GetRow(rowIndex).Cells("cant").Value = 1
+        '        '  grDetalle.CurrentRow.Cells.Item("cant").Value = 1
+        '        Dim lin As Integer = grdetalle.GetValue("vdnumi")
+        '        Dim pos As Integer = -1
+        '        _fnObtenerFilaDetalle(pos, lin)
+        '        CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdcmin") = 1
+        '        grdetalle.SetValue("vdcmin", 1)
+        '        Dim estado As Integer = CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado")
+        '        CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdtotdesc") = grdetalle.GetValue("vdpbas")
+        '        If (estado = 1) Then
+        '            CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado") = 2
+        '        End If
+        '    Else
+        '        If (grdetalle.GetValue("vdcmin") > 0) Then
+        '            Dim lin As Integer = grdetalle.GetValue("vdnumi")
+        '            Dim pos As Integer = -1
+        '            _fnObtenerFilaDetalle(pos, lin)
+        '            Dim estado As Integer = CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado")
+        '            CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdptot") = grdetalle.GetValue("vdpbas") * grdetalle.GetValue("vdcmin")
+        '            CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdtotdesc") = grdetalle.GetValue("vdpbas") * grdetalle.GetValue("vdcmin")
+
+        '            If (estado = 1) Then
+        '                CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado") = 2
+        '            End If
+
+        '        Else
+        '            Dim lin As Integer = grdetalle.GetValue("vdnumi")
+        '            Dim pos As Integer = -1
+        '            _fnObtenerFilaDetalle(pos, lin)
+        '            CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdcmin") = 1
+        '            Dim estado As Integer = CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado")
+        '            CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdtotdesc") = grdetalle.GetValue("vdpbas")
+        '            If (estado = 1) Then
+        '                CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado") = 2
+        '            End If
+        '            grdetalle.SetValue("vdcmin", 1)
+        '        End If
+        '    End If
+        'End If
 
 
-        If (e.Column.Index = grdetalle.RootTable.Columns("vdcmin").Index) Then
-            If (Not IsNumeric(grdetalle.GetValue("vdcmin")) Or grdetalle.GetValue("vdcmin").ToString = String.Empty) Then
+        'If (e.Column.Index = grdetalle.RootTable.Columns("vdpbas").Index) Then
+        '    If (Not IsNumeric(grdetalle.GetValue("vdpbas")) Or grdetalle.GetValue("vdpbas").ToString = String.Empty) Then
 
-                'grDetalle.GetRow(rowIndex).Cells("cant").Value = 1
-                '  grDetalle.CurrentRow.Cells.Item("cant").Value = 1
-                Dim lin As Integer = grdetalle.GetValue("vdnumi")
-                Dim pos As Integer = -1
-                _fnObtenerFilaDetalle(pos, lin)
-                CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdcmin") = 1
-                grdetalle.SetValue("vdcmin", 1)
-                Dim estado As Integer = CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado")
-                CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdtotdesc") = grdetalle.GetValue("vdpbas")
-                If (estado = 1) Then
-                    CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado") = 2
-                End If
-            Else
-                If (grdetalle.GetValue("vdcmin") > 0) Then
-                    Dim lin As Integer = grdetalle.GetValue("vdnumi")
-                    Dim pos As Integer = -1
-                    _fnObtenerFilaDetalle(pos, lin)
-                    Dim estado As Integer = CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado")
-                    CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdtotdesc") = grdetalle.GetValue("vdpbas") * grdetalle.GetValue("vdcmin")
+        '        'grDetalle.GetRow(rowIndex).Cells("cant").Value = 1
+        '        '  grDetalle.CurrentRow.Cells.Item("cant").Value = 1
+        '        Dim lin As Integer = grdetalle.GetValue("vdnumi")
+        '        Dim pos As Integer = -1
+        '        _fnObtenerFilaDetalle(pos, lin)
+        '        CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdpbas") = grdetalle.GetValue("vdptot2")
 
-                    If (estado = 1) Then
-                        CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado") = 2
-                    End If
+        '        grdetalle.SetValue("vdcmin", grdetalle.GetValue("vdptot2"))
+        '        Dim estado As Integer = CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado")
+        '        CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdtotdesc") = grdetalle.GetValue("vdptot2") * grdetalle.GetValue("vdcmin")
 
-                Else
-                    Dim lin As Integer = grdetalle.GetValue("vdnumi")
-                    Dim pos As Integer = -1
-                    _fnObtenerFilaDetalle(pos, lin)
-                    CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdcmin") = 1
-                    Dim estado As Integer = CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado")
-                    CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdtotdesc") = grdetalle.GetValue("vdpbas")
-                    If (estado = 1) Then
-                        CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado") = 2
-                    End If
-                    grdetalle.SetValue("vdcmin", 1)
-                End If
-            End If
-        End If
+        '        CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdptot") = grdetalle.GetValue("vdptot2") * grdetalle.GetValue("vdcmin")
+        '        If (estado = 1) Then
+        '            CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado") = 2
+        '        End If
+        '    Else
+        '        If (grdetalle.GetValue("vdpbas") > 0) Then
+        '            Dim lin As Integer = grdetalle.GetValue("vdnumi")
+        '            Dim pos As Integer = -1
+        '            _fnObtenerFilaDetalle(pos, lin)
+        '            Dim estado As Integer = CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado")
 
+        '            CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdtotdesc") = grdetalle.GetValue("vdpbas") * grdetalle.GetValue("vdcmin")
+        '            CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdptot") = grdetalle.GetValue("vdpbas") * grdetalle.GetValue("vdcmin")
+        '            If (estado = 1) Then
+        '                CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado") = 2
+        '            End If
 
-        If (e.Column.Index = grdetalle.RootTable.Columns("vdpbas").Index) Then
-            If (Not IsNumeric(grdetalle.GetValue("vdpbas")) Or grdetalle.GetValue("vdpbas").ToString = String.Empty) Then
+        '        Else
+        '            Dim lin As Integer = grdetalle.GetValue("vdnumi")
+        '            Dim pos As Integer = -1
+        '            _fnObtenerFilaDetalle(pos, lin)
+        '            CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdpbas") = grdetalle.GetValue("vdptot2")
 
-                'grDetalle.GetRow(rowIndex).Cells("cant").Value = 1
-                '  grDetalle.CurrentRow.Cells.Item("cant").Value = 1
-                Dim lin As Integer = grdetalle.GetValue("vdnumi")
-                Dim pos As Integer = -1
-                _fnObtenerFilaDetalle(pos, lin)
-                CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdpbas") = grdetalle.GetValue("vdptot2")
+        '            grdetalle.SetValue("vdcmin", grdetalle.GetValue("vdptot2"))
+        '            Dim estado As Integer = CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado")
+        '            CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdtotdesc") = grdetalle.GetValue("vdptot2") * grdetalle.GetValue("vdcmin")
 
-                grdetalle.SetValue("vdcmin", grdetalle.GetValue("vdptot2"))
-                Dim estado As Integer = CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado")
-                CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdtotdesc") = grdetalle.GetValue("vdptot2") * grdetalle.GetValue("vdcmin")
+        '            CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdptot") = grdetalle.GetValue("vdptot2") * grdetalle.GetValue("vdcmin")
+        '            If (estado = 1) Then
+        '                CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado") = 2
+        '            End If
 
-                CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdptot") = grdetalle.GetValue("vdptot2") * grdetalle.GetValue("vdcmin")
-                If (estado = 1) Then
-                    CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado") = 2
-                End If
-            Else
-                If (grdetalle.GetValue("vdpbas") > 0) Then
-                    Dim lin As Integer = grdetalle.GetValue("vdnumi")
-                    Dim pos As Integer = -1
-                    _fnObtenerFilaDetalle(pos, lin)
-                    Dim estado As Integer = CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado")
-
-                    CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdtotdesc") = grdetalle.GetValue("vdpbas") * grdetalle.GetValue("vdcmin")
-                    CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdptot") = grdetalle.GetValue("vdpbas") * grdetalle.GetValue("vdcmin")
-                    If (estado = 1) Then
-                        CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado") = 2
-                    End If
-
-                Else
-                    Dim lin As Integer = grdetalle.GetValue("vdnumi")
-                    Dim pos As Integer = -1
-                    _fnObtenerFilaDetalle(pos, lin)
-                    CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdpbas") = grdetalle.GetValue("vdptot2")
-
-                    grdetalle.SetValue("vdcmin", grdetalle.GetValue("vdptot2"))
-                    Dim estado As Integer = CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado")
-                    CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdtotdesc") = grdetalle.GetValue("vdptot2") * grdetalle.GetValue("vdcmin")
-
-                    CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdptot") = grdetalle.GetValue("vdptot2") * grdetalle.GetValue("vdcmin")
-                    If (estado = 1) Then
-                        CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado") = 2
-                    End If
-
-                End If
-            End If
-        End If
-        _prCalcularPrecioTotal()
+        '        End If
+        '    End If
+        'End If
+        '_prCalcularPrecioTotal()
 
     End Sub
 
@@ -3768,6 +3769,7 @@ salirIf:
         If (swTipoVenta.Value = 4) Then
             lbbanco.Visible = True
             tbbanco.Visible = True
+            tbbanco.Focus()
             'lbobservacion.Visible = True
             'tbObservacion.Visible = True
         Else
@@ -3796,11 +3798,102 @@ salirIf:
 
     End Sub
 
-    Private Sub tbsecnumi_TextChanged(sender As Object, e As EventArgs) Handles tbsecnumi.TextChanged
 
-    End Sub
+    Private Sub grdetalle_CellValueChanged(sender As Object, e As ColumnActionEventArgs) Handles grdetalle.CellValueChanged
+        If (e.Column.Index = grdetalle.RootTable.Columns("vdcmin").Index) Then
+            If (Not IsNumeric(grdetalle.GetValue("vdcmin")) Or grdetalle.GetValue("vdcmin").ToString = String.Empty) Then
 
-    Private Sub tbClienteCredito_TextChanged(sender As Object, e As EventArgs) Handles tbClienteCredito.TextChanged
+                'grDetalle.GetRow(rowIndex).Cells("cant").Value = 1
+                '  grDetalle.CurrentRow.Cells.Item("cant").Value = 1
+                Dim lin As Integer = grdetalle.GetValue("vdnumi")
+                Dim pos As Integer = -1
+                _fnObtenerFilaDetalle(pos, lin)
+                CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdcmin") = 1
+                grdetalle.SetValue("vdcmin", 1)
+                Dim estado As Integer = CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado")
+                CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdtotdesc") = grdetalle.GetValue("vdpbas")
+                If (estado = 1) Then
+                    CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado") = 2
+                End If
+            Else
+                If (grdetalle.GetValue("vdcmin") > 0) Then
+                    Dim lin As Integer = grdetalle.GetValue("vdnumi")
+                    Dim pos As Integer = -1
+                    _fnObtenerFilaDetalle(pos, lin)
+                    Dim estado As Integer = CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado")
+                    CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdptot") = grdetalle.GetValue("vdpbas") * grdetalle.GetValue("vdcmin")
+                    CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdtotdesc") = grdetalle.GetValue("vdpbas") * grdetalle.GetValue("vdcmin")
+
+                    If (estado = 1) Then
+                        CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado") = 2
+                    End If
+
+                Else
+                    Dim lin As Integer = grdetalle.GetValue("vdnumi")
+                    Dim pos As Integer = -1
+                    _fnObtenerFilaDetalle(pos, lin)
+                    CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdcmin") = 1
+                    Dim estado As Integer = CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado")
+                    CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdtotdesc") = grdetalle.GetValue("vdpbas")
+                    If (estado = 1) Then
+                        CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado") = 2
+                    End If
+                    grdetalle.SetValue("vdcmin", 1)
+                End If
+            End If
+        End If
+
+
+        If (e.Column.Index = grdetalle.RootTable.Columns("vdpbas").Index) Then
+            If (Not IsNumeric(grdetalle.GetValue("vdpbas")) Or grdetalle.GetValue("vdpbas").ToString = String.Empty) Then
+
+                'grDetalle.GetRow(rowIndex).Cells("cant").Value = 1
+                '  grDetalle.CurrentRow.Cells.Item("cant").Value = 1
+                Dim lin As Integer = grdetalle.GetValue("vdnumi")
+                Dim pos As Integer = -1
+                _fnObtenerFilaDetalle(pos, lin)
+                CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdpbas") = grdetalle.GetValue("vdptot2")
+
+                grdetalle.SetValue("vdcmin", grdetalle.GetValue("vdptot2"))
+                Dim estado As Integer = CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado")
+                CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdtotdesc") = grdetalle.GetValue("vdptot2") * grdetalle.GetValue("vdcmin")
+
+                CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdptot") = grdetalle.GetValue("vdptot2") * grdetalle.GetValue("vdcmin")
+                If (estado = 1) Then
+                    CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado") = 2
+                End If
+            Else
+                If (grdetalle.GetValue("vdpbas") > 0) Then
+                    Dim lin As Integer = grdetalle.GetValue("vdnumi")
+                    Dim pos As Integer = -1
+                    _fnObtenerFilaDetalle(pos, lin)
+                    Dim estado As Integer = CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado")
+
+                    CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdtotdesc") = grdetalle.GetValue("vdpbas") * grdetalle.GetValue("vdcmin")
+                    CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdptot") = grdetalle.GetValue("vdpbas") * grdetalle.GetValue("vdcmin")
+                    If (estado = 1) Then
+                        CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado") = 2
+                    End If
+
+                Else
+                    Dim lin As Integer = grdetalle.GetValue("vdnumi")
+                    Dim pos As Integer = -1
+                    _fnObtenerFilaDetalle(pos, lin)
+                    CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdpbas") = grdetalle.GetValue("vdptot2")
+
+                    grdetalle.SetValue("vdcmin", grdetalle.GetValue("vdptot2"))
+                    Dim estado As Integer = CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado")
+                    CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdtotdesc") = grdetalle.GetValue("vdptot2") * grdetalle.GetValue("vdcmin")
+
+                    CType(grdetalle.DataSource, DataTable).Rows(pos).Item("vdptot") = grdetalle.GetValue("vdptot2") * grdetalle.GetValue("vdcmin")
+                    If (estado = 1) Then
+                        CType(grdetalle.DataSource, DataTable).Rows(pos).Item("estado") = 2
+                    End If
+
+                End If
+            End If
+        End If
+        _prCalcularPrecioTotal()
 
     End Sub
 End Class
