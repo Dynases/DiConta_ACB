@@ -109,12 +109,11 @@ Partial Class ModeloF1
         Me.SuperTabPrincipal.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SuperTabPrincipal.HorizontalText = False
         Me.SuperTabPrincipal.Location = New System.Drawing.Point(0, 0)
-        Me.SuperTabPrincipal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.SuperTabPrincipal.Name = "SuperTabPrincipal"
         Me.SuperTabPrincipal.ReorderTabsEnabled = True
         Me.SuperTabPrincipal.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.SuperTabPrincipal.SelectedTabIndex = 0
-        Me.SuperTabPrincipal.Size = New System.Drawing.Size(1137, 624)
+        Me.SuperTabPrincipal.Size = New System.Drawing.Size(853, 507)
         Me.SuperTabPrincipal.TabAlignment = DevComponents.DotNetBar.eTabStripAlignment.Right
         Me.SuperTabPrincipal.TabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SuperTabPrincipal.TabIndex = 0
@@ -132,9 +131,8 @@ Partial Class ModeloF1
         Me.SuperTabControlPanelRegistro.Controls.Add(Me.PanelSuperior)
         Me.SuperTabControlPanelRegistro.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SuperTabControlPanelRegistro.Location = New System.Drawing.Point(0, 0)
-        Me.SuperTabControlPanelRegistro.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.SuperTabControlPanelRegistro.Name = "SuperTabControlPanelRegistro"
-        Me.SuperTabControlPanelRegistro.Size = New System.Drawing.Size(1101, 624)
+        Me.SuperTabControlPanelRegistro.Size = New System.Drawing.Size(821, 507)
         Me.SuperTabControlPanelRegistro.TabIndex = 1
         Me.SuperTabControlPanelRegistro.TabItem = Me.SupTabItemRegistro
         '
@@ -144,10 +142,9 @@ Partial Class ModeloF1
         Me.PanelPrincipal.Controls.Add(Me.GroupPanelBuscador)
         Me.PanelPrincipal.Controls.Add(Me.MPanelSup)
         Me.PanelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelPrincipal.Location = New System.Drawing.Point(0, 89)
-        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelPrincipal.Location = New System.Drawing.Point(0, 72)
         Me.PanelPrincipal.Name = "PanelPrincipal"
-        Me.PanelPrincipal.Size = New System.Drawing.Size(1101, 491)
+        Me.PanelPrincipal.Size = New System.Drawing.Size(821, 399)
         Me.PanelPrincipal.TabIndex = 0
         '
         'GroupPanelBuscador
@@ -158,10 +155,9 @@ Partial Class ModeloF1
         Me.GroupPanelBuscador.DisabledBackColor = System.Drawing.Color.Empty
         Me.GroupPanelBuscador.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupPanelBuscador.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupPanelBuscador.Location = New System.Drawing.Point(0, 226)
-        Me.GroupPanelBuscador.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupPanelBuscador.Location = New System.Drawing.Point(0, 184)
         Me.GroupPanelBuscador.Name = "GroupPanelBuscador"
-        Me.GroupPanelBuscador.Size = New System.Drawing.Size(1101, 265)
+        Me.GroupPanelBuscador.Size = New System.Drawing.Size(821, 215)
         '
         '
         '
@@ -197,9 +193,8 @@ Partial Class ModeloF1
         '
         Me.JGrM_Buscador.Dock = System.Windows.Forms.DockStyle.Fill
         Me.JGrM_Buscador.Location = New System.Drawing.Point(0, 0)
-        Me.JGrM_Buscador.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.JGrM_Buscador.Name = "JGrM_Buscador"
-        Me.JGrM_Buscador.Size = New System.Drawing.Size(1095, 238)
+        Me.JGrM_Buscador.Size = New System.Drawing.Size(815, 192)
         Me.JGrM_Buscador.TabIndex = 0
         '
         'MPanelSup
@@ -209,9 +204,8 @@ Partial Class ModeloF1
         Me.MPanelSup.Dock = System.Windows.Forms.DockStyle.Top
         Me.MPanelSup.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MPanelSup.Location = New System.Drawing.Point(0, 0)
-        Me.MPanelSup.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MPanelSup.Name = "MPanelSup"
-        Me.MPanelSup.Size = New System.Drawing.Size(1101, 226)
+        Me.MPanelSup.Size = New System.Drawing.Size(821, 184)
         Me.MPanelSup.TabIndex = 0
         '
         'PanelUsuario
@@ -222,10 +216,9 @@ Partial Class ModeloF1
         Me.PanelUsuario.Controls.Add(Me.lblHora)
         Me.PanelUsuario.Controls.Add(Me.lblFecha)
         Me.PanelUsuario.Controls.Add(Me.lblUsuario)
-        Me.PanelUsuario.Location = New System.Drawing.Point(869, 36)
-        Me.PanelUsuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelUsuario.Location = New System.Drawing.Point(652, 29)
         Me.PanelUsuario.Name = "PanelUsuario"
-        Me.PanelUsuario.Size = New System.Drawing.Size(293, 123)
+        Me.PanelUsuario.Size = New System.Drawing.Size(220, 100)
         Me.PanelUsuario.TabIndex = 19
         Me.PanelUsuario.TabStop = True
         Me.PanelUsuario.Visible = False
@@ -234,10 +227,9 @@ Partial Class ModeloF1
         '
         Me.lbHora.AutoSize = True
         Me.lbHora.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbHora.Location = New System.Drawing.Point(153, 80)
-        Me.lbHora.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbHora.Location = New System.Drawing.Point(115, 65)
         Me.lbHora.Name = "lbHora"
-        Me.lbHora.Size = New System.Drawing.Size(98, 24)
+        Me.lbHora.Size = New System.Drawing.Size(79, 18)
         Me.lbHora.TabIndex = 6
         Me.lbHora.Text = "USUARIO:"
         '
@@ -245,10 +237,9 @@ Partial Class ModeloF1
         '
         Me.lbFecha.AutoSize = True
         Me.lbFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbFecha.Location = New System.Drawing.Point(153, 52)
-        Me.lbFecha.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbFecha.Location = New System.Drawing.Point(115, 42)
         Me.lbFecha.Name = "lbFecha"
-        Me.lbFecha.Size = New System.Drawing.Size(98, 24)
+        Me.lbFecha.Size = New System.Drawing.Size(79, 18)
         Me.lbFecha.TabIndex = 5
         Me.lbFecha.Text = "USUARIO:"
         '
@@ -256,10 +247,9 @@ Partial Class ModeloF1
         '
         Me.lbUsuario.AutoSize = True
         Me.lbUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbUsuario.Location = New System.Drawing.Point(153, 23)
-        Me.lbUsuario.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbUsuario.Location = New System.Drawing.Point(115, 19)
         Me.lbUsuario.Name = "lbUsuario"
-        Me.lbUsuario.Size = New System.Drawing.Size(98, 24)
+        Me.lbUsuario.Size = New System.Drawing.Size(79, 18)
         Me.lbUsuario.TabIndex = 4
         Me.lbUsuario.Text = "USUARIO:"
         '
@@ -267,10 +257,9 @@ Partial Class ModeloF1
         '
         Me.lblHora.AutoSize = True
         Me.lblHora.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHora.Location = New System.Drawing.Point(41, 80)
-        Me.lblHora.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblHora.Location = New System.Drawing.Point(31, 65)
         Me.lblHora.Name = "lblHora"
-        Me.lblHora.Size = New System.Drawing.Size(75, 24)
+        Me.lblHora.Size = New System.Drawing.Size(60, 18)
         Me.lblHora.TabIndex = 2
         Me.lblHora.Text = "HORA:"
         '
@@ -278,10 +267,9 @@ Partial Class ModeloF1
         '
         Me.lblFecha.AutoSize = True
         Me.lblFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFecha.Location = New System.Drawing.Point(41, 53)
-        Me.lblFecha.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblFecha.Location = New System.Drawing.Point(31, 43)
         Me.lblFecha.Name = "lblFecha"
-        Me.lblFecha.Size = New System.Drawing.Size(86, 24)
+        Me.lblFecha.Size = New System.Drawing.Size(68, 18)
         Me.lblFecha.TabIndex = 1
         Me.lblFecha.Text = "FECHA:"
         '
@@ -289,10 +277,9 @@ Partial Class ModeloF1
         '
         Me.lblUsuario.AutoSize = True
         Me.lblUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUsuario.Location = New System.Drawing.Point(41, 23)
-        Me.lblUsuario.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblUsuario.Location = New System.Drawing.Point(31, 19)
         Me.lblUsuario.Name = "lblUsuario"
-        Me.lblUsuario.Size = New System.Drawing.Size(106, 24)
+        Me.lblUsuario.Size = New System.Drawing.Size(87, 18)
         Me.lblUsuario.TabIndex = 0
         Me.lblUsuario.Text = "USUARIO:"
         '
@@ -304,10 +291,9 @@ Partial Class ModeloF1
         Me.PanelInferior.Controls.Add(Me.PanelNavegacion)
         Me.PanelInferior.DisabledBackColor = System.Drawing.Color.Empty
         Me.PanelInferior.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.PanelInferior.Location = New System.Drawing.Point(0, 580)
-        Me.PanelInferior.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelInferior.Location = New System.Drawing.Point(0, 471)
         Me.PanelInferior.Name = "PanelInferior"
-        Me.PanelInferior.Size = New System.Drawing.Size(1101, 44)
+        Me.PanelInferior.Size = New System.Drawing.Size(821, 36)
         Me.PanelInferior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelInferior.Style.BackColor1.Color = System.Drawing.Color.DarkSlateGray
         Me.PanelInferior.Style.BackColor2.Color = System.Drawing.Color.DarkSlateGray
@@ -323,10 +309,9 @@ Partial Class ModeloF1
         Me.MPanelUserAct.Controls.Add(Me.BubbleBarUsuario)
         Me.MPanelUserAct.Controls.Add(Me.TxtNombreUsu)
         Me.MPanelUserAct.Dock = System.Windows.Forms.DockStyle.Right
-        Me.MPanelUserAct.Location = New System.Drawing.Point(834, 0)
-        Me.MPanelUserAct.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MPanelUserAct.Location = New System.Drawing.Point(621, 0)
         Me.MPanelUserAct.Name = "MPanelUserAct"
-        Me.MPanelUserAct.Size = New System.Drawing.Size(267, 44)
+        Me.MPanelUserAct.Size = New System.Drawing.Size(200, 36)
         Me.MPanelUserAct.TabIndex = 21
         '
         'BubbleBarUsuario
@@ -354,14 +339,12 @@ Partial Class ModeloF1
         Me.BubbleBarUsuario.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BubbleBarUsuario.ImageSizeLarge = New System.Drawing.Size(50, 50)
         Me.BubbleBarUsuario.ImageSizeNormal = New System.Drawing.Size(32, 28)
-
         Me.BubbleBarUsuario.Location = New System.Drawing.Point(0, 0)
-        Me.BubbleBarUsuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BubbleBarUsuario.MouseOverTabColors.BorderColor = System.Drawing.SystemColors.Highlight
         Me.BubbleBarUsuario.Name = "BubbleBarUsuario"
         Me.BubbleBarUsuario.SelectedTab = Me.BubbleBarTabUsuario
         Me.BubbleBarUsuario.SelectedTabColors.BorderColor = System.Drawing.Color.Black
-        Me.BubbleBarUsuario.Size = New System.Drawing.Size(267, 44)
+        Me.BubbleBarUsuario.Size = New System.Drawing.Size(200, 36)
         Me.BubbleBarUsuario.TabIndex = 13
         Me.BubbleBarUsuario.Tabs.Add(Me.BubbleBarTabUsuario)
         Me.BubbleBarUsuario.TabsVisible = False
@@ -392,10 +375,9 @@ Partial Class ModeloF1
         Me.TxtNombreUsu.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtNombreUsu.ForeColor = System.Drawing.SystemColors.InfoText
         Me.TxtNombreUsu.Location = New System.Drawing.Point(0, 0)
-        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TxtNombreUsu.Multiline = True
         Me.TxtNombreUsu.Name = "TxtNombreUsu"
-        Me.TxtNombreUsu.Size = New System.Drawing.Size(267, 44)
+        Me.TxtNombreUsu.Size = New System.Drawing.Size(200, 36)
         Me.TxtNombreUsu.TabIndex = 14
         Me.TxtNombreUsu.Text = "MARCO"
         Me.TxtNombreUsu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -410,9 +392,8 @@ Partial Class ModeloF1
         Me.PanelNavegacion.Controls.Add(Me.btnPrimero)
         Me.PanelNavegacion.Dock = System.Windows.Forms.DockStyle.Left
         Me.PanelNavegacion.Location = New System.Drawing.Point(0, 0)
-        Me.PanelNavegacion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PanelNavegacion.Name = "PanelNavegacion"
-        Me.PanelNavegacion.Size = New System.Drawing.Size(384, 44)
+        Me.PanelNavegacion.Size = New System.Drawing.Size(288, 36)
         Me.PanelNavegacion.TabIndex = 20
         '
         'LblPaginacion
@@ -420,10 +401,9 @@ Partial Class ModeloF1
         Me.LblPaginacion.Dock = System.Windows.Forms.DockStyle.Fill
         Me.LblPaginacion.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblPaginacion.ForeColor = System.Drawing.Color.White
-        Me.LblPaginacion.Location = New System.Drawing.Point(228, 0)
-        Me.LblPaginacion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblPaginacion.Location = New System.Drawing.Point(172, 0)
         Me.LblPaginacion.Name = "LblPaginacion"
-        Me.LblPaginacion.Size = New System.Drawing.Size(156, 44)
+        Me.LblPaginacion.Size = New System.Drawing.Size(116, 36)
         Me.LblPaginacion.TabIndex = 22
         Me.LblPaginacion.Text = "12345/12345"
         Me.LblPaginacion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -437,10 +417,9 @@ Partial Class ModeloF1
         Me.btnUltimo.Image = Global.Modelos.My.Resources.Resources.next2
         Me.btnUltimo.ImageFixedSize = New System.Drawing.Size(30, 30)
         Me.btnUltimo.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.btnUltimo.Location = New System.Drawing.Point(171, 0)
-        Me.btnUltimo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnUltimo.Location = New System.Drawing.Point(129, 0)
         Me.btnUltimo.Name = "btnUltimo"
-        Me.btnUltimo.Size = New System.Drawing.Size(57, 44)
+        Me.btnUltimo.Size = New System.Drawing.Size(43, 36)
         Me.btnUltimo.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.btnUltimo.TabIndex = 14
         '
@@ -453,10 +432,9 @@ Partial Class ModeloF1
         Me.btnSiguiente.Image = Global.Modelos.My.Resources.Resources.next1
         Me.btnSiguiente.ImageFixedSize = New System.Drawing.Size(30, 30)
         Me.btnSiguiente.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.btnSiguiente.Location = New System.Drawing.Point(114, 0)
-        Me.btnSiguiente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnSiguiente.Location = New System.Drawing.Point(86, 0)
         Me.btnSiguiente.Name = "btnSiguiente"
-        Me.btnSiguiente.Size = New System.Drawing.Size(57, 44)
+        Me.btnSiguiente.Size = New System.Drawing.Size(43, 36)
         Me.btnSiguiente.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.btnSiguiente.TabIndex = 13
         '
@@ -469,10 +447,9 @@ Partial Class ModeloF1
         Me.btnAnterior.Image = Global.Modelos.My.Resources.Resources.at1
         Me.btnAnterior.ImageFixedSize = New System.Drawing.Size(30, 30)
         Me.btnAnterior.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.btnAnterior.Location = New System.Drawing.Point(57, 0)
-        Me.btnAnterior.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAnterior.Location = New System.Drawing.Point(43, 0)
         Me.btnAnterior.Name = "btnAnterior"
-        Me.btnAnterior.Size = New System.Drawing.Size(57, 44)
+        Me.btnAnterior.Size = New System.Drawing.Size(43, 36)
         Me.btnAnterior.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.btnAnterior.TabIndex = 12
         '
@@ -486,9 +463,8 @@ Partial Class ModeloF1
         Me.btnPrimero.ImageFixedSize = New System.Drawing.Size(30, 30)
         Me.btnPrimero.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
         Me.btnPrimero.Location = New System.Drawing.Point(0, 0)
-        Me.btnPrimero.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnPrimero.Name = "btnPrimero"
-        Me.btnPrimero.Size = New System.Drawing.Size(57, 44)
+        Me.btnPrimero.Size = New System.Drawing.Size(43, 36)
         Me.btnPrimero.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.btnPrimero.TabIndex = 11
         '
@@ -503,9 +479,8 @@ Partial Class ModeloF1
         Me.PanelSuperior.DisabledBackColor = System.Drawing.Color.Empty
         Me.PanelSuperior.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelSuperior.Location = New System.Drawing.Point(0, 0)
-        Me.PanelSuperior.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PanelSuperior.Name = "PanelSuperior"
-        Me.PanelSuperior.Size = New System.Drawing.Size(1101, 89)
+        Me.PanelSuperior.Size = New System.Drawing.Size(821, 72)
         Me.PanelSuperior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelSuperior.Style.BackColor1.Color = System.Drawing.Color.DarkSlateGray
         Me.PanelSuperior.Style.BackColor2.Color = System.Drawing.Color.DarkSlateGray
@@ -521,10 +496,9 @@ Partial Class ModeloF1
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Right
         Me.PictureBox1.Image = Global.Modelos.My.Resources.Resources.dinases
-        Me.PictureBox1.Location = New System.Drawing.Point(642, 0)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Location = New System.Drawing.Point(477, 0)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(352, 89)
+        Me.PictureBox1.Size = New System.Drawing.Size(264, 72)
         Me.PictureBox1.TabIndex = 8
         Me.PictureBox1.TabStop = False
         '
@@ -537,10 +511,9 @@ Partial Class ModeloF1
         Me.MRlAccion.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MRlAccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MRlAccion.ForeColor = System.Drawing.Color.White
-        Me.MRlAccion.Location = New System.Drawing.Point(501, 0)
-        Me.MRlAccion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MRlAccion.Location = New System.Drawing.Point(376, 0)
         Me.MRlAccion.Name = "MRlAccion"
-        Me.MRlAccion.Size = New System.Drawing.Size(493, 89)
+        Me.MRlAccion.Size = New System.Drawing.Size(365, 72)
         Me.MRlAccion.TabIndex = 7
         Me.MRlAccion.Text = "<b><font size=""+10""><font color=""#FF0000""></font></font></b>"
         '
@@ -549,10 +522,9 @@ Partial Class ModeloF1
         Me.PanelToolBar2.BackgroundImage = Global.Modelos.My.Resources.Resources.fondoPanel
         Me.PanelToolBar2.Controls.Add(Me.btnImprimir)
         Me.PanelToolBar2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.PanelToolBar2.Location = New System.Drawing.Point(994, 0)
-        Me.PanelToolBar2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelToolBar2.Location = New System.Drawing.Point(741, 0)
         Me.PanelToolBar2.Name = "PanelToolBar2"
-        Me.PanelToolBar2.Size = New System.Drawing.Size(107, 89)
+        Me.PanelToolBar2.Size = New System.Drawing.Size(80, 72)
         Me.PanelToolBar2.TabIndex = 6
         '
         'btnImprimir
@@ -565,9 +537,8 @@ Partial Class ModeloF1
         Me.btnImprimir.ImageFixedSize = New System.Drawing.Size(48, 48)
         Me.btnImprimir.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
         Me.btnImprimir.Location = New System.Drawing.Point(0, 0)
-        Me.btnImprimir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnImprimir.Name = "btnImprimir"
-        Me.btnImprimir.Size = New System.Drawing.Size(107, 89)
+        Me.btnImprimir.Size = New System.Drawing.Size(80, 72)
         Me.btnImprimir.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.btnImprimir.TabIndex = 11
         Me.btnImprimir.Text = "IMPRIMIR"
@@ -583,9 +554,8 @@ Partial Class ModeloF1
         Me.PanelToolBar1.Controls.Add(Me.btnNuevo)
         Me.PanelToolBar1.Dock = System.Windows.Forms.DockStyle.Left
         Me.PanelToolBar1.Location = New System.Drawing.Point(0, 0)
-        Me.PanelToolBar1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PanelToolBar1.Name = "PanelToolBar1"
-        Me.PanelToolBar1.Size = New System.Drawing.Size(501, 89)
+        Me.PanelToolBar1.Size = New System.Drawing.Size(376, 72)
         Me.PanelToolBar1.TabIndex = 5
         '
         'btnSalir
@@ -597,10 +567,9 @@ Partial Class ModeloF1
         Me.btnSalir.Image = Global.Modelos.My.Resources.Resources.atras
         Me.btnSalir.ImageFixedSize = New System.Drawing.Size(48, 48)
         Me.btnSalir.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.btnSalir.Location = New System.Drawing.Point(384, 0)
-        Me.btnSalir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnSalir.Location = New System.Drawing.Point(288, 0)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(117, 89)
+        Me.btnSalir.Size = New System.Drawing.Size(88, 72)
         Me.btnSalir.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.btnSalir.TabIndex = 10
         Me.btnSalir.Text = "SALIR"
@@ -615,10 +584,9 @@ Partial Class ModeloF1
         Me.btnGrabar.Image = Global.Modelos.My.Resources.Resources.save
         Me.btnGrabar.ImageFixedSize = New System.Drawing.Size(48, 48)
         Me.btnGrabar.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.btnGrabar.Location = New System.Drawing.Point(288, 0)
-        Me.btnGrabar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnGrabar.Location = New System.Drawing.Point(216, 0)
         Me.btnGrabar.Name = "btnGrabar"
-        Me.btnGrabar.Size = New System.Drawing.Size(96, 89)
+        Me.btnGrabar.Size = New System.Drawing.Size(72, 72)
         Me.btnGrabar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.btnGrabar.TabIndex = 9
         Me.btnGrabar.Text = "GRABAR"
@@ -633,13 +601,12 @@ Partial Class ModeloF1
         Me.btnEliminar.Image = Global.Modelos.My.Resources.Resources.trash
         Me.btnEliminar.ImageFixedSize = New System.Drawing.Size(48, 48)
         Me.btnEliminar.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.btnEliminar.Location = New System.Drawing.Point(192, 0)
-        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnEliminar.Location = New System.Drawing.Point(144, 0)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(96, 89)
+        Me.btnEliminar.Size = New System.Drawing.Size(72, 72)
         Me.btnEliminar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.btnEliminar.TabIndex = 8
-        Me.btnEliminar.Text = "ELIMNAR"
+        Me.btnEliminar.Text = "ELIMINAR"
         Me.btnEliminar.TextColor = System.Drawing.Color.White
         '
         'btnModificar
@@ -651,10 +618,9 @@ Partial Class ModeloF1
         Me.btnModificar.Image = Global.Modelos.My.Resources.Resources.edit
         Me.btnModificar.ImageFixedSize = New System.Drawing.Size(48, 48)
         Me.btnModificar.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.btnModificar.Location = New System.Drawing.Point(96, 0)
-        Me.btnModificar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnModificar.Location = New System.Drawing.Point(72, 0)
         Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(96, 89)
+        Me.btnModificar.Size = New System.Drawing.Size(72, 72)
         Me.btnModificar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.btnModificar.TabIndex = 7
         Me.btnModificar.Text = "MODIFICAR"
@@ -671,9 +637,8 @@ Partial Class ModeloF1
         Me.btnNuevo.ImageFixedSize = New System.Drawing.Size(48, 48)
         Me.btnNuevo.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
         Me.btnNuevo.Location = New System.Drawing.Point(0, 0)
-        Me.btnNuevo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(96, 89)
+        Me.btnNuevo.Size = New System.Drawing.Size(72, 72)
         Me.btnNuevo.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.btnNuevo.TabIndex = 6
         Me.btnNuevo.Text = "NUEVO"
@@ -689,10 +654,9 @@ Partial Class ModeloF1
         'SuperTabControlPanelBuscador
         '
         Me.SuperTabControlPanelBuscador.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SuperTabControlPanelBuscador.Location = New System.Drawing.Point(0, 41)
-        Me.SuperTabControlPanelBuscador.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.SuperTabControlPanelBuscador.Location = New System.Drawing.Point(0, 33)
         Me.SuperTabControlPanelBuscador.Name = "SuperTabControlPanelBuscador"
-        Me.SuperTabControlPanelBuscador.Size = New System.Drawing.Size(1089, 583)
+        Me.SuperTabControlPanelBuscador.Size = New System.Drawing.Size(817, 474)
         Me.SuperTabControlPanelBuscador.TabIndex = 0
         Me.SuperTabControlPanelBuscador.TabItem = Me.SupTabItemBusqueda
         '
@@ -710,7 +674,6 @@ Partial Class ModeloF1
         'MHighlighterFocus
         '
         Me.MHighlighterFocus.ContainerControl = Me
-
         '
         'MFlyoutUsuario
         '
@@ -720,12 +683,11 @@ Partial Class ModeloF1
         '
         'ModeloF1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1137, 624)
+        Me.ClientSize = New System.Drawing.Size(853, 507)
         Me.Controls.Add(Me.SuperTabPrincipal)
         Me.KeyPreview = True
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "ModeloF1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "{...TITULO...}"

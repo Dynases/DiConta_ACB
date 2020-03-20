@@ -550,7 +550,7 @@ Partial Class ModeloF2
         Me.btnEliminar.Size = New System.Drawing.Size(72, 72)
         Me.btnEliminar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.btnEliminar.TabIndex = 8
-        Me.btnEliminar.Text = "ELIMNAR"
+        Me.btnEliminar.Text = "ELIMINAR"
         Me.btnEliminar.TextColor = System.Drawing.Color.Black
         '
         'btnModificar
@@ -625,14 +625,14 @@ Partial Class ModeloF2
         Me.MFlyoutUsuario.Parent = Me
         Me.MFlyoutUsuario.TargetControl = Me.BubbleBarUsuario
         '
-        'ModeloF1
+        'ModeloF2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(884, 561)
         Me.Controls.Add(Me.SuperTabPrincipal)
         Me.KeyPreview = True
-        Me.Name = "ModeloF1"
+        Me.Name = "ModeloF2"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "{...TITULO...}"
         CType(Me.SuperTabPrincipal, System.ComponentModel.ISupportInitialize).EndInit()

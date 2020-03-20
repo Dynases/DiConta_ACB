@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class F0_Comprobante
     Inherits Modelos.ModeloF0_M
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class F0_Comprobante
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F0_Comprobante))
@@ -78,6 +78,7 @@ Partial Class F0_Comprobante
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.btRecuperar = New DevComponents.DotNetBar.ButtonX()
         Me.timerRecuperacion = New System.Windows.Forms.Timer(Me.components)
+        Me.btnBitacora = New DevComponents.DotNetBar.ButtonX()
         CType(Me.SuperTabPrincipal, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuperTabPrincipal.SuspendLayout()
         Me.SuperTabControlPanelBuscador.SuspendLayout()
@@ -128,21 +129,21 @@ Partial Class F0_Comprobante
         Me.SuperTabPrincipal.ControlBox.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.SuperTabPrincipal.ControlBox.MenuBox, Me.SuperTabPrincipal.ControlBox.CloseBox})
         Me.SuperTabPrincipal.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.SuperTabPrincipal.SelectedTabIndex = 1
-        Me.SuperTabPrincipal.Size = New System.Drawing.Size(1023, 482)
-        Me.SuperTabPrincipal.Controls.SetChildIndex(Me.SuperTabControlPanelRegistro, 0)
+        Me.SuperTabPrincipal.Size = New System.Drawing.Size(1149, 482)
         Me.SuperTabPrincipal.Controls.SetChildIndex(Me.SuperTabControlPanelBuscador, 0)
+        Me.SuperTabPrincipal.Controls.SetChildIndex(Me.SuperTabControlPanelRegistro, 0)
         '
         'SuperTabControlPanelBuscador
         '
         Me.SuperTabControlPanelBuscador.Controls.Add(Me.GroupPanelBuscador)
         Me.SuperTabControlPanelBuscador.Location = New System.Drawing.Point(0, 0)
         Me.SuperTabControlPanelBuscador.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.SuperTabControlPanelBuscador.Size = New System.Drawing.Size(985, 482)
+        Me.SuperTabControlPanelBuscador.Size = New System.Drawing.Size(1117, 482)
         '
         'SuperTabControlPanelRegistro
         '
         Me.SuperTabControlPanelRegistro.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.SuperTabControlPanelRegistro.Size = New System.Drawing.Size(991, 482)
+        Me.SuperTabControlPanelRegistro.Size = New System.Drawing.Size(1117, 482)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelSuperior, 0)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelInferior, 0)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelPrincipal, 0)
@@ -150,7 +151,7 @@ Partial Class F0_Comprobante
         'PanelSuperior
         '
         Me.PanelSuperior.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.PanelSuperior.Size = New System.Drawing.Size(991, 72)
+        Me.PanelSuperior.Size = New System.Drawing.Size(1117, 72)
         Me.PanelSuperior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelSuperior.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(150, Byte), Integer))
         Me.PanelSuperior.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(150, Byte), Integer))
@@ -169,7 +170,7 @@ Partial Class F0_Comprobante
         '
         Me.PanelInferior.Location = New System.Drawing.Point(0, 443)
         Me.PanelInferior.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.PanelInferior.Size = New System.Drawing.Size(991, 39)
+        Me.PanelInferior.Size = New System.Drawing.Size(1117, 39)
         Me.PanelInferior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelInferior.Style.BackColor1.Color = System.Drawing.Color.Transparent
         Me.PanelInferior.Style.BackColor2.Color = System.Drawing.Color.Transparent
@@ -214,7 +215,7 @@ Partial Class F0_Comprobante
         Me.PanelToolBar1.Controls.Add(Me.ButtonX3)
         Me.PanelToolBar1.Controls.Add(Me.ButtonX1)
         Me.PanelToolBar1.Controls.Add(Me.ButtonX2)
-        Me.PanelToolBar1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelToolBar1.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelToolBar1.Size = New System.Drawing.Size(779, 72)
         Me.PanelToolBar1.Controls.SetChildIndex(Me.btnNuevo, 0)
         Me.PanelToolBar1.Controls.SetChildIndex(Me.btnModificar, 0)
@@ -230,7 +231,7 @@ Partial Class F0_Comprobante
         'btnSalir
         '
         Me.btnSalir.Dock = System.Windows.Forms.DockStyle.Left
-        Me.btnSalir.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnSalir.Margin = New System.Windows.Forms.Padding(2)
         Me.btnSalir.Size = New System.Drawing.Size(66, 72)
         Me.btnSalir.Text = "&SALIR"
         '
@@ -240,7 +241,7 @@ Partial Class F0_Comprobante
         '
         'btnEliminar
         '
-        Me.btnEliminar.Text = "&ELIMNAR"
+        Me.btnEliminar.Text = "&ELIMINAR"
         '
         'btnModificar
         '
@@ -252,26 +253,31 @@ Partial Class F0_Comprobante
         '
         'PanelToolBar2
         '
-        Me.PanelToolBar2.Location = New System.Drawing.Point(911, 0)
+        Me.PanelToolBar2.Controls.Add(Me.btnBitacora)
+        Me.PanelToolBar2.Location = New System.Drawing.Point(944, 0)
         Me.PanelToolBar2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.PanelToolBar2.Size = New System.Drawing.Size(173, 72)
+        Me.PanelToolBar2.Controls.SetChildIndex(Me.btnBitacora, 0)
+        Me.PanelToolBar2.Controls.SetChildIndex(Me.btnImprimir, 0)
         '
         'PanelPrincipal
         '
         Me.PanelPrincipal.Controls.Add(Me.panelDetalle)
         Me.PanelPrincipal.Controls.Add(Me.panelCabecera)
         Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.PanelPrincipal.Size = New System.Drawing.Size(991, 371)
+        Me.PanelPrincipal.Size = New System.Drawing.Size(1117, 371)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelUsuario, 0)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.panelCabecera, 0)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.panelDetalle, 0)
         '
         'btnImprimir
         '
+        Me.btnImprimir.Location = New System.Drawing.Point(88, 0)
+        Me.btnImprimir.Size = New System.Drawing.Size(85, 72)
         Me.btnImprimir.Text = "IM&PRIMIR"
         '
         'btnUltimo
         '
-        Me.btnUltimo.Location = New System.Drawing.Point(129, 0)
         Me.btnUltimo.Margin = New System.Windows.Forms.Padding(1)
         '
         'btnSiguiente
@@ -285,7 +291,7 @@ Partial Class F0_Comprobante
         '
         'MPanelUserAct
         '
-        Me.MPanelUserAct.Location = New System.Drawing.Point(791, 0)
+        Me.MPanelUserAct.Location = New System.Drawing.Point(917, 0)
         Me.MPanelUserAct.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         '
         'MFlyoutUsuario
@@ -299,7 +305,7 @@ Partial Class F0_Comprobante
         Me.MRlAccion.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.MRlAccion.Location = New System.Drawing.Point(779, 0)
         Me.MRlAccion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.MRlAccion.Size = New System.Drawing.Size(132, 72)
+        Me.MRlAccion.Size = New System.Drawing.Size(165, 72)
         '
         'GroupPanelBuscador
         '
@@ -311,7 +317,7 @@ Partial Class F0_Comprobante
         Me.GroupPanelBuscador.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupPanelBuscador.Location = New System.Drawing.Point(0, 0)
         Me.GroupPanelBuscador.Name = "GroupPanelBuscador"
-        Me.GroupPanelBuscador.Size = New System.Drawing.Size(985, 482)
+        Me.GroupPanelBuscador.Size = New System.Drawing.Size(1117, 482)
         '
         '
         '
@@ -348,7 +354,7 @@ Partial Class F0_Comprobante
         Me.JGrM_Buscador.Dock = System.Windows.Forms.DockStyle.Fill
         Me.JGrM_Buscador.Location = New System.Drawing.Point(0, 0)
         Me.JGrM_Buscador.Name = "JGrM_Buscador"
-        Me.JGrM_Buscador.Size = New System.Drawing.Size(979, 459)
+        Me.JGrM_Buscador.Size = New System.Drawing.Size(1111, 459)
         Me.JGrM_Buscador.TabIndex = 0
         '
         'panelCabecera
@@ -361,7 +367,7 @@ Partial Class F0_Comprobante
         Me.panelCabecera.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.panelCabecera.Location = New System.Drawing.Point(0, 0)
         Me.panelCabecera.Name = "panelCabecera"
-        Me.panelCabecera.Size = New System.Drawing.Size(991, 149)
+        Me.panelCabecera.Size = New System.Drawing.Size(1117, 149)
         Me.panelCabecera.TabIndex = 20
         '
         'GroupPanel5
@@ -975,7 +981,7 @@ Partial Class F0_Comprobante
         Me.panelDetalle.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelDetalle.Location = New System.Drawing.Point(0, 149)
         Me.panelDetalle.Name = "panelDetalle"
-        Me.panelDetalle.Size = New System.Drawing.Size(991, 222)
+        Me.panelDetalle.Size = New System.Drawing.Size(1117, 222)
         Me.panelDetalle.TabIndex = 21
         '
         'GroupPanel1
@@ -991,7 +997,7 @@ Partial Class F0_Comprobante
         Me.GroupPanel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupPanel1.Location = New System.Drawing.Point(0, 0)
         Me.GroupPanel1.Name = "GroupPanel1"
-        Me.GroupPanel1.Size = New System.Drawing.Size(991, 222)
+        Me.GroupPanel1.Size = New System.Drawing.Size(1117, 222)
         '
         '
         '
@@ -1029,7 +1035,7 @@ Partial Class F0_Comprobante
         Me.grDetalle.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grDetalle.Location = New System.Drawing.Point(0, 0)
         Me.grDetalle.Name = "grDetalle"
-        Me.grDetalle.Size = New System.Drawing.Size(985, 0)
+        Me.grDetalle.Size = New System.Drawing.Size(1111, 0)
         Me.grDetalle.TabIndex = 0
         '
         'grDetalle2
@@ -1039,7 +1045,7 @@ Partial Class F0_Comprobante
         Me.grDetalle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grDetalle2.Location = New System.Drawing.Point(0, -4)
         Me.grDetalle2.Name = "grDetalle2"
-        Me.grDetalle2.Size = New System.Drawing.Size(985, 23)
+        Me.grDetalle2.Size = New System.Drawing.Size(1111, 23)
         Me.grDetalle2.TabIndex = 0
         Me.grDetalle2.Visible = False
         '
@@ -1049,7 +1055,7 @@ Partial Class F0_Comprobante
         Me.panelAyudaCuenta.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.panelAyudaCuenta.Location = New System.Drawing.Point(0, 19)
         Me.panelAyudaCuenta.Name = "panelAyudaCuenta"
-        Me.panelAyudaCuenta.Size = New System.Drawing.Size(985, 180)
+        Me.panelAyudaCuenta.Size = New System.Drawing.Size(1111, 180)
         Me.panelAyudaCuenta.TabIndex = 2
         '
         'grAyudaCuenta
@@ -1059,7 +1065,7 @@ Partial Class F0_Comprobante
         Me.grAyudaCuenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grAyudaCuenta.Location = New System.Drawing.Point(0, 0)
         Me.grAyudaCuenta.Name = "grAyudaCuenta"
-        Me.grAyudaCuenta.Size = New System.Drawing.Size(985, 180)
+        Me.grAyudaCuenta.Size = New System.Drawing.Size(1111, 180)
         Me.grAyudaCuenta.TabIndex = 1
         '
         'cmOpcionesDetalle
@@ -1067,20 +1073,20 @@ Partial Class F0_Comprobante
         Me.cmOpcionesDetalle.ImageScalingSize = New System.Drawing.Size(24, 24)
         Me.cmOpcionesDetalle.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ELIMINARToolStripMenuItem, Me.INSERTARFILAToolStripMenuItem})
         Me.cmOpcionesDetalle.Name = "ContextMenuStrip1"
-        Me.cmOpcionesDetalle.Size = New System.Drawing.Size(165, 76)
+        Me.cmOpcionesDetalle.Size = New System.Drawing.Size(164, 76)
         '
         'ELIMINARToolStripMenuItem
         '
         Me.ELIMINARToolStripMenuItem.Image = Global.Presentacion.My.Resources.Resources.elim_fila2
         Me.ELIMINARToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ELIMINARToolStripMenuItem.Name = "ELIMINARToolStripMenuItem"
-        Me.ELIMINARToolStripMenuItem.Size = New System.Drawing.Size(164, 36)
+        Me.ELIMINARToolStripMenuItem.Size = New System.Drawing.Size(163, 36)
         Me.ELIMINARToolStripMenuItem.Text = "ELIMINAR"
         '
         'INSERTARFILAToolStripMenuItem
         '
         Me.INSERTARFILAToolStripMenuItem.Name = "INSERTARFILAToolStripMenuItem"
-        Me.INSERTARFILAToolStripMenuItem.Size = New System.Drawing.Size(164, 36)
+        Me.INSERTARFILAToolStripMenuItem.Size = New System.Drawing.Size(163, 36)
         Me.INSERTARFILAToolStripMenuItem.Text = "INSERTAR FILA"
         '
         'ButtonX2
@@ -1156,13 +1162,13 @@ Partial Class F0_Comprobante
         Me.cmOpcionesAyuda.ImageScalingSize = New System.Drawing.Size(24, 24)
         Me.cmOpcionesAyuda.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1})
         Me.cmOpcionesAyuda.Name = "ContextMenuStrip1"
-        Me.cmOpcionesAyuda.Size = New System.Drawing.Size(186, 26)
+        Me.cmOpcionesAyuda.Size = New System.Drawing.Size(185, 26)
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(185, 22)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(184, 22)
         Me.ToolStripMenuItem1.Text = "MODIFICAR CLIENTE"
         '
         'btRecuperar
@@ -1188,11 +1194,28 @@ Partial Class F0_Comprobante
         Me.timerRecuperacion.Enabled = True
         Me.timerRecuperacion.Interval = 30000
         '
+        'btnBitacora
+        '
+        Me.btnBitacora.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.btnBitacora.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange
+        Me.btnBitacora.Dock = System.Windows.Forms.DockStyle.Left
+        Me.btnBitacora.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBitacora.Image = Global.Presentacion.My.Resources.Resources.busqueda
+        Me.btnBitacora.ImageFixedSize = New System.Drawing.Size(48, 48)
+        Me.btnBitacora.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
+        Me.btnBitacora.Location = New System.Drawing.Point(0, 0)
+        Me.btnBitacora.Name = "btnBitacora"
+        Me.btnBitacora.Size = New System.Drawing.Size(88, 72)
+        Me.btnBitacora.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.btnBitacora.TabIndex = 16
+        Me.btnBitacora.Text = "BITÁCORA"
+        Me.btnBitacora.TextColor = System.Drawing.Color.White
+        '
         'F0_Comprobante
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1023, 482)
+        Me.ClientSize = New System.Drawing.Size(1149, 482)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "F0_Comprobante"
         Me.Text = "F0_Comprobante"
@@ -1287,4 +1310,5 @@ Partial Class F0_Comprobante
     Friend WithEvents tbDiferenciaSus As DevComponents.DotNetBar.Controls.TextBoxX
     Protected WithEvents btRecuperar As DevComponents.DotNetBar.ButtonX
     Friend WithEvents timerRecuperacion As Timer
+    Protected WithEvents btnBitacora As DevComponents.DotNetBar.ButtonX
 End Class

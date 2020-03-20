@@ -3342,4 +3342,31 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         End If
 
     End Sub
+
+    Private Sub btnBitacora_Click(sender As Object, e As EventArgs) Handles btnBitacora.Click
+        Dim dtb As DataTable
+        dtb = L_prBitacoraComprobantes(tbNumi.Text)
+        If dtb.Rows.Count > 0 Then
+            Dim listEstCeldas As New List(Of Modelos.Celda)
+            listEstCeldas.Add(New Modelos.Celda("accion", True, "ACCIÓN", 120))
+            listEstCeldas.Add(New Modelos.Celda("oafact", True, "FECHA", 80))
+            listEstCeldas.Add(New Modelos.Celda("oahact", True, "HORA", 70))
+            listEstCeldas.Add(New Modelos.Celda("oauact", True, "USUARIO", 120))
+            listEstCeldas.Add(New Modelos.Celda("oanumi", False, "ID", 50))
+
+            Dim ef = New Efecto
+            ef.tipo = 3
+            ef.dt = dtb
+            ef.SeleclCol = 2
+            ef.listEstCeldas = listEstCeldas
+            ef.AutoScrollPosition = AutoScrollPosition
+            'ef.alto = 450
+            'ef.ancho = 180
+            ef.Context = "BITÁCORA DEL COMPROBANTE"
+            ef.ShowDialog()
+        Else
+            ToastNotification.Show(Me, "No existe bitácora para este registro".ToUpper, My.Resources.WARNING, 3000, eToastGlowColor.Blue, eToastPosition.TopCenter)
+        End If
+
+    End Sub
 End Class

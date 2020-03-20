@@ -1459,6 +1459,7 @@
     <None Include="Resources\at1.png" />
     <None Include="Resources\next1.png" />
     <None Include="Resources\imageDefault.jpg" />
+    <None Include="Resources\busqueda.png" />
     <Content Include="Resources\nuevo2.png" />
     <Content Include="Resources\ok.png" />
     <None Include="Resources\search.png" />
