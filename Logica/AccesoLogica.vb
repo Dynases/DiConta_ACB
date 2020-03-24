@@ -4639,6 +4639,19 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
 
         Return _Tabla
     End Function
+    Public Shared Function L_prBitacoraVenta(_numi As String) As DataTable
+        Dim _Tabla As DataTable
+
+        Dim _listParam As New List(Of Datos.DParametro)
+
+        _listParam.Add(New Datos.DParametro("@tipo", 25))
+        _listParam.Add(New Datos.DParametro("@vcnumi", _numi))
+        _listParam.Add(New Datos.DParametro("@vcuact", L_Usuario))
+
+        _Tabla = D_ProcedimientoConParam("sp_Mam_TV002", _listParam)
+
+        Return _Tabla
+    End Function
 
 #End Region
 

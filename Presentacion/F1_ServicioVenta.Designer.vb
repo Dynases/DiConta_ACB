@@ -113,6 +113,7 @@ Partial Class F1_ServicioVenta
         Me.CbOP = New System.Windows.Forms.CheckBox()
         Me.ttmensaje = New System.Windows.Forms.ToolTip(Me.components)
         Me.CachedR_ArqueoResumen1 = New Presentacion.CachedR_ArqueoResumen()
+        Me.btnBitacora = New DevComponents.DotNetBar.ButtonX()
         Me.PanelSuperior.SuspendLayout()
         Me.PanelInferior.SuspendLayout()
         CType(Me.BubbleBarUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -273,9 +274,13 @@ Partial Class F1_ServicioVenta
         '
         'PanelToolBar2
         '
-        Me.PanelToolBar2.Location = New System.Drawing.Point(1104, 0)
+        Me.PanelToolBar2.Controls.Add(Me.btnBitacora)
+        Me.PanelToolBar2.Location = New System.Drawing.Point(1031, 0)
         Me.PanelToolBar2.Margin = New System.Windows.Forms.Padding(4)
+        Me.PanelToolBar2.Size = New System.Drawing.Size(153, 72)
         Me.PanelToolBar2.TabIndex = 0
+        Me.PanelToolBar2.Controls.SetChildIndex(Me.btnBitacora, 0)
+        Me.PanelToolBar2.Controls.SetChildIndex(Me.btnImprimir, 0)
         '
         'PanelPrincipal
         '
@@ -288,6 +293,8 @@ Partial Class F1_ServicioVenta
         '
         'btnImprimir
         '
+        Me.btnImprimir.Location = New System.Drawing.Point(88, 0)
+        Me.btnImprimir.Size = New System.Drawing.Size(65, 72)
         Me.btnImprimir.TabIndex = 0
         Me.btnImprimir.Text = "IM&PRIMIR"
         '
@@ -316,7 +323,7 @@ Partial Class F1_ServicioVenta
         '
         Me.MRlAccion.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.MRlAccion.Margin = New System.Windows.Forms.Padding(4)
-        Me.MRlAccion.Size = New System.Drawing.Size(728, 72)
+        Me.MRlAccion.Size = New System.Drawing.Size(655, 72)
         '
         'PanelContent
         '
@@ -362,7 +369,7 @@ Partial Class F1_ServicioVenta
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(840, 0)
+        Me.PictureBox1.Location = New System.Drawing.Point(767, 0)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         '
         'SuperTabItemBuscador
@@ -373,7 +380,7 @@ Partial Class F1_ServicioVenta
         '
         Me.PanelBuscador.Controls.Add(Me.TableLayoutPanel1)
         Me.PanelBuscador.Margin = New System.Windows.Forms.Padding(3)
-        Me.PanelBuscador.Size = New System.Drawing.Size(951, 450)
+        Me.PanelBuscador.Size = New System.Drawing.Size(1151, 498)
         '
         'PanelTotal
         '
@@ -1795,7 +1802,7 @@ Partial Class F1_ServicioVenta
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 450.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(951, 450)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1151, 498)
         Me.TableLayoutPanel1.TabIndex = 2
         '
         'PanelVentas
@@ -1806,7 +1813,7 @@ Partial Class F1_ServicioVenta
         Me.PanelVentas.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelVentas.Location = New System.Drawing.Point(3, 3)
         Me.PanelVentas.Name = "PanelVentas"
-        Me.PanelVentas.Size = New System.Drawing.Size(945, 444)
+        Me.PanelVentas.Size = New System.Drawing.Size(1145, 492)
         Me.PanelVentas.TabIndex = 0
         '
         'GroupPanel2
@@ -1819,7 +1826,7 @@ Partial Class F1_ServicioVenta
         Me.GroupPanel2.Font = New System.Drawing.Font("Georgia", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupPanel2.Location = New System.Drawing.Point(0, 0)
         Me.GroupPanel2.Name = "GroupPanel2"
-        Me.GroupPanel2.Size = New System.Drawing.Size(945, 444)
+        Me.GroupPanel2.Size = New System.Drawing.Size(1145, 492)
         '
         '
         '
@@ -1859,7 +1866,7 @@ Partial Class F1_ServicioVenta
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel6.Location = New System.Drawing.Point(0, 0)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(939, 421)
+        Me.Panel6.Size = New System.Drawing.Size(1139, 469)
         Me.Panel6.TabIndex = 0
         '
         'grVentas
@@ -1881,7 +1888,7 @@ Partial Class F1_ServicioVenta
         Me.grVentas.SelectedFormatStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grVentas.SelectedFormatStyle.ForeColor = System.Drawing.Color.White
         Me.grVentas.SelectOnExpand = False
-        Me.grVentas.Size = New System.Drawing.Size(939, 421)
+        Me.grVentas.Size = New System.Drawing.Size(1139, 469)
         Me.grVentas.TabIndex = 0
         Me.grVentas.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
@@ -1908,7 +1915,7 @@ Partial Class F1_ServicioVenta
         Me.swreporte.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.swreporte.Dock = System.Windows.Forms.DockStyle.Right
         Me.swreporte.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.swreporte.Location = New System.Drawing.Point(645, 0)
+        Me.swreporte.Location = New System.Drawing.Point(572, 0)
         Me.swreporte.Name = "swreporte"
         Me.swreporte.OffBackColor = System.Drawing.Color.DodgerBlue
         Me.swreporte.OffText = "Reporte Media Carta"
@@ -1936,6 +1943,23 @@ Partial Class F1_ServicioVenta
         'ttmensaje
         '
         Me.ttmensaje.IsBalloon = True
+        '
+        'btnBitacora
+        '
+        Me.btnBitacora.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.btnBitacora.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange
+        Me.btnBitacora.Dock = System.Windows.Forms.DockStyle.Left
+        Me.btnBitacora.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBitacora.Image = Global.Presentacion.My.Resources.Resources.busqueda
+        Me.btnBitacora.ImageFixedSize = New System.Drawing.Size(48, 48)
+        Me.btnBitacora.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
+        Me.btnBitacora.Location = New System.Drawing.Point(0, 0)
+        Me.btnBitacora.Name = "btnBitacora"
+        Me.btnBitacora.Size = New System.Drawing.Size(88, 72)
+        Me.btnBitacora.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.btnBitacora.TabIndex = 17
+        Me.btnBitacora.Text = "BITÁCORA"
+        Me.btnBitacora.TextColor = System.Drawing.Color.White
         '
         'F1_ServicioVenta
         '
@@ -2092,4 +2116,5 @@ Partial Class F1_ServicioVenta
     Friend WithEvents CbOP As CheckBox
     Friend WithEvents ttmensaje As ToolTip
     Friend WithEvents lbCtrlEnter1 As DevComponents.DotNetBar.LabelX
+    Protected WithEvents btnBitacora As DevComponents.DotNetBar.ButtonX
 End Class

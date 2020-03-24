@@ -3369,4 +3369,9 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         End If
 
     End Sub
+
+    Private Sub JGrM_Buscador_DoubleClick(sender As Object, e As EventArgs) Handles JGrM_Buscador.DoubleClick
+        SuperTabPrincipal.SelectedTabIndex = 0
+        grDetalle2.Focus()
+    End Sub
 End Class
