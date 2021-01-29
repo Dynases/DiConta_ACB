@@ -97,6 +97,8 @@ Public Class MetodoDatos
             'Dim n As Integer = Comando.Connection.ConnectionTimeout()
             'MsgBox("Tiempo de Espera :" + Str(n))
             'Comando.Connection.Close()
+
+            Comando.CommandTimeout = 900
             Comando.Connection.Close()
         Catch ex As Exception
             MsgBox(ex.Message)

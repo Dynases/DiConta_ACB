@@ -54,6 +54,7 @@ Partial Class PR_LibroMayor
         Me.LabelX6 = New DevComponents.DotNetBar.LabelX()
         Me.gpGrilla = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.grDetalle = New Janus.Windows.GridEX.GridEX()
+        Me.swCuenta = New DevComponents.DotNetBar.Controls.SwitchButton()
         CType(Me.SuperTabPrincipal, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuperTabPrincipal.SuspendLayout()
         Me.SuperTabControlPanelRegistro.SuspendLayout()
@@ -225,7 +226,6 @@ Partial Class PR_LibroMayor
         '
         'btnUltimo
         '
-        Me.btnUltimo.Location = New System.Drawing.Point(129, 0)
         Me.btnUltimo.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         '
         'MPanelUserAct
@@ -543,6 +543,7 @@ Partial Class PR_LibroMayor
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.swCuenta)
         Me.Panel1.Controls.Add(Me.LabelX1)
         Me.Panel1.Controls.Add(Me.tbMeses)
         Me.Panel1.Controls.Add(Me.LabelX5)
@@ -761,6 +762,27 @@ Partial Class PR_LibroMayor
         Me.grDetalle.Size = New System.Drawing.Size(946, 249)
         Me.grDetalle.TabIndex = 3
         '
+        'swCuenta
+        '
+        '
+        '
+        '
+        Me.swCuenta.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.swCuenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.swCuenta.Location = New System.Drawing.Point(8, 99)
+        Me.swCuenta.Margin = New System.Windows.Forms.Padding(2)
+        Me.swCuenta.Name = "swCuenta"
+        Me.swCuenta.OffBackColor = System.Drawing.Color.Aqua
+        Me.swCuenta.OffText = "Todas Cuentas"
+        Me.swCuenta.OnBackColor = System.Drawing.Color.Gold
+        Me.swCuenta.OnText = "Una Cuenta"
+        Me.swCuenta.ReadOnlyMarkerColor = System.Drawing.Color.Empty
+        Me.swCuenta.Size = New System.Drawing.Size(102, 25)
+        Me.swCuenta.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.swCuenta.TabIndex = 246
+        Me.swCuenta.Value = True
+        Me.swCuenta.ValueObject = "Y"
+        '
         'PR_LibroMayor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -831,4 +853,5 @@ Partial Class PR_LibroMayor
     Friend WithEvents lbAuxiliar01 As DevComponents.DotNetBar.LabelX
     Friend WithEvents lbAuxiliar02 As DevComponents.DotNetBar.LabelX
     Friend WithEvents cbAuxiliar02 As Janus.Windows.GridEX.EditControls.MultiColumnCombo
+    Friend WithEvents swCuenta As DevComponents.DotNetBar.Controls.SwitchButton
 End Class

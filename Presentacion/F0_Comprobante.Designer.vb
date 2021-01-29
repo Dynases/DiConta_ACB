@@ -1210,6 +1210,7 @@ Partial Class F0_Comprobante
         Me.btnBitacora.TabIndex = 16
         Me.btnBitacora.Text = "BITÁCORA"
         Me.btnBitacora.TextColor = System.Drawing.Color.White
+        Me.btnBitacora.Visible = False
         '
         'F0_Comprobante
         '

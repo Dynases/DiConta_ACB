@@ -70,9 +70,13 @@ Public Class PR_LibroMayor
 
     Public Sub Interpretar(ByRef dt As DataTable)
         If (swAuxiliar01.Value = True And swAuxiliar02.Value = True) Then
-            dt = L_prCuentaReporteLibroMayor(tbNumi.Tag.ToString.Trim, tbFechaDel.Value.ToString("yyyy/MM/dd"), tbFechaAl.Value.ToString("yyyy/MM/dd"))
-            Return
-
+            If swCuenta.Value = True Then
+                dt = L_prCuentaReporteLibroMayor(tbNumi.Tag.ToString.Trim, tbFechaDel.Value.ToString("yyyy/MM/dd"), tbFechaAl.Value.ToString("yyyy/MM/dd"))
+                Return
+            Else
+                dt = L_prCuentaReporteLibroMayorTodos(gi_empresaNumi, tbFechaDel.Value.ToString("yyyy/MM/dd"), tbFechaAl.Value.ToString("yyyy/MM/dd"))
+                Return
+            End If
         End If
         If (swAuxiliar01.Value = False And swAuxiliar02.Value = True) Then '' Si selecciono una variable auxiliar 01 y la Aux02 es todos
             dt = L_prCuentaReporteLibroMayorAuxiliar01(tbNumi.Tag.ToString.Trim, tbFechaDel.Value.ToString("yyyy/MM/dd"), tbFechaAl.Value.ToString("yyyy/MM/dd"), cbAuxiliar01.Value)
@@ -306,7 +310,13 @@ Public Class PR_LibroMayor
     Private Sub _prCargarGridDetalleConTotalesMeses()
         Dim dt As New DataTable
         If tbCliente.Tag = 0 Then
-            dt = L_prCuentaReporteLibroMayor(tbNumi.Tag.ToString.Trim, tbFechaDel.Value.ToString("yyyy/MM/dd"), tbFechaAl.Value.ToString("yyyy/MM/dd"))
+            If swCuenta.Value = True Then
+                dt = L_prCuentaReporteLibroMayor(tbNumi.Tag.ToString.Trim, tbFechaDel.Value.ToString("yyyy/MM/dd"), tbFechaAl.Value.ToString("yyyy/MM/dd"))
+
+            Else
+                dt = L_prCuentaReporteLibroMayorTodos(gi_empresaNumi, tbFechaDel.Value.ToString("yyyy/MM/dd"), tbFechaAl.Value.ToString("yyyy/MM/dd"))
+
+            End If
 
         Else
             dt = L_prCuentaReporteLibroMayorPorCliente(tbNumi.Tag.ToString.Trim, tbFechaDel.Value.ToString("yyyy/MM/dd"), tbFechaAl.Value.ToString("yyyy/MM/dd"), tbCliente.Tag)
@@ -567,43 +577,74 @@ Public Class PR_LibroMayor
                 Auxiliar02 = cbAuxiliar02.Text
 
             End If
-            Dim objrep As New R_LibroMayor
+
             Dim dt As DataTable = CType(grDetalle.DataSource, DataTable)
+
             If tbMeses.Value = True Then
                 Dim filasFiltradas As DataRow() = dt.Select("oanumi<>-1")
                 If filasFiltradas.Count > 0 Then
                     dt = filasFiltradas.CopyToDataTable
                 End If
+            Else
+                'saco el ultimo registro del total
+                dt.Rows(dt.Rows.Count - 1).Delete()
             End If
-            'saco el ultimo registro del total
-            dt.Rows(dt.Rows.Count - 1).Delete()
 
-            'ahora lo mando al visualizador
-            P_Global.Visualizador = New Visualizador
-            objrep.SetDataSource(dt)
-
-            objrep.SetParameterValue("fechaDesde", tbFechaDel.Value.ToString("dd/MM/yyyy"))
-            objrep.SetParameterValue("fechaHasta", tbFechaAl.Value.ToString("dd/MM/yyyy"))
-            objrep.SetParameterValue("titulo", "AUTOMOVIL CLUB BOLIVIANO " + gs_empresaDesc.ToUpper)
-            objrep.SetParameterValue("nit", gs_empresaNit.ToUpper)
-            objrep.SetParameterValue("cliente", IIf(tbCliente.Tag > 0, _cobrarPagar, ""))
-            objrep.SetParameterValue("nroCuenta", tbNumi.Text)
-            objrep.SetParameterValue("cuenta", tbCuenta.Text)
-            objrep.SetParameterValue("moneda", tbMoneda.Value)
-            objrep.SetParameterValue("auxiliar01", Auxiliar01)
-            objrep.SetParameterValue("auxiliar02", Auxiliar02)
             If tbMeses.Value = True Then
-                objrep.SetParameterValue("conMeses", 1)
+                Dim objrep As New R_LibroMayor
+
+                'ahora lo mando al visualizador
+                P_Global.Visualizador = New Visualizador
+                objrep.SetDataSource(dt)
+
+                objrep.SetParameterValue("fechaDesde", tbFechaDel.Value.ToString("dd/MM/yyyy"))
+                objrep.SetParameterValue("fechaHasta", tbFechaAl.Value.ToString("dd/MM/yyyy"))
+                objrep.SetParameterValue("titulo", "AUTOMOVIL CLUB BOLIVIANO " + gs_empresaDesc.ToUpper)
+                objrep.SetParameterValue("nit", gs_empresaNit.ToUpper)
+                objrep.SetParameterValue("cliente", IIf(tbCliente.Tag > 0, _cobrarPagar, ""))
+                objrep.SetParameterValue("nroCuenta", tbNumi.Text)
+                objrep.SetParameterValue("cuenta", tbCuenta.Text)
+                objrep.SetParameterValue("moneda", tbMoneda.Value)
+                objrep.SetParameterValue("auxiliar01", Auxiliar01)
+                objrep.SetParameterValue("auxiliar02", Auxiliar02)
+                If tbMeses.Value = True Then
+                    objrep.SetParameterValue("conMeses", 1)
+                Else
+                    objrep.SetParameterValue("conMeses", 0)
+                End If
+
+                P_Global.Visualizador.CRV1.ReportSource = objrep 'Comentar
+                P_Global.Visualizador.Show() 'Comentar
+                P_Global.Visualizador.BringToFront() 'Comentar
 
             Else
-                objrep.SetParameterValue("conMeses", 0)
+                Dim objrep As New R_LibroMayor2
 
+                'ahora lo mando al visualizador
+                P_Global.Visualizador = New Visualizador
+                objrep.SetDataSource(dt)
+
+                objrep.SetParameterValue("fechaDesde", tbFechaDel.Value.ToString("dd/MM/yyyy"))
+                objrep.SetParameterValue("fechaHasta", tbFechaAl.Value.ToString("dd/MM/yyyy"))
+                objrep.SetParameterValue("titulo", "AUTOMOVIL CLUB BOLIVIANO " + gs_empresaDesc.ToUpper)
+                objrep.SetParameterValue("nit", gs_empresaNit.ToUpper)
+                objrep.SetParameterValue("cliente", IIf(tbCliente.Tag > 0, _cobrarPagar, ""))
+                objrep.SetParameterValue("nroCuenta", tbNumi.Text)
+                objrep.SetParameterValue("cuenta", tbCuenta.Text)
+                objrep.SetParameterValue("moneda", tbMoneda.Value)
+                objrep.SetParameterValue("auxiliar01", Auxiliar01)
+                objrep.SetParameterValue("auxiliar02", Auxiliar02)
+                If tbMeses.Value = True Then
+                    objrep.SetParameterValue("conMeses", 1)
+                Else
+                    objrep.SetParameterValue("conMeses", 0)
+                End If
+
+                P_Global.Visualizador.CRV1.ReportSource = objrep 'Comentar
+                P_Global.Visualizador.Show() 'Comentar
+                P_Global.Visualizador.BringToFront() 'Comentar
             End If
 
-
-            P_Global.Visualizador.CRV1.ReportSource = objrep 'Comentar
-            P_Global.Visualizador.Show() 'Comentar
-            P_Global.Visualizador.BringToFront() 'Comentar
         End If
     End Sub
 
@@ -659,15 +700,18 @@ Public Class PR_LibroMayor
                                            eToastPosition.BottomLeft)
             Exit Sub
         End If
-
-        If tbNumi.Text = "" Then
-            ToastNotification.Show(Me, "seleccione una cuenta..!!!".ToUpper,
-                                           My.Resources.WARNING, 2000,
-                                           eToastGlowColor.Blue,
-                                           eToastPosition.BottomLeft)
-            Exit Sub
+        If swCuenta.Value = True Then
+            If tbNumi.Text = "" Then
+                ToastNotification.Show(Me, "seleccione una cuenta..!!!".ToUpper,
+                                               My.Resources.WARNING, 2000,
+                                               eToastGlowColor.Blue,
+                                               eToastPosition.BottomLeft)
+                Exit Sub
+            End If
+            gpGrilla.Text = "cuenta ".ToUpper + tbNumi.Text + " " + tbCuenta.Text
         End If
-        gpGrilla.Text = "cuenta ".ToUpper + tbNumi.Text + " " + tbCuenta.Text
+
+
         If tbMeses.Value = True Then
             _prCargarGridDetalleConTotalesMeses()
         Else
@@ -892,5 +936,12 @@ Public Class PR_LibroMayor
 
     Private Sub tbCuenta_TextChanged(sender As Object, e As EventArgs) Handles tbCuenta.TextChanged
 
+    End Sub
+
+    Private Sub swCuenta_ValueChanged(sender As Object, e As EventArgs) Handles swCuenta.ValueChanged
+        If swCuenta.Value = False Then
+            tbNumi.Text = ""
+            tbCuenta.Text = ""
+        End If
     End Sub
 End Class

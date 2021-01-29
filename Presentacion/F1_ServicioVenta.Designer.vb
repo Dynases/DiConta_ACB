@@ -1960,6 +1960,7 @@ Partial Class F1_ServicioVenta
         Me.btnBitacora.TabIndex = 17
         Me.btnBitacora.Text = "BITÁCORA"
         Me.btnBitacora.TextColor = System.Drawing.Color.White
+        Me.btnBitacora.Visible = False
         '
         'F1_ServicioVenta
         '
