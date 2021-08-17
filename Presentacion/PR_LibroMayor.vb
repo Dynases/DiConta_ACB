@@ -136,8 +136,8 @@ Public Class PR_LibroMayor
         Try
             dt.Rows(0).Item("saldo") = IIf(IsDBNull(dt.Rows(0).Item("obdebebs")) = True, 0, dt.Rows(0).Item("obdebebs")) - IIf(IsDBNull(dt.Rows(0).Item("obhaberbs")) = True, 0, dt.Rows(0).Item("obhaberbs"))
             dt.Rows(0).Item("saldoSus") = IIf(IsDBNull(dt.Rows(0).Item("obdebeus")) = True, 0, dt.Rows(0).Item("obdebeus")) - IIf(IsDBNull(dt.Rows(0).Item("obhaberus")) = True, 0, dt.Rows(0).Item("obhaberus"))
-            dt.Rows(0).Item("saldo") = 0
-            dt.Rows(0).Item("saldoSus") = 0
+            'dt.Rows(0).Item("saldo") = 0
+            'dt.Rows(0).Item("saldoSus") = 0
             dt.Rows(0).Item("obdebebs") = DBNull.Value
             dt.Rows(0).Item("obhaberbs") = DBNull.Value
             dt.Rows(0).Item("obdebeus") = DBNull.Value
