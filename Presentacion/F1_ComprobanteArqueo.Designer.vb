@@ -116,9 +116,9 @@ Partial Class F1_ComprobanteArqueo
         '
         'TxtNombreUsu
         '
-        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(2)
         Me.TxtNombreUsu.ReadOnly = True
-        Me.TxtNombreUsu.Size = New System.Drawing.Size(179, 27)
+        Me.TxtNombreUsu.Size = New System.Drawing.Size(135, 23)
         Me.TxtNombreUsu.Text = "DEFAULT"
         '
         'btnSalir
@@ -168,13 +168,11 @@ Partial Class F1_ComprobanteArqueo
         '
         Me.PanelContent.Controls.Add(Me.grComprob)
         Me.PanelContent.Controls.Add(Me.GrDatos)
-        Me.PanelContent.Margin = New System.Windows.Forms.Padding(9, 7, 9, 7)
-        Me.PanelContent.Size = New System.Drawing.Size(1279, 553)
+        Me.PanelContent.Margin = New System.Windows.Forms.Padding(7, 6, 7, 6)
         '
         'MSuperTabControlPanel1
         '
-        Me.MSuperTabControlPanel1.Margin = New System.Windows.Forms.Padding(9, 7, 9, 7)
-        Me.MSuperTabControlPanel1.Size = New System.Drawing.Size(1279, 553)
+        Me.MSuperTabControlPanel1.Margin = New System.Windows.Forms.Padding(7, 6, 7, 6)
         '
         'MSuperTabControl
         '
@@ -196,8 +194,8 @@ Partial Class F1_ComprobanteArqueo
         'PanelBuscador
         '
         Me.PanelBuscador.Controls.Add(Me.GroupPanel2)
-        Me.PanelBuscador.Margin = New System.Windows.Forms.Padding(4)
-        Me.PanelBuscador.Size = New System.Drawing.Size(1279, 553)
+        Me.PanelBuscador.Margin = New System.Windows.Forms.Padding(3)
+        Me.PanelBuscador.Size = New System.Drawing.Size(951, 450)
         '
         'GrDatos
         '
@@ -216,9 +214,9 @@ Partial Class F1_ComprobanteArqueo
         Me.GrDatos.DisabledBackColor = System.Drawing.Color.Empty
         Me.GrDatos.Dock = System.Windows.Forms.DockStyle.Top
         Me.GrDatos.Location = New System.Drawing.Point(0, 0)
-        Me.GrDatos.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GrDatos.Margin = New System.Windows.Forms.Padding(2)
         Me.GrDatos.Name = "GrDatos"
-        Me.GrDatos.Size = New System.Drawing.Size(1279, 162)
+        Me.GrDatos.Size = New System.Drawing.Size(951, 132)
         '
         '
         '
@@ -257,10 +255,9 @@ Partial Class F1_ComprobanteArqueo
         Me.btnNuevoTipoCambio.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat
         Me.btnNuevoTipoCambio.Image = Global.Presentacion.My.Resources.Resources.anadir
         Me.btnNuevoTipoCambio.ImageFixedSize = New System.Drawing.Size(28, 28)
-        Me.btnNuevoTipoCambio.Location = New System.Drawing.Point(208, 41)
-        Me.btnNuevoTipoCambio.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnNuevoTipoCambio.Location = New System.Drawing.Point(156, 33)
         Me.btnNuevoTipoCambio.Name = "btnNuevoTipoCambio"
-        Me.btnNuevoTipoCambio.Size = New System.Drawing.Size(45, 36)
+        Me.btnNuevoTipoCambio.Size = New System.Drawing.Size(34, 29)
         Me.btnNuevoTipoCambio.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.btnNuevoTipoCambio.TabIndex = 240
         Me.btnNuevoTipoCambio.Visible = False
@@ -273,11 +270,10 @@ Partial Class F1_ComprobanteArqueo
         Me.btActualizar.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btActualizar.Image = Global.Presentacion.My.Resources.Resources.reload_5
         Me.btActualizar.ImageFixedSize = New System.Drawing.Size(40, 40)
-        Me.btActualizar.Location = New System.Drawing.Point(453, 58)
-        Me.btActualizar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btActualizar.Location = New System.Drawing.Point(340, 47)
         Me.btActualizar.Name = "btActualizar"
         Me.btActualizar.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor(4)
-        Me.btActualizar.Size = New System.Drawing.Size(141, 60)
+        Me.btActualizar.Size = New System.Drawing.Size(106, 49)
         Me.btActualizar.SubItemsExpandWidth = 10
         Me.btActualizar.TabIndex = 239
         Me.btActualizar.Text = "CARGAR DATOS"
@@ -292,8 +288,7 @@ Partial Class F1_ComprobanteArqueo
         '
         Me.LabelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX5.Location = New System.Drawing.Point(271, 74)
-        Me.LabelX5.Margin = New System.Windows.Forms.Padding(4)
+        Me.LabelX5.Location = New System.Drawing.Point(203, 60)
         Me.LabelX5.Name = "LabelX5"
         Me.LabelX5.Size = New System.Drawing.Size(19, 15)
         Me.LabelX5.TabIndex = 130
@@ -304,10 +299,9 @@ Partial Class F1_ComprobanteArqueo
         Me.tbFechaF.CalendarMonthBackground = System.Drawing.Color.White
         Me.tbFechaF.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbFechaF.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.tbFechaF.Location = New System.Drawing.Point(301, 71)
-        Me.tbFechaF.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbFechaF.Location = New System.Drawing.Point(226, 58)
         Me.tbFechaF.Name = "tbFechaF"
-        Me.tbFechaF.Size = New System.Drawing.Size(132, 20)
+        Me.tbFechaF.Size = New System.Drawing.Size(100, 20)
         Me.tbFechaF.TabIndex = 129
         '
         'tbNumi
@@ -318,11 +312,10 @@ Partial Class F1_ComprobanteArqueo
         Me.tbNumi.Border.Class = "TextBoxBorder"
         Me.tbNumi.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbNumi.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbNumi.Location = New System.Drawing.Point(133, 4)
-        Me.tbNumi.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbNumi.Location = New System.Drawing.Point(100, 3)
         Me.tbNumi.Name = "tbNumi"
         Me.tbNumi.PreventEnterBeep = True
-        Me.tbNumi.Size = New System.Drawing.Size(96, 20)
+        Me.tbNumi.Size = New System.Drawing.Size(72, 20)
         Me.tbNumi.TabIndex = 123
         Me.tbNumi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -336,10 +329,9 @@ Partial Class F1_ComprobanteArqueo
         Me.tbTipoCambio.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
         Me.tbTipoCambio.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbTipoCambio.Increment = 1.0R
-        Me.tbTipoCambio.Location = New System.Drawing.Point(133, 39)
-        Me.tbTipoCambio.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbTipoCambio.Location = New System.Drawing.Point(100, 32)
         Me.tbTipoCambio.Name = "tbTipoCambio"
-        Me.tbTipoCambio.Size = New System.Drawing.Size(76, 20)
+        Me.tbTipoCambio.Size = New System.Drawing.Size(57, 20)
         Me.tbTipoCambio.TabIndex = 122
         '
         'LabelX4
@@ -351,8 +343,7 @@ Partial Class F1_ComprobanteArqueo
         '
         Me.LabelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX4.Location = New System.Drawing.Point(24, 39)
-        Me.LabelX4.Margin = New System.Windows.Forms.Padding(4)
+        Me.LabelX4.Location = New System.Drawing.Point(18, 32)
         Me.LabelX4.Name = "LabelX4"
         Me.LabelX4.Size = New System.Drawing.Size(78, 15)
         Me.LabelX4.TabIndex = 128
@@ -366,10 +357,9 @@ Partial Class F1_ComprobanteArqueo
         '
         Me.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX1.Location = New System.Drawing.Point(24, 4)
-        Me.LabelX1.Margin = New System.Windows.Forms.Padding(4)
+        Me.LabelX1.Location = New System.Drawing.Point(18, 3)
         Me.LabelX1.Name = "LabelX1"
-        Me.LabelX1.Size = New System.Drawing.Size(100, 28)
+        Me.LabelX1.Size = New System.Drawing.Size(75, 23)
         Me.LabelX1.TabIndex = 124
         Me.LabelX1.Text = "ID:"
         '
@@ -382,8 +372,7 @@ Partial Class F1_ComprobanteArqueo
         '
         Me.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX3.Location = New System.Drawing.Point(24, 76)
-        Me.LabelX3.Margin = New System.Windows.Forms.Padding(4)
+        Me.LabelX3.Location = New System.Drawing.Point(18, 62)
         Me.LabelX3.Name = "LabelX3"
         Me.LabelX3.Size = New System.Drawing.Size(43, 15)
         Me.LabelX3.TabIndex = 127
@@ -394,10 +383,9 @@ Partial Class F1_ComprobanteArqueo
         Me.tbFechaI.CalendarMonthBackground = System.Drawing.Color.White
         Me.tbFechaI.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbFechaI.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.tbFechaI.Location = New System.Drawing.Point(133, 71)
-        Me.tbFechaI.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbFechaI.Location = New System.Drawing.Point(100, 58)
         Me.tbFechaI.Name = "tbFechaI"
-        Me.tbFechaI.Size = New System.Drawing.Size(132, 20)
+        Me.tbFechaI.Size = New System.Drawing.Size(100, 20)
         Me.tbFechaI.TabIndex = 121
         '
         'grComprob
@@ -407,10 +395,10 @@ Partial Class F1_ComprobanteArqueo
         Me.grComprob.Controls.Add(Me.grComprobante)
         Me.grComprob.DisabledBackColor = System.Drawing.Color.Empty
         Me.grComprob.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.grComprob.Location = New System.Drawing.Point(0, 162)
-        Me.grComprob.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.grComprob.Location = New System.Drawing.Point(0, 132)
+        Me.grComprob.Margin = New System.Windows.Forms.Padding(2)
         Me.grComprob.Name = "grComprob"
-        Me.grComprob.Size = New System.Drawing.Size(1279, 391)
+        Me.grComprob.Size = New System.Drawing.Size(951, 318)
         '
         '
         '
@@ -450,12 +438,12 @@ Partial Class F1_ComprobanteArqueo
         Me.grComprobante.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grComprobante.HeaderFormatStyle.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grComprobante.Location = New System.Drawing.Point(0, 0)
-        Me.grComprobante.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.grComprobante.Margin = New System.Windows.Forms.Padding(2)
         Me.grComprobante.Name = "grComprobante"
         Me.grComprobante.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.grComprobante.Office2007CustomColor = System.Drawing.Color.DodgerBlue
         Me.grComprobante.RowFormatStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grComprobante.Size = New System.Drawing.Size(1273, 368)
+        Me.grComprobante.Size = New System.Drawing.Size(945, 295)
         Me.grComprobante.TabIndex = 0
         Me.grComprobante.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
@@ -469,9 +457,8 @@ Partial Class F1_ComprobanteArqueo
         Me.GroupPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupPanel2.Font = New System.Drawing.Font("Georgia", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupPanel2.Location = New System.Drawing.Point(0, 0)
-        Me.GroupPanel2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupPanel2.Name = "GroupPanel2"
-        Me.GroupPanel2.Size = New System.Drawing.Size(1279, 553)
+        Me.GroupPanel2.Size = New System.Drawing.Size(951, 450)
         '
         '
         '
@@ -518,23 +505,22 @@ Partial Class F1_ComprobanteArqueo
         Me.grmovimientos.HeaderFormatStyle.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grmovimientos.HideSelection = Janus.Windows.GridEX.HideSelection.Highlight
         Me.grmovimientos.Location = New System.Drawing.Point(0, 0)
-        Me.grmovimientos.Margin = New System.Windows.Forms.Padding(4)
         Me.grmovimientos.Name = "grmovimientos"
         Me.grmovimientos.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.grmovimientos.Office2007CustomColor = System.Drawing.Color.DodgerBlue
         Me.grmovimientos.SelectedFormatStyle.BackColor = System.Drawing.Color.DodgerBlue
         Me.grmovimientos.SelectedFormatStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grmovimientos.SelectedFormatStyle.ForeColor = System.Drawing.Color.White
-        Me.grmovimientos.Size = New System.Drawing.Size(1273, 530)
+        Me.grmovimientos.Size = New System.Drawing.Size(945, 427)
         Me.grmovimientos.TabIndex = 0
         Me.grmovimientos.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
         'F1_ComprobanteArqueo
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1312, 690)
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ClientSize = New System.Drawing.Size(984, 561)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "F1_ComprobanteArqueo"
         Me.Text = "F1_ComprobanteArqueo"
         Me.Controls.SetChildIndex(Me.PanelPrincipal, 0)

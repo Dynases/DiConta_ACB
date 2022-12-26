@@ -149,6 +149,9 @@ Partial Class F0_Arqueo
         Me.SuperTabControlPanel4 = New DevComponents.DotNetBar.SuperTabControlPanel()
         Me.grDetalle1 = New Janus.Windows.GridEX.GridEX()
         Me.SuperTabItem4 = New DevComponents.DotNetBar.SuperTabItem()
+        Me.SuperTabControlPanel5 = New DevComponents.DotNetBar.SuperTabControlPanel()
+        Me.grDetalle2 = New Janus.Windows.GridEX.GridEX()
+        Me.SuperTabItem5 = New DevComponents.DotNetBar.SuperTabItem()
         Me.SuperTabControlPanel1 = New DevComponents.DotNetBar.SuperTabControlPanel()
         Me.grPagosAnticipados = New Janus.Windows.GridEX.GridEX()
         Me.SuperTabItem1 = New DevComponents.DotNetBar.SuperTabItem()
@@ -158,9 +161,6 @@ Partial Class F0_Arqueo
         Me.SuperTabControlPanel2 = New DevComponents.DotNetBar.SuperTabControlPanel()
         Me.grTarjetas = New Janus.Windows.GridEX.GridEX()
         Me.SuperTabItem2 = New DevComponents.DotNetBar.SuperTabItem()
-        Me.SuperTabControlPanel5 = New DevComponents.DotNetBar.SuperTabControlPanel()
-        Me.grDetalle2 = New Janus.Windows.GridEX.GridEX()
-        Me.SuperTabItem5 = New DevComponents.DotNetBar.SuperTabItem()
         Me.grPanelAyudaExcel = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.grAyuda = New Janus.Windows.GridEX.GridEX()
         Me.JGrM_Buscador = New Janus.Windows.GridEX.GridEX()
@@ -251,14 +251,14 @@ Partial Class F0_Arqueo
         Me.SuperTabControl2.SuspendLayout()
         Me.SuperTabControlPanel4.SuspendLayout()
         CType(Me.grDetalle1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuperTabControlPanel5.SuspendLayout()
+        CType(Me.grDetalle2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuperTabControlPanel1.SuspendLayout()
         CType(Me.grPagosAnticipados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuperTabControlPanel3.SuspendLayout()
         CType(Me.grProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuperTabControlPanel2.SuspendLayout()
         CType(Me.grTarjetas, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuperTabControlPanel5.SuspendLayout()
-        CType(Me.grDetalle2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grPanelAyudaExcel.SuspendLayout()
         CType(Me.grAyuda, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.JGrM_Buscador, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -428,7 +428,6 @@ Partial Class F0_Arqueo
         '
         'btnUltimo
         '
-        Me.btnUltimo.Location = New System.Drawing.Point(129, 0)
         Me.btnUltimo.Margin = New System.Windows.Forms.Padding(1)
         '
         'btnSiguiente
@@ -2534,6 +2533,34 @@ Partial Class F0_Arqueo
         Me.SuperTabItem4.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.F1)
         Me.SuperTabItem4.Text = "VENTAS A" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "CREDITO(F1)"
         '
+        'SuperTabControlPanel5
+        '
+        Me.SuperTabControlPanel5.CanvasColor = System.Drawing.SystemColors.Control
+        Me.SuperTabControlPanel5.Controls.Add(Me.grDetalle2)
+        Me.SuperTabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SuperTabControlPanel5.Location = New System.Drawing.Point(121, 0)
+        Me.SuperTabControlPanel5.Name = "SuperTabControlPanel5"
+        Me.SuperTabControlPanel5.Size = New System.Drawing.Size(0, 429)
+        Me.SuperTabControlPanel5.TabIndex = 2
+        Me.SuperTabControlPanel5.TabItem = Me.SuperTabItem5
+        '
+        'grDetalle2
+        '
+        Me.grDetalle2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.grDetalle2.Location = New System.Drawing.Point(0, 0)
+        Me.grDetalle2.Name = "grDetalle2"
+        Me.grDetalle2.Size = New System.Drawing.Size(0, 429)
+        Me.grDetalle2.TabIndex = 1
+        '
+        'SuperTabItem5
+        '
+        Me.SuperTabItem5.AttachedControl = Me.SuperTabControlPanel5
+        Me.SuperTabItem5.GlobalItem = False
+        Me.SuperTabItem5.KeyTips = "F2"
+        Me.SuperTabItem5.Name = "SuperTabItem5"
+        Me.SuperTabItem5.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.F2)
+        Me.SuperTabItem5.Text = "EFECTIVO(F2)"
+        '
         'SuperTabControlPanel1
         '
         Me.SuperTabControlPanel1.Controls.Add(Me.grPagosAnticipados)
@@ -2609,34 +2636,6 @@ Partial Class F0_Arqueo
         Me.SuperTabItem2.GlobalItem = False
         Me.SuperTabItem2.Name = "SuperTabItem2"
         Me.SuperTabItem2.Text = "TARJETAS(F4)"
-        '
-        'SuperTabControlPanel5
-        '
-        Me.SuperTabControlPanel5.CanvasColor = System.Drawing.SystemColors.Control
-        Me.SuperTabControlPanel5.Controls.Add(Me.grDetalle2)
-        Me.SuperTabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SuperTabControlPanel5.Location = New System.Drawing.Point(121, 0)
-        Me.SuperTabControlPanel5.Name = "SuperTabControlPanel5"
-        Me.SuperTabControlPanel5.Size = New System.Drawing.Size(0, 429)
-        Me.SuperTabControlPanel5.TabIndex = 2
-        Me.SuperTabControlPanel5.TabItem = Me.SuperTabItem5
-        '
-        'grDetalle2
-        '
-        Me.grDetalle2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.grDetalle2.Location = New System.Drawing.Point(0, 0)
-        Me.grDetalle2.Name = "grDetalle2"
-        Me.grDetalle2.Size = New System.Drawing.Size(0, 429)
-        Me.grDetalle2.TabIndex = 1
-        '
-        'SuperTabItem5
-        '
-        Me.SuperTabItem5.AttachedControl = Me.SuperTabControlPanel5
-        Me.SuperTabItem5.GlobalItem = False
-        Me.SuperTabItem5.KeyTips = "F2"
-        Me.SuperTabItem5.Name = "SuperTabItem5"
-        Me.SuperTabItem5.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.F2)
-        Me.SuperTabItem5.Text = "EFECTIVO(F2)"
         '
         'grPanelAyudaExcel
         '
@@ -2911,14 +2910,14 @@ Partial Class F0_Arqueo
         Me.SuperTabControl2.ResumeLayout(False)
         Me.SuperTabControlPanel4.ResumeLayout(False)
         CType(Me.grDetalle1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SuperTabControlPanel5.ResumeLayout(False)
+        CType(Me.grDetalle2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SuperTabControlPanel1.ResumeLayout(False)
         CType(Me.grPagosAnticipados, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SuperTabControlPanel3.ResumeLayout(False)
         CType(Me.grProductos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SuperTabControlPanel2.ResumeLayout(False)
         CType(Me.grTarjetas, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.SuperTabControlPanel5.ResumeLayout(False)
-        CType(Me.grDetalle2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grPanelAyudaExcel.ResumeLayout(False)
         CType(Me.grAyuda, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.JGrM_Buscador, System.ComponentModel.ISupportInitialize).EndInit()

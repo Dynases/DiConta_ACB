@@ -823,7 +823,8 @@ Public Class F1_Parametros
 
             Dim listEstCeldas As New List(Of Modelos.Celda)
             listEstCeldas.Add(New Modelos.Celda("canumi", False))
-            listEstCeldas.Add(New Modelos.Celda("cacta", True, "codigo".ToUpper, 150))
+            listEstCeldas.Add(New Modelos.Celda("cacta", False, "codigo".ToUpper, 150))
+            listEstCeldas.Add(New Modelos.Celda("cactaucg", True, "codigo".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("cadesc", True, "cuenta".ToUpper, 200))
             listEstCeldas.Add(New Modelos.Celda("camon", True, "moneda".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("catipo", False))
@@ -865,7 +866,8 @@ Public Class F1_Parametros
 
             Dim listEstCeldas As New List(Of Modelos.Celda)
             listEstCeldas.Add(New Modelos.Celda("canumi", False))
-            listEstCeldas.Add(New Modelos.Celda("cacta", True, "codigo".ToUpper, 150))
+            listEstCeldas.Add(New Modelos.Celda("cacta", False, "codigo".ToUpper, 150))
+            listEstCeldas.Add(New Modelos.Celda("cactaucg", True, "codigo".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("cadesc", True, "cuenta".ToUpper, 200))
             listEstCeldas.Add(New Modelos.Celda("camon", True, "moneda".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("catipo", False))
@@ -896,7 +898,8 @@ Public Class F1_Parametros
 
             Dim listEstCeldas As New List(Of Modelos.Celda)
             listEstCeldas.Add(New Modelos.Celda("canumi", False))
-            listEstCeldas.Add(New Modelos.Celda("cacta", True, "codigo".ToUpper, 150))
+            listEstCeldas.Add(New Modelos.Celda("cacta", False, "codigo".ToUpper, 150))
+            listEstCeldas.Add(New Modelos.Celda("cactaucg", True, "codigo".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("cadesc", True, "cuenta".ToUpper, 200))
             listEstCeldas.Add(New Modelos.Celda("camon", True, "moneda".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("catipo", False))
@@ -927,7 +930,8 @@ Public Class F1_Parametros
 
             Dim listEstCeldas As New List(Of Modelos.Celda)
             listEstCeldas.Add(New Modelos.Celda("canumi", False))
-            listEstCeldas.Add(New Modelos.Celda("cacta", True, "codigo".ToUpper, 150))
+            listEstCeldas.Add(New Modelos.Celda("cacta", False, "codigo".ToUpper, 150))
+            listEstCeldas.Add(New Modelos.Celda("cactaucg", True, "codigo".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("cadesc", True, "cuenta".ToUpper, 200))
             listEstCeldas.Add(New Modelos.Celda("camon", True, "moneda".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("catipo", False))
@@ -958,7 +962,8 @@ Public Class F1_Parametros
 
             Dim listEstCeldas As New List(Of Modelos.Celda)
             listEstCeldas.Add(New Modelos.Celda("canumi", False))
-            listEstCeldas.Add(New Modelos.Celda("cacta", True, "codigo".ToUpper, 150))
+            listEstCeldas.Add(New Modelos.Celda("cacta", False, "codigo".ToUpper, 150))
+            listEstCeldas.Add(New Modelos.Celda("cactaucg", True, "codigo".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("cadesc", True, "cuenta".ToUpper, 200))
             listEstCeldas.Add(New Modelos.Celda("camon", True, "moneda".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("catipo", False))
@@ -989,7 +994,8 @@ Public Class F1_Parametros
 
             Dim listEstCeldas As New List(Of Modelos.Celda)
             listEstCeldas.Add(New Modelos.Celda("canumi", False))
-            listEstCeldas.Add(New Modelos.Celda("cacta", True, "codigo".ToUpper, 150))
+            listEstCeldas.Add(New Modelos.Celda("cacta", False, "codigo".ToUpper, 150))
+            listEstCeldas.Add(New Modelos.Celda("cactaucg", True, "codigo".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("cadesc", True, "cuenta".ToUpper, 200))
             listEstCeldas.Add(New Modelos.Celda("camon", True, "moneda".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("catipo", False))
@@ -1020,7 +1026,8 @@ Public Class F1_Parametros
 
             Dim listEstCeldas As New List(Of Modelos.Celda)
             listEstCeldas.Add(New Modelos.Celda("canumi", False))
-            listEstCeldas.Add(New Modelos.Celda("cacta", True, "codigo".ToUpper, 150))
+            listEstCeldas.Add(New Modelos.Celda("cacta", False, "codigo".ToUpper, 150))
+            listEstCeldas.Add(New Modelos.Celda("cactaucg", True, "codigo".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("cadesc", True, "cuenta".ToUpper, 200))
             listEstCeldas.Add(New Modelos.Celda("camon", True, "moneda".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("catipo", False))
@@ -1051,7 +1058,8 @@ Public Class F1_Parametros
 
             Dim listEstCeldas As New List(Of Modelos.Celda)
             listEstCeldas.Add(New Modelos.Celda("canumi", False))
-            listEstCeldas.Add(New Modelos.Celda("cacta", True, "codigo".ToUpper, 150))
+            listEstCeldas.Add(New Modelos.Celda("cacta", False, "codigo".ToUpper, 150))
+            listEstCeldas.Add(New Modelos.Celda("cactaucg", True, "codigo".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("cadesc", True, "cuenta".ToUpper, 200))
             listEstCeldas.Add(New Modelos.Celda("camon", True, "moneda".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("catipo", False))
@@ -1082,7 +1090,8 @@ Public Class F1_Parametros
 
             Dim listEstCeldas As New List(Of Modelos.Celda)
             listEstCeldas.Add(New Modelos.Celda("canumi", False))
-            listEstCeldas.Add(New Modelos.Celda("cacta", True, "codigo".ToUpper, 150))
+            listEstCeldas.Add(New Modelos.Celda("cacta", False, "codigo".ToUpper, 150))
+            listEstCeldas.Add(New Modelos.Celda("cactaucg", True, "codigo".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("cadesc", True, "cuenta".ToUpper, 200))
             listEstCeldas.Add(New Modelos.Celda("camon", True, "moneda".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("catipo", False))
@@ -1114,7 +1123,8 @@ Public Class F1_Parametros
 
             Dim listEstCeldas As New List(Of Modelos.Celda)
             listEstCeldas.Add(New Modelos.Celda("canumi", False))
-            listEstCeldas.Add(New Modelos.Celda("cacta", True, "codigo".ToUpper, 150))
+            listEstCeldas.Add(New Modelos.Celda("cacta", False, "codigo".ToUpper, 150))
+            listEstCeldas.Add(New Modelos.Celda("cactaucg", True, "codigo".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("cadesc", True, "cuenta".ToUpper, 200))
             listEstCeldas.Add(New Modelos.Celda("camon", True, "moneda".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("catipo", False))
@@ -1146,7 +1156,8 @@ Public Class F1_Parametros
 
             Dim listEstCeldas As New List(Of Modelos.Celda)
             listEstCeldas.Add(New Modelos.Celda("canumi", False))
-            listEstCeldas.Add(New Modelos.Celda("cacta", True, "codigo".ToUpper, 150))
+            listEstCeldas.Add(New Modelos.Celda("cacta", False, "codigo".ToUpper, 150))
+            listEstCeldas.Add(New Modelos.Celda("cactaucg", True, "codigo".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("cadesc", True, "cuenta".ToUpper, 200))
             listEstCeldas.Add(New Modelos.Celda("camon", True, "moneda".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("catipo", False))
@@ -1199,7 +1210,8 @@ Public Class F1_Parametros
 
             Dim listEstCeldas As New List(Of Modelos.Celda)
             listEstCeldas.Add(New Modelos.Celda("canumi", False))
-            listEstCeldas.Add(New Modelos.Celda("cacta", True, "codigo".ToUpper, 150))
+            listEstCeldas.Add(New Modelos.Celda("cacta", False, "codigo".ToUpper, 150))
+            listEstCeldas.Add(New Modelos.Celda("cactaucg", True, "codigo".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("cadesc", True, "cuenta".ToUpper, 200))
             listEstCeldas.Add(New Modelos.Celda("camon", True, "moneda".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("catipo", False))
@@ -1231,7 +1243,8 @@ Public Class F1_Parametros
 
             Dim listEstCeldas As New List(Of Modelos.Celda)
             listEstCeldas.Add(New Modelos.Celda("canumi", False))
-            listEstCeldas.Add(New Modelos.Celda("cacta", True, "codigo".ToUpper, 150))
+            listEstCeldas.Add(New Modelos.Celda("cacta", False, "codigo".ToUpper, 150))
+            listEstCeldas.Add(New Modelos.Celda("cactaucg", True, "codigo".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("cadesc", True, "cuenta".ToUpper, 200))
             listEstCeldas.Add(New Modelos.Celda("camon", True, "moneda".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("catipo", False))

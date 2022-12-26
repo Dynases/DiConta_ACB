@@ -90,6 +90,13 @@ Public Class F1_CuemtaAutomatica
             .Width = 120
             .HeaderStyle.TextAlignment = TextAlignment.Center
             .EditType = EditType.NoEdit
+            .Visible = False
+        End With
+        With grDetalle.RootTable.Columns("cactaucg")
+            .Caption = "COD"
+            .Width = 120
+            .HeaderStyle.TextAlignment = TextAlignment.Center
+            .EditType = EditType.NoEdit
         End With
         With grDetalle.RootTable.Columns("cadesc")
             .Caption = "CUENTA"
@@ -398,7 +405,8 @@ Public Class F1_CuemtaAutomatica
 
                 Dim listEstCeldas As New List(Of Modelos.Celda)
                 listEstCeldas.Add(New Modelos.Celda("canumi", False))
-                listEstCeldas.Add(New Modelos.Celda("cacta", True, "codigo".ToUpper, 150))
+                listEstCeldas.Add(New Modelos.Celda("cacta", False, "codigo".ToUpper, 150))
+                listEstCeldas.Add(New Modelos.Celda("cactaucg", True, "codigo".ToUpper, 150))
                 listEstCeldas.Add(New Modelos.Celda("cadesc", True, "cuenta".ToUpper, 200))
                 listEstCeldas.Add(New Modelos.Celda("camon", True, "moneda".ToUpper, 150))
                 listEstCeldas.Add(New Modelos.Celda("catipo", False))
@@ -439,13 +447,14 @@ Public Class F1_CuemtaAutomatica
 
                 If frmAyuda.seleccionado = True Then
                     Dim numiCuenta As String = frmAyuda.filaSelect.Cells("canumi").Value
-                    Dim cod As String = frmAyuda.filaSelect.Cells("cacta").Value
+                    Dim cod As String = frmAyuda.filaSelect.Cells("cactaucg").Value
                     Dim desc As String = frmAyuda.filaSelect.Cells("cadesc").Value
                     Dim numAux As Integer = frmAyuda.filaSelect.Cells("numAux").Value
                     Dim cuentaPadre As String = frmAyuda.filaSelect.Cells("cadesc2").Value
 
                     grDetalle.SetValue("chnumitc1", numiCuenta)
-                    grDetalle.SetValue("cacta", cod)
+                    'grDetalle.SetValue("cacta", cod)
+                    grDetalle.SetValue("cactaucg", cod)
                     grDetalle.SetValue("cadesc", desc)
 
 

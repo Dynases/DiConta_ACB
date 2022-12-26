@@ -429,7 +429,7 @@ Public Class F0_LibroCompra1
                 objrep.SetParameterValue("nombre", dtTitulos.Rows(1).Item("yedesc").ToString)
 
                 'objrep.SetParameterValue("empresaDesc", gs_empresaDescSistema)
-                objrep.SetParameterValue("empresaDesc", "AUTOMOVIL CLUB BOLIVIANO " + gs_empresaDesc.ToUpper)
+                objrep.SetParameterValue("empresaDesc", gs_empresaDesc.ToUpper)
 
                 objrep.SetParameterValue("empresaNit", gs_empresaNit)
                 objrep.SetParameterValue("empresaDirec", gs_empresaDireccion)
@@ -486,4 +486,6 @@ Public Class F0_LibroCompra1
     Private Sub btReporte_Click(sender As Object, e As EventArgs) Handles btReporte.Click
         _prImprimir()
     End Sub
+
+
 End Class

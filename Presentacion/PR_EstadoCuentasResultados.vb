@@ -178,7 +178,7 @@ Public Class PR_EstadoCuentasResultados
 
             objrep.SetParameterValue("fechaDesde", tbFechaDel.Value.Date.ToString("dd/MM/yyyy"))
             objrep.SetParameterValue("fechaHasta", tbFechaAl.Value.Date.ToString("dd/MM/yyyy"))
-            objrep.SetParameterValue("titulo", "AUTOMOVIL CLUB BOLIVIANO " + gs_empresaDesc.ToUpper)
+            objrep.SetParameterValue("titulo", gs_empresaDesc.ToUpper)
             objrep.SetParameterValue("nit", gs_empresaNit.ToUpper)
             objrep.SetParameterValue("nmes", nmes)
 

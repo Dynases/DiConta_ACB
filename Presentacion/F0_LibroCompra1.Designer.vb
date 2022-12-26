@@ -138,9 +138,8 @@ Partial Class F0_LibroCompra1
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelSuperior, 0)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.Panel1, 0)
         '
-        'btnUltimo
+        'btnImprimir
         '
-        Me.btnUltimo.Location = New System.Drawing.Point(129, 0)
         '
         'MRlAccion
         '
@@ -152,11 +151,6 @@ Partial Class F0_LibroCompra1
         'PanelContent
         '
         Me.PanelContent.Controls.Add(Me.TableLayoutPanelPrincipal)
-        Me.PanelContent.Size = New System.Drawing.Size(951, 450)
-        '
-        'MSuperTabControlPanel1
-        '
-        Me.MSuperTabControlPanel1.Size = New System.Drawing.Size(951, 450)
         '
         'MSuperTabControl
         '

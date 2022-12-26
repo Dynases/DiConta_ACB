@@ -97,7 +97,7 @@ Public Class PR_BalanceGeneral
 
             objrep.SetParameterValue("fechaDesde", tbFechaDel.Value.ToString("dd/MM/yyyy"))
             objrep.SetParameterValue("fechaHasta", tbFechaAl.Value.ToString("dd/MM/yyyy"))
-            objrep.SetParameterValue("titulo", "AUTOMOVIL CLUB BOLIVIANO " + gs_empresaDesc.ToUpper)
+            objrep.SetParameterValue("titulo", gs_empresaDesc.ToUpper)
             objrep.SetParameterValue("nit", gs_empresaNit.ToUpper)
 
             MReportViewer.Show()

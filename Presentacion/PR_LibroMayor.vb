@@ -208,6 +208,12 @@ Public Class PR_LibroMayor
         With grDetalle.RootTable.Columns("cacta")
             .Caption = "CUENTA"
             .Width = 80
+            .Visible = False
+            .HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center
+        End With
+        With grDetalle.RootTable.Columns("cactaucg")
+            .Caption = "CUENTA"
+            .Width = 80
             .HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center
         End With
         With grDetalle.RootTable.Columns("obobs")
@@ -466,6 +472,12 @@ Public Class PR_LibroMayor
         With grDetalle.RootTable.Columns("cacta")
             .Caption = "CUENTA"
             .Width = 100
+            .Visible = False
+            .HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center
+        End With
+        With grDetalle.RootTable.Columns("cactaucg")
+            .Caption = "CUENTA"
+            .Width = 100
             .HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center
         End With
         With grDetalle.RootTable.Columns("obobs")
@@ -599,7 +611,7 @@ Public Class PR_LibroMayor
 
                 objrep.SetParameterValue("fechaDesde", tbFechaDel.Value.ToString("dd/MM/yyyy"))
                 objrep.SetParameterValue("fechaHasta", tbFechaAl.Value.ToString("dd/MM/yyyy"))
-                objrep.SetParameterValue("titulo", "AUTOMOVIL CLUB BOLIVIANO " + gs_empresaDesc.ToUpper)
+                objrep.SetParameterValue("titulo", gs_empresaDesc.ToUpper)
                 objrep.SetParameterValue("nit", gs_empresaNit.ToUpper)
                 objrep.SetParameterValue("cliente", IIf(tbCliente.Tag > 0, _cobrarPagar, ""))
                 objrep.SetParameterValue("nroCuenta", tbNumi.Text)
@@ -667,7 +679,7 @@ Public Class PR_LibroMayor
 
             objrep.SetParameterValue("fechaDesde", tbFechaDel.Value.ToString("dd/MM/yyyy"))
             objrep.SetParameterValue("fechaHasta", tbFechaAl.Value.ToString("dd/MM/yyyy"))
-            objrep.SetParameterValue("titulo", "AUTOMOVIL CLUB BOLIVIANO " + gs_empresaDesc.ToUpper)
+            objrep.SetParameterValue("titulo", gs_empresaDesc.ToUpper)
             objrep.SetParameterValue("nit", gs_empresaNit.ToUpper)
             objrep.SetParameterValue("cliente", IIf(tbCliente.Tag > 0, _cobrarPagar, ""))
             objrep.SetParameterValue("nroCuenta", tbNumi.Text)
@@ -728,7 +740,8 @@ Public Class PR_LibroMayor
 
             Dim listEstCeldas As New List(Of Modelos.Celda)
             listEstCeldas.Add(New Modelos.Celda("canumi", False))
-            listEstCeldas.Add(New Modelos.Celda("cacta", True, "codigo".ToUpper, 150))
+            listEstCeldas.Add(New Modelos.Celda("cacta", False, "codigo".ToUpper, 150))
+            listEstCeldas.Add(New Modelos.Celda("cactaucg", True, "codigo".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("cadesc", True, "cuenta".ToUpper, 200))
             listEstCeldas.Add(New Modelos.Celda("camon", True, "moneda".ToUpper, 150))
             listEstCeldas.Add(New Modelos.Celda("catipo", False))
@@ -764,7 +777,7 @@ Public Class PR_LibroMayor
                 tbCliente.Tag = 0
 
                 Dim numiCuenta As String = frmAyuda.filaSelect.Cells("canumi").Value
-                Dim cod As String = frmAyuda.filaSelect.Cells("cacta").Value
+                Dim cod As String = frmAyuda.filaSelect.Cells("cactaucg").Value
                 Dim desc As String = frmAyuda.filaSelect.Cells("cadesc").Value
                 Dim isCobrar As Integer = frmAyuda.filaSelect.Cells("isCobrar").Value
                 Dim isPagar As Integer = frmAyuda.filaSelect.Cells("isPagar").Value

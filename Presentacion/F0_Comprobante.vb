@@ -477,6 +477,14 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
             .HeaderAlignment = TextAlignment.Center
             .Width = 60
             .AllowSort = False
+            .Visible = False
+            '.EditType = EditType.NoEdit
+        End With
+        With grDetalle.RootTable.Columns("cactaucg")
+            .Caption = "CUENTA"
+            .HeaderAlignment = TextAlignment.Center
+            .Width = 80
+            .AllowSort = False
             '.EditType = EditType.NoEdit
         End With
 
@@ -1171,6 +1179,14 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
             .HeaderAlignment = TextAlignment.Center
             .Width = 70
             .DefaultFilterRowComparison = FilterConditionOperator.BeginsWith
+            .Visible = False
+        End With
+
+        With grAyudaCuenta.RootTable.Columns("cactaucg")
+            .Caption = "CODIGO"
+            .HeaderAlignment = TextAlignment.Center
+            .Width = 70
+            .DefaultFilterRowComparison = FilterConditionOperator.BeginsWith
         End With
 
         With grAyudaCuenta.RootTable.Columns("cadesc")
@@ -1674,7 +1690,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         objrep.SetDataSource(dt)
         objrep.SetParameterValue("fechaDesde", "")
         objrep.SetParameterValue("fechaHasta", "")
-        objrep.SetParameterValue("titulo", "AUTOMOVIL CLUB BOLIVIANO " + gs_empresaDesc.ToUpper)
+        objrep.SetParameterValue("titulo", "" + gs_empresaDesc.ToUpper)
         objrep.SetParameterValue("nit", gs_empresaNit.ToUpper)
         objrep.SetParameterValue("ultimoRegistro", 0)
         objrep.SetParameterValue("Autor", gs_user)
@@ -2859,7 +2875,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
             Return
         End If
 
-        If grDetalle.RootTable.Columns(e.Column.Index).Key = "cacta" Then
+        If grDetalle.RootTable.Columns(e.Column.Index).Key = "cactaucg" Then
             panelAyudaCuenta.Visible = True
             _prCargarGridAyudaCuenta()
         End If
@@ -2871,6 +2887,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
 
         If e.KeyData = Keys.Control + Keys.A And btnGrabar.Enabled = True And grAyudaCuenta.Tag = -1 And grAyudaCuenta.Row = -2 Then
             'desea agregar a un nuevo cliente
+
             Dim ci As String = "" 'grAyudaCuenta.GetValue("cjci").ToString
             Dim nombre As String = grAyudaCuenta.GetValue("cjnombre").ToString
             Dim numiNuevo As String = ""
@@ -2909,7 +2926,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
                 End If
                 If True Then 'grAyudaCuenta.GetValue("caniv") = 5
                     Dim numiCuenta As String = grAyudaCuenta.GetValue("canumi")
-                    Dim cod As String = grAyudaCuenta.GetValue("cacta")
+                    Dim cod As String = grAyudaCuenta.GetValue("cactaucg")
                     Dim desc As String = grAyudaCuenta.GetValue("cadesc")
                     Dim numAux As Integer = grAyudaCuenta.GetValue("numAux")
                     Dim cuentaPadre As String = grAyudaCuenta.GetValue("cadesc2")
@@ -2919,7 +2936,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
                     _numiAuxSuc = grAyudaCuenta.GetValue("sucursal")
 
                     grDetalle.SetValue("obcuenta", numiCuenta)
-                    grDetalle.SetValue("cacta", cod)
+                    grDetalle.SetValue("cactaucg", cod)
                     grDetalle.SetValue("cadesc", desc)
                     grDetalle.SetValue("numAux", numAux)
                     grDetalle.SetValue("cadesc2", cuentaPadre)

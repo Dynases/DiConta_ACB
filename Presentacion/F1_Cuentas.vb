@@ -152,7 +152,7 @@ Public Class F1_Cuentas
             Dim nuevoNodo As New TreeNode
 
             'Descripción o texto del nodo
-            nuevoNodo.Text = dataRowCurrent("cacta").ToString().Trim() + " " + dataRowCurrent("cadesc").ToString().Trim()
+            nuevoNodo.Text = dataRowCurrent("cactaucg").ToString().Trim() + " " + dataRowCurrent("cadesc").ToString().Trim()
 
             'Si necesito guardar el valor del IdentificadorNodo dentro del mismo nodo
             nuevoNodo.Name = dataRowCurrent("canumi").ToString().Trim()
@@ -512,6 +512,7 @@ Public Class F1_Cuentas
 
         MHighlighterFocus.UpdateHighlights()
         Return _ok
+
     End Function
 
     Public Overrides Function _PMOGetTablaBuscador() As DataTable
@@ -524,7 +525,8 @@ Public Class F1_Cuentas
         Dim listEstCeldas As New List(Of Modelos.Celda)
         listEstCeldas.Add(New Modelos.Celda("canumi", True, "ID", 70))
         listEstCeldas.Add(New Modelos.Celda("caemp", True, "EMPRESA", 100))
-        listEstCeldas.Add(New Modelos.Celda("cacta", True, "CUENTA", 100))
+        listEstCeldas.Add(New Modelos.Celda("cactaucg", True, "CUENTA", 100))
+        listEstCeldas.Add(New Modelos.Celda("cacta", False, "CUENTA", 100))
         listEstCeldas.Add(New Modelos.Celda("cadesc", True, "DESCRIPCION", 200))
         listEstCeldas.Add(New Modelos.Celda("caniv", True, "NIVEL", 100))
         listEstCeldas.Add(New Modelos.Celda("camon", True, "MONEDA", 70))
@@ -540,7 +542,7 @@ Public Class F1_Cuentas
 
         With JGrM_Buscador
             tbNumi.Text = .GetValue("canumi").ToString
-            tbCuenta.Text = .GetValue("cacta")
+            tbCuenta.Text = .GetValue("cactaucg")
             tbDesc.Text = .GetValue("cadesc").ToString
             tbMoneda.Value = IIf(.GetValue("camon").ToString = "SU", True, False)
             tbTipo.Value = .GetValue("catipo")
@@ -655,9 +657,7 @@ Public Class F1_Cuentas
         End If
     End Sub
 
-    Private Sub btnGrabar_Click(sender As Object, e As EventArgs) Handles btnGrabar.Click
 
-    End Sub
 
     Private Sub grDetalle_EditingCell(sender As Object, e As EditingCellEventArgs) Handles grDetalle.EditingCell
         If grDetalle.Row <= 1 And grDetalle.Row >= 0 Then

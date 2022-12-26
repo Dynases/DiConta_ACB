@@ -58,17 +58,17 @@ Partial Class PR_BalanceGeneral
         'PanelPrincipal
         '
         Me.PanelPrincipal.Location = New System.Drawing.Point(261, 0)
-        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelPrincipal.Size = New System.Drawing.Size(623, 561)
         '
         'MReportViewer
         '
-        Me.MReportViewer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MReportViewer.Margin = New System.Windows.Forms.Padding(4)
         Me.MReportViewer.Size = New System.Drawing.Size(623, 561)
         '
         'MGPFiltros
         '
-        Me.MGPFiltros.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MGPFiltros.Margin = New System.Windows.Forms.Padding(4)
         Me.MGPFiltros.Size = New System.Drawing.Size(261, 561)
         '
         '
@@ -101,7 +101,7 @@ Partial Class PR_BalanceGeneral
         '
         'PanelIzq
         '
-        Me.PanelIzq.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelIzq.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelIzq.Size = New System.Drawing.Size(261, 561)
         Me.PanelIzq.Controls.SetChildIndex(Me.MGPFiltros, 0)
         Me.PanelIzq.Controls.SetChildIndex(Me.PanelEx1, 0)
@@ -109,7 +109,7 @@ Partial Class PR_BalanceGeneral
         '
         'PanelEx1
         '
-        Me.PanelEx1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelEx1.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelEx1.Size = New System.Drawing.Size(261, 76)
         Me.PanelEx1.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(150, Byte), Integer))
@@ -169,7 +169,7 @@ Partial Class PR_BalanceGeneral
         '
         'TxtNombreUsu
         '
-        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtNombreUsu.Size = New System.Drawing.Size(135, 32)
         '
         'GroupPanelFiltros
@@ -177,7 +177,7 @@ Partial Class PR_BalanceGeneral
         Me.GroupPanelFiltros.Controls.Add(Me.GroupPanel2)
         Me.GroupPanelFiltros.Controls.Add(Me.GroupPanel1)
         Me.GroupPanelFiltros.Controls.Add(Me.Panel2)
-        Me.GroupPanelFiltros.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupPanelFiltros.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupPanelFiltros.Size = New System.Drawing.Size(261, 485)
         '
         '
@@ -211,7 +211,7 @@ Partial Class PR_BalanceGeneral
         'Panel1
         '
         Me.Panel1.Location = New System.Drawing.Point(43, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         '
         'LabelX3
         '
@@ -266,7 +266,7 @@ Partial Class PR_BalanceGeneral
         Me.Panel2.Controls.Add(Me.tbFechaAl)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(255, 75)
         Me.Panel2.TabIndex = 120
@@ -282,7 +282,7 @@ Partial Class PR_BalanceGeneral
         Me.GroupPanel1.DisabledBackColor = System.Drawing.Color.Empty
         Me.GroupPanel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupPanel1.Location = New System.Drawing.Point(0, 75)
-        Me.GroupPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupPanel1.Name = "GroupPanel1"
         Me.GroupPanel1.Size = New System.Drawing.Size(255, 97)
         '
@@ -314,6 +314,7 @@ Partial Class PR_BalanceGeneral
         Me.GroupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.GroupPanel1.TabIndex = 124
         Me.GroupPanel1.Text = "AUXILIAR MODULOS"
+        Me.GroupPanel1.Visible = False
         '
         'tbVariable
         '
@@ -349,7 +350,7 @@ Partial Class PR_BalanceGeneral
         '
         Me.tbFiltrar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbFiltrar.Location = New System.Drawing.Point(78, 16)
-        Me.tbFiltrar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.tbFiltrar.Margin = New System.Windows.Forms.Padding(2)
         Me.tbFiltrar.Name = "tbFiltrar"
         Me.tbFiltrar.OffText = "NO"
         Me.tbFiltrar.OnText = "SI"
@@ -368,7 +369,7 @@ Partial Class PR_BalanceGeneral
         Me.GroupPanel2.DisabledBackColor = System.Drawing.Color.Empty
         Me.GroupPanel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupPanel2.Location = New System.Drawing.Point(0, 172)
-        Me.GroupPanel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupPanel2.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupPanel2.Name = "GroupPanel2"
         Me.GroupPanel2.Size = New System.Drawing.Size(255, 98)
         '
@@ -400,6 +401,7 @@ Partial Class PR_BalanceGeneral
         Me.GroupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.GroupPanel2.TabIndex = 125
         Me.GroupPanel2.Text = "AUXILIAR SUCURSALES"
+        Me.GroupPanel2.Visible = False
         '
         'tbVariableSucursal
         '
@@ -435,7 +437,7 @@ Partial Class PR_BalanceGeneral
         '
         Me.tbFiltrarSucursal.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbFiltrarSucursal.Location = New System.Drawing.Point(78, 16)
-        Me.tbFiltrarSucursal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.tbFiltrarSucursal.Margin = New System.Windows.Forms.Padding(2)
         Me.tbFiltrarSucursal.Name = "tbFiltrarSucursal"
         Me.tbFiltrarSucursal.OffText = "NO"
         Me.tbFiltrarSucursal.OnText = "SI"
@@ -449,7 +451,7 @@ Partial Class PR_BalanceGeneral
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(884, 561)
         Me.Location = New System.Drawing.Point(0, 0)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "PR_BalanceGeneral"
         Me.Text = "PR_EstadoCuentasActivoPasivo"
         Me.Controls.SetChildIndex(Me.PanelInferior, 0)
