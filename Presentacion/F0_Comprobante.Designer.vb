@@ -28,20 +28,16 @@ Partial Class F0_Comprobante
         Me.GroupPanelBuscador = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.JGrM_Buscador = New Janus.Windows.GridEX.GridEX()
         Me.panelCabecera = New System.Windows.Forms.Panel()
-        Me.tbReferencia = New DevComponents.DotNetBar.Controls.TextBoxX()
-        Me.tbCuentaSuperior = New DevComponents.DotNetBar.Controls.TextBoxX()
-        Me.LabelX9 = New DevComponents.DotNetBar.LabelX()
-        Me.LabelX10 = New DevComponents.DotNetBar.LabelX()
         Me.GroupPanel5 = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.tbDiferenciaSus = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.tbDiferenciaBs = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.LabelX12 = New DevComponents.DotNetBar.LabelX()
         Me.LabelX13 = New DevComponents.DotNetBar.LabelX()
         Me.GroupPanel4 = New DevComponents.DotNetBar.Controls.GroupPanel()
-        Me.LabelX14 = New DevComponents.DotNetBar.LabelX()
-        Me.tbNombre = New DevComponents.DotNetBar.Controls.TextBoxX()
-        Me.LabelX15 = New DevComponents.DotNetBar.LabelX()
-        Me.LabelX16 = New DevComponents.DotNetBar.LabelX()
+        Me.tbReferencia = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.LabelX10 = New DevComponents.DotNetBar.LabelX()
+        Me.LabelX9 = New DevComponents.DotNetBar.LabelX()
+        Me.tbCuentaSuperior = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.GroupPanel3 = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.LabelX11 = New DevComponents.DotNetBar.LabelX()
         Me.tbEmpresa = New DevComponents.DotNetBar.Controls.TextBoxX()
@@ -50,8 +46,14 @@ Partial Class F0_Comprobante
         Me.tbObs = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.LabelX7 = New DevComponents.DotNetBar.LabelX()
         Me.GroupPanel2 = New DevComponents.DotNetBar.Controls.GroupPanel()
+        Me.tbChque = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.btnNuevoTipoCambio = New DevComponents.DotNetBar.ButtonX()
+        Me.LabelX16 = New DevComponents.DotNetBar.LabelX()
+        Me.tbBanco = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.tbNumi = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.LabelX15 = New DevComponents.DotNetBar.LabelX()
+        Me.tbNombre = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.LabelX14 = New DevComponents.DotNetBar.LabelX()
         Me.tbTipoCambio = New DevComponents.Editors.DoubleInput()
         Me.LabelX8 = New DevComponents.DotNetBar.LabelX()
         Me.tbNroDoc = New DevComponents.DotNetBar.Controls.TextBoxX()
@@ -83,8 +85,6 @@ Partial Class F0_Comprobante
         Me.btRecuperar = New DevComponents.DotNetBar.ButtonX()
         Me.timerRecuperacion = New System.Windows.Forms.Timer(Me.components)
         Me.btnBitacora = New DevComponents.DotNetBar.ButtonX()
-        Me.tbBanco = New DevComponents.DotNetBar.Controls.TextBoxX()
-        Me.tbChque = New DevComponents.DotNetBar.Controls.TextBoxX()
         CType(Me.SuperTabPrincipal, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuperTabPrincipal.SuspendLayout()
         Me.SuperTabControlPanelBuscador.SuspendLayout()
@@ -376,63 +376,6 @@ Partial Class F0_Comprobante
         Me.panelCabecera.Size = New System.Drawing.Size(1322, 149)
         Me.panelCabecera.TabIndex = 20
         '
-        'tbReferencia
-        '
-        '
-        '
-        '
-        Me.tbReferencia.Border.Class = "TextBoxBorder"
-        Me.tbReferencia.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.tbReferencia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbReferencia.Location = New System.Drawing.Point(3, 71)
-        Me.tbReferencia.Multiline = True
-        Me.tbReferencia.Name = "tbReferencia"
-        Me.tbReferencia.PreventEnterBeep = True
-        Me.tbReferencia.Size = New System.Drawing.Size(324, 53)
-        Me.tbReferencia.TabIndex = 121
-        '
-        'tbCuentaSuperior
-        '
-        '
-        '
-        '
-        Me.tbCuentaSuperior.Border.Class = "TextBoxBorder"
-        Me.tbCuentaSuperior.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.tbCuentaSuperior.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbCuentaSuperior.Location = New System.Drawing.Point(3, 22)
-        Me.tbCuentaSuperior.Name = "tbCuentaSuperior"
-        Me.tbCuentaSuperior.PreventEnterBeep = True
-        Me.tbCuentaSuperior.Size = New System.Drawing.Size(324, 20)
-        Me.tbCuentaSuperior.TabIndex = 124
-        '
-        'LabelX9
-        '
-        Me.LabelX9.BackColor = System.Drawing.Color.Transparent
-        '
-        '
-        '
-        Me.LabelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX9.Location = New System.Drawing.Point(3, 49)
-        Me.LabelX9.Name = "LabelX9"
-        Me.LabelX9.Size = New System.Drawing.Size(95, 23)
-        Me.LabelX9.TabIndex = 122
-        Me.LabelX9.Text = "REFERENCIA:"
-        '
-        'LabelX10
-        '
-        Me.LabelX10.BackColor = System.Drawing.Color.Transparent
-        '
-        '
-        '
-        Me.LabelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX10.Location = New System.Drawing.Point(3, 0)
-        Me.LabelX10.Name = "LabelX10"
-        Me.LabelX10.Size = New System.Drawing.Size(129, 23)
-        Me.LabelX10.TabIndex = 123
-        Me.LabelX10.Text = "CUENTA SUPERIOR:"
-        '
         'GroupPanel5
         '
         Me.GroupPanel5.CanvasColor = System.Drawing.SystemColors.Control
@@ -581,61 +524,62 @@ Partial Class F0_Comprobante
         Me.GroupPanel4.TabIndex = 130
         Me.GroupPanel4.Text = "DETALLE DE CUENTA"
         '
-        'LabelX14
-        '
-        Me.LabelX14.BackColor = System.Drawing.Color.Transparent
-        '
-        '
-        '
-        Me.LabelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX14.Location = New System.Drawing.Point(3, 102)
-        Me.LabelX14.Name = "LabelX14"
-        Me.LabelX14.Size = New System.Drawing.Size(59, 23)
-        Me.LabelX14.TabIndex = 129
-        Me.LabelX14.Text = "NOMBRE:"
-        '
-        'tbNombre
+        'tbReferencia
         '
         '
         '
         '
-        Me.tbNombre.Border.Class = "TextBoxBorder"
-        Me.tbNombre.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.tbNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbNombre.Location = New System.Drawing.Point(68, 102)
-        Me.tbNombre.Name = "tbNombre"
-        Me.tbNombre.PreventEnterBeep = True
-        Me.tbNombre.Size = New System.Drawing.Size(317, 22)
-        Me.tbNombre.TabIndex = 125
+        Me.tbReferencia.Border.Class = "TextBoxBorder"
+        Me.tbReferencia.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.tbReferencia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbReferencia.Location = New System.Drawing.Point(3, 71)
+        Me.tbReferencia.Multiline = True
+        Me.tbReferencia.Name = "tbReferencia"
+        Me.tbReferencia.PreventEnterBeep = True
+        Me.tbReferencia.Size = New System.Drawing.Size(324, 53)
+        Me.tbReferencia.TabIndex = 121
         '
-        'LabelX15
+        'LabelX10
         '
-        Me.LabelX15.BackColor = System.Drawing.Color.Transparent
-        '
-        '
-        '
-        Me.LabelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX15.Location = New System.Drawing.Point(172, 53)
-        Me.LabelX15.Name = "LabelX15"
-        Me.LabelX15.Size = New System.Drawing.Size(84, 23)
-        Me.LabelX15.TabIndex = 127
-        Me.LabelX15.Text = "BANCO:"
-        '
-        'LabelX16
-        '
-        Me.LabelX16.BackColor = System.Drawing.Color.Transparent
+        Me.LabelX10.BackColor = System.Drawing.Color.Transparent
         '
         '
         '
-        Me.LabelX16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX16.Location = New System.Drawing.Point(172, 79)
-        Me.LabelX16.Name = "LabelX16"
-        Me.LabelX16.Size = New System.Drawing.Size(91, 23)
-        Me.LabelX16.TabIndex = 128
-        Me.LabelX16.Text = "NRO CHEQUE:"
+        Me.LabelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX10.Location = New System.Drawing.Point(3, 0)
+        Me.LabelX10.Name = "LabelX10"
+        Me.LabelX10.Size = New System.Drawing.Size(129, 23)
+        Me.LabelX10.TabIndex = 123
+        Me.LabelX10.Text = "CUENTA SUPERIOR:"
+        '
+        'LabelX9
+        '
+        Me.LabelX9.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.LabelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX9.Location = New System.Drawing.Point(3, 49)
+        Me.LabelX9.Name = "LabelX9"
+        Me.LabelX9.Size = New System.Drawing.Size(95, 23)
+        Me.LabelX9.TabIndex = 122
+        Me.LabelX9.Text = "REFERENCIA:"
+        '
+        'tbCuentaSuperior
+        '
+        '
+        '
+        '
+        Me.tbCuentaSuperior.Border.Class = "TextBoxBorder"
+        Me.tbCuentaSuperior.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.tbCuentaSuperior.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbCuentaSuperior.Location = New System.Drawing.Point(3, 22)
+        Me.tbCuentaSuperior.Name = "tbCuentaSuperior"
+        Me.tbCuentaSuperior.PreventEnterBeep = True
+        Me.tbCuentaSuperior.Size = New System.Drawing.Size(324, 20)
+        Me.tbCuentaSuperior.TabIndex = 124
         '
         'GroupPanel3
         '
@@ -833,6 +777,20 @@ Partial Class F0_Comprobante
         Me.GroupPanel2.TabIndex = 128
         Me.GroupPanel2.Text = "DATOS DE COMPROBANTE"
         '
+        'tbChque
+        '
+        '
+        '
+        '
+        Me.tbChque.Border.Class = "TextBoxBorder"
+        Me.tbChque.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.tbChque.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbChque.Location = New System.Drawing.Point(254, 74)
+        Me.tbChque.Name = "tbChque"
+        Me.tbChque.PreventEnterBeep = True
+        Me.tbChque.Size = New System.Drawing.Size(131, 22)
+        Me.tbChque.TabIndex = 131
+        '
         'btnNuevoTipoCambio
         '
         Me.btnNuevoTipoCambio.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
@@ -846,6 +804,34 @@ Partial Class F0_Comprobante
         Me.btnNuevoTipoCambio.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.btnNuevoTipoCambio.TabIndex = 205
         Me.btnNuevoTipoCambio.Visible = False
+        '
+        'LabelX16
+        '
+        Me.LabelX16.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.LabelX16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX16.Location = New System.Drawing.Point(172, 79)
+        Me.LabelX16.Name = "LabelX16"
+        Me.LabelX16.Size = New System.Drawing.Size(91, 23)
+        Me.LabelX16.TabIndex = 128
+        Me.LabelX16.Text = "NRO CHEQUE:"
+        '
+        'tbBanco
+        '
+        '
+        '
+        '
+        Me.tbBanco.Border.Class = "TextBoxBorder"
+        Me.tbBanco.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.tbBanco.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbBanco.Location = New System.Drawing.Point(254, 49)
+        Me.tbBanco.Name = "tbBanco"
+        Me.tbBanco.PreventEnterBeep = True
+        Me.tbBanco.Size = New System.Drawing.Size(131, 22)
+        Me.tbBanco.TabIndex = 130
         '
         'tbNumi
         '
@@ -861,6 +847,48 @@ Partial Class F0_Comprobante
         Me.tbNumi.Size = New System.Drawing.Size(72, 20)
         Me.tbNumi.TabIndex = 106
         Me.tbNumi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'LabelX15
+        '
+        Me.LabelX15.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.LabelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX15.Location = New System.Drawing.Point(172, 53)
+        Me.LabelX15.Name = "LabelX15"
+        Me.LabelX15.Size = New System.Drawing.Size(84, 23)
+        Me.LabelX15.TabIndex = 127
+        Me.LabelX15.Text = "BANCO:"
+        '
+        'tbNombre
+        '
+        '
+        '
+        '
+        Me.tbNombre.Border.Class = "TextBoxBorder"
+        Me.tbNombre.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.tbNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbNombre.Location = New System.Drawing.Point(95, 102)
+        Me.tbNombre.Name = "tbNombre"
+        Me.tbNombre.PreventEnterBeep = True
+        Me.tbNombre.Size = New System.Drawing.Size(290, 22)
+        Me.tbNombre.TabIndex = 125
+        '
+        'LabelX14
+        '
+        Me.LabelX14.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.LabelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX14.Location = New System.Drawing.Point(3, 102)
+        Me.LabelX14.Name = "LabelX14"
+        Me.LabelX14.Size = New System.Drawing.Size(104, 23)
+        Me.LabelX14.TabIndex = 129
+        Me.LabelX14.Text = "A LA ORDEN DE:"
         '
         'tbTipoCambio
         '
@@ -1279,34 +1307,6 @@ Partial Class F0_Comprobante
         Me.btnBitacora.Text = "BITÁCORA"
         Me.btnBitacora.TextColor = System.Drawing.Color.White
         Me.btnBitacora.Visible = False
-        '
-        'tbBanco
-        '
-        '
-        '
-        '
-        Me.tbBanco.Border.Class = "TextBoxBorder"
-        Me.tbBanco.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.tbBanco.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbBanco.Location = New System.Drawing.Point(254, 49)
-        Me.tbBanco.Name = "tbBanco"
-        Me.tbBanco.PreventEnterBeep = True
-        Me.tbBanco.Size = New System.Drawing.Size(131, 22)
-        Me.tbBanco.TabIndex = 130
-        '
-        'tbChque
-        '
-        '
-        '
-        '
-        Me.tbChque.Border.Class = "TextBoxBorder"
-        Me.tbChque.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.tbChque.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbChque.Location = New System.Drawing.Point(254, 74)
-        Me.tbChque.Name = "tbChque"
-        Me.tbChque.PreventEnterBeep = True
-        Me.tbChque.Size = New System.Drawing.Size(131, 22)
-        Me.tbChque.TabIndex = 131
         '
         'F0_Comprobante
         '
