@@ -1578,7 +1578,7 @@ BDDiconCaneros .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
     End Function
 
 
-    Public Shared Function L_prComprobanteGrabar(ByRef _numi As String, _numDoc As String, _tipo As String, _anio As String, _mes As String, _num As String, _fecha As String, _tipoCambio As String, _glosa As String, _obs As String, _numiEmpresa As String, _detalle As DataTable, _detalleDetalle As DataTable, _detalleDetalleCompras As DataTable, _user As String) As Boolean
+    Public Shared Function L_prComprobanteGrabar(ByRef _numi As String, _numDoc As String, _tipo As String, _anio As String, _mes As String, _num As String, _fecha As String, _tipoCambio As String, _glosa As String, _obs As String, _numiEmpresa As String, _detalle As DataTable, _detalleDetalle As DataTable, _detalleDetalleCompras As DataTable, _user As String, _nombre As String, _banco As String, _cheque As String) As Boolean
         Dim _resultado As Boolean
 
         Dim _Tabla As DataTable
@@ -1599,6 +1599,9 @@ BDDiconCaneros .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
         _listParam.Add(New Datos.DParametro("@TO00111", "", _detalleDetalle))
         _listParam.Add(New Datos.DParametro("@TFC001", "", _detalleDetalleCompras))
         _listParam.Add(New Datos.DParametro("@uact", _user))
+        _listParam.Add(New Datos.DParametro("@oanom", _nombre))
+        _listParam.Add(New Datos.DParametro("@oaban", _banco))
+        _listParam.Add(New Datos.DParametro("@oache", _cheque))
 
         _Tabla = D_ProcedimientoConParam("sp_dg_TO001", _listParam)
 
@@ -1771,7 +1774,7 @@ BDDiconCaneros .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
         Return _resultado
     End Function
 
-    Public Shared Function L_prComprobanteModificar(_numi As String, _numDoc As String, _tipo As String, _anio As String, _mes As String, _num As String, _fecha As String, _tipoCambio As String, _glosa As String, _obs As String, _numiEmpresa As String, _detalle As DataTable, _detalleDetalle As DataTable) As Boolean
+    Public Shared Function L_prComprobanteModificar(_numi As String, _numDoc As String, _tipo As String, _anio As String, _mes As String, _num As String, _fecha As String, _tipoCambio As String, _glosa As String, _obs As String, _numiEmpresa As String, _detalle As DataTable, _detalleDetalle As DataTable, _nombre As String, _banco As String, _cheque As String) As Boolean
         Dim _resultado As Boolean
 
         Dim _Tabla As DataTable
@@ -1792,6 +1795,9 @@ BDDiconCaneros .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
         _listParam.Add(New Datos.DParametro("@TO0011", "", _detalle))
         _listParam.Add(New Datos.DParametro("@TO00111", "", _detalleDetalle))
         _listParam.Add(New Datos.DParametro("@uact", L_Usuario))
+        _listParam.Add(New Datos.DParametro("@oanom", _nombre))
+        _listParam.Add(New Datos.DParametro("@oaban", _banco))
+        _listParam.Add(New Datos.DParametro("@oache", _cheque))
 
         _Tabla = D_ProcedimientoConParam("sp_dg_TO001", _listParam)
 
