@@ -2906,6 +2906,8 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
 
     Private Sub grAyudaCuenta_KeyDown(sender As Object, e As KeyEventArgs) Handles grAyudaCuenta.KeyDown
 
+
+
         If e.KeyData = Keys.Control + Keys.A And btnGrabar.Enabled = True And grAyudaCuenta.Tag = -1 And grAyudaCuenta.Row = -2 Then
             'desea agregar a un nuevo cliente
 
@@ -2962,6 +2964,10 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
                     grDetalle.SetValue("numAux", numAux)
                     grDetalle.SetValue("cadesc2", cuentaPadre)
                     grDetalle.SetValue("camon", cuentaMoneda)
+                    If (grDetalle.RowCount > 2) Then
+                        Dim ref As String = grDetalle.GetRow(0).Cells(16).Value.ToString
+                        grDetalle.SetValue("obobs", ref)
+                    End If
 
                     'limpio los auxiliares
                     grDetalle.SetValue("obaux1", 0)
@@ -3019,6 +3025,8 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
                                     _prCargarGridAyudaAuxiliar(1, _numiAuxMod)
                                 Else
                                     grDetalle.Focus()
+                                    Dim pos As Integer = grDetalle.RowCount - 2
+                                    grDetalle.Row = pos
                                     grDetalle.Col = grDetalle.RootTable.Columns("obobs").Index
 
                                     panelAyudaCuenta.Visible = False
@@ -3029,6 +3037,8 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
                                     _prCargarGridAyudaAuxiliar(1, _numiAuxMod)
                                 Else
                                     grDetalle.Focus()
+                                    Dim pos As Integer = grDetalle.RowCount - 2
+                                    grDetalle.Row = pos
                                     grDetalle.Col = grDetalle.RootTable.Columns("obobs").Index
 
                                     panelAyudaCuenta.Visible = False
@@ -3036,6 +3046,8 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
                             End If
                         End If
                     End If
+
+
                 End If
 
 
@@ -3055,6 +3067,8 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
                     _prCargarGridAyudaAuxiliar(1, _numiAuxMod)
                 Else
                     grDetalle.Focus()
+                    Dim pos As Integer = grDetalle.RowCount - 2
+                    grDetalle.Row = pos
                     grDetalle.Col = grDetalle.RootTable.Columns("obobs").Index
 
                     panelAyudaCuenta.Visible = False
@@ -3076,6 +3090,8 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
                     _prCargarGridAyudaAuxiliar(1, _numiAuxMod)
                 Else
                     grDetalle.Focus()
+                    Dim pos As Integer = grDetalle.RowCount - 2
+                    grDetalle.Row = pos
                     grDetalle.Col = grDetalle.RootTable.Columns("obobs").Index
 
                     panelAyudaCuenta.Visible = False
@@ -3096,6 +3112,8 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
                     _prCargarGridAyudaAuxiliar(2, _numiAuxSuc)
                 Else
                     grDetalle.Focus()
+                    Dim pos As Integer = grDetalle.RowCount - 2
+                    grDetalle.Row = pos
                     grDetalle.Col = grDetalle.RootTable.Columns("obobs").Index
                     'If grDetalle.GetValue("camon") = "BO" Then
                     '    grDetalle.Col = grDetalle.RootTable.Columns("obdebebs").Index
@@ -3120,6 +3138,8 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
                     _prCargarGridAyudaAuxiliar(3, 0)
                 Else
                     grDetalle.Focus()
+                    Dim pos As Integer = grDetalle.RowCount - 2
+                    grDetalle.Row = pos
                     grDetalle.Col = grDetalle.RootTable.Columns("obobs").Index
 
                     'If grDetalle.GetValue("camon") = "BO" Then
@@ -3140,6 +3160,8 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
                 grDetalle.SetValue("desc3", desc)
 
                 grDetalle.Focus()
+                Dim pos As Integer = grDetalle.RowCount - 2
+                grDetalle.Row = pos
                 grDetalle.Col = grDetalle.RootTable.Columns("obobs").Index
 
                 'If grDetalle.GetValue("camon") = "BO" Then
@@ -3432,6 +3454,10 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
     End Sub
 
     Private Sub grDetalle2_FormattingRow(sender As Object, e As RowLoadEventArgs) Handles grDetalle2.FormattingRow
+
+    End Sub
+
+    Private Sub grAyudaCuenta_FormattingRow(sender As Object, e As RowLoadEventArgs) Handles grAyudaCuenta.FormattingRow
 
     End Sub
 End Class
