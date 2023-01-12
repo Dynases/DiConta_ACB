@@ -437,7 +437,7 @@ Public Class F1_Cuentas
 
     Public Overrides Function _PMOModificarRegistro() As Boolean
         Dim dtDetalle As DataTable = CType(grDetalle.DataSource, DataTable).DefaultView.ToTable(True, "cenumi", "cenumitc1", "cenumitc3", "cenumitc31", "estado")
-        Dim res As Boolean = L_prCuentaModificar(tbNumi.Text, gi_empresaNumi, tbCuenta.Text, tbDesc.Text, tbNivel2.Text, IIf(tbMoneda.Value = True, "SU", "BO"), tbTipo.Value, tbPadre.Text, dtDetalle)
+        Dim res As Boolean = L_prCuentaModificar(tbNumi.Text, gi_empresaNumi, tbcuenta3.Text, tbDesc.Text, tbNivel2.Text, IIf(tbMoneda.Value = True, "SU", "BO"), tbTipo.Value, tbPadre.Text, dtDetalle)
         If res Then
             ToastNotification.Show(Me, "Registro ".ToUpper + tbNumi.Text + " modificado con Exito.".ToUpper, My.Resources.GRABACION_EXITOSA, 5000, eToastGlowColor.Green, eToastPosition.TopCenter)
             _PSalirRegistro()
@@ -543,6 +543,7 @@ Public Class F1_Cuentas
         With JGrM_Buscador
             tbNumi.Text = .GetValue("canumi").ToString
             tbCuenta.Text = .GetValue("cactaucg")
+            tbcuenta3.Text = .GetValue("cacta")
             tbDesc.Text = .GetValue("cadesc").ToString
             tbMoneda.Value = IIf(.GetValue("camon").ToString = "SU", True, False)
             tbTipo.Value = .GetValue("catipo")
@@ -714,4 +715,6 @@ Public Class F1_Cuentas
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
 
     End Sub
+
+
 End Class

@@ -41,6 +41,7 @@ Partial Class F1_Cuentas
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.grDetalle = New Janus.Windows.GridEX.GridEX()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.tbcuenta3 = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.GroupPanel2 = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.tbEmpresa = New Janus.Windows.GridEX.EditControls.MultiColumnCombo()
         Me.tbAuxiliar = New Janus.Windows.GridEX.EditControls.MultiColumnCombo()
@@ -178,7 +179,6 @@ Partial Class F1_Cuentas
         'TxtNombreUsu
         '
         Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4)
-        Me.TxtNombreUsu.Size = New System.Drawing.Size(200, 36)
         '
         'PanelToolBar1
         '
@@ -290,7 +290,6 @@ Partial Class F1_Cuentas
         '
         'btnUltimo
         '
-        Me.btnUltimo.Location = New System.Drawing.Point(129, 0)
         Me.btnUltimo.Margin = New System.Windows.Forms.Padding(2)
         '
         'MPanelUserAct
@@ -362,7 +361,7 @@ Partial Class F1_Cuentas
         Me.tbCuenta.Border.Class = "TextBoxBorder"
         Me.tbCuenta.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbCuenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbCuenta.Location = New System.Drawing.Point(106, 90)
+        Me.tbCuenta.Location = New System.Drawing.Point(107, 90)
         Me.tbCuenta.Name = "tbCuenta"
         Me.tbCuenta.PreventEnterBeep = True
         Me.tbCuenta.Size = New System.Drawing.Size(136, 22)
@@ -534,6 +533,7 @@ Partial Class F1_Cuentas
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.tbcuenta3)
         Me.Panel2.Controls.Add(Me.GroupPanel2)
         Me.Panel2.Controls.Add(Me.tbAuxiliar)
         Me.Panel2.Controls.Add(Me.LabelX1)
@@ -556,6 +556,22 @@ Partial Class F1_Cuentas
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(366, 308)
         Me.Panel2.TabIndex = 107
+        '
+        'tbcuenta3
+        '
+        Me.tbcuenta3.AcceptsTab = True
+        '
+        '
+        '
+        Me.tbcuenta3.Border.Class = "TextBoxBorder"
+        Me.tbcuenta3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.tbcuenta3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbcuenta3.Location = New System.Drawing.Point(255, 90)
+        Me.tbcuenta3.Name = "tbcuenta3"
+        Me.tbcuenta3.PreventEnterBeep = True
+        Me.tbcuenta3.Size = New System.Drawing.Size(72, 22)
+        Me.tbcuenta3.TabIndex = 138
+        Me.tbcuenta3.Visible = False
         '
         'GroupPanel2
         '
@@ -924,4 +940,5 @@ Partial Class F1_Cuentas
     Friend WithEvents ELIMINARToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GroupPanel2 As DevComponents.DotNetBar.Controls.GroupPanel
     Friend WithEvents tbEmpresa As Janus.Windows.GridEX.EditControls.MultiColumnCombo
+    Friend WithEvents tbcuenta3 As DevComponents.DotNetBar.Controls.TextBoxX
 End Class

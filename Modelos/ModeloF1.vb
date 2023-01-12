@@ -319,7 +319,7 @@ Public Class ModeloF1
 
 #Region "EVENTOS"
     Private Sub ModeloHor_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
-        e.KeyChar = e.KeyChar.ToString.ToUpper
+        e.KeyChar = e.KeyChar.ToString
         If (e.KeyChar = ChrW(Keys.Enter)) Then
             e.Handled = True
             P_Moverenfoque()
@@ -394,8 +394,6 @@ Public Class ModeloF1
 
     End Sub
 
-    Private Sub ModeloF1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    End Sub
 #End Region
 End Class
