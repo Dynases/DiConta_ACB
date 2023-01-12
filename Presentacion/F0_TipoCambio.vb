@@ -90,7 +90,7 @@ Public Class F0_TipoCambio
         With grDetalle.RootTable.Columns("cbufv")
             .Caption = "UFV"
             .Width = 100
-            .FormatString = "0.0000"
+            .FormatString = "0.00000"
             .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
         End With
 

@@ -186,7 +186,7 @@ Partial Class F0_TipoCambio_Nuevo
         Me.tbDolar.Location = New System.Drawing.Point(105, 128)
         Me.tbDolar.Name = "tbDolar"
         Me.tbDolar.ShowUpDown = True
-        Me.tbDolar.Size = New System.Drawing.Size(88, 22)
+        Me.tbDolar.Size = New System.Drawing.Size(111, 22)
         Me.tbDolar.TabIndex = 120
         '
         'tbUFV
@@ -197,12 +197,12 @@ Partial Class F0_TipoCambio_Nuevo
         Me.tbUFV.BackgroundStyle.Class = "DateTimeInputBackground"
         Me.tbUFV.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbUFV.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
-        Me.tbUFV.DisplayFormat = "0.0000"
+        Me.tbUFV.DisplayFormat = "0.00000"
         Me.tbUFV.Increment = 1.0R
         Me.tbUFV.Location = New System.Drawing.Point(105, 156)
         Me.tbUFV.Name = "tbUFV"
         Me.tbUFV.ShowUpDown = True
-        Me.tbUFV.Size = New System.Drawing.Size(88, 22)
+        Me.tbUFV.Size = New System.Drawing.Size(111, 22)
         Me.tbUFV.TabIndex = 122
         '
         'LabelX1
