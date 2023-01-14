@@ -115,6 +115,34 @@ Public Class AccesoDatos
         Return MetodoDatos.EjecutarProcedimiento(_comandoProcedimiento)
     End Function
 
+    Public Shared Function D_ProcedimientoConParam1(_Nombre As String, _listaParam As List(Of DParametro)) As DataSet
+        'codigo modificado para abrir la conexion a la base de datos cuando expiro el tiempo de conexion
+        'If _comandoProcedimiento.Connection.State <> ConnectionState.Open Then
+        '    D_abrirConexion(_ip, _usuarioSql, _claveSql, _nombreBD)
+        '    D_abrirConexion(_ip, _usuarioSql, _claveSql, "BHDicon")
+        'End If
+
+        '-------------------------------------------------------------------------
+
+        _comandoProcedimiento.Parameters.Clear()
+        _comandoProcedimiento.CommandText = _Nombre
+        For i = 0 To _listaParam.Count - 1
+            Dim nombre As String = _listaParam.Item(i).nombre
+            Dim valor As String = _listaParam.Item(i).valor
+            Dim detalle As DataTable = _listaParam.Item(i).detalle
+
+            If IsNothing(detalle) Then
+                _comandoProcedimiento.Parameters.AddWithValue(nombre, valor)
+            Else
+                _comandoProcedimiento.Parameters.Add(nombre, SqlDbType.Structured)
+                _comandoProcedimiento.Parameters(nombre).Value = detalle
+            End If
+
+        Next
+
+        Return MetodoDatos.EjecutarProcedimiento1(_comandoProcedimiento)
+    End Function
+
     Public Shared Function D_ProcedimientoConParamHistorial(_Nombre As String, _listaParam As List(Of DParametro)) As DataTable
         _comandoProcedimientoHistorial.Parameters.Clear()
         _comandoProcedimientoHistorial.CommandText = _Nombre

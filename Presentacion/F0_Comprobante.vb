@@ -518,7 +518,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
             .EditType = EditType.NoEdit
             .CellStyle.BackColor = Color.DodgerBlue
             .AllowSort = False
-
+            .Visible = False
         End With
 
         With grDetalle.RootTable.Columns("obaux2")
@@ -531,7 +531,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
             .EditType = EditType.NoEdit
             .CellStyle.BackColor = Color.DodgerBlue
             .AllowSort = False
-
+            .Visible = False
         End With
 
         With grDetalle.RootTable.Columns("obaux3")
@@ -544,7 +544,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
             .EditType = EditType.NoEdit
             .CellStyle.BackColor = Color.DodgerBlue
             .AllowSort = False
-
+            .Visible = False
         End With
 
         With grDetalle.RootTable.Columns("obobs")
@@ -569,7 +569,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
             .HeaderAlignment = TextAlignment.Center
             .Width = 100
             .AllowSort = False
-
+            .Visible = False
         End With
 
         With grDetalle.RootTable.Columns("obtc")
@@ -581,6 +581,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
             .DefaultValue = tbTipoCambio.Value
             .AllowSort = False
             .EditType = EditType.NoEdit
+            .Visible = False
         End With
 
         With grDetalle.RootTable.Columns("obdebebs")
@@ -821,6 +822,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
             .Width = 100 + 70
             .CellStyle.FontBold = TriState.True
             .CellStyle.BackColor = _color
+            .Visible = False
 
         End With
 
@@ -1033,7 +1035,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
             .HeaderAlignment = TextAlignment.Center
             .Width = 100
             .AllowSort = False
-
+            .Visible = False
         End With
 
         With grDetalle.RootTable.Columns("obtc")
@@ -1684,13 +1686,24 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
     End Sub
 
     Private Sub _prImprimir()
+        Dim _Autorizacion, _Nit, _Fechainv, _Total, _Key, _Cod_Control, _Hora,
+            _Literal, _TotalDecimal, _TotalDecimal2 As String
         Dim objrep As New R_Comprobante2
         Dim dt As New DataTable
         dt = L_prComprobanteReporteComprobante(tbNumi.Text)
+        Dim _Ds, _Ds1, _Ds2, _Ds3 As New DataSet
+        _Ds = L_prComprobanteReporteComprobante1(tbNumi.Text)
+        'Literal 
+
+        _TotalLi = _Ds.Tables(0).Rows(0).Item("obhaberus")
+        _TotalDecimal = _TotalLi - Math.Truncate(_TotalLi)
+        _TotalDecimal2 = CDbl(_TotalDecimal) * 100
+        Dim li As String = Facturacion.ConvertirLiteral.A_fnConvertirLiteral(CDbl(_TotalLi)) + "  " + IIf(_TotalDecimal2.Equals("0"), "00", _TotalDecimal2) + "/100 DOLARES AMERICANOS"
 
         Dim nombre As String = tbNombre.Text
         Dim banco As String = tbBanco.Text
         Dim cheque As String = tbChque.Text
+        Dim impresion As String = DateTime.Now
         'ahora lo mando al visualizador
         P_Global.Visualizador = New Visualizador
         objrep.SetDataSource(dt)
@@ -1703,6 +1716,8 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         objrep.SetParameterValue("nombre", nombre)
         objrep.SetParameterValue("banco", banco)
         objrep.SetParameterValue("cheque", cheque)
+        objrep.SetParameterValue("fechaImpresion", "Fecha de Impresion: " + impresion)
+        objrep.SetParameterValue("literal", li.ToUpper)
         P_Global.Visualizador.CRV1.ReportSource = objrep 'Comentar
         P_Global.Visualizador.Show() 'Comentar
         P_Global.Visualizador.BringToFront() 'Comentar

@@ -106,5 +106,29 @@ Public Class MetodoDatos
         End Try
         Return _tabla
     End Function
+    Public Shared Function EjecutarProcedimiento1(Comando As SqlCommand) As DataSet
+        Dim _tabla As New DataSet()
+        Try
+            If (Comando.Connection.State <> ConnectionState.Open) Then
+                Comando.Connection.Open()
+            End If
+
+            Dim _adaptador As New SqlDataAdapter 'SqlDataAdapter()
+            _adaptador.SelectCommand = Comando
+
+            _adaptador.Fill(_tabla)
+
+            'Dim n As Integer = Comando.Connection.ConnectionTimeout()
+            'MsgBox("Tiempo de Espera :" + Str(n))
+            'Comando.Connection.Close()
+
+            Comando.CommandTimeout = 1200
+            Comando.Connection.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+
+        End Try
+        Return _tabla
+    End Function
 
 End Class

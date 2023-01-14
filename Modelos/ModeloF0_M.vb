@@ -1,7 +1,7 @@
 ﻿Public Class ModeloF0_M
 
     Private Sub ModeloHor_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
-        e.KeyChar = e.KeyChar.ToString.ToUpper
+        e.KeyChar = e.KeyChar.ToString
         'If (e.KeyChar = ChrW(Keys.Enter)) Then
         '    e.Handled = True
         '    P_Moverenfoque()

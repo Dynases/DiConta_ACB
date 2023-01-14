@@ -1456,6 +1456,19 @@ BDDiconCaneros .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
 
         Return _Tabla
     End Function
+    Public Shared Function L_prComprobanteReporteComprobante1(_numi As String) As DataSet
+        Dim _Tabla As DataSet
+
+        Dim _listParam As New List(Of Datos.DParametro)
+
+        _listParam.Add(New Datos.DParametro("@tipo", 6))
+        _listParam.Add(New Datos.DParametro("@oanumi", _numi))
+        _listParam.Add(New Datos.DParametro("@uact", L_Usuario))
+
+        _Tabla = D_ProcedimientoConParam1("sp_dg_TO001", _listParam)
+
+        Return _Tabla
+    End Function
 
     Public Shared Function L_prComprobanteReporteLibroDiario(_numiEmp As String, _fechaDel As String, _fechaAl As String) As DataTable
         Dim _Tabla As DataTable
