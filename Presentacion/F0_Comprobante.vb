@@ -1699,7 +1699,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         _TotalDecimal = _TotalLi - Math.Truncate(_TotalLi)
         _TotalDecimal2 = CDbl(_TotalDecimal) * 100
         Dim li As String = Facturacion.ConvertirLiteral.A_fnConvertirLiteral(CDbl(_TotalLi)) + "  " + IIf(_TotalDecimal2.Equals("0"), "00", _TotalDecimal2) + "/100 DOLARES AMERICANOS"
-
+        Dim presidente = "", tesorero = "", conforme = ""
         Dim nombre As String = tbNombre.Text
         Dim banco As String = tbBanco.Text
         Dim cheque As String = tbChque.Text
@@ -1718,6 +1718,18 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         objrep.SetParameterValue("cheque", cheque)
         objrep.SetParameterValue("fechaImpresion", "Fecha de Impresion: " + impresion)
         objrep.SetParameterValue("literal", li.ToUpper)
+        If tbTipo.Value = 1 Then
+            conforme = "Entregué Conforme"
+        ElseIf tbTipo.Value = 2 Then
+            presidente = "Presidente"
+            tesorero = "Tesorero"
+            conforme = "Recibí Conforme"
+        End If
+        objrep.SetParameterValue("presidente", presidente)
+        objrep.SetParameterValue("tesorero", tesorero)
+        objrep.SetParameterValue("conforme", conforme)
+
+
         P_Global.Visualizador.CRV1.ReportSource = objrep 'Comentar
         P_Global.Visualizador.Show() 'Comentar
         P_Global.Visualizador.BringToFront() 'Comentar
@@ -2025,7 +2037,9 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         tbTipo.Text = ""
         'tbTipoCambio.Value = 0
         tbObs.Text = ""
-
+        tbNombre.Text = ""
+        tbChque.Text = ""
+        tbBanco.Text = ""
         tbCuentaSuperior.Text = ""
         tbReferencia.Text = ""
 
