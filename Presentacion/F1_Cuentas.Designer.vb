@@ -361,11 +361,12 @@ Partial Class F1_Cuentas
         Me.tbCuenta.Border.Class = "TextBoxBorder"
         Me.tbCuenta.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbCuenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbCuenta.Location = New System.Drawing.Point(107, 90)
+        Me.tbCuenta.Location = New System.Drawing.Point(106, 90)
         Me.tbCuenta.Name = "tbCuenta"
         Me.tbCuenta.PreventEnterBeep = True
         Me.tbCuenta.Size = New System.Drawing.Size(136, 22)
         Me.tbCuenta.TabIndex = 89
+        Me.tbCuenta.Visible = False
         '
         'LabelX1
         '
@@ -759,7 +760,7 @@ Partial Class F1_Cuentas
         Me.tbCuenta2.Border.Class = "TextBoxBorder"
         Me.tbCuenta2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbCuenta2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbCuenta2.Location = New System.Drawing.Point(179, 90)
+        Me.tbCuenta2.Location = New System.Drawing.Point(189, 90)
         Me.tbCuenta2.Name = "tbCuenta2"
         Me.tbCuenta2.PreventEnterBeep = True
         Me.tbCuenta2.Size = New System.Drawing.Size(63, 22)
@@ -776,7 +777,7 @@ Partial Class F1_Cuentas
         Me.tbCuenta1.Location = New System.Drawing.Point(106, 90)
         Me.tbCuenta1.Name = "tbCuenta1"
         Me.tbCuenta1.PreventEnterBeep = True
-        Me.tbCuenta1.Size = New System.Drawing.Size(72, 22)
+        Me.tbCuenta1.Size = New System.Drawing.Size(80, 22)
         Me.tbCuenta1.TabIndex = 0
         '
         'LabelX6

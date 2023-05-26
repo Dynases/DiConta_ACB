@@ -24,7 +24,7 @@ Public Class F1_Cuentas
 
         _prAsignarPermisos()
 
-        tvCuentas.SelectedNode.ExpandAll()
+        'tvCuentas.SelectedNode.ExpandAll()
 
         '_prCargarArbol()
     End Sub
@@ -314,7 +314,7 @@ Public Class F1_Cuentas
     End Sub
     Public Overrides Sub _PMOHabilitar()
         tbDesc.ReadOnly = False
-        'tbCuenta.ReadOnly = False
+        tbCuenta.ReadOnly = False
         tbMoneda.IsReadOnly = False
 
 
@@ -325,7 +325,7 @@ Public Class F1_Cuentas
         If _MNuevo Then
             tbCuenta1.Visible = True
             tbCuenta2.Visible = True
-            tbCuenta.Visible = False
+            tbCuenta.Visible = True
             tbCuenta1.BackColor = Color.LightBlue
             tbCuenta2.BackColor = Color.LightGreen
             tbCuenta1.Refresh()
@@ -364,7 +364,7 @@ Public Class F1_Cuentas
         tbCuenta1.Visible = False
         tbCuenta1.ReadOnly = True
         tbCuenta2.Visible = False
-        'tvCuentas.Enabled = True
+        tvCuentas.Enabled = True
         tbCuenta.Visible = True
 
         tvCuentas.Enabled = True
@@ -393,7 +393,7 @@ Public Class F1_Cuentas
 
         tbDesc.Text = ""
         tbNumi.Text = ""
-        'tbCuenta.Text = ""
+        tbCuenta.Text = ""
         tbMoneda.Value = True
         'tbTipo.Text = ""
         tbPadre.Text = ""
@@ -423,9 +423,15 @@ Public Class F1_Cuentas
             ToastNotification.Show(Me, "la cuenta que desea registrar ya existe".ToUpper, My.Resources.WARNING, 5000, eToastGlowColor.Blue, eToastPosition.TopCenter)
             Return False
         End If
+        If tbNivel.Text = 4 Or tbNivel.Text = 5 Then
+            If tbCuenta2.TextLength <> 3 Then
+                ToastNotification.Show(Me, "la cuenta debe tener 3 digitos".ToUpper, My.Resources.WARNING, 5000, eToastGlowColor.Blue, eToastPosition.TopCenter)
+                Return False
+            End If
+        End If
 
         Dim dtDetalle As DataTable = CType(grDetalle.DataSource, DataTable).DefaultView.ToTable(True, "cenumi", "cenumitc1", "cenumitc3", "cenumitc31", "estado")
-        Dim res As Boolean = L_prCuentaGrabar(tbNumi.Text, gi_empresaNumi, tbCuenta.Text, tbDesc.Text, tbNivel.Text, IIf(tbMoneda.Value = True, "SU", "BO"), tbTipo.Value, tbNumiPadre.Text, dtDetalle)
+        Dim res As Boolean = L_prCuentaGrabar(tbNumi.Text, gi_empresaNumi, tbCuenta.Text, tbDesc.Text, tbNivel.Text, IIf(tbMoneda.Value = True, "SU", "BO"), tbTipo.Value, tbNumiPadre.Text, dtDetalle, tbCuenta2.Text)
         If res Then
             ToastNotification.Show(Me, "Registro ".ToUpper + tbNumi.Text + " Grabado con Exito.".ToUpper, My.Resources.GRABACION_EXITOSA, 5000, eToastGlowColor.Green, eToastPosition.TopCenter)
             'tbCuenta.Focus()
@@ -625,7 +631,7 @@ Public Class F1_Cuentas
     End Sub
 
     Private Sub tbCuenta1_TextChanged(sender As Object, e As EventArgs) Handles tbCuenta1.TextChanged, tbCuenta2.TextChanged
-        tbCuenta.Text = tbCuenta1.Text + tbCuenta2.Text
+        tbCuenta.Text = tbcuenta3.Text + tbCuenta2.Text
     End Sub
 
     Private Sub grDetalle_CellEdited(sender As Object, e As ColumnActionEventArgs) Handles grDetalle.CellEdited

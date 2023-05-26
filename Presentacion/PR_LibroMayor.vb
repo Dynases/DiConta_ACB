@@ -65,7 +65,7 @@ Public Class PR_LibroMayor
             .DataSource = dt
             .Refresh()
         End With
-        tbMoneda.SelectedIndex = 0
+        tbMoneda.SelectedIndex = 1
     End Sub
 
     Public Sub Interpretar(ByRef dt As DataTable)
@@ -617,7 +617,7 @@ Public Class PR_LibroMayor
                 objrep.SetParameterValue("nroCuenta", tbNumi.Text)
                 objrep.SetParameterValue("cuenta", tbCuenta.Text)
                 objrep.SetParameterValue("moneda", tbMoneda.Value)
-                objrep.SetParameterValue("auxiliar01", Auxiliar01)
+                objrep.SetParameterValue("auxiliar01", IIf(tbMoneda.Value = 0, "Bolivianos", IIf(tbMoneda.Value = 1, "Dolares", "")))
                 objrep.SetParameterValue("auxiliar02", Auxiliar02)
                 If tbMeses.Value = True Then
                     objrep.SetParameterValue("conMeses", 1)
@@ -638,13 +638,13 @@ Public Class PR_LibroMayor
 
                 objrep.SetParameterValue("fechaDesde", tbFechaDel.Value.ToString("dd/MM/yyyy"))
                 objrep.SetParameterValue("fechaHasta", tbFechaAl.Value.ToString("dd/MM/yyyy"))
-                objrep.SetParameterValue("titulo", "AUTOMOVIL CLUB BOLIVIANO " + gs_empresaDesc.ToUpper)
+                objrep.SetParameterValue("titulo", gs_empresaDesc.ToUpper)
                 objrep.SetParameterValue("nit", gs_empresaNit.ToUpper)
                 objrep.SetParameterValue("cliente", IIf(tbCliente.Tag > 0, _cobrarPagar, ""))
                 objrep.SetParameterValue("nroCuenta", tbNumi.Text)
                 objrep.SetParameterValue("cuenta", tbCuenta.Text)
                 objrep.SetParameterValue("moneda", tbMoneda.Value)
-                objrep.SetParameterValue("auxiliar01", Auxiliar01)
+                objrep.SetParameterValue("auxiliar01", IIf(tbMoneda.Value = 0, "Bolivianos", IIf(tbMoneda.Value = 1, "Dolares", "")))
                 objrep.SetParameterValue("auxiliar02", Auxiliar02)
                 If tbMeses.Value = True Then
                     objrep.SetParameterValue("conMeses", 1)
@@ -895,7 +895,7 @@ Public Class PR_LibroMayor
                     objrep.SetDataSource(dt)
                     objrep.SetParameterValue("fechaDesde", "")
                     objrep.SetParameterValue("fechaHasta", "")
-                    objrep.SetParameterValue("titulo", "AUTOMOVIL CLUB BOLIVIANO " + gs_empresaDescSistema.ToUpper)
+                    objrep.SetParameterValue("titulo", gs_empresaDescSistema.ToUpper)
                     objrep.SetParameterValue("nit", gs_empresaNit.ToUpper)
                     objrep.SetParameterValue("ultimoRegistro", 0)
 

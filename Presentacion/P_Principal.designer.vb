@@ -25,6 +25,18 @@ Partial Class P_Principal
         Dim MetroTileFrame1 As DevComponents.DotNetBar.Metro.MetroTileFrame
         Dim MetroTileFrame2 As DevComponents.DotNetBar.Metro.MetroTileFrame
         Me.SideNav1 = New DevComponents.DotNetBar.Controls.SideNav()
+        Me.SideNavPanel5 = New DevComponents.DotNetBar.Controls.SideNavPanel()
+        Me.MetroTilePanel6 = New DevComponents.DotNetBar.Metro.MetroTilePanel()
+        Me.btCarbArqueo = New DevComponents.DotNetBar.Metro.MetroTileItem()
+        Me.btCarbCliente = New DevComponents.DotNetBar.Metro.MetroTileItem()
+        Me.btCarbMaquina = New DevComponents.DotNetBar.Metro.MetroTileItem()
+        Me.btCarbRepResumen = New DevComponents.DotNetBar.Metro.MetroTileItem()
+        Me.btCarbPersonal = New DevComponents.DotNetBar.Metro.MetroTileItem()
+        Me.btCarbCombustible = New DevComponents.DotNetBar.Metro.MetroTileItem()
+        Me.MetroTileItem12 = New DevComponents.DotNetBar.Metro.MetroTileItem()
+        Me.btVentIntegArqueo = New DevComponents.DotNetBar.Metro.MetroTileItem()
+        Me.btCarbArqueoDiario = New DevComponents.DotNetBar.Metro.MetroTileItem()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.SideNav_Logistica = New DevComponents.DotNetBar.Controls.SideNavPanel()
         Me.MetroTilePanel2 = New DevComponents.DotNetBar.Metro.MetroTilePanel()
         Me.btTranComprobante = New DevComponents.DotNetBar.Metro.MetroTileItem()
@@ -69,18 +81,6 @@ Partial Class P_Principal
         Me.btInvRegActivoFijo = New DevComponents.DotNetBar.Metro.MetroTileItem()
         Me.btInvDepreActivoFijo = New DevComponents.DotNetBar.Metro.MetroTileItem()
         Me.btInvDepreResumen = New DevComponents.DotNetBar.Metro.MetroTileItem()
-        Me.SideNavPanel5 = New DevComponents.DotNetBar.Controls.SideNavPanel()
-        Me.MetroTilePanel6 = New DevComponents.DotNetBar.Metro.MetroTilePanel()
-        Me.btCarbArqueo = New DevComponents.DotNetBar.Metro.MetroTileItem()
-        Me.btCarbCliente = New DevComponents.DotNetBar.Metro.MetroTileItem()
-        Me.btCarbMaquina = New DevComponents.DotNetBar.Metro.MetroTileItem()
-        Me.btCarbRepResumen = New DevComponents.DotNetBar.Metro.MetroTileItem()
-        Me.btCarbPersonal = New DevComponents.DotNetBar.Metro.MetroTileItem()
-        Me.btCarbCombustible = New DevComponents.DotNetBar.Metro.MetroTileItem()
-        Me.MetroTileItem12 = New DevComponents.DotNetBar.Metro.MetroTileItem()
-        Me.btVentIntegArqueo = New DevComponents.DotNetBar.Metro.MetroTileItem()
-        Me.btCarbArqueoDiario = New DevComponents.DotNetBar.Metro.MetroTileItem()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.SideNavPanel6 = New DevComponents.DotNetBar.Controls.SideNavPanel()
         Me.MetroTilePanel7 = New DevComponents.DotNetBar.Metro.MetroTilePanel()
         Me.btVentVentas = New DevComponents.DotNetBar.Metro.MetroTileItem()
@@ -161,14 +161,14 @@ Partial Class P_Principal
         MetroTileFrame1 = New DevComponents.DotNetBar.Metro.MetroTileFrame()
         MetroTileFrame2 = New DevComponents.DotNetBar.Metro.MetroTileFrame()
         Me.SideNav1.SuspendLayout()
+        Me.SideNavPanel5.SuspendLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SideNav_Logistica.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SideNav_Conf.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SideNavPanel8.SuspendLayout()
         Me.SideNavPanel7.SuspendLayout()
-        Me.SideNavPanel5.SuspendLayout()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SideNavPanel6.SuspendLayout()
         Me.SideNavPanel4.SuspendLayout()
         Me.SideNavPanel3.SuspendLayout()
@@ -225,6 +225,214 @@ Partial Class P_Principal
         Me.SideNav1.Size = New System.Drawing.Size(784, 561)
         Me.SideNav1.TabIndex = 1
         Me.SideNav1.Text = "SideNav1"
+        '
+        'SideNavPanel5
+        '
+        Me.SideNavPanel5.Controls.Add(Me.MetroTilePanel6)
+        Me.SideNavPanel5.Controls.Add(Me.PictureBox5)
+        Me.SideNavPanel5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SideNavPanel5.Location = New System.Drawing.Point(143, 36)
+        Me.SideNavPanel5.Name = "SideNavPanel5"
+        Me.SideNavPanel5.Size = New System.Drawing.Size(636, 524)
+        Me.SideNavPanel5.TabIndex = 87
+        '
+        'MetroTilePanel6
+        '
+        Me.MetroTilePanel6.BackColor = System.Drawing.Color.Transparent
+        Me.MetroTilePanel6.BackgroundImage = Global.Presentacion.My.Resources.Resources.fondo
+        Me.MetroTilePanel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        '
+        '
+        '
+        Me.MetroTilePanel6.BackgroundStyle.BackColor = System.Drawing.Color.Transparent
+        Me.MetroTilePanel6.BackgroundStyle.Class = "MetroTilePanel"
+        Me.MetroTilePanel6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.MetroTilePanel6.ContainerControlProcessDialogKey = True
+        Me.MetroTilePanel6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.MetroTilePanel6.DragDropSupport = True
+        Me.MetroTilePanel6.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.btCarbArqueo, Me.btCarbCliente, Me.btCarbMaquina, Me.btCarbRepResumen, Me.btCarbPersonal, Me.btCarbCombustible, Me.MetroTileItem12, Me.btVentIntegArqueo, Me.btCarbArqueoDiario})
+        Me.MetroTilePanel6.ItemSpacing = 10
+        Me.MetroTilePanel6.Location = New System.Drawing.Point(0, 0)
+        Me.MetroTilePanel6.MultiLine = True
+        Me.MetroTilePanel6.Name = "MetroTilePanel6"
+        Me.MetroTilePanel6.Size = New System.Drawing.Size(636, 410)
+        Me.MetroTilePanel6.TabIndex = 2
+        Me.MetroTilePanel6.Text = "mtp2Logistica"
+        '
+        'btCarbArqueo
+        '
+        Me.btCarbArqueo.Image = Global.Presentacion.My.Resources.Resources.arqueo
+        Me.btCarbArqueo.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btCarbArqueo.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center
+        Me.btCarbArqueo.Name = "btCarbArqueo"
+        Me.btCarbArqueo.SymbolColor = System.Drawing.Color.Empty
+        Me.btCarbArqueo.Text = "FERIADOS"
+        Me.btCarbArqueo.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal
+        Me.btCarbArqueo.TileSize = New System.Drawing.Size(250, 135)
+        '
+        '
+        '
+        Me.btCarbArqueo.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.btCarbArqueo.TileStyle.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Far
+        Me.btCarbArqueo.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter
+        Me.btCarbArqueo.TitleTextColor = System.Drawing.Color.Red
+        '
+        'btCarbCliente
+        '
+        Me.btCarbCliente.Image = Global.Presentacion.My.Resources.Resources.CLIENTES
+        Me.btCarbCliente.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btCarbCliente.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center
+        Me.btCarbCliente.Name = "btCarbCliente"
+        Me.btCarbCliente.SymbolColor = System.Drawing.Color.Empty
+        Me.btCarbCliente.Text = "DESCUENTOS FIJOS"
+        Me.btCarbCliente.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Plum
+        Me.btCarbCliente.TileSize = New System.Drawing.Size(250, 135)
+        '
+        '
+        '
+        Me.btCarbCliente.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.btCarbCliente.TileStyle.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Far
+        Me.btCarbCliente.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter
+        Me.btCarbCliente.TitleTextColor = System.Drawing.Color.Red
+        '
+        'btCarbMaquina
+        '
+        Me.btCarbMaquina.Image = Global.Presentacion.My.Resources.Resources.maquina
+        Me.btCarbMaquina.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btCarbMaquina.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center
+        Me.btCarbMaquina.Name = "btCarbMaquina"
+        Me.btCarbMaquina.SymbolColor = System.Drawing.Color.Empty
+        Me.btCarbMaquina.Text = "BONOS ANTIGUEDAD Y VACACIONES"
+        Me.btCarbMaquina.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Blueish
+        Me.btCarbMaquina.TileSize = New System.Drawing.Size(250, 135)
+        '
+        '
+        '
+        Me.btCarbMaquina.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.btCarbMaquina.TileStyle.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Far
+        Me.btCarbMaquina.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter
+        Me.btCarbMaquina.TitleTextColor = System.Drawing.Color.Red
+        '
+        'btCarbRepResumen
+        '
+        Me.btCarbRepResumen.Image = Global.Presentacion.My.Resources.Resources.CONTROL_PEDIDOS
+        Me.btCarbRepResumen.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btCarbRepResumen.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center
+        Me.btCarbRepResumen.Name = "btCarbRepResumen"
+        Me.btCarbRepResumen.SymbolColor = System.Drawing.Color.Empty
+        Me.btCarbRepResumen.Text = "BONOS / DECUENTOS"
+        Me.btCarbRepResumen.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.RedOrange
+        Me.btCarbRepResumen.TileSize = New System.Drawing.Size(250, 135)
+        '
+        '
+        '
+        Me.btCarbRepResumen.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.btCarbRepResumen.TileStyle.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Far
+        Me.btCarbRepResumen.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter
+        Me.btCarbRepResumen.TitleTextColor = System.Drawing.Color.Red
+        '
+        'btCarbPersonal
+        '
+        Me.btCarbPersonal.Image = Global.Presentacion.My.Resources.Resources.PERONAL
+        Me.btCarbPersonal.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btCarbPersonal.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center
+        Me.btCarbPersonal.Name = "btCarbPersonal"
+        Me.btCarbPersonal.SymbolColor = System.Drawing.Color.Empty
+        Me.btCarbPersonal.Text = "REPORTE PLANILLA DE SUELDOS"
+        Me.btCarbPersonal.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Olive
+        Me.btCarbPersonal.TileSize = New System.Drawing.Size(250, 135)
+        '
+        '
+        '
+        Me.btCarbPersonal.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.btCarbPersonal.TileStyle.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Far
+        Me.btCarbPersonal.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter
+        Me.btCarbPersonal.TitleTextColor = System.Drawing.Color.Red
+        '
+        'btCarbCombustible
+        '
+        Me.btCarbCombustible.Image = Global.Presentacion.My.Resources.Resources.reporte
+        Me.btCarbCombustible.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btCarbCombustible.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center
+        Me.btCarbCombustible.Name = "btCarbCombustible"
+        Me.btCarbCombustible.SymbolColor = System.Drawing.Color.Empty
+        Me.btCarbCombustible.Text = "PEDIDO DE VACACION"
+        Me.btCarbCombustible.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta
+        Me.btCarbCombustible.TileSize = New System.Drawing.Size(250, 135)
+        '
+        '
+        '
+        Me.btCarbCombustible.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.btCarbCombustible.TileStyle.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Far
+        Me.btCarbCombustible.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter
+        Me.btCarbCombustible.TitleTextColor = System.Drawing.Color.Red
+        '
+        'MetroTileItem12
+        '
+        Me.MetroTileItem12.Image = Global.Presentacion.My.Resources.Resources.comprobante
+        Me.MetroTileItem12.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.MetroTileItem12.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center
+        Me.MetroTileItem12.Name = "MetroTileItem12"
+        Me.MetroTileItem12.SymbolColor = System.Drawing.Color.Empty
+        Me.MetroTileItem12.Text = "PERSONAL"
+        Me.MetroTileItem12.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.DarkBlue
+        Me.MetroTileItem12.TileSize = New System.Drawing.Size(250, 135)
+        '
+        '
+        '
+        Me.MetroTileItem12.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.MetroTileItem12.TileStyle.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Far
+        Me.MetroTileItem12.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter
+        Me.MetroTileItem12.TitleTextColor = System.Drawing.Color.Red
+        '
+        'btVentIntegArqueo
+        '
+        Me.btVentIntegArqueo.Image = Global.Presentacion.My.Resources.Resources.maquina
+        Me.btVentIntegArqueo.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btVentIntegArqueo.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center
+        Me.btVentIntegArqueo.Name = "btVentIntegArqueo"
+        Me.btVentIntegArqueo.SymbolColor = System.Drawing.Color.Empty
+        Me.btVentIntegArqueo.Text = "INTEGRACION"
+        Me.btVentIntegArqueo.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.DarkBlue
+        Me.btVentIntegArqueo.TileSize = New System.Drawing.Size(250, 135)
+        '
+        '
+        '
+        Me.btVentIntegArqueo.TileStyle.BackColor = System.Drawing.Color.Blue
+        Me.btVentIntegArqueo.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(205, Byte), Integer), CType(CType(92, Byte), Integer), CType(CType(92, Byte), Integer))
+        Me.btVentIntegArqueo.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.btVentIntegArqueo.TileStyle.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Far
+        Me.btVentIntegArqueo.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter
+        Me.btVentIntegArqueo.TitleTextColor = System.Drawing.Color.Red
+        '
+        'btCarbArqueoDiario
+        '
+        Me.btCarbArqueoDiario.Image = Global.Presentacion.My.Resources.Resources.comprobante
+        Me.btCarbArqueoDiario.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btCarbArqueoDiario.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center
+        Me.btCarbArqueoDiario.Name = "btCarbArqueoDiario"
+        Me.btCarbArqueoDiario.SymbolColor = System.Drawing.Color.Empty
+        Me.btCarbArqueoDiario.Text = "PERSONAL"
+        Me.btCarbArqueoDiario.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.DarkBlue
+        Me.btCarbArqueoDiario.TileSize = New System.Drawing.Size(250, 135)
+        '
+        '
+        '
+        Me.btCarbArqueoDiario.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.btCarbArqueoDiario.TileStyle.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Far
+        Me.btCarbArqueoDiario.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter
+        Me.btCarbArqueoDiario.TitleTextColor = System.Drawing.Color.Red
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox5.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.PictureBox5.Location = New System.Drawing.Point(0, 410)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(636, 114)
+        Me.PictureBox5.TabIndex = 3
+        Me.PictureBox5.TabStop = False
+        Me.PictureBox5.Visible = False
         '
         'SideNav_Logistica
         '
@@ -903,214 +1111,6 @@ Partial Class P_Principal
         '
         Me.btInvDepreResumen.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.btInvDepreResumen.TitleText = "TIPO ACTIVO FIJO"
-        '
-        'SideNavPanel5
-        '
-        Me.SideNavPanel5.Controls.Add(Me.MetroTilePanel6)
-        Me.SideNavPanel5.Controls.Add(Me.PictureBox5)
-        Me.SideNavPanel5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SideNavPanel5.Location = New System.Drawing.Point(143, 36)
-        Me.SideNavPanel5.Name = "SideNavPanel5"
-        Me.SideNavPanel5.Size = New System.Drawing.Size(636, 524)
-        Me.SideNavPanel5.TabIndex = 87
-        '
-        'MetroTilePanel6
-        '
-        Me.MetroTilePanel6.BackColor = System.Drawing.Color.Transparent
-        Me.MetroTilePanel6.BackgroundImage = Global.Presentacion.My.Resources.Resources.fondo
-        Me.MetroTilePanel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        '
-        '
-        '
-        Me.MetroTilePanel6.BackgroundStyle.BackColor = System.Drawing.Color.Transparent
-        Me.MetroTilePanel6.BackgroundStyle.Class = "MetroTilePanel"
-        Me.MetroTilePanel6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.MetroTilePanel6.ContainerControlProcessDialogKey = True
-        Me.MetroTilePanel6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MetroTilePanel6.DragDropSupport = True
-        Me.MetroTilePanel6.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.btCarbArqueo, Me.btCarbCliente, Me.btCarbMaquina, Me.btCarbRepResumen, Me.btCarbPersonal, Me.btCarbCombustible, Me.MetroTileItem12, Me.btVentIntegArqueo, Me.btCarbArqueoDiario})
-        Me.MetroTilePanel6.ItemSpacing = 10
-        Me.MetroTilePanel6.Location = New System.Drawing.Point(0, 0)
-        Me.MetroTilePanel6.MultiLine = True
-        Me.MetroTilePanel6.Name = "MetroTilePanel6"
-        Me.MetroTilePanel6.Size = New System.Drawing.Size(636, 410)
-        Me.MetroTilePanel6.TabIndex = 2
-        Me.MetroTilePanel6.Text = "mtp2Logistica"
-        '
-        'btCarbArqueo
-        '
-        Me.btCarbArqueo.Image = Global.Presentacion.My.Resources.Resources.arqueo
-        Me.btCarbArqueo.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btCarbArqueo.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center
-        Me.btCarbArqueo.Name = "btCarbArqueo"
-        Me.btCarbArqueo.SymbolColor = System.Drawing.Color.Empty
-        Me.btCarbArqueo.Text = "FERIADOS"
-        Me.btCarbArqueo.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal
-        Me.btCarbArqueo.TileSize = New System.Drawing.Size(250, 135)
-        '
-        '
-        '
-        Me.btCarbArqueo.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.btCarbArqueo.TileStyle.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Far
-        Me.btCarbArqueo.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter
-        Me.btCarbArqueo.TitleTextColor = System.Drawing.Color.Red
-        '
-        'btCarbCliente
-        '
-        Me.btCarbCliente.Image = Global.Presentacion.My.Resources.Resources.CLIENTES
-        Me.btCarbCliente.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btCarbCliente.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center
-        Me.btCarbCliente.Name = "btCarbCliente"
-        Me.btCarbCliente.SymbolColor = System.Drawing.Color.Empty
-        Me.btCarbCliente.Text = "DESCUENTOS FIJOS"
-        Me.btCarbCliente.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Plum
-        Me.btCarbCliente.TileSize = New System.Drawing.Size(250, 135)
-        '
-        '
-        '
-        Me.btCarbCliente.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.btCarbCliente.TileStyle.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Far
-        Me.btCarbCliente.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter
-        Me.btCarbCliente.TitleTextColor = System.Drawing.Color.Red
-        '
-        'btCarbMaquina
-        '
-        Me.btCarbMaquina.Image = Global.Presentacion.My.Resources.Resources.maquina
-        Me.btCarbMaquina.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btCarbMaquina.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center
-        Me.btCarbMaquina.Name = "btCarbMaquina"
-        Me.btCarbMaquina.SymbolColor = System.Drawing.Color.Empty
-        Me.btCarbMaquina.Text = "BONOS ANTIGUEDAD Y VACACIONES"
-        Me.btCarbMaquina.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Blueish
-        Me.btCarbMaquina.TileSize = New System.Drawing.Size(250, 135)
-        '
-        '
-        '
-        Me.btCarbMaquina.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.btCarbMaquina.TileStyle.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Far
-        Me.btCarbMaquina.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter
-        Me.btCarbMaquina.TitleTextColor = System.Drawing.Color.Red
-        '
-        'btCarbRepResumen
-        '
-        Me.btCarbRepResumen.Image = Global.Presentacion.My.Resources.Resources.CONTROL_PEDIDOS
-        Me.btCarbRepResumen.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btCarbRepResumen.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center
-        Me.btCarbRepResumen.Name = "btCarbRepResumen"
-        Me.btCarbRepResumen.SymbolColor = System.Drawing.Color.Empty
-        Me.btCarbRepResumen.Text = "BONOS / DECUENTOS"
-        Me.btCarbRepResumen.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.RedOrange
-        Me.btCarbRepResumen.TileSize = New System.Drawing.Size(250, 135)
-        '
-        '
-        '
-        Me.btCarbRepResumen.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.btCarbRepResumen.TileStyle.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Far
-        Me.btCarbRepResumen.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter
-        Me.btCarbRepResumen.TitleTextColor = System.Drawing.Color.Red
-        '
-        'btCarbPersonal
-        '
-        Me.btCarbPersonal.Image = Global.Presentacion.My.Resources.Resources.PERONAL
-        Me.btCarbPersonal.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btCarbPersonal.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center
-        Me.btCarbPersonal.Name = "btCarbPersonal"
-        Me.btCarbPersonal.SymbolColor = System.Drawing.Color.Empty
-        Me.btCarbPersonal.Text = "REPORTE PLANILLA DE SUELDOS"
-        Me.btCarbPersonal.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Olive
-        Me.btCarbPersonal.TileSize = New System.Drawing.Size(250, 135)
-        '
-        '
-        '
-        Me.btCarbPersonal.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.btCarbPersonal.TileStyle.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Far
-        Me.btCarbPersonal.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter
-        Me.btCarbPersonal.TitleTextColor = System.Drawing.Color.Red
-        '
-        'btCarbCombustible
-        '
-        Me.btCarbCombustible.Image = Global.Presentacion.My.Resources.Resources.reporte
-        Me.btCarbCombustible.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btCarbCombustible.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center
-        Me.btCarbCombustible.Name = "btCarbCombustible"
-        Me.btCarbCombustible.SymbolColor = System.Drawing.Color.Empty
-        Me.btCarbCombustible.Text = "PEDIDO DE VACACION"
-        Me.btCarbCombustible.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta
-        Me.btCarbCombustible.TileSize = New System.Drawing.Size(250, 135)
-        '
-        '
-        '
-        Me.btCarbCombustible.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.btCarbCombustible.TileStyle.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Far
-        Me.btCarbCombustible.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter
-        Me.btCarbCombustible.TitleTextColor = System.Drawing.Color.Red
-        '
-        'MetroTileItem12
-        '
-        Me.MetroTileItem12.Image = Global.Presentacion.My.Resources.Resources.comprobante
-        Me.MetroTileItem12.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.MetroTileItem12.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center
-        Me.MetroTileItem12.Name = "MetroTileItem12"
-        Me.MetroTileItem12.SymbolColor = System.Drawing.Color.Empty
-        Me.MetroTileItem12.Text = "PERSONAL"
-        Me.MetroTileItem12.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.DarkBlue
-        Me.MetroTileItem12.TileSize = New System.Drawing.Size(250, 135)
-        '
-        '
-        '
-        Me.MetroTileItem12.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.MetroTileItem12.TileStyle.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Far
-        Me.MetroTileItem12.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter
-        Me.MetroTileItem12.TitleTextColor = System.Drawing.Color.Red
-        '
-        'btVentIntegArqueo
-        '
-        Me.btVentIntegArqueo.Image = Global.Presentacion.My.Resources.Resources.maquina
-        Me.btVentIntegArqueo.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btVentIntegArqueo.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center
-        Me.btVentIntegArqueo.Name = "btVentIntegArqueo"
-        Me.btVentIntegArqueo.SymbolColor = System.Drawing.Color.Empty
-        Me.btVentIntegArqueo.Text = "INTEGRACION"
-        Me.btVentIntegArqueo.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.DarkBlue
-        Me.btVentIntegArqueo.TileSize = New System.Drawing.Size(250, 135)
-        '
-        '
-        '
-        Me.btVentIntegArqueo.TileStyle.BackColor = System.Drawing.Color.Blue
-        Me.btVentIntegArqueo.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(205, Byte), Integer), CType(CType(92, Byte), Integer), CType(CType(92, Byte), Integer))
-        Me.btVentIntegArqueo.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.btVentIntegArqueo.TileStyle.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Far
-        Me.btVentIntegArqueo.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter
-        Me.btVentIntegArqueo.TitleTextColor = System.Drawing.Color.Red
-        '
-        'btCarbArqueoDiario
-        '
-        Me.btCarbArqueoDiario.Image = Global.Presentacion.My.Resources.Resources.comprobante
-        Me.btCarbArqueoDiario.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btCarbArqueoDiario.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center
-        Me.btCarbArqueoDiario.Name = "btCarbArqueoDiario"
-        Me.btCarbArqueoDiario.SymbolColor = System.Drawing.Color.Empty
-        Me.btCarbArqueoDiario.Text = "PERSONAL"
-        Me.btCarbArqueoDiario.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.DarkBlue
-        Me.btCarbArqueoDiario.TileSize = New System.Drawing.Size(250, 135)
-        '
-        '
-        '
-        Me.btCarbArqueoDiario.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.btCarbArqueoDiario.TileStyle.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Far
-        Me.btCarbArqueoDiario.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter
-        Me.btCarbArqueoDiario.TitleTextColor = System.Drawing.Color.Red
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox5.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.PictureBox5.Location = New System.Drawing.Point(0, 410)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(636, 114)
-        Me.PictureBox5.TabIndex = 3
-        Me.PictureBox5.TabStop = False
-        Me.PictureBox5.Visible = False
         '
         'SideNavPanel6
         '
@@ -2187,14 +2187,14 @@ Partial Class P_Principal
         Me.Text = "DINOREP"
         Me.SideNav1.ResumeLayout(False)
         Me.SideNav1.PerformLayout()
+        Me.SideNavPanel5.ResumeLayout(False)
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SideNav_Logistica.ResumeLayout(False)
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SideNav_Conf.ResumeLayout(False)
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SideNavPanel8.ResumeLayout(False)
         Me.SideNavPanel7.ResumeLayout(False)
-        Me.SideNavPanel5.ResumeLayout(False)
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SideNavPanel6.ResumeLayout(False)
         Me.SideNavPanel4.ResumeLayout(False)
         Me.SideNavPanel3.ResumeLayout(False)

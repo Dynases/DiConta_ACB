@@ -310,12 +310,60 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         End If
 
         If _MNuevo Then
+            If btnGrabar.Enabled = True Then
+                If tbTipo.SelectedIndex = 0 Then
+                    tbNombre.ReadOnly = False
+                    tbBanco.ReadOnly = False
+                ElseIf tbTipo.SelectedIndex = 1 Then
+                    tbNombre.ReadOnly = False
+                    tbBanco.ReadOnly = False
+                    tbChque.ReadOnly = False
+
+                End If
+                If tbTipo.SelectedIndex >= 0 Then
+                    _prCargarOpcionesDeCuentasAutomaticas()
+
+                    'cargar el numero de comprobante
+                    Dim dt As DataTable = L_prObtenerNumFacturaGeneral(tbTipo.Value, tbFecha.Value.Year, tbFecha.Value.Month, gi_empresaNumi)
+                    If dt.Rows.Count > 0 Then
+                        tbNum.Text = dt.Rows(0).Item("oanum")
+                        tbNroDoc.Text = dt.Rows(0).Item("oanumdoc")
+
+                    End If
+
+
+                Else
+                    tbNum.Text = ""
+                    tbNroDoc.Text = ""
+
+                    Me.cmOpcionesDetalle.Items.Clear()
+
+                    Dim subItem1 As ToolStripMenuItem
+                    subItem1 = New ToolStripMenuItem()
+                    subItem1.Image = Global.Presentacion.My.Resources.Resources.elim_fila2
+                    subItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+                    subItem1.Name = "subItemEliminar"
+                    subItem1.Size = New System.Drawing.Size(274, 36)
+                    subItem1.Text = "ELIMINAR"
+                    AddHandler subItem1.Click, AddressOf ELIMINAR_Click
+                    Me.cmOpcionesDetalle.Items.Add(subItem1)
+
+                    Dim subItem2 As ToolStripMenuItem
+                    subItem2 = New ToolStripMenuItem()
+                    subItem2.Name = "subItemNuevaFila"
+                    subItem2.Size = New System.Drawing.Size(274, 36)
+                    subItem2.Text = "INSERTAR FILA"
+                    AddHandler subItem2.Click, AddressOf INSERTARFILAToolStripMenuItem_Click
+                    Me.cmOpcionesDetalle.Items.Add(subItem2)
+                End If
+            End If
             If _PMOGrabarRegistro() = True Then
                 'actualizar el grid de buscador
                 _PMCargarBuscador()
 
                 If _MTipoInserccionNuevo Then
-                    _PMOLimpiar()
+                    _PMSalir()
+                    _PMUltimoRegistro()
                 Else
                     _PMSalir()
                 End If
@@ -657,7 +705,6 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
             .Visible = False
             .DefaultValue = 0
         End With
-
         With grDetalle.RootTable.Columns("imgCompra")
             .HeaderAlignment = TextAlignment.Center
             .CellStyle.TextAlignment = TextAlignment.Center
@@ -2108,13 +2155,13 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         Dim dtUltimoCompr As DataTable = L_prObtenerUltimoComprobantePorTipoAnioMesEmpresa(tbTipo.Value, tbAnio.Text, tbMes.Text, gi_empresaNumi)
         If dtUltimoCompr.Rows.Count > 0 Then
             'If dtUltimoCompr.Rows(0).Item("oanumi") = tbNumi.Text Then
-            Dim info As New TaskDialogInfo("eliminacion".ToUpper, eTaskDialogIcon.Delete, "¿esta seguro de eliminar el registro?".ToUpper, "".ToUpper, eTaskDialogButton.Yes Or eTaskDialogButton.Cancel, eTaskDialogBackgroundColor.Blue)
+            Dim info As New TaskDialogInfo("anulacion".ToUpper, eTaskDialogIcon.Delete, "¿esta seguro de anular el registro?".ToUpper, "".ToUpper, eTaskDialogButton.Yes Or eTaskDialogButton.Cancel, eTaskDialogBackgroundColor.Blue)
             Dim result As eTaskDialogResult = TaskDialog.Show(info)
             If result = eTaskDialogResult.Yes Then
                 Dim mensajeError As String = ""
                 Dim res As Boolean = L_prComprobanteBorrar(tbNumi.Text, tbNroDoc.Text, tbTipo.Value, tbAnio.Text, tbMes.Text, tbNum.Text, tbFecha.Value.ToString("yyyy/MM/dd"), tbTipoCambio.Value, tbGlosa.Text, tbObs.Text, gi_empresaNumi, mensajeError)
                 If res Then
-                    ToastNotification.Show(Me, "Codigo ".ToUpper + tbNumi.Text + " eliminado con Exito.".ToUpper, My.Resources.GRABACION_EXITOSA, 5000, eToastGlowColor.Green, eToastPosition.TopCenter)
+                    ToastNotification.Show(Me, "Codigo ".ToUpper + tbNumi.Text + " Anulado con Exito.".ToUpper, My.Resources.GRABACION_EXITOSA, 5000, eToastGlowColor.Green, eToastPosition.TopCenter)
                     _PMFiltrar()
                 Else
                     ToastNotification.Show(Me, mensajeError, My.Resources.WARNING, 8000, eToastGlowColor.Red, eToastPosition.TopCenter)
@@ -2129,6 +2176,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
     End Sub
     Public Function _PMOValidarCampos() As Boolean
         Dim _ok As Boolean = True
+        Dim _okBs As Boolean = True
         MEP.Clear()
 
         If tbTipoCambio.Value = 0 Then
@@ -2206,6 +2254,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
 
         MHighlighterFocus.UpdateHighlights()
         Return _ok
+
     End Function
 
     Public Function _PMOGetTablaBuscador() As DataTable
@@ -2231,6 +2280,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         listEstCeldas.Add(New Modelos.Celda("oanom", False))
         listEstCeldas.Add(New Modelos.Celda("oaban", False))
         listEstCeldas.Add(New Modelos.Celda("oache", False))
+        listEstCeldas.Add(New Modelos.Celda("oaest", False))
 
         Return listEstCeldas
     End Function
@@ -2247,6 +2297,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
             tbNum.Text = .GetValue("oanum").ToString
             tbFecha.Value = .GetValue("oafdoc")
             tbTipoCambio.Value = .GetValue("oatc")
+            swEstado.Value = .GetValue("oaest")
             tbGlosa.Text = .GetValue("oaglosa").ToString
             tbObs.Text = .GetValue("oaobs").ToString
             tbNombre.Text = .GetValue("oanom").ToString
@@ -2341,6 +2392,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
     End Sub
 
     Private Sub btnGrabar_Click(sender As Object, e As EventArgs) Handles btnGrabar.Click
+
         _PMGuardar()
     End Sub
 
@@ -2937,6 +2989,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
 
 
 
+
         If e.KeyData = Keys.Control + Keys.A And btnGrabar.Enabled = True And grAyudaCuenta.Tag = -1 And grAyudaCuenta.Row = -2 Then
             'desea agregar a un nuevo cliente
 
@@ -2993,8 +3046,12 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
                     grDetalle.SetValue("numAux", numAux)
                     grDetalle.SetValue("cadesc2", cuentaPadre)
                     grDetalle.SetValue("camon", cuentaMoneda)
-                    If (grDetalle.RowCount > 2) Then
-                        Dim ref As String = grDetalle.GetRow(0).Cells(16).Value.ToString
+                    If (grDetalle.RowCount = 2) Then
+                        'Dim ref As String = grDetalle.GetRow(0).Cells(16).Value.ToString
+                        grDetalle.SetValue("obobs", tbGlosa.Text)
+
+                    Else
+                        Dim ref As String = grDetalle.GetRow(grDetalle.RowCount - 3).Cells(16).Value.ToString
                         grDetalle.SetValue("obobs", ref)
                     End If
 
@@ -3383,7 +3440,8 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
 
     Private Sub tbFecha_KeyDown(sender As Object, e As KeyEventArgs) Handles tbFecha.KeyDown
         If e.KeyData = Keys.Enter Or e.KeyData = Keys.Tab Then
-            tbGlosa.Focus()
+            ' tbGlosa.Focus()
+            tbBanco.Focus()
         End If
     End Sub
 
@@ -3488,5 +3546,36 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
 
     Private Sub grAyudaCuenta_FormattingRow(sender As Object, e As RowLoadEventArgs) Handles grAyudaCuenta.FormattingRow
 
+    End Sub
+
+    Private Sub tbBanco_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbBanco.KeyPress
+        e.KeyChar = e.KeyChar.ToString.ToUpper
+
+    End Sub
+
+    Private Sub tbNombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbNombre.KeyPress
+        e.KeyChar = e.KeyChar.ToString.ToUpper
+    End Sub
+
+    Private Sub tbChque_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbChque.KeyPress
+        e.KeyChar = e.KeyChar.ToString.ToUpper
+    End Sub
+
+    Private Sub tbBanco_KeyDown(sender As Object, e As KeyEventArgs) Handles tbBanco.KeyDown
+        If e.KeyData = Keys.Enter Or e.KeyData = Keys.Tab Then
+            tbChque.Focus()
+        End If
+    End Sub
+
+    Private Sub tbChque_KeyDown(sender As Object, e As KeyEventArgs) Handles tbChque.KeyDown
+        If e.KeyData = Keys.Enter Or e.KeyData = Keys.Tab Then
+            tbNombre.Focus()
+        End If
+    End Sub
+
+    Private Sub tbNombre_KeyDown(sender As Object, e As KeyEventArgs) Handles tbNombre.KeyDown
+        If e.KeyData = Keys.Enter Or e.KeyData = Keys.Tab Then
+            tbGlosa.Focus()
+        End If
     End Sub
 End Class

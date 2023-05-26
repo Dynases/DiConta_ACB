@@ -85,6 +85,7 @@ Partial Class F0_Comprobante
         Me.btRecuperar = New DevComponents.DotNetBar.ButtonX()
         Me.timerRecuperacion = New System.Windows.Forms.Timer(Me.components)
         Me.btnBitacora = New DevComponents.DotNetBar.ButtonX()
+        Me.swEstado = New DevComponents.DotNetBar.Controls.SwitchButton()
         CType(Me.SuperTabPrincipal, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuperTabPrincipal.SuspendLayout()
         Me.SuperTabControlPanelBuscador.SuspendLayout()
@@ -156,6 +157,7 @@ Partial Class F0_Comprobante
         '
         'PanelSuperior
         '
+        Me.PanelSuperior.Controls.Add(Me.swEstado)
         Me.PanelSuperior.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PanelSuperior.Size = New System.Drawing.Size(1322, 72)
         Me.PanelSuperior.Style.Alignment = System.Drawing.StringAlignment.Center
@@ -171,6 +173,10 @@ Partial Class F0_Comprobante
         Me.PanelSuperior.StyleMouseOver.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(150, Byte), Integer))
         Me.PanelSuperior.StyleMouseOver.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(150, Byte), Integer))
         Me.PanelSuperior.StyleMouseOver.BackgroundImage = CType(resources.GetObject("PanelSuperior.StyleMouseOver.BackgroundImage"), System.Drawing.Image)
+        Me.PanelSuperior.Controls.SetChildIndex(Me.PanelToolBar1, 0)
+        Me.PanelSuperior.Controls.SetChildIndex(Me.PanelToolBar2, 0)
+        Me.PanelSuperior.Controls.SetChildIndex(Me.MRlAccion, 0)
+        Me.PanelSuperior.Controls.SetChildIndex(Me.swEstado, 0)
         '
         'PanelInferior
         '
@@ -247,7 +253,7 @@ Partial Class F0_Comprobante
         '
         'btnEliminar
         '
-        Me.btnEliminar.Text = "&ELIMINAR"
+        Me.btnEliminar.Text = "&ANULAR"
         '
         'btnModificar
         '
@@ -260,7 +266,7 @@ Partial Class F0_Comprobante
         'PanelToolBar2
         '
         Me.PanelToolBar2.Controls.Add(Me.btnBitacora)
-        Me.PanelToolBar2.Location = New System.Drawing.Point(1149, 0)
+        Me.PanelToolBar2.Location = New System.Drawing.Point(885, 0)
         Me.PanelToolBar2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PanelToolBar2.Size = New System.Drawing.Size(173, 72)
         Me.PanelToolBar2.Controls.SetChildIndex(Me.btnBitacora, 0)
@@ -311,7 +317,7 @@ Partial Class F0_Comprobante
         Me.MRlAccion.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.MRlAccion.Location = New System.Drawing.Point(779, 0)
         Me.MRlAccion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.MRlAccion.Size = New System.Drawing.Size(370, 72)
+        Me.MRlAccion.Size = New System.Drawing.Size(106, 72)
         '
         'GroupPanelBuscador
         '
@@ -1308,6 +1314,31 @@ Partial Class F0_Comprobante
         Me.btnBitacora.TextColor = System.Drawing.Color.White
         Me.btnBitacora.Visible = False
         '
+        'swEstado
+        '
+        Me.swEstado.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.swEstado.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.swEstado.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.swEstado.IsReadOnly = True
+        Me.swEstado.Location = New System.Drawing.Point(845, 42)
+        Me.swEstado.Margin = New System.Windows.Forms.Padding(2)
+        Me.swEstado.Name = "swEstado"
+        Me.swEstado.OffBackColor = System.Drawing.Color.IndianRed
+        Me.swEstado.OffText = "ANULADO"
+        Me.swEstado.OffTextColor = System.Drawing.Color.Black
+        Me.swEstado.OnBackColor = System.Drawing.Color.LimeGreen
+        Me.swEstado.OnText = "HABILITADO"
+        Me.swEstado.ReadOnlyMarkerColor = System.Drawing.Color.Empty
+        Me.swEstado.Size = New System.Drawing.Size(102, 25)
+        Me.swEstado.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.swEstado.SwitchBackColor = System.Drawing.Color.White
+        Me.swEstado.TabIndex = 247
+        Me.swEstado.Value = True
+        Me.swEstado.ValueObject = "Y"
+        '
         'F0_Comprobante
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1414,4 +1445,5 @@ Partial Class F0_Comprobante
     Friend WithEvents LabelX16 As DevComponents.DotNetBar.LabelX
     Friend WithEvents tbChque As DevComponents.DotNetBar.Controls.TextBoxX
     Friend WithEvents tbBanco As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents swEstado As DevComponents.DotNetBar.Controls.SwitchButton
 End Class

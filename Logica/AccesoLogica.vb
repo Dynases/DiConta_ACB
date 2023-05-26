@@ -849,7 +849,7 @@ BDDiconCaneros .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
         Return _Tabla
     End Function
 
-    Public Shared Function L_prCuentaGrabar(ByRef _numi As String, _empresa As String, _cuenta As String, _desc As String, _nivel As String, _moneda As String, _tipo As String, _numiPadre As String, _detalle As DataTable) As Boolean
+    Public Shared Function L_prCuentaGrabar(ByRef _numi As String, _empresa As String, _cuenta As String, _desc As String, _nivel As String, _moneda As String, _tipo As String, _numiPadre As String, _detalle As DataTable, Optional _cuenta2 As Integer = 0) As Boolean
         Dim _resultado As Boolean
 
         Dim _Tabla As DataTable
@@ -864,6 +864,7 @@ BDDiconCaneros .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
         _listParam.Add(New Datos.DParametro("@catipo", _tipo))
         _listParam.Add(New Datos.DParametro("@capadre", _numiPadre))
         _listParam.Add(New Datos.DParametro("@TC0011", "", _detalle))
+        _listParam.Add(New Datos.DParametro("@numCuenta", _cuenta2))
         _listParam.Add(New Datos.DParametro("@uact", L_Usuario))
 
         _Tabla = D_ProcedimientoConParam("sp_dg_TC001", _listParam)
