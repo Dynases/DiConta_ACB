@@ -305,9 +305,9 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
 
     Private Sub _PMGuardar()
 
-        If _PMOValidarCampos() = False Then
-            Exit Sub
-        End If
+        'If _PMOValidarCampos() = False Then
+        '    Exit Sub
+        'End If
 
         If _MNuevo Then
             If btnGrabar.Enabled = True Then

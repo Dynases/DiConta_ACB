@@ -207,12 +207,12 @@ Partial Class P_Principal
         'SideNav1
         '
         Me.SideNav1.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.SideNav1.Controls.Add(Me.SideNavPanel5)
         Me.SideNav1.Controls.Add(Me.SideNav_Logistica)
-        Me.SideNav1.Controls.Add(Me.SideNav_Conf)
-        Me.SideNav1.Controls.Add(Me.SideNavPanel8)
         Me.SideNav1.Controls.Add(Me.SideNavPanel7)
         Me.SideNav1.Controls.Add(Me.SideNavPanel6)
+        Me.SideNav1.Controls.Add(Me.SideNavPanel5)
+        Me.SideNav1.Controls.Add(Me.SideNav_Conf)
+        Me.SideNav1.Controls.Add(Me.SideNavPanel8)
         Me.SideNav1.Controls.Add(Me.SideNavPanel4)
         Me.SideNav1.Controls.Add(Me.SideNavPanel3)
         Me.SideNav1.Controls.Add(Me.SideNavPanel1)
@@ -235,6 +235,7 @@ Partial Class P_Principal
         Me.SideNavPanel5.Name = "SideNavPanel5"
         Me.SideNavPanel5.Size = New System.Drawing.Size(636, 524)
         Me.SideNavPanel5.TabIndex = 87
+        Me.SideNavPanel5.Visible = False
         '
         'MetroTilePanel6
         '
@@ -443,7 +444,6 @@ Partial Class P_Principal
         Me.SideNav_Logistica.Name = "SideNav_Logistica"
         Me.SideNav_Logistica.Size = New System.Drawing.Size(636, 524)
         Me.SideNav_Logistica.TabIndex = 6
-        Me.SideNav_Logistica.Visible = False
         '
         'MetroTilePanel2
         '
@@ -1884,6 +1884,7 @@ Partial Class P_Principal
         '
         'FP_Transacciones
         '
+        Me.FP_Transacciones.Checked = True
         Me.FP_Transacciones.Name = "FP_Transacciones"
         Me.FP_Transacciones.Panel = Me.SideNav_Logistica
         Me.FP_Transacciones.Symbol = "57789"
@@ -1892,7 +1893,6 @@ Partial Class P_Principal
         '
         'FP_Carburantes
         '
-        Me.FP_Carburantes.Checked = True
         Me.FP_Carburantes.Name = "FP_Carburantes"
         Me.FP_Carburantes.Panel = Me.SideNavPanel5
         Me.FP_Carburantes.Symbol = ""

@@ -1323,7 +1323,7 @@ Partial Class F0_Comprobante
         Me.swEstado.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.swEstado.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.swEstado.IsReadOnly = True
-        Me.swEstado.Location = New System.Drawing.Point(845, 42)
+        Me.swEstado.Location = New System.Drawing.Point(802, 27)
         Me.swEstado.Margin = New System.Windows.Forms.Padding(2)
         Me.swEstado.Name = "swEstado"
         Me.swEstado.OffBackColor = System.Drawing.Color.IndianRed
