@@ -636,7 +636,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
             .Caption = "DEBE BS."
             .CellStyle.TextAlignment = TextAlignment.Far
             .HeaderAlignment = TextAlignment.Center
-            .Width = 70
+            .Width = 100
             .FormatString = "0.00"
             .DefaultValue = 0
             .CellStyle.BackColor = Color.LightBlue
@@ -650,7 +650,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
             .Caption = "HABER BS."
             .CellStyle.TextAlignment = TextAlignment.Far
             .HeaderAlignment = TextAlignment.Center
-            .Width = 70
+            .Width = 100
             .FormatString = "0.00"
             .DefaultValue = 0
             .CellStyle.BackColor = Color.LightBlue
@@ -663,7 +663,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
             .Caption = "DEBE SUS."
             .CellStyle.TextAlignment = TextAlignment.Far
             .HeaderAlignment = TextAlignment.Center
-            .Width = 70
+            .Width = 100
             .FormatString = "0.00"
             .DefaultValue = 0
             .CellStyle.BackColor = Color.LightGreen
@@ -677,7 +677,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
             .Caption = "HABER SUS."
             .CellStyle.TextAlignment = TextAlignment.Far
             .HeaderAlignment = TextAlignment.Center
-            .Width = 70
+            .Width = 100
             .FormatString = "0.00"
             .DefaultValue = 0
             .CellStyle.BackColor = Color.LightGreen
