@@ -1486,13 +1486,15 @@ BDDiconCaneros .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
 
         Return _Tabla
     End Function
-    Public Shared Function L_prComprobanteGeneral(_numiEmpresa As String) As DataTable
+    Public Shared Function L_prComprobanteGeneral(_numiEmpresa As String, anio As String, mes As String) As DataTable
         Dim _Tabla As DataTable
 
         Dim _listParam As New List(Of Datos.DParametro)
 
         _listParam.Add(New Datos.DParametro("@tipo", 3))
         _listParam.Add(New Datos.DParametro("@oaemp", _numiEmpresa))
+        _listParam.Add(New Datos.DParametro("@oaano", anio))
+        _listParam.Add(New Datos.DParametro("@oames", mes))
         _listParam.Add(New Datos.DParametro("@uact", L_Usuario))
 
         _Tabla = D_ProcedimientoConParam("sp_dg_TO001", _listParam)

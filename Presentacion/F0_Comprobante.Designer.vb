@@ -25,6 +25,8 @@ Partial Class F0_Comprobante
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F0_Comprobante))
         Dim tbTipo_DesignTimeLayout As Janus.Windows.GridEX.GridEXLayout = New Janus.Windows.GridEX.GridEXLayout()
+        Dim comboanio_DesignTimeLayout As Janus.Windows.GridEX.GridEXLayout = New Janus.Windows.GridEX.GridEXLayout()
+        Dim comboMeses_DesignTimeLayout As Janus.Windows.GridEX.GridEXLayout = New Janus.Windows.GridEX.GridEXLayout()
         Me.GroupPanelBuscador = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.JGrM_Buscador = New Janus.Windows.GridEX.GridEX()
         Me.panelCabecera = New System.Windows.Forms.Panel()
@@ -86,6 +88,13 @@ Partial Class F0_Comprobante
         Me.timerRecuperacion = New System.Windows.Forms.Timer(Me.components)
         Me.btnBitacora = New DevComponents.DotNetBar.ButtonX()
         Me.swEstado = New DevComponents.DotNetBar.Controls.SwitchButton()
+        Me.comboanio = New Janus.Windows.GridEX.EditControls.MultiColumnCombo()
+        Me.comboMeses = New Janus.Windows.GridEX.EditControls.MultiColumnCombo()
+        Me.GroupPanel6 = New DevComponents.DotNetBar.Controls.GroupPanel()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.LabelX18 = New DevComponents.DotNetBar.LabelX()
+        Me.LabelX17 = New DevComponents.DotNetBar.LabelX()
         CType(Me.SuperTabPrincipal, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuperTabPrincipal.SuspendLayout()
         Me.SuperTabControlPanelBuscador.SuspendLayout()
@@ -117,6 +126,9 @@ Partial Class F0_Comprobante
         CType(Me.grAyudaCuenta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.cmOpcionesDetalle.SuspendLayout()
         Me.cmOpcionesAyuda.SuspendLayout()
+        CType(Me.comboanio, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.comboMeses, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupPanel6.SuspendLayout()
         Me.SuspendLayout()
         '
         'SuperTabPrincipal
@@ -137,15 +149,19 @@ Partial Class F0_Comprobante
         Me.SuperTabPrincipal.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.SuperTabPrincipal.SelectedTabIndex = 1
         Me.SuperTabPrincipal.Size = New System.Drawing.Size(1354, 482)
-        Me.SuperTabPrincipal.Controls.SetChildIndex(Me.SuperTabControlPanelBuscador, 0)
         Me.SuperTabPrincipal.Controls.SetChildIndex(Me.SuperTabControlPanelRegistro, 0)
+        Me.SuperTabPrincipal.Controls.SetChildIndex(Me.SuperTabControlPanelBuscador, 0)
         '
         'SuperTabControlPanelBuscador
         '
+        Me.SuperTabControlPanelBuscador.Controls.Add(Me.GroupPanel6)
         Me.SuperTabControlPanelBuscador.Controls.Add(Me.GroupPanelBuscador)
         Me.SuperTabControlPanelBuscador.Location = New System.Drawing.Point(0, 0)
         Me.SuperTabControlPanelBuscador.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.SuperTabControlPanelBuscador.Size = New System.Drawing.Size(1117, 482)
+        Me.SuperTabControlPanelBuscador.Size = New System.Drawing.Size(1322, 482)
+        '
+        'SupTabItemBusqueda
+        '
         '
         'SuperTabControlPanelRegistro
         '
@@ -321,15 +337,17 @@ Partial Class F0_Comprobante
         '
         'GroupPanelBuscador
         '
+        Me.GroupPanelBuscador.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupPanelBuscador.CanvasColor = System.Drawing.SystemColors.Control
         Me.GroupPanelBuscador.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007
         Me.GroupPanelBuscador.Controls.Add(Me.JGrM_Buscador)
         Me.GroupPanelBuscador.DisabledBackColor = System.Drawing.Color.Empty
-        Me.GroupPanelBuscador.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupPanelBuscador.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupPanelBuscador.Location = New System.Drawing.Point(0, 0)
+        Me.GroupPanelBuscador.Location = New System.Drawing.Point(0, 63)
         Me.GroupPanelBuscador.Name = "GroupPanelBuscador"
-        Me.GroupPanelBuscador.Size = New System.Drawing.Size(1117, 482)
+        Me.GroupPanelBuscador.Size = New System.Drawing.Size(1319, 419)
         '
         '
         '
@@ -366,7 +384,7 @@ Partial Class F0_Comprobante
         Me.JGrM_Buscador.Dock = System.Windows.Forms.DockStyle.Fill
         Me.JGrM_Buscador.Location = New System.Drawing.Point(0, 0)
         Me.JGrM_Buscador.Name = "JGrM_Buscador"
-        Me.JGrM_Buscador.Size = New System.Drawing.Size(1111, 459)
+        Me.JGrM_Buscador.Size = New System.Drawing.Size(1313, 396)
         Me.JGrM_Buscador.TabIndex = 0
         '
         'panelCabecera
@@ -1339,6 +1357,124 @@ Partial Class F0_Comprobante
         Me.swEstado.Value = True
         Me.swEstado.ValueObject = "Y"
         '
+        'comboanio
+        '
+        comboanio_DesignTimeLayout.LayoutString = resources.GetString("comboanio_DesignTimeLayout.LayoutString")
+        Me.comboanio.DesignTimeLayout = comboanio_DesignTimeLayout
+        Me.comboanio.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.comboanio.Location = New System.Drawing.Point(54, 19)
+        Me.comboanio.Name = "comboanio"
+        Me.comboanio.SelectedIndex = -1
+        Me.comboanio.SelectedItem = Nothing
+        Me.comboanio.Size = New System.Drawing.Size(160, 20)
+        Me.comboanio.TabIndex = 3
+        '
+        'comboMeses
+        '
+        comboMeses_DesignTimeLayout.LayoutString = resources.GetString("comboMeses_DesignTimeLayout.LayoutString")
+        Me.comboMeses.DesignTimeLayout = comboMeses_DesignTimeLayout
+        Me.comboMeses.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.comboMeses.Location = New System.Drawing.Point(286, 19)
+        Me.comboMeses.Name = "comboMeses"
+        Me.comboMeses.SelectedIndex = -1
+        Me.comboMeses.SelectedItem = Nothing
+        Me.comboMeses.Size = New System.Drawing.Size(200, 20)
+        Me.comboMeses.TabIndex = 4
+        '
+        'GroupPanel6
+        '
+        Me.GroupPanel6.CanvasColor = System.Drawing.SystemColors.Control
+        Me.GroupPanel6.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007
+        Me.GroupPanel6.Controls.Add(Me.CheckBox1)
+        Me.GroupPanel6.Controls.Add(Me.btnBuscar)
+        Me.GroupPanel6.Controls.Add(Me.LabelX18)
+        Me.GroupPanel6.Controls.Add(Me.LabelX17)
+        Me.GroupPanel6.Controls.Add(Me.comboMeses)
+        Me.GroupPanel6.Controls.Add(Me.comboanio)
+        Me.GroupPanel6.DisabledBackColor = System.Drawing.Color.Empty
+        Me.GroupPanel6.Dock = System.Windows.Forms.DockStyle.Top
+        Me.GroupPanel6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupPanel6.Location = New System.Drawing.Point(0, 0)
+        Me.GroupPanel6.Name = "GroupPanel6"
+        Me.GroupPanel6.Size = New System.Drawing.Size(1322, 57)
+        '
+        '
+        '
+        Me.GroupPanel6.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
+        Me.GroupPanel6.Style.BackColorGradientAngle = 90
+        Me.GroupPanel6.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
+        Me.GroupPanel6.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.GroupPanel6.Style.BorderBottomWidth = 1
+        Me.GroupPanel6.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
+        Me.GroupPanel6.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.GroupPanel6.Style.BorderLeftWidth = 1
+        Me.GroupPanel6.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.GroupPanel6.Style.BorderRightWidth = 1
+        Me.GroupPanel6.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.GroupPanel6.Style.BorderTopWidth = 1
+        Me.GroupPanel6.Style.CornerDiameter = 4
+        Me.GroupPanel6.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
+        Me.GroupPanel6.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center
+        Me.GroupPanel6.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
+        Me.GroupPanel6.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near
+        '
+        '
+        '
+        Me.GroupPanel6.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.GroupPanel6.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.GroupPanel6.TabIndex = 5
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.CheckBox1.Location = New System.Drawing.Point(616, 21)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(146, 20)
+        Me.CheckBox1.TabIndex = 127
+        Me.CheckBox1.Text = "MOSTRAR TODOS"
+        Me.CheckBox1.UseVisualStyleBackColor = False
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.Location = New System.Drawing.Point(506, 19)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(94, 23)
+        Me.btnBuscar.TabIndex = 126
+        Me.btnBuscar.Text = "B U S C A R"
+        Me.btnBuscar.UseVisualStyleBackColor = True
+        '
+        'LabelX18
+        '
+        Me.LabelX18.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.LabelX18.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX18.Location = New System.Drawing.Point(243, 17)
+        Me.LabelX18.Name = "LabelX18"
+        Me.LabelX18.Size = New System.Drawing.Size(37, 23)
+        Me.LabelX18.TabIndex = 125
+        Me.LabelX18.Text = "MES:"
+        '
+        'LabelX17
+        '
+        Me.LabelX17.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.LabelX17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX17.Location = New System.Drawing.Point(11, 19)
+        Me.LabelX17.Name = "LabelX17"
+        Me.LabelX17.Size = New System.Drawing.Size(37, 23)
+        Me.LabelX17.TabIndex = 124
+        Me.LabelX17.Text = "AÑO:"
+        '
         'F0_Comprobante
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1382,6 +1518,10 @@ Partial Class F0_Comprobante
         CType(Me.grAyudaCuenta, System.ComponentModel.ISupportInitialize).EndInit()
         Me.cmOpcionesDetalle.ResumeLayout(False)
         Me.cmOpcionesAyuda.ResumeLayout(False)
+        CType(Me.comboanio, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.comboMeses, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupPanel6.ResumeLayout(False)
+        Me.GroupPanel6.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1446,4 +1586,11 @@ Partial Class F0_Comprobante
     Friend WithEvents tbChque As DevComponents.DotNetBar.Controls.TextBoxX
     Friend WithEvents tbBanco As DevComponents.DotNetBar.Controls.TextBoxX
     Friend WithEvents swEstado As DevComponents.DotNetBar.Controls.SwitchButton
+    Friend WithEvents comboMeses As Janus.Windows.GridEX.EditControls.MultiColumnCombo
+    Friend WithEvents comboanio As Janus.Windows.GridEX.EditControls.MultiColumnCombo
+    Protected WithEvents GroupPanel6 As DevComponents.DotNetBar.Controls.GroupPanel
+    Friend WithEvents LabelX18 As DevComponents.DotNetBar.LabelX
+    Friend WithEvents LabelX17 As DevComponents.DotNetBar.LabelX
+    Friend WithEvents btnBuscar As Button
+    Friend WithEvents CheckBox1 As CheckBox
 End Class

@@ -305,9 +305,9 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
 
     Private Sub _PMGuardar()
 
-        'If _PMOValidarCampos() = False Then
-        '    Exit Sub
-        'End If
+        If _PMOValidarCampos() = False Then
+            Exit Sub
+        End If
 
         If _MNuevo Then
             If btnGrabar.Enabled = True Then
@@ -359,7 +359,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
             End If
             If _PMOGrabarRegistro() = True Then
                 'actualizar el grid de buscador
-                _PMCargarBuscador()
+                '_PMCargarBuscador()
 
                 If _MTipoInserccionNuevo Then
                     _PMSalir()
@@ -376,7 +376,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
             _PMOModificarRegistro()
 
             'actualizar el grid de buscador
-            _PMCargarBuscador()
+            '_PMCargarBuscador()
 
             _PMSalir()
         End If
@@ -402,7 +402,8 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         _detalleDetalleCompras = L_prCompraComprobanteGeneralPorNumi(-1)
 
         _prCargarComboLibreria(tbTipo, gi_LibComprobante, gi_LibCOMPROBANTETipo)
-
+        _prCargarComboLibreria(comboanio, 10, 1)
+        _prCargarComboLibreria(comboMeses, 10, 2)
         tbChque.ReadOnly = True
         tbBanco.ReadOnly = True
         tbNombre.ReadOnly = True
@@ -2203,8 +2204,8 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         Dim debeSus As Double = grDetalle.GetTotal(grDetalle.RootTable.Columns("obdebeus"), AggregateFunction.Sum)
         Dim haberSus As Double = grDetalle.GetTotal(grDetalle.RootTable.Columns("obhaberus"), AggregateFunction.Sum)
 
-        If debeBs <> haberBs Then
-            _ok = False
+        If debeSus <> haberSus Then
+            _ok = True
             ToastNotification.Show(Me, "No se puede grabar el comprobante porque esta desbalanceado".ToUpper, My.Resources.WARNING, 3000, eToastGlowColor.Blue, eToastPosition.TopCenter)
         End If
 
@@ -2228,10 +2229,10 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
                         'a.obnumi,a.obnumito1,a.oblin,a.obcuenta,b.cacta,b.cadesc,c.cadesc as cadesc2,b.camon,numAux,
                         'obaux1,desc1,obaux2,desc2,obaux3,desc3,a.obobs,a.obobs2,a.obcheque,a.obtc,
                         'a.obdebebs,a.obhaberbs,a.obdebeus, a.obhaberus, estado
-                        dt.Rows.Add(0, 0, 0, _numiCuentaAjuste, "", "", "", "", 0,
-                                    0, "", 0, "", 0, "", "", "", "", 0,
-                                    0, 0, IIf(esDebe = False, diferencia, 0), IIf(esDebe = True, diferencia, 0),
-                                    0, "", 0, 0, 0)
+                        dt.Rows.Add(0, 0, 0, _numiCuentaAjuste, 6010302001, 0, "Diferencia de Cambio", "Diferencia de Cambio", "SU",
+                                    0, 0, 0, 0, 0, 0, "", "DIFERENCIA", 0,
+                                    0, 6.96, IIf(esDebe = False, diferencia, 0), IIf(esDebe = True, diferencia, 0),
+                                    0, 0, 0, 0, 0, 0, 0)
 
                     Else
                         _ok = False
@@ -2258,8 +2259,13 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
     End Function
 
     Public Function _PMOGetTablaBuscador() As DataTable
+        Dim dtBuscador As DataTable
+        If CheckBox1.Checked = True Then
+            dtBuscador = L_prComprobanteGeneral(gi_empresaNumi, -1, -1)
+        Else
+            dtBuscador = L_prComprobanteGeneral(gi_empresaNumi, comboanio.Text, comboMeses.Value)
+        End If
 
-        Dim dtBuscador As DataTable = L_prComprobanteGeneral(gi_empresaNumi)
         Return dtBuscador
     End Function
 
@@ -2281,7 +2287,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         listEstCeldas.Add(New Modelos.Celda("oaban", False))
         listEstCeldas.Add(New Modelos.Celda("oache", False))
         listEstCeldas.Add(New Modelos.Celda("oaest", False))
-
+        listEstCeldas.Add(New Modelos.Celda("oataalm", False))
         Return listEstCeldas
     End Function
 
@@ -2422,6 +2428,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
 
     Private Sub F0_Comprobante_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         _prIniciarTodo()
+
     End Sub
 
 
@@ -3576,6 +3583,24 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
     Private Sub tbNombre_KeyDown(sender As Object, e As KeyEventArgs) Handles tbNombre.KeyDown
         If e.KeyData = Keys.Enter Or e.KeyData = Keys.Tab Then
             tbGlosa.Focus()
+        End If
+    End Sub
+
+    Private Sub SupTabItemBusqueda_Click(sender As Object, e As EventArgs) Handles SupTabItemBusqueda.Click
+
+    End Sub
+
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        _PMIniciarTodo()
+    End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        If CheckBox1.Checked = True Then
+
+            _PMIniciarTodo()
+        Else
+            comboanio.SelectedItem = 1
+            comboMeses.SelectedItem = 1
         End If
     End Sub
 End Class

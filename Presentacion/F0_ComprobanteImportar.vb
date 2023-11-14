@@ -12,7 +12,7 @@ Public Class F0_ComprobanteImportar
             dtBuscador = L_prComprobanteGeneral2(gi_empresaNumi, tbFechaDel.Value.ToString("yyyy/MM/dd"), tbFechaAl.Value.ToString("yyyy/MM/dd"))
 
         Else
-            dtBuscador = L_prComprobanteGeneral(gi_empresaNumi)
+            dtBuscador = L_prComprobanteGeneral(gi_empresaNumi, "", "")
         End If
 
         Dim _MListEstBuscador As New List(Of Modelos.Celda)
