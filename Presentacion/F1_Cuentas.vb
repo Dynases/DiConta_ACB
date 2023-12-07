@@ -721,6 +721,37 @@ Public Class F1_Cuentas
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
 
     End Sub
+    ' Agregamos una propiedad para almacenar la referencia al formulario padre
+    Private _formularioPadre As PR_LibroMayor
+
+    ' Constructor que toma una referencia al formulario padre como parámetro
+    Private _vr1 As String
+    Private _vr2 As String
+    Private _vr3 As String
+    Public ReadOnly Property Vr1 As String
+        Get
+            Return _vr1
+        End Get
+    End Property
+    Public ReadOnly Property Vr2 As String
+        Get
+            Return _vr2
+        End Get
+    End Property
+    Public ReadOnly Property Vr3 As String
+        Get
+            Return _vr3
+        End Get
+    End Property
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim frm As New PR_LibroMayor()
 
 
+        Me.Close()
+        frm.tbNumi.Text = tbNumi.Text
+        _vr1 = tbCuenta.Text
+        _vr2 = tbDesc.Text
+        _vr3 = tbNumi.Text
+    End Sub
 End Class

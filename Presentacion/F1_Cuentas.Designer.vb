@@ -41,6 +41,7 @@ Partial Class F1_Cuentas
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.grDetalle = New Janus.Windows.GridEX.GridEX()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.tbcuenta3 = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.GroupPanel2 = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.tbEmpresa = New Janus.Windows.GridEX.EditControls.MultiColumnCombo()
@@ -108,15 +109,16 @@ Partial Class F1_Cuentas
         Me.SuperTabPrincipal.ControlBox.Name = ""
         Me.SuperTabPrincipal.ControlBox.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.SuperTabPrincipal.ControlBox.MenuBox, Me.SuperTabPrincipal.ControlBox.CloseBox})
         Me.SuperTabPrincipal.Margin = New System.Windows.Forms.Padding(4)
+        Me.SuperTabPrincipal.SelectedTabIndex = 1
         Me.SuperTabPrincipal.Size = New System.Drawing.Size(853, 602)
-        Me.SuperTabPrincipal.Controls.SetChildIndex(Me.SuperTabControlPanelBuscador, 0)
         Me.SuperTabPrincipal.Controls.SetChildIndex(Me.SuperTabControlPanelRegistro, 0)
+        Me.SuperTabPrincipal.Controls.SetChildIndex(Me.SuperTabControlPanelBuscador, 0)
         '
         'SuperTabControlPanelBuscador
         '
         Me.SuperTabControlPanelBuscador.Location = New System.Drawing.Point(0, 0)
         Me.SuperTabControlPanelBuscador.Margin = New System.Windows.Forms.Padding(4)
-        Me.SuperTabControlPanelBuscador.Size = New System.Drawing.Size(821, 507)
+        Me.SuperTabControlPanelBuscador.Size = New System.Drawing.Size(821, 602)
         '
         'SuperTabControlPanelRegistro
         '
@@ -534,6 +536,7 @@ Partial Class F1_Cuentas
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Controls.Add(Me.tbcuenta3)
         Me.Panel2.Controls.Add(Me.GroupPanel2)
         Me.Panel2.Controls.Add(Me.tbAuxiliar)
@@ -557,6 +560,16 @@ Partial Class F1_Cuentas
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(366, 308)
         Me.Panel2.TabIndex = 107
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(219, 61)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(111, 23)
+        Me.Button1.TabIndex = 139
+        Me.Button1.Text = "V-Libro Mayor"
+        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Visible = False
         '
         'tbcuenta3
         '
@@ -942,4 +955,5 @@ Partial Class F1_Cuentas
     Friend WithEvents GroupPanel2 As DevComponents.DotNetBar.Controls.GroupPanel
     Friend WithEvents tbEmpresa As Janus.Windows.GridEX.EditControls.MultiColumnCombo
     Friend WithEvents tbcuenta3 As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents Button1 As Button
 End Class

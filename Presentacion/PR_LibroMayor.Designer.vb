@@ -39,6 +39,7 @@ Partial Class PR_LibroMayor
         Me.tbReferencia = New System.Windows.Forms.TextBox()
         Me.tbFiltrarRef = New DevComponents.DotNetBar.Controls.SwitchButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.swCuenta = New DevComponents.DotNetBar.Controls.SwitchButton()
         Me.LabelX1 = New DevComponents.DotNetBar.LabelX()
         Me.tbMeses = New DevComponents.DotNetBar.Controls.SwitchButton()
         Me.LabelX5 = New DevComponents.DotNetBar.LabelX()
@@ -54,7 +55,8 @@ Partial Class PR_LibroMayor
         Me.LabelX6 = New DevComponents.DotNetBar.LabelX()
         Me.gpGrilla = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.grDetalle = New Janus.Windows.GridEX.GridEX()
-        Me.swCuenta = New DevComponents.DotNetBar.Controls.SwitchButton()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         CType(Me.SuperTabPrincipal, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuperTabPrincipal.SuspendLayout()
         Me.SuperTabControlPanelRegistro.SuspendLayout()
@@ -254,7 +256,7 @@ Partial Class PR_LibroMayor
         Me.GroupPanel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupPanel1.Location = New System.Drawing.Point(0, 0)
         Me.GroupPanel1.Name = "GroupPanel1"
-        Me.GroupPanel1.Size = New System.Drawing.Size(952, 180)
+        Me.GroupPanel1.Size = New System.Drawing.Size(952, 192)
         '
         '
         '
@@ -298,7 +300,7 @@ Partial Class PR_LibroMayor
         Me.GroupPanel4.Dock = System.Windows.Forms.DockStyle.Left
         Me.GroupPanel4.Location = New System.Drawing.Point(755, 0)
         Me.GroupPanel4.Name = "GroupPanel4"
-        Me.GroupPanel4.Size = New System.Drawing.Size(164, 159)
+        Me.GroupPanel4.Size = New System.Drawing.Size(164, 171)
         '
         '
         '
@@ -392,7 +394,7 @@ Partial Class PR_LibroMayor
         Me.GroupPanel3.Dock = System.Windows.Forms.DockStyle.Left
         Me.GroupPanel3.Location = New System.Drawing.Point(589, 0)
         Me.GroupPanel3.Name = "GroupPanel3"
-        Me.GroupPanel3.Size = New System.Drawing.Size(166, 159)
+        Me.GroupPanel3.Size = New System.Drawing.Size(166, 171)
         '
         '
         '
@@ -485,7 +487,7 @@ Partial Class PR_LibroMayor
         Me.GroupPanel2.Dock = System.Windows.Forms.DockStyle.Left
         Me.GroupPanel2.Location = New System.Drawing.Point(422, 0)
         Me.GroupPanel2.Name = "GroupPanel2"
-        Me.GroupPanel2.Size = New System.Drawing.Size(167, 159)
+        Me.GroupPanel2.Size = New System.Drawing.Size(167, 171)
         '
         '
         '
@@ -543,6 +545,8 @@ Partial Class PR_LibroMayor
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.CheckBox1)
+        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.swCuenta)
         Me.Panel1.Controls.Add(Me.LabelX1)
         Me.Panel1.Controls.Add(Me.tbMeses)
@@ -560,8 +564,29 @@ Partial Class PR_LibroMayor
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(422, 159)
+        Me.Panel1.Size = New System.Drawing.Size(422, 171)
         Me.Panel1.TabIndex = 248
+        '
+        'swCuenta
+        '
+        '
+        '
+        '
+        Me.swCuenta.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.swCuenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.swCuenta.Location = New System.Drawing.Point(8, 99)
+        Me.swCuenta.Margin = New System.Windows.Forms.Padding(2)
+        Me.swCuenta.Name = "swCuenta"
+        Me.swCuenta.OffBackColor = System.Drawing.Color.Aqua
+        Me.swCuenta.OffText = "Todas Cuentas"
+        Me.swCuenta.OnBackColor = System.Drawing.Color.Gold
+        Me.swCuenta.OnText = "Una Cuenta"
+        Me.swCuenta.ReadOnlyMarkerColor = System.Drawing.Color.Empty
+        Me.swCuenta.Size = New System.Drawing.Size(102, 25)
+        Me.swCuenta.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.swCuenta.TabIndex = 246
+        Me.swCuenta.Value = True
+        Me.swCuenta.ValueObject = "Y"
         '
         'LabelX1
         '
@@ -582,7 +607,7 @@ Partial Class PR_LibroMayor
         '
         '
         Me.tbMeses.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.tbMeses.Location = New System.Drawing.Point(114, 128)
+        Me.tbMeses.Location = New System.Drawing.Point(116, 127)
         Me.tbMeses.Margin = New System.Windows.Forms.Padding(2)
         Me.tbMeses.Name = "tbMeses"
         Me.tbMeses.OffText = "SIN TOTAL POR MES"
@@ -719,9 +744,9 @@ Partial Class PR_LibroMayor
         Me.gpGrilla.Controls.Add(Me.grDetalle)
         Me.gpGrilla.DisabledBackColor = System.Drawing.Color.Empty
         Me.gpGrilla.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.gpGrilla.Location = New System.Drawing.Point(0, 180)
+        Me.gpGrilla.Location = New System.Drawing.Point(0, 192)
         Me.gpGrilla.Name = "gpGrilla"
-        Me.gpGrilla.Size = New System.Drawing.Size(952, 270)
+        Me.gpGrilla.Size = New System.Drawing.Size(952, 258)
         '
         '
         '
@@ -759,29 +784,30 @@ Partial Class PR_LibroMayor
         Me.grDetalle.Dock = System.Windows.Forms.DockStyle.Fill
         Me.grDetalle.Location = New System.Drawing.Point(0, 0)
         Me.grDetalle.Name = "grDetalle"
-        Me.grDetalle.Size = New System.Drawing.Size(946, 249)
+        Me.grDetalle.Size = New System.Drawing.Size(946, 237)
         Me.grDetalle.TabIndex = 3
         '
-        'swCuenta
+        'Button1
         '
+        Me.Button1.Location = New System.Drawing.Point(282, 145)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(120, 23)
+        Me.Button1.TabIndex = 247
+        Me.Button1.Text = "Seleccionar Cuenta"
+        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Visible = False
         '
+        'CheckBox1
         '
-        '
-        Me.swCuenta.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.swCuenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.swCuenta.Location = New System.Drawing.Point(8, 99)
-        Me.swCuenta.Margin = New System.Windows.Forms.Padding(2)
-        Me.swCuenta.Name = "swCuenta"
-        Me.swCuenta.OffBackColor = System.Drawing.Color.Aqua
-        Me.swCuenta.OffText = "Todas Cuentas"
-        Me.swCuenta.OnBackColor = System.Drawing.Color.Gold
-        Me.swCuenta.OnText = "Una Cuenta"
-        Me.swCuenta.ReadOnlyMarkerColor = System.Drawing.Color.Empty
-        Me.swCuenta.Size = New System.Drawing.Size(102, 25)
-        Me.swCuenta.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.swCuenta.TabIndex = 246
-        Me.swCuenta.Value = True
-        Me.swCuenta.ValueObject = "Y"
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Font = New System.Drawing.Font("Bodoni MT Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox1.Location = New System.Drawing.Point(116, 149)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(135, 19)
+        Me.CheckBox1.TabIndex = 407
+        Me.CheckBox1.Text = "Seleccionar Mayor"
+        Me.CheckBox1.TextAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'PR_LibroMayor
         '
@@ -854,4 +880,6 @@ Partial Class PR_LibroMayor
     Friend WithEvents lbAuxiliar02 As DevComponents.DotNetBar.LabelX
     Friend WithEvents cbAuxiliar02 As Janus.Windows.GridEX.EditControls.MultiColumnCombo
     Friend WithEvents swCuenta As DevComponents.DotNetBar.Controls.SwitchButton
+    Friend WithEvents Button1 As Button
+    Friend WithEvents CheckBox1 As CheckBox
 End Class

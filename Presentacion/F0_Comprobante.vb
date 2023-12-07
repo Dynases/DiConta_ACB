@@ -2273,13 +2273,14 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         Dim listEstCeldas As New List(Of Modelos.Celda)
         listEstCeldas.Add(New Modelos.Celda("oanumi", True, "ID", 70))
         listEstCeldas.Add(New Modelos.Celda("oatip", False))
-        listEstCeldas.Add(New Modelos.Celda("oanumdoc", True, "NRO. DOCUMENTO", 150))
+        listEstCeldas.Add(New Modelos.Celda("oanumdoc1", True, "NRO. DOCUMENTO", 100))
+        listEstCeldas.Add(New Modelos.Celda("oanumfac", True, "NRO. FACTURA", 100))
         listEstCeldas.Add(New Modelos.Celda("cndesc1", True, "TIPO", 100))
         listEstCeldas.Add(New Modelos.Celda("oaano", False))
         listEstCeldas.Add(New Modelos.Celda("oames", False))
         listEstCeldas.Add(New Modelos.Celda("oanum", True, "NUMERO", 100))
         listEstCeldas.Add(New Modelos.Celda("oafdoc", True, "FECHA", 100))
-        listEstCeldas.Add(New Modelos.Celda("oatc", True, "TIPO DE CAMBIO", 120, "0.00"))
+        listEstCeldas.Add(New Modelos.Celda("oatc", True, "TIPO DE CAMBIO", 50, "0.00"))
         listEstCeldas.Add(New Modelos.Celda("oaglosa", True, "GLOSA", 200))
         listEstCeldas.Add(New Modelos.Celda("oaobs", True, "OBSERVACION", 200))
         listEstCeldas.Add(New Modelos.Celda("oaemp", False))
@@ -2287,7 +2288,6 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         listEstCeldas.Add(New Modelos.Celda("oaban", False))
         listEstCeldas.Add(New Modelos.Celda("oache", False))
         listEstCeldas.Add(New Modelos.Celda("oaest", False))
-        listEstCeldas.Add(New Modelos.Celda("oataalm", False))
         Return listEstCeldas
     End Function
 

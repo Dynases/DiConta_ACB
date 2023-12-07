@@ -414,6 +414,22 @@ BDDiconCaneros .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
 
         Return _Tabla
     End Function
+
+    Public Shared Function L_prCuentaReporteLibroMayor1(_numiCuenta As String, _fechaDel As String, _fechaAl As String) As DataTable
+        Dim _Tabla As DataTable
+
+        Dim _listParam As New List(Of Datos.DParametro)
+
+        _listParam.Add(New Datos.DParametro("@tipo", 506))
+        _listParam.Add(New Datos.DParametro("@canumi", _numiCuenta))
+        _listParam.Add(New Datos.DParametro("@fecha1", _fechaDel))
+        _listParam.Add(New Datos.DParametro("@fecha2", _fechaAl))
+        _listParam.Add(New Datos.DParametro("@uact", L_Usuario))
+
+        _Tabla = D_ProcedimientoConParam("sp_dg_TC001", _listParam)
+
+        Return _Tabla
+    End Function
     Public Shared Function L_prCuentaReporteLibroMayorTodos(_numiEmpresa As String, _fechaDel As String, _fechaAl As String) As DataTable
         Dim _Tabla As DataTable
 

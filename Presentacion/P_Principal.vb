@@ -347,7 +347,7 @@ Public Class P_Principal
 
         SideNav1.IsMenuExpanded = False
         Ventana.Select()
-        Dim frm As New F1_Cuentas
+        Dim frm As New F1_Cuentas()
         frm._nameButton = btConfCuenta.Name
         frm._modulo = FP_Configuracion
         Dim tab3 As SuperTabItem = superTabControl3.CreateTab(frm.Text)

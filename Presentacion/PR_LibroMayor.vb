@@ -71,7 +71,11 @@ Public Class PR_LibroMayor
     Public Sub Interpretar(ByRef dt As DataTable)
         If (swAuxiliar01.Value = True And swAuxiliar02.Value = True) Then
             If swCuenta.Value = True Then
-                dt = L_prCuentaReporteLibroMayor(tbNumi.Tag.ToString.Trim, tbFechaDel.Value.ToString("yyyy/MM/dd"), tbFechaAl.Value.ToString("yyyy/MM/dd"))
+                If CheckBox1.Checked = False Then
+                    dt = L_prCuentaReporteLibroMayor(tbNumi.Tag.ToString.Trim, tbFechaDel.Value.ToString("yyyy/MM/dd"), tbFechaAl.Value.ToString("yyyy/MM/dd"))
+                Else
+                    dt = L_prCuentaReporteLibroMayor1(tbNumi.Tag.ToString.Trim, tbFechaDel.Value.ToString("yyyy/MM/dd"), tbFechaAl.Value.ToString("yyyy/MM/dd"))
+                End If
                 Return
             Else
                 dt = L_prCuentaReporteLibroMayorTodos(gi_empresaNumi, tbFechaDel.Value.ToString("yyyy/MM/dd"), tbFechaAl.Value.ToString("yyyy/MM/dd"))
@@ -955,6 +959,33 @@ Public Class PR_LibroMayor
         If swCuenta.Value = False Then
             tbNumi.Text = ""
             tbCuenta.Text = ""
+        End If
+    End Sub
+    ' Propiedad pública para almacenar el valor del formulario hijo
+    Public Property ValorDesdeHijo As String
+    Public Sub MostrarMensaje()
+        tbNumi.Text = ValorDesdeHijo
+    End Sub
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        ' Crear una instancia del formulario hijo y pasar la referencia al formulario padre
+        Dim formularioHijo As New F1_Cuentas
+        formularioHijo._nameButton = "btConfCuenta"
+        formularioHijo._modulo = FP_Configuracion
+        formularioHijo._tab = tab3
+        formularioHijo.Button1.Visible = True
+        formularioHijo.ShowDialog()
+        tbNumi.Text = formularioHijo.Vr1
+        tbCuenta.Text = formularioHijo.Vr2
+        tbNumi.Tag = formularioHijo.Vr3
+    End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        tbNumi.Text = ""
+        tbCuenta.Text = ""
+        If CheckBox1.Checked = True Then
+            Button1.Visible = True
+        Else
+            Button1.Visible = False
         End If
     End Sub
 End Class

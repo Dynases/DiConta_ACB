@@ -208,10 +208,10 @@ Partial Class P_Principal
         '
         Me.SideNav1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.SideNav1.Controls.Add(Me.SideNav_Logistica)
+        Me.SideNav1.Controls.Add(Me.SideNav_Conf)
         Me.SideNav1.Controls.Add(Me.SideNavPanel7)
         Me.SideNav1.Controls.Add(Me.SideNavPanel6)
         Me.SideNav1.Controls.Add(Me.SideNavPanel5)
-        Me.SideNav1.Controls.Add(Me.SideNav_Conf)
         Me.SideNav1.Controls.Add(Me.SideNavPanel8)
         Me.SideNav1.Controls.Add(Me.SideNavPanel4)
         Me.SideNav1.Controls.Add(Me.SideNavPanel3)
@@ -1013,7 +1013,7 @@ Partial Class P_Principal
         Me.SideNav_Conf.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SideNav_Conf.Location = New System.Drawing.Point(143, 36)
         Me.SideNav_Conf.Name = "SideNav_Conf"
-        Me.SideNav_Conf.Size = New System.Drawing.Size(636, 524)
+        Me.SideNav_Conf.Size = New System.Drawing.Size(822, 524)
         Me.SideNav_Conf.TabIndex = 2
         Me.SideNav_Conf.Visible = False
         '
@@ -1036,7 +1036,7 @@ Partial Class P_Principal
         Me.MetroTilePanel1.Location = New System.Drawing.Point(0, 0)
         Me.MetroTilePanel1.MultiLine = True
         Me.MetroTilePanel1.Name = "MetroTilePanel1"
-        Me.MetroTilePanel1.Size = New System.Drawing.Size(636, 410)
+        Me.MetroTilePanel1.Size = New System.Drawing.Size(822, 410)
         Me.MetroTilePanel1.TabIndex = 0
         Me.MetroTilePanel1.Text = "mtp1Configuracion"
         '
@@ -1242,7 +1242,7 @@ Partial Class P_Principal
         Me.PictureBox4.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PictureBox4.Location = New System.Drawing.Point(0, 410)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(636, 114)
+        Me.PictureBox4.Size = New System.Drawing.Size(822, 114)
         Me.PictureBox4.TabIndex = 2
         Me.PictureBox4.TabStop = False
         Me.PictureBox4.Visible = False
