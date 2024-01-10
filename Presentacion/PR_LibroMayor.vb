@@ -158,6 +158,7 @@ Public Class PR_LibroMayor
 
         Dim debe, haber, saldo, debeSus, haberSus, saldoSus As Double
         Dim sumDebe, sumHaber, sumDebeSus, sumHaberSus As Double
+
         sumDebe = 0
         sumHaber = 0
         sumDebeSus = 0
@@ -176,8 +177,40 @@ Public Class PR_LibroMayor
                 saldo = saldo - haber
                 saldoSus = saldoSus - haberSus
             End If
-            dt.Rows(i).Item("saldo") = saldo
-            dt.Rows(i).Item("saldoSus") = saldoSus
+            If CheckBox1.Checked = True Then
+                If i = 1 Then
+                    dt.Rows(i).Item("saldo") = saldo
+                    dt.Rows(i).Item("saldoSus") = saldoSus
+                Else
+
+                    If dt.Rows(i).Item("cactaucg") <> dt.Rows(i - 1).Item("cactaucg") Then
+                        saldo = 0
+                        saldoSus = 0
+                        If debe > 0 Then
+                            saldo = saldo + debe
+                            saldoSus = saldoSus + debeSus
+                        Else
+                            saldo = saldo - haber
+                            saldoSus = saldoSus - haberSus
+                        End If
+                        dt.Rows(i).Item("saldo") = saldo
+                        dt.Rows(i).Item("saldoSus") = saldoSus
+
+                    Else
+                        dt.Rows(i).Item("saldo") = saldo
+                        dt.Rows(i).Item("saldoSus") = saldoSus
+                    End If
+
+
+
+                End If
+
+            Else
+                dt.Rows(i).Item("saldo") = saldo
+                dt.Rows(i).Item("saldoSus") = saldoSus
+            End If
+
+
             sumDebe = sumDebe + debe
             sumHaber = sumHaber + haber
             sumDebeSus = sumDebeSus + debeSus
@@ -435,6 +468,7 @@ Public Class PR_LibroMayor
                     saldoSus = saldoSus - haberSus
                 End If
                 dt.Rows(i).Item("saldo") = saldo
+
                 dt.Rows(i).Item("saldoSus") = saldoSus
                 sumDebe = sumDebe + debe
                 sumHaber = sumHaber + haber
@@ -634,31 +668,62 @@ Public Class PR_LibroMayor
                 P_Global.Visualizador.BringToFront() 'Comentar
 
             Else
-                Dim objrep As New R_LibroMayor2
 
-                'ahora lo mando al visualizador
-                P_Global.Visualizador = New Visualizador
-                objrep.SetDataSource(dt)
+                If CheckBox1.Checked = True Then
+                    Dim objrep As New R_LibroMayor3
 
-                objrep.SetParameterValue("fechaDesde", tbFechaDel.Value.ToString("dd/MM/yyyy"))
-                objrep.SetParameterValue("fechaHasta", tbFechaAl.Value.ToString("dd/MM/yyyy"))
-                objrep.SetParameterValue("titulo", gs_empresaDesc.ToUpper)
-                objrep.SetParameterValue("nit", gs_empresaNit.ToUpper)
-                objrep.SetParameterValue("cliente", IIf(tbCliente.Tag > 0, _cobrarPagar, ""))
-                objrep.SetParameterValue("nroCuenta", tbNumi.Text)
-                objrep.SetParameterValue("cuenta", tbCuenta.Text)
-                objrep.SetParameterValue("moneda", tbMoneda.Value)
-                objrep.SetParameterValue("auxiliar01", IIf(tbMoneda.Value = 0, "Bolivianos", IIf(tbMoneda.Value = 1, "Dolares", "")))
-                objrep.SetParameterValue("auxiliar02", Auxiliar02)
-                If tbMeses.Value = True Then
-                    objrep.SetParameterValue("conMeses", 1)
+                    'ahora lo mando al visualizador
+                    P_Global.Visualizador = New Visualizador
+                    objrep.SetDataSource(dt)
+
+                    objrep.SetParameterValue("fechaDesde", tbFechaDel.Value.ToString("dd/MM/yyyy"))
+                    objrep.SetParameterValue("fechaHasta", tbFechaAl.Value.ToString("dd/MM/yyyy"))
+                    objrep.SetParameterValue("titulo", gs_empresaDesc.ToUpper)
+                    objrep.SetParameterValue("nit", gs_empresaNit.ToUpper)
+                    objrep.SetParameterValue("cliente", IIf(tbCliente.Tag > 0, _cobrarPagar, ""))
+                    objrep.SetParameterValue("nroCuenta", tbNumi.Text)
+                    objrep.SetParameterValue("cuenta", tbCuenta.Text)
+                    objrep.SetParameterValue("moneda", tbMoneda.Value)
+                    objrep.SetParameterValue("auxiliar01", IIf(tbMoneda.Value = 0, "Bolivianos", IIf(tbMoneda.Value = 1, "Dolares", "")))
+                    objrep.SetParameterValue("auxiliar02", Auxiliar02)
+                    If tbMeses.Value = True Then
+                        objrep.SetParameterValue("conMeses", 1)
+                    Else
+                        objrep.SetParameterValue("conMeses", 0)
+                    End If
+
+                    P_Global.Visualizador.CRV1.ReportSource = objrep 'Comentar
+                    P_Global.Visualizador.Show() 'Comentar
+                    P_Global.Visualizador.BringToFront() 'Comentar
                 Else
-                    objrep.SetParameterValue("conMeses", 0)
+                    Dim objrep As New R_LibroMayor2
+
+                    'ahora lo mando al visualizador
+                    P_Global.Visualizador = New Visualizador
+                    objrep.SetDataSource(dt)
+
+                    objrep.SetParameterValue("fechaDesde", tbFechaDel.Value.ToString("dd/MM/yyyy"))
+                    objrep.SetParameterValue("fechaHasta", tbFechaAl.Value.ToString("dd/MM/yyyy"))
+                    objrep.SetParameterValue("titulo", gs_empresaDesc.ToUpper)
+                    objrep.SetParameterValue("nit", gs_empresaNit.ToUpper)
+                    objrep.SetParameterValue("cliente", IIf(tbCliente.Tag > 0, _cobrarPagar, ""))
+                    objrep.SetParameterValue("nroCuenta", tbNumi.Text)
+                    objrep.SetParameterValue("cuenta", tbCuenta.Text)
+                    objrep.SetParameterValue("moneda", tbMoneda.Value)
+                    objrep.SetParameterValue("auxiliar01", IIf(tbMoneda.Value = 0, "Bolivianos", IIf(tbMoneda.Value = 1, "Dolares", "")))
+                    objrep.SetParameterValue("auxiliar02", Auxiliar02)
+                    If tbMeses.Value = True Then
+                        objrep.SetParameterValue("conMeses", 1)
+                    Else
+                        objrep.SetParameterValue("conMeses", 0)
+                    End If
+
+                    P_Global.Visualizador.CRV1.ReportSource = objrep 'Comentar
+                    P_Global.Visualizador.Show() 'Comentar
+                    P_Global.Visualizador.BringToFront() 'Comentar
+
                 End If
 
-                P_Global.Visualizador.CRV1.ReportSource = objrep 'Comentar
-                P_Global.Visualizador.Show() 'Comentar
-                P_Global.Visualizador.BringToFront() 'Comentar
             End If
 
         End If
