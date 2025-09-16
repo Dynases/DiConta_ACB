@@ -120,7 +120,7 @@ Public Class PR_EstadoCuentasActivoPasivo
             '    Return
             'End If
         Else
-            dt = L_prCuentaReporteEstadoCuentasActivoPasivoSinGestion(gi_empresaNumi, tbFechaDel.Value.ToString("yyyy/MM/dd"), tbFechaAl.Value.ToString("yyyy/MM/dd"))
+            'dt = L_prCuentaReporteEstadoCuentasActivoPasivoSinGestion(gi_empresaNumi, tbFechaDel.Value.ToString("yyyy/MM/dd"), tbFechaAl.Value.ToString("yyyy/MM/dd"))
 
         End If
         If (dt.Rows.Count > 0) Then

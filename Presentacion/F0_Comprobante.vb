@@ -276,7 +276,12 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         '_PMOLimpiar()
 
         If (CType(tbTipo.DataSource, DataTable).Rows.Count > 0) Then
-            tbTipo.Value = 1
+            If gs_user = "EDUARDO" Then
+                tbTipo.Value = 3
+            Else
+                tbTipo.Value = 1
+            End If
+
 
         End If
     End Sub
@@ -2028,7 +2033,12 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         PanelInferior.Visible = False
 
         If _MNuevo = True Then
-            tbTipo.ReadOnly = False
+            If gs_user = "EDUARDO" Then
+                tbTipo.ReadOnly = True
+            Else
+                tbTipo.ReadOnly = False
+            End If
+
 
         End If
 
@@ -2288,6 +2298,12 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         listEstCeldas.Add(New Modelos.Celda("oaban", False))
         listEstCeldas.Add(New Modelos.Celda("oache", False))
         listEstCeldas.Add(New Modelos.Celda("oaest", False))
+        listEstCeldas.Add(New Modelos.Celda("usuarioreg", False))
+        listEstCeldas.Add(New Modelos.Celda("fecha", False))
+        listEstCeldas.Add(New Modelos.Celda("hora", False))
+        listEstCeldas.Add(New Modelos.Celda("usuarioact", False))
+        listEstCeldas.Add(New Modelos.Celda("fechaAct", False))
+        listEstCeldas.Add(New Modelos.Celda("horaAct", False))
         Return listEstCeldas
     End Function
 
@@ -2309,10 +2325,12 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
             tbNombre.Text = .GetValue("oanom").ToString
             tbBanco.Text = .GetValue("oaban").ToString
             tbChque.Text = .GetValue("oache").ToString
-            'lbFecha.Text = CType(.GetValue("ybfact"), Date).ToString("dd/MM/yyyy")
-            'lbHora.Text = .GetValue("ybhact").ToString
-            'lbUsuario.Text = .GetValue("ybuact").ToString
-
+            lbFecha.Text = CType(.GetValue("fecha"), Date).ToString("dd/MM/yyyy")
+            lbHora.Text = .GetValue("hora").ToString
+            lbUsuario.Text = .GetValue("usuarioreg").ToString
+            Label1.Text = .GetValue("usuarioact").ToString
+            Label2.Text = .GetValue("fechaAct").ToString
+            Label3.Text = .GetValue("horaAct").ToString
             'CARGAR DETALLE
             _prCargarGridDetalle(tbNumi.Text)
         End With
@@ -2388,13 +2406,25 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
     End Sub
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
-        tbTipo.Focus()
-        _ultimaFecha = tbFecha.Value
-        _PMModificar()
+        If Label1.Text = gs_user Then
+            If tbTipo.SelectedIndex = 2 Then
+                tbTipo.Focus()
+                _ultimaFecha = tbFecha.Value
+                _PMModificar()
+            Else
+                MessageBox.Show("NO TIENE PERMITIDO MODIFICAR ESTE ASIENTO CONTABLE")
+            End If
+        Else
+            MessageBox.Show("NO SE PUEDE MODIFICAR POR QUE EL USUARIO ACTUAL: " + gs_user + " NO COINCIDE CON EL USUARIO: " + Label1.Text + " QUE REGISTRO EL ASIENTO CONTABLE")
+        End If
+
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+
+
         _PMEliminar()
+
     End Sub
 
     Private Sub btnGrabar_Click(sender As Object, e As EventArgs) Handles btnGrabar.Click
