@@ -276,7 +276,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         '_PMOLimpiar()
 
         If (CType(tbTipo.DataSource, DataTable).Rows.Count > 0) Then
-            If gs_user = "EDUARDO" Then
+            If gs_user = "EDUARDO" Or gs_user = "AMVARGAS" Or gs_user = "AVARGAS" Then
                 tbTipo.Value = 3
             Else
                 tbTipo.Value = 1
@@ -1741,17 +1741,17 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
     Private Sub _prImprimir()
         Dim _Autorizacion, _Nit, _Fechainv, _Total, _Key, _Cod_Control, _Hora,
             _Literal, _TotalDecimal, _TotalDecimal2 As String
-        Dim objrep As New R_Comprobante2
+        Dim objrep As New R_Comprobante3
         Dim dt As New DataTable
         dt = L_prComprobanteReporteComprobante(tbNumi.Text)
         Dim _Ds, _Ds1, _Ds2, _Ds3 As New DataSet
         _Ds = L_prComprobanteReporteComprobante1(tbNumi.Text)
         'Literal 
 
-        _TotalLi = _Ds.Tables(0).Rows(0).Item("obhaberus")
+        _TotalLi = _Ds.Tables(0).Rows(0).Item("obhaberbs")
         _TotalDecimal = _TotalLi - Math.Truncate(_TotalLi)
         _TotalDecimal2 = CDbl(_TotalDecimal) * 100
-        Dim li As String = Facturacion.ConvertirLiteral.A_fnConvertirLiteral(CDbl(_TotalLi)) + "  " + IIf(_TotalDecimal2.Equals("0"), "00", _TotalDecimal2) + "/100 DOLARES AMERICANOS"
+        Dim li As String = Facturacion.ConvertirLiteral.A_fnConvertirLiteral(CDbl(_TotalLi)) + "  " + IIf(_TotalDecimal2.Equals("0"), "00", _TotalDecimal2) + "/100 BOLIVIANOS"
         Dim presidente = "", tesorero = "", conforme = ""
         Dim nombre As String = tbNombre.Text
         Dim banco As String = tbBanco.Text
@@ -1873,7 +1873,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         Else
             res = num
         End If
-        Return Res
+        Return res
     End Function
 
     Private Sub ELIMINAR_Click(sender As Object, e As EventArgs)
@@ -2033,12 +2033,13 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         PanelInferior.Visible = False
 
         If _MNuevo = True Then
-            If gs_user = "EDUARDO" Then
+            If gs_user = "EDUARDO" Or gs_user = "AVARGAS" Or gs_user = "AMVARGAS" Then
                 tbTipo.ReadOnly = True
+
             Else
                 tbTipo.ReadOnly = False
-            End If
 
+            End If
 
         End If
 
@@ -2125,7 +2126,6 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         Dim dtDetalle As DataTable = CType(grDetalle.DataSource, DataTable)
         _prPonerLine(dtDetalle)
         dtDetalle = dtDetalle.DefaultView.ToTable(True, "obnumi", "obnumito1", "oblin", "obcuenta", "obaux1", "obaux2", "obaux3", "obobs", "obobs2", "obcheque", "obtc", "obdebebs", "obhaberbs", "obdebeus", "obhaberus", "estado")
-
 
         If tbMes.Text.Trim.Count = 1 Then
             tbMes.Text = "0" + tbMes.Text
@@ -2214,7 +2214,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         Dim debeSus As Double = grDetalle.GetTotal(grDetalle.RootTable.Columns("obdebeus"), AggregateFunction.Sum)
         Dim haberSus As Double = grDetalle.GetTotal(grDetalle.RootTable.Columns("obhaberus"), AggregateFunction.Sum)
 
-        If debeSus <> haberSus Then
+        If debeBs <> haberBs Then
             _ok = True
             ToastNotification.Show(Me, "No se puede grabar el comprobante porque esta desbalanceado".ToUpper, My.Resources.WARNING, 3000, eToastGlowColor.Blue, eToastPosition.TopCenter)
         End If
@@ -2222,9 +2222,9 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
 
         If _ok = True Then
 
-            If debeSus <> haberSus Then
+            If debeBs <> haberBs Then
                 Dim esDebe As Boolean = True
-                Dim diferencia As Double = debeSus - haberSus
+                Dim diferencia As Double = debeBs - haberBs
                 'verifico si la diferencia es para el debe
                 If diferencia < 0 Then 'si es negativo la diferencia es para el haber
                     esDebe = False
@@ -2241,7 +2241,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
                         'a.obdebebs,a.obhaberbs,a.obdebeus, a.obhaberus, estado
                         dt.Rows.Add(0, 0, 0, _numiCuentaAjuste, 6010302001, 0, "Diferencia de Cambio", "Diferencia de Cambio", "SU",
                                     0, 0, 0, 0, 0, 0, "", "DIFERENCIA", 0,
-                                    0, 6.96, IIf(esDebe = False, diferencia, 0), IIf(esDebe = True, diferencia, 0),
+                                    0, tbTipoCambio.Text, IIf(esDebe = False, diferencia, 0), IIf(esDebe = True, diferencia, 0),
                                     0, 0, 0, 0, 0, 0, 0)
 
                     Else
@@ -2407,13 +2407,21 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
         If Label1.Text = gs_user Then
-            If tbTipo.SelectedIndex = 2 Then
+            If gs_user = "ROSAB" Then
                 tbTipo.Focus()
                 _ultimaFecha = tbFecha.Value
                 _PMModificar()
             Else
-                MessageBox.Show("NO TIENE PERMITIDO MODIFICAR ESTE ASIENTO CONTABLE")
+                If tbTipo.SelectedIndex = 2 Then
+                    tbTipo.Focus()
+                    _ultimaFecha = tbFecha.Value
+                    _PMModificar()
+                Else
+                    MessageBox.Show("NO TIENE PERMITIDO MODIFICAR ESTE ASIENTO CONTABLE")
+                End If
             End If
+
+
         Else
             MessageBox.Show("NO SE PUEDE MODIFICAR POR QUE EL USUARIO ACTUAL: " + gs_user + " NO COINCIDE CON EL USUARIO: " + Label1.Text + " QUE REGISTRO EL ASIENTO CONTABLE")
         End If
@@ -2458,6 +2466,14 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
 
     Private Sub F0_Comprobante_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         _prIniciarTodo()
+        ' Bloquea edición directa de las columnas en dólares:
+        ' el Boliviano es la única puerta de entrada, el USD siempre se calcula.
+        grDetalle.RootTable.Columns("obdebeus").EditType = EditType.NoEdit
+        grDetalle.RootTable.Columns("obhaberus").EditType = EditType.NoEdit
+
+        ' Estilo visual para reforzar que son campos calculados (opcional pero recomendado)
+        'grDetalle.RootTable.Columns("obdebeus").FormatStyle.BackColor = System.Drawing.Color.WhiteSmoke
+        'grDetalle.RootTable.Columns("obhaberus").FormatStyle.BackColor = System.Drawing.Color.WhiteSmoke
 
     End Sub
 
@@ -2946,66 +2962,114 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
 
         _prIsBalanceado()
     End Sub
-
+    Private _actualizandoPorCodigo As Boolean = False
     Private Sub grDetalle_CellValueChanged(sender As Object, e As ColumnActionEventArgs) Handles grDetalle.CellValueChanged
-        'Dim f As Integer = grDetalle.Row
-        'Dim c As Integer = grDetalle.Col
+        ' Evita que el propio cálculo automático vuelva a disparar este evento (ping-pong/recursión)
+        If _actualizandoPorCodigo Then Exit Sub
 
-        'If grDetalle.RootTable.Columns(c).Key = "cacta" Then
-        '    panelAyudaCuenta.Visible = True
+        Dim col As String = grDetalle.RootTable.Columns(grDetalle.Col).Key
 
-        '    Dim codCuenta As String = grDetalle.GetValue("cacta")
-        '    grAyudaCuenta.RemoveFilters()
-        '    grAyudaCuenta.RootTable.ApplyFilter(New Janus.Windows.GridEX.GridEXFilterCondition(grAyudaCuenta.RootTable.Columns("cacta"), Janus.Windows.GridEX.ConditionOperator.BeginsWith, codCuenta))
-        'End If
-
-        If True Then
-            If grDetalle.RootTable.Columns(grDetalle.Col).Key = "obdebebs" Then 'And grDetalle.GetValue("obdebebs") <> 0
-                If IsNumeric(grDetalle.GetValue("obdebebs")) Or grDetalle.GetValue("obdebebs") = "." Then
-                    Dim conversion As Double = grDetalle.GetValue("obdebebs") / grDetalle.GetValue("obtc")
-                    conversion = to3Decimales(conversion)
-                    grDetalle.SetValue("obdebeus", Round(conversion, 2))
-                    grDetalle.SetValue("obhaberus", 0)
-                    grDetalle.SetValue("obhaberbs", 0)
-
-                End If
-
-            End If
-            If grDetalle.RootTable.Columns(grDetalle.Col).Key = "obhaberbs" Then 'And grDetalle.GetValue("obhaberbs") <> 0
-                If IsNumeric(grDetalle.GetValue("obhaberbs")) Or grDetalle.GetValue("obhaberbs") = "." Then
-                    Dim conversion As Double = grDetalle.GetValue("obhaberbs") / grDetalle.GetValue("obtc")
-                    conversion = to3Decimales(conversion)
-                    grDetalle.SetValue("obhaberus", Round(conversion, 2))
-                    grDetalle.SetValue("obdebeus", 0)
-                    grDetalle.SetValue("obdebebs", 0)
-
-                End If
-            End If
-            If grDetalle.RootTable.Columns(grDetalle.Col).Key = "obdebeus" Then 'And grDetalle.GetValue("obdebeus") <> 0
-                If IsNumeric(grDetalle.GetValue("obdebeus")) Or grDetalle.GetValue("obdebeus") = "." Then
-                    Dim conversion As Double = grDetalle.GetValue("obdebeus") * grDetalle.GetValue("obtc")
-                    conversion = to3Decimales(conversion)
-                    grDetalle.SetValue("obdebebs", Round(conversion, 2))
-                    grDetalle.SetValue("obhaberbs", 0)
-                    grDetalle.SetValue("obhaberus", 0)
-
-                End If
-
-
-            End If
-            If grDetalle.RootTable.Columns(grDetalle.Col).Key = "obhaberus" Then 'And grDetalle.GetValue("obhaberus") <> 0
-                If IsNumeric(grDetalle.GetValue("obhaberus")) Or grDetalle.GetValue("obhaberus") = "." Then
-                    Dim conversion As Double = grDetalle.GetValue("obhaberus") * grDetalle.GetValue("obtc")
-                    conversion = to3Decimales(conversion)
-                    grDetalle.SetValue("obhaberbs", Round(conversion, 2))
-                    grDetalle.SetValue("obdebebs", 0)
-                    grDetalle.SetValue("obdebeus", 0)
-
-                End If
-
+        If col = "obdebebs" Then
+            If IsNumeric(grDetalle.GetValue("obdebebs")) Or grDetalle.GetValue("obdebebs") = "." Then
+                _actualizandoPorCodigo = True
+                Dim conversion As Double = grDetalle.GetValue("obdebebs") / grDetalle.GetValue("obtc")
+                conversion = to3Decimales(conversion)
+                grDetalle.SetValue("obdebeus", Round(conversion, 2))
+                grDetalle.SetValue("obhaberus", 0)
+                grDetalle.SetValue("obhaberbs", 0)
+                _actualizandoPorCodigo = False
             End If
         End If
+
+        If col = "obhaberbs" Then
+            If IsNumeric(grDetalle.GetValue("obhaberbs")) Or grDetalle.GetValue("obhaberbs") = "." Then
+                _actualizandoPorCodigo = True
+                Dim conversion As Double = grDetalle.GetValue("obhaberbs") / grDetalle.GetValue("obtc")
+                conversion = to3Decimales(conversion)
+                grDetalle.SetValue("obhaberus", Round(conversion, 2))
+                grDetalle.SetValue("obdebeus", 0)
+                grDetalle.SetValue("obdebebs", 0)
+                _actualizandoPorCodigo = False
+            End If
+        End If
+
+        ' Si el usuario intenta editar USD directamente, se restaura el valor correcto
+        ' calculado desde Bs (o se deja en 0 si no había nada en Bs todavía).
+        ' El Boliviano es la única fuente válida, sin excepción.
+        If col = "obdebeus" OrElse col = "obhaberus" Then
+            _actualizandoPorCodigo = True
+
+            Dim debeBsActual As Double = grDetalle.GetValue("obdebebs")
+            Dim haberBsActual As Double = grDetalle.GetValue("obhaberbs")
+            Dim tc As Double = grDetalle.GetValue("obtc")
+
+            If debeBsActual <> 0 Then
+                Dim conversion As Double = to3Decimales(debeBsActual / tc)
+                grDetalle.SetValue("obdebeus", Round(conversion, 2))
+                grDetalle.SetValue("obhaberus", 0)
+            ElseIf haberBsActual <> 0 Then
+                Dim conversion As Double = to3Decimales(haberBsActual / tc)
+                grDetalle.SetValue("obhaberus", Round(conversion, 2))
+                grDetalle.SetValue("obdebeus", 0)
+            Else
+                grDetalle.SetValue("obdebeus", 0)
+                grDetalle.SetValue("obhaberus", 0)
+            End If
+
+            _actualizandoPorCodigo = False
+            MsgBox("El monto en dólares se calcula automáticamente. Ingrese el valor en Bolivianos.", MsgBoxStyle.Information)
+        End If
     End Sub
+    'Private Sub grDetalle_CellValueChanged(sender As Object, e As ColumnActionEventArgs) Handles grDetalle.CellValueChanged
+
+
+    '    If True Then
+    '        If grDetalle.RootTable.Columns(grDetalle.Col).Key = "obdebebs" Then 'And grDetalle.GetValue("obdebebs") <> 0
+    '            If IsNumeric(grDetalle.GetValue("obdebebs")) Or grDetalle.GetValue("obdebebs") = "." Then
+    '                Dim conversion As Double = grDetalle.GetValue("obdebebs") / grDetalle.GetValue("obtc")
+    '                conversion = to3Decimales(conversion)
+    '                grDetalle.SetValue("obdebeus", Round(conversion, 2))
+    '                grDetalle.SetValue("obhaberus", 0)
+    '                grDetalle.SetValue("obhaberbs", 0)
+
+    '            End If
+
+    '        End If
+    '        If grDetalle.RootTable.Columns(grDetalle.Col).Key = "obhaberbs" Then 'And grDetalle.GetValue("obhaberbs") <> 0
+    '            If IsNumeric(grDetalle.GetValue("obhaberbs")) Or grDetalle.GetValue("obhaberbs") = "." Then
+    '                Dim conversion As Double = grDetalle.GetValue("obhaberbs") / grDetalle.GetValue("obtc")
+    '                conversion = to3Decimales(conversion)
+    '                grDetalle.SetValue("obhaberus", Round(conversion, 2))
+    '                grDetalle.SetValue("obdebeus", 0)
+    '                grDetalle.SetValue("obdebebs", 0)
+
+    '            End If
+    '        End If
+    '        If grDetalle.RootTable.Columns(grDetalle.Col).Key = "obdebeus" Then 'And grDetalle.GetValue("obdebeus") <> 0
+    '            If IsNumeric(grDetalle.GetValue("obdebeus")) Or grDetalle.GetValue("obdebeus") = "." Then
+    '                Dim conversion As Double = grDetalle.GetValue("obdebeus") * grDetalle.GetValue("obtc")
+    '                conversion = to3Decimales(conversion)
+    '                grDetalle.SetValue("obdebebs", Round(conversion, 2))
+    '                grDetalle.SetValue("obhaberbs", 0)
+    '                grDetalle.SetValue("obhaberus", 0)
+
+    '            End If
+
+
+    '        End If
+    '        If grDetalle.RootTable.Columns(grDetalle.Col).Key = "obhaberus" Then 'And grDetalle.GetValue("obhaberus") <> 0
+    '            If IsNumeric(grDetalle.GetValue("obhaberus")) Or grDetalle.GetValue("obhaberus") = "." Then
+    '                Dim conversion As Double = grDetalle.GetValue("obhaberus") * grDetalle.GetValue("obtc")
+    '                conversion = to3Decimales(conversion)
+    '                grDetalle.SetValue("obhaberbs", Round(conversion, 2))
+    '                grDetalle.SetValue("obdebebs", 0)
+    '                grDetalle.SetValue("obdebeus", 0)
+
+    '            End If
+
+    '        End If
+    '    End If
+    'End Sub
 
     Private Sub grDetalle_EditingCell(sender As Object, e As EditingCellEventArgs) Handles grDetalle.EditingCell
         If tbTipoCambio.Value = 0 Then
